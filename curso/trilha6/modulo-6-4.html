@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.4 Rotina de manutenção contínua | Agente Hermes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-rose-400 { color: #9f1239; }
+    html:not(.dark) .bg-rose-500\/20 { background-color: rgba(225,29,72,0.12); }
+    html:not(.dark) .bg-rose-500\/10 { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) .border-rose-500\/30 { border-color: rgba(225,29,72,0.25); }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .bg-blue-900\/20 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .text-red-400 { color: #b91c1c; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(185,28,28,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(185,28,28,0.25); }
+    html:not(.dark) .bg-rose-900\/20 { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.9em; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
+          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-rose-400">Início</a><span>/</span>
+      <a href="index.html" class="hover:text-rose-400">Trilha 6</a><span>/</span>
+      <span class="text-rose-400">Módulo 6.4</span>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MÓDULO 6.4</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔁 Rotina de manutenção contínua</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">A diferença entre 1 mês e 1 ano de Hermes é rotina. Regras simples, leitura periódica, debug pelo Markdown antes do código, cadência de rotação e a filosofia que mantém o agente vivo.</p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">25</div><div class="text-xs text-neutral-400">Minutos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Avançado</div><div class="text-xs text-neutral-400">Nível</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Filosofia</div><div class="text-xs text-neutral-400">Tipo</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">📐 Regras simples</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Manutenção sem regra vira "quando der tempo" — e nunca dá. Com regra simples, vira reflexo. Aqui estão as <strong class="text-rose-400">três que cobrem 90% dos casos</strong>:
+      </p>
+      <div class="space-y-4 mb-6">
+        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6">
+          <h4 class="font-bold text-rose-400 mb-2">1. Errou 2× → atualiza skill ou memória</h4>
+          <p class="text-neutral-300 text-sm">Primeira vez é acaso, segunda é padrão. Quando o agente comete o mesmo erro 2 vezes, você abre a skill (se for procedimento) ou a memória (se for fato) e corrige na hora.</p>
+        </div>
+        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6">
+          <h4 class="font-bold text-rose-400 mb-2">2. Repetiu instrução → vira skill</h4>
+          <p class="text-neutral-300 text-sm">Se você está dando a mesma orientação ("faz X, depois Y, depois Z") pela 3ª vez, é hora de salvar como skill. <em>"Isso aqui virou skill, salva."</em> O agente cuida do resto.</p>
+        </div>
+        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6">
+          <h4 class="font-bold text-rose-400 mb-2">3. Tom errado → ajusta soul</h4>
+          <p class="text-neutral-300 text-sm">Quando o agente "sai do personagem" — formal demais, informal demais, frio quando deveria ser caloroso — não é bug, é soul.md desatualizado ou ambíguo. Ajuste 1-2 linhas e teste.</p>
+        </div>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Frase mágica</h3>
+        <p class="text-neutral-300"><em>"Isso aqui virou skill, salva."</em> O agente cria SKILL.md no formato correto, salva em <code class="text-primary">~/.hermes/skills/</code>, e na próxima invocação já está disponível. Você não precisa lembrar a sintaxe.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">📖 Leitura periódica</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Mensalmente, peça pro agente <strong class="text-rose-400">se auditar</strong>. É auditoria barata: você vê em 5 minutos o que está desatualizado, duplicado ou órfão. Sem isso, a memória vira lixão silencioso.
+      </p>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-4">📋 Pedidos mensais</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><em>"Leia sua memória e me diga o que parece desatualizado"</em></span></li>
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><em>"Leia seu soul e diga se ainda reflete como devo me comportar"</em></span></li>
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><em>"Liste suas skills ativas e indique 3 que não foram usadas no último mês"</em></span></li>
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><em>"Liste crons ativos e diga quais ainda fazem sentido"</em></span></li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">⏰</span>Automatize com cron</h3>
+        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code>hermes cron create "1st of every month at 9:00" \
+  "Faça auditoria de memória, soul, skills e crons. \
+  Liste 3 itens pra podar. Aguardo aprovação." \
+  --deliver telegram</code></pre>
+        <p class="text-neutral-300 text-sm mt-3">Você só aprova ou rejeita. Manutenção sem esforço deliberado seu, mas com você no loop pras decisões.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">🧟 Stale memory é o #1</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        <strong class="text-rose-400">Memória desatualizada</strong> é a causa principal de "comportamento estranho" do Hermes. VPS antigo que migrou, projeto morto que continua sendo citado, preferência que mudou. O agente segue a memória — e parece "errado".
+      </p>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Sintomas de stale memory</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Agente cita ferramenta que você não usa mais</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Sugere reuniões/contatos com pessoas antigas</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Preferências erradas ("você gosta de X" quando agora prefere Y)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Caminhos de arquivo errados (servidor antigo, pasta movida)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Tom inadequado pra fase atual da sua vida/projeto</span></li>
+        </ul>
+      </div>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">📓</span>Memória como diário, não log</h3>
+        <p class="text-neutral-300 text-sm mb-3">Memory.md deve ser editada como <strong>diário</strong>, com versão atual dos fatos — não como <strong>log</strong> que acumula tudo. Quando algo muda na sua vida, peça:</p>
+        <p class="text-neutral-300 text-sm italic">"Atualiza memória: agora uso X em vez de Y. Remove referências antigas a Y."</p>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3">🔍 Antes de qualquer debug</h3>
+        <p class="text-neutral-300 text-sm">70% dos comportamentos estranhos do Hermes são <strong>fato desatualizado em memory.md</strong>. Antes de assumir bug do código, abra o arquivo. É o pulo do gato.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">🔍 Quando algo quebrar: memory.md antes de tudo</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Hermes é <strong class="text-rose-400">90% Markdown</strong>. Skills, memória, soul, configs. Erros frequentemente são instrução antiga ou ambígua, não bug. Tenha um protocolo claro de debug que começa pelo texto.
+      </p>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-4">📋 Protocolo de debug</h3>
+        <ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
+          <li><strong>memory.md</strong> — fato desatualizado é a causa mais comum</li>
+          <li><strong>soul.md</strong> — tom ambíguo gera resposta errática</li>
+          <li><strong>skill envolvida</strong> — procedimento desatualizado ou conflitante com outra skill</li>
+          <li><strong>logs</strong> — só agora abrir <code class="text-rose-400">~/.hermes/logs/</code></li>
+          <li><strong>config</strong> — config.yaml, .env, plugins</li>
+          <li><strong>código</strong> — última fronteira; raramente é o problema</li>
+        </ol>
+      </div>
+      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">💬</span>Frase pra delegar o debug</h3>
+        <p class="text-neutral-300 italic text-sm">"Comportamento estranho em <strong>X</strong>. Audita memory, soul e skill relacionada antes de eu mexer no código. Me lista o que achou de inconsistente."</p>
+        <p class="text-neutral-300 text-sm mt-3">O agente faz o trabalho de auditoria. Você revisa e aprova mudanças. Economiza horas que iam pra debug em código.</p>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3">💡 Filosofia do "Markdown first"</h3>
+        <p class="text-neutral-300">O design do Hermes intencionalmente coloca conhecimento em texto editável, não em banco oculto. Isso significa que <strong>texto é o primeiro lugar pra olhar</strong>. Quando você incorpora isso, debug fica mais barato e mais rápido.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">🔐 Rotação e auditoria</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Sem cadência, ninguém faz manutenção de segurança. Com cron, vira automático: o agente lembra você. É a diferença entre <em>"tenho intenção de"</em> e <em>"está acontecendo"</em>.
+      </p>
+      <div class="space-y-4 mb-6">
+        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6">
+          <h4 class="font-bold text-rose-400 mb-2">🔑 Trimestral: rotação de tokens</h4>
+          <p class="text-neutral-300 text-sm">Telegram, Gmail, GitHub, OpenRouter, Anthropic. Cada 3 meses, gere novos e revogue antigos. Cron lembra você a cada 90 dias com checklist do que rotacionar.</p>
+        </div>
+        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6">
+          <h4 class="font-bold text-rose-400 mb-2">🧹 Mensal: review de skills</h4>
+          <p class="text-neutral-300 text-sm">Cron mensal pede ao agente: "liste skills sem uso há 30+ dias, com sugestão de podar". Você aprova arquivamento ou exclusão.</p>
+        </div>
+        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6">
+          <h4 class="font-bold text-rose-400 mb-2">🛡️ Semanal: auditoria de segurança</h4>
+          <p class="text-neutral-300 text-sm">Skill bundled "auditoria de segurança" verifica portas abertas, processos novos, espaço em disco, logs anormais, chaves SSH. Cron toda 2ª-feira de manhã.</p>
+        </div>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3">🎯 Por que tokens vencidos importam</h3>
+        <p class="text-neutral-300 text-sm">Token de Telegram revogado é causa frequente de "gateway parado misteriosamente". Token expirado de provedor de inferência pode parar todos os crons. Rotação programada evita o caos.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🤝 Filosofia: agente é colega que aprende</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Aqui vai o resumo filosófico que carrega tudo. Hermes <strong class="text-rose-400">não é uma ferramenta que termina</strong> — não é como um app que você instala e está pronto. É um colega: precisa de onboarding, contexto, correção e crescimento.
+      </p>
+      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">🎭</span>Os dois jeitos de tratar</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-red-900/20 rounded-lg p-5 border border-red-500/30">
+            <h4 class="font-bold text-red-400 mb-2">❌ Como ferramenta estática</h4>
+            <p class="text-neutral-300 text-sm">"Instalei e está pronto." Não corrige, não atualiza, não treina. Em 60 dias, ele vira "aquele agente que tem mas eu não uso muito".</p>
+          </div>
+          <div class="bg-rose-900/20 rounded-lg p-5 border border-rose-500/30">
+            <h4 class="font-bold text-rose-400 mb-2">✅ Como colega que aprende</h4>
+            <p class="text-neutral-300 text-sm">Onboarding cuidadoso, correção quando erra, atualização quando contexto muda. Em 60 dias, o agente está mais útil que no dia 1.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">👤</span>Mentalidade final</h3>
+        <p class="text-neutral-300 text-sm mb-3">Você é o <strong>tech lead</strong>. Ele é o <strong>estagiário sênior</strong>. Cada um tem papel claro:</p>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><strong>Você:</strong> aprova, corrige, ensina, define prioridades, audita</span></li>
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><strong>Ele:</strong> executa, lembra, sugere, automatiza, pergunta o que não sabe</span></li>
+        </ul>
+        <p class="text-neutral-300 text-sm mt-3">Cada mês, mais alinhamento. Cada correção, mais inteligência. Cada skill nova, mais autonomia.</p>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">🌱</span>O que você leva</h3>
+        <p class="text-neutral-300">Se há uma só coisa pra carregar dessas 6 trilhas: <strong>agente Hermes não é projeto que termina. É relação que cresce.</strong> Quem entende isso tem agente cada vez mais útil. Quem não entende, abandona em 60 dias.</p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
+        <div class="space-y-3 mb-8">
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>3 regras simples</strong><span class="text-neutral-400"> — errou 2x atualiza; repetiu instrução vira skill; tom errado ajusta soul.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Auditoria mensal automatizada</strong><span class="text-neutral-400"> — cron pedindo poda de memória, skills sem uso, crons obsoletos.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Stale memory é o #1</strong><span class="text-neutral-400"> — 70% dos comportamentos estranhos são fato desatualizado.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Debug começa em Markdown, não em código</strong><span class="text-neutral-400"> — memory, soul, skill, logs, config, código.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Cadência: trimestral, mensal, semanal</strong><span class="text-neutral-400"> — tokens, skills, segurança. Tudo via cron.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Filosofia: tech lead + estagiário sênior</strong><span class="text-neutral-400"> — você aprova e corrige; ele executa e cresce.</span></div></div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-rose-400 mb-2">Você concluiu o curso 🎉</h3><p class="text-neutral-300">Esta foi a última trilha. Agora é colocar em prática: comece com 1 agente, ative as rotinas, e deixe o tempo trabalhar a seu favor.</p></div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="modulo-6-3.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
+          <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors">Voltar ao início do curso →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 6.4 • 2026</p></div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+  </script>
+</body>
+</html>

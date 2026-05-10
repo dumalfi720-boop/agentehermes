@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha 2 - Setup do Zero | Agente Hermes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .hover\:bg-blue-500\/30:hover { background-color: rgba(37,99,235,0.18); }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .group:hover .group-hover\:text-blue-400 { color: #2563eb; }
+    html:not(.dark) .hover\:border-blue-500\/30:hover { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .text-teal-400 { color: #0d9488; }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .text-rose-400 { color: #9f1239; }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225,29,72,0.08); }
+
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🪽</span>
+            <span class="font-bold text-lg hidden sm:inline">Agente Hermes</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
+          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
+          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">TRILHA 2</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">⚙️ Setup do Zero</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Da escolha do VPS até o primeiro cron rodando: cada passo prático para subir um Hermes funcional, conectado ao Telegram, versionado no GitHub e fazendo backup sozinho todos os dias.</p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Módulos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">36</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">~3h</div><div class="text-xs text-neutral-400">Duração</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Prático</div><div class="text-xs text-neutral-400">Nível</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- NAVEGACAO RAPIDA -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="#modulo-2-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">☁️ Contratando o VPS</h3>
+          <p class="text-xs text-neutral-400">Provedor, plano, SO e hardening básico</p>
+        </a>
+        <a href="#modulo-2-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">🐳 Docker + auto-deploy</h3>
+          <p class="text-xs text-neutral-400">Container, compose, primeiro hermes up</p>
+        </a>
+        <a href="#modulo-2-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">🤖 Provedor e modelo</h3>
+          <p class="text-xs text-neutral-400">Codex, OpenRouter, Claude, locais</p>
+        </a>
+        <a href="#modulo-2-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">📱 Telegram + BotFather</h3>
+          <p class="text-xs text-neutral-400">Token, user ID, gateway, primeira conversa</p>
+        </a>
+        <a href="#modulo-2-5" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.5</span><span class="text-xs text-neutral-500">~30 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">🐙 GitHub + config set</h3>
+          <p class="text-xs text-neutral-400">Token, .gitignore, .env do container</p>
+        </a>
+        <a href="#modulo-2-6" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.6</span><span class="text-xs text-neutral-500">~25 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">🌙 Primeiro cron: backup</h3>
+          <p class="text-xs text-neutral-400">Sintaxe, timezone, permissões, verificação</p>
+        </a>
+      </div>
+    </section>
+
+    <h2 class="text-2xl font-bold mb-6 pt-8 border-t border-dark-600">Conteúdo detalhado</h2>
+
+    <!-- MODULO 2.1 -->
+    <div id="modulo-2-1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">☁️ Contratando e configurando VPS</h3>
+        <p class="text-neutral-400 text-sm">Por que VPS, qual provedor escolher, qual plano cabe, qual SO instalar e como deixar o servidor seguro antes de subir o Hermes.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🤔</span>
+            <div><span class="font-medium">Por que VPS e não laptop</span><span class="text-neutral-500 text-sm ml-2">- 24/7, IP fixo, baixo custo</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">VPS é uma máquina virtual dedicada na nuvem com IP público fixo, ligada 24 horas. Diferente do laptop, ela não dorme, não cai quando você fecha a tampa, e não depende do seu Wi-Fi residencial.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Crons só são confiáveis em máquina sempre ligada. Telegram precisa do gateway acessível continuamente. Sua máquina pessoal não foi feita pra isso. KVM 2 da Hostinger custa o equivalente a um Spotify Premium e cabe múltiplos agentes.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">VPS = Virtual Private Server. KVM = tipo de virtualização (kernel-level, mais isolado que LXC). NVMe = disco rápido. Banda mensal = limite de transferência (8TB no KVM 2 é generoso para Hermes).</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🏷️</span>
+            <div><span class="font-medium">Escolhendo o provedor</span><span class="text-neutral-500 text-sm ml-2">- Hostinger, Hetzner, DigitalOcean, Oracle</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hostinger tem o melhor onboarding pra brasileiro (preço em real, suporte PT-BR, painel simples). Hetzner é o mais barato pro porte. DigitalOcean tem ecossistema rico de tutoriais. Oracle Always Free dá micro-VPS gratuito.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A escolha errada vira atrito por meses. Hostinger é o caminho recomendado pra primeiro Hermes — instalação simples, NVMe rápido e desconto de boas-vindas significativo. Hetzner exige mais autonomia técnica.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Hostinger: $8,99/mês com desconto, $14,99 renovação. Hetzner: ~€4 por equivalente. DO: $12+/mês. Oracle Free: ARM64 com 24GB RAM gratuitos, mas burocracia de cadastro alta.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">📊</span>
+            <div><span class="font-medium">Plano: KVM 2 da Hostinger</span><span class="text-neutral-500 text-sm ml-2">- 8GB RAM, 2 vCPUs, 100GB NVMe</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">KVM 2 da Hostinger oferece 2 vCPUs, 8 GB RAM, 100 GB NVMe e 8 TB de banda. Ele cabe Hermes + Docker + um par de skills pesadas (browser automation, vision) sem suar.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Subdimensionar (KVM 1, 4GB) faz Docker engasgar quando você pede coisa que carrega Chromium. Superdimensionar (KVM 4) só vale se você for rodar múltiplos perfis ou kanban multi-agente.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Tabela: KVM 1 ($6,49) é OK pra teste; KVM 2 ($8,99) é o sweet-spot; KVM 4 ($12,99) pra múltiplos agentes; KVM 8 ($25,99) para Kanban com vários workers paralelos.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🐧</span>
+            <div><span class="font-medium">Sistema operacional: Ubuntu 24.04 LTS</span><span class="text-neutral-500 text-sm ml-2">- Hostname, backup, datacenter</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Ubuntu 24.04 LTS é o padrão recomendado: suporte até 2029, comunidade gigante, todos os tutoriais usam. Escolha um hostname memorável (ex: <code class="text-blue-400">hermes-pessoal</code>), datacenter próximo (São Paulo se possível), e ative backup diário.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Distros menos populares (CentOS, Alpine) têm pegadinhas com Docker, NodeJS e Python. LTS = atualizações de segurança garantidas. Backup automático te salva quando você quebra algo às 23h de uma sexta.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">LTS = Long Term Support (5 anos). Hostname aparece no prompt — facilita identificar terminal. Datacenter próximo reduz latência do SSH e do Telegram. Backup Hostinger ~$1/mês a mais, vale cada centavo.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🔑</span>
+            <div><span class="font-medium">Primeiro SSH e comandos básicos</span><span class="text-neutral-500 text-sm ml-2">- apt update, ufw, usuário</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Após o servidor subir, conecte via <code class="text-blue-400">ssh root@SEU_IP</code>. Atualize o sistema com <code class="text-blue-400">apt update && apt upgrade -y</code>. Crie um usuário não-root, instale ufw e habilite firewall mínimo (22 SSH, 443 HTTPS).</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Rodar tudo como root é receita pra desastre. Um comando mal copiado e você apagou o /etc inteiro. Usuário separado limita estrago. ufw bloqueia portas que você não usa, reduzindo superfície de ataque.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm"><code>adduser hermes</code> + <code>usermod -aG sudo hermes</code> cria usuário com escalonamento. <code>ufw default deny incoming</code> + <code>ufw allow 22</code> + <code>ufw enable</code> ativa o firewall.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🛡️</span>
+            <div><span class="font-medium">Hardening básico antes do Hermes</span><span class="text-neutral-500 text-sm ml-2">- SSH key, fail2ban, root disable</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Trocar autenticação por senha por chave SSH (<code class="text-blue-400">ssh-keygen + ssh-copy-id</code>), desabilitar login root direto, instalar fail2ban (bloqueia IPs com tentativas de força bruta).</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VPS público leva milhares de tentativas de login por dia. Sem hardening, é só questão de tempo. Com chave + fail2ban + ufw, o servidor fica praticamente intocável pra brute-force.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Editar <code>/etc/ssh/sshd_config</code>: <code>PasswordAuthentication no</code> e <code>PermitRootLogin no</code>. Reiniciar com <code>systemctl restart sshd</code>. Antes de fechar a sessão, abra outro terminal e teste login com chave — se quebrar, você ainda tem acesso.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-1.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.2 -->
+    <div id="modulo-2-2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">🐳 Instalação Docker + auto-deploy</h3>
+        <p class="text-neutral-400 text-sm">Por que rodar dentro de container, como subir o Hermes via docker compose, comandos do dia-a-dia e como atualizar sem perder memória nem skills.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">📦</span>
+            <div><span class="font-medium">Por que Docker</span><span class="text-neutral-500 text-sm ml-2">- Isolamento, multi-agente, .env separado</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Docker isola o Hermes em um container com seu próprio filesystem, suas próprias dependências Python, seu próprio .env. Você pode rodar 3 Hermes em paralelo (pessoal, marketing, financeiro) na mesma VPS sem conflito.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem Docker, atualizar Python ou bibliotecas vira drama. Skills que dependem de versões específicas brigam. Quando algo falha, você não sabe se foi do sistema ou do agente. Container é a borda limpa.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Imagem = template. Container = instância rodando. Volume = pasta persistente fora do container. <code>~/.hermes</code> tem que ser volume, senão você perde memória ao recriar o container.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">⬇️</span>
+            <div><span class="font-medium">Instalar Docker no Ubuntu</span><span class="text-neutral-500 text-sm ml-2">- Script oficial + compose plugin</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A forma certa: <code class="text-blue-400">curl -fsSL https://get.docker.com | sh</code>. Esse script é mantido pela própria Docker e instala engine + compose plugin atualizados. Hostinger também oferece "Docker app" one-click no painel.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Pacote do Ubuntu (<code>apt install docker.io</code>) costuma estar atrasado. Docker Compose v1 (em Python) está descontinuado — só funciona o v2 (plugin Go). Pegar o errado custa horas debugando "command not found".</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Após instalar: <code>usermod -aG docker hermes</code> pra rodar sem sudo. Logout + login. Teste com <code>docker run hello-world</code>. Compose v2: <code>docker compose</code> (sem hífen), não <code>docker-compose</code>.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">📜</span>
+            <div><span class="font-medium">docker-compose.yml para Hermes</span><span class="text-neutral-500 text-sm ml-2">- Volumes, env_file, restart policy</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Arquivo <code class="text-blue-400">docker-compose.yml</code> declara o serviço hermes: imagem oficial, volume <code>~/.hermes:/root/.hermes</code> (persistência), <code>env_file</code> apontando pro .env, e <code>restart: unless-stopped</code> para subir sozinho após reboot.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem volume, ao recriar o container você perde toda a memória, skills, sessões. Sem restart policy, depois de uma queda de energia o agente não volta sozinho. Sem env_file, secrets viram strings hardcoded — ruim de versionar.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Volume bind mount = pasta do host aparece dentro do container. <code>env_file: .env</code> injeta variáveis. <code>TZ=America/Sao_Paulo</code> ajusta timezone. <code>tty: true</code> deixa o agente interativo via <code>docker exec</code>.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🚀</span>
+            <div><span class="font-medium">Primeira subida: docker compose up</span><span class="text-neutral-500 text-sm ml-2">- Logs, healthcheck, primeira sessão</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Comando: <code class="text-blue-400">docker compose up -d</code> sobe em background. <code>docker logs -f hermes</code> mostra o log em tempo real. <code>docker exec -it hermes hermes</code> entra na CLI interativa do agente.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A primeira subida é onde quase tudo dá errado: token errado, volume com permissão errada, .env não montado. Saber ler logs e identificar o sintoma ajuda a corrigir em minutos em vez de horas.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm"><code>up -d</code> = detached. <code>logs -f</code> = follow. <code>exec -it</code> = interactive + tty. Erros comuns: <em>"permission denied"</em> no volume → ajustar uid/gid; <em>"missing API key"</em> → .env errado.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🔧</span>
+            <div><span class="font-medium">Comandos do dia-a-dia</span><span class="text-neutral-500 text-sm ml-2">- exec, restart, config set</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Os 5 comandos que você vai usar 90% do tempo: <code class="text-blue-400">docker compose up -d</code>, <code>docker compose restart</code>, <code>docker exec -it hermes hermes</code>, <code>docker exec -it hermes hermes config set X=valor</code>, <code>docker logs hermes --tail 100</code>.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decorar esses 5 comandos elimina dependência de tutorial. Você vira autônomo pra debugar e ajustar configurações em segundos. <code>hermes config set</code> escreve no .env do container — não confundir com .env do host.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Após config set, sempre <code>docker compose restart</code> para o agente reler. <code>docker compose pull</code> baixa imagem nova. <code>docker compose down</code> para tudo (preserva volumes).</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🔄</span>
+            <div><span class="font-medium">Atualização sem perder dados</span><span class="text-neutral-500 text-sm ml-2">- Pull image, recreate, volumes</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Fluxo seguro: <code class="text-blue-400">docker compose pull</code> baixa nova imagem, <code>docker compose up -d</code> recria container já com a nova versão. O volume <code>~/.hermes</code> permanece intocado — memória, skills, state.db tudo lá.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hermes lança versões frequentes (v0.13.0 saiu há 3 dias). Você precisa atualizar com confiança. Confundir <code>down -v</code> (apaga volume) com <code>down</code> (preserva) destrói meses de trabalho. Decorar é seguro.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Antes de qualquer atualização: backup do volume (<code>tar czf hermes-backup.tgz ~/.hermes</code>). <code>docker compose down</code> = para; <code>down -v</code> = para + apaga volumes. NUNCA usar <code>-v</code> num agente em produção.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-2.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.3 -->
+    <div id="modulo-2-3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">🤖 Provedor de inferência e modelo</h3>
+        <p class="text-neutral-400 text-sm">Codex OAuth, OpenRouter, Anthropic, MiniMax, modelos locais. Como decidir entre custo, privacidade, qualidade e volume.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🟢</span>
+            <div><span class="font-medium">Codex OAuth via ChatGPT Plus/Pro</span><span class="text-neutral-500 text-sm ml-2">- Sem API key, $20 ou $200/mês</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Codex OAuth usa sua conta ChatGPT (Plus $20 ou Pro $200) como provedor. Login via browser, sem API key. Modelo padrão: <code class="text-blue-400">gpt-5.3-codex</code> com vision. Tudo dentro do plano fixo da OpenAI.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a opção mais barata pra uso intenso. Pela API, 10 conversas longas por dia passam fácil de $100/mês. Pelo Plus, mesmo uso fica em $20 fixos. Pro libera o3, o4-pro e GPT-5 com limites altos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Configurar com <code>provider: "codex"</code> no config.yaml. Hermes pede pra abrir URL no browser, você loga, ele captura o token. Limitação: rate limits do plano ChatGPT — não é "ilimitado de verdade".</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🌐</span>
+            <div><span class="font-medium">OpenRouter — pay-per-token flexível</span><span class="text-neutral-500 text-sm ml-2">- owl-alpha free, gemini flash barato</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">OpenRouter é um agregador: você bota crédito, escolhe qualquer modelo (Claude, Gemini, DeepSeek, Grok, GPT) e paga por token. <code class="text-blue-400">openrouter/owl-alpha</code> é grátis. Gemini Flash custa ~$0,075/1M tokens.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Permite trocar modelo por tarefa. Compressão de contexto pode usar Gemini Flash (barato). Conversa principal usa Claude. Watchdog pode usar owl-alpha (grátis). Você ajusta cada slot ao orçamento.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Configurar com <code>OPENROUTER_API_KEY</code> + <code>provider: "openrouter"</code>. Modelos novos no v0.13.0: <code>deepseek/deepseek-v4-pro</code>, <code>x-ai/grok-4.3</code>, <code>tencent/hy3-preview</code>.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🎭</span>
+            <div><span class="font-medium">Anthropic / Claude via API ou GMI</span><span class="text-neutral-500 text-sm ml-2">- Raciocínio top, custo alto</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Claude Opus / Sonnet via API direta da Anthropic ou via GMI (revendedor). O modelo mencionado nos exemplos do Hermes v0.13.0 é <code class="text-blue-400">claude-opus-4.6</code>. Excelente em código complexo e raciocínio longo.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quando a tarefa é crítica (review de código, escrita longa, planejamento estratégico), Claude tem qualidade superior. Vale o custo extra para uso pontual. Para volume alto, Codex+OpenRouter é mais econômico.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Anthropic não está nativamente sem enforcement no Hermes — modelo confiado nativamente. Tools usadas com confiança nativa. Use GMI para faturamento centralizado se ainda não tem conta Anthropic.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🔌</span>
+            <div><span class="font-medium">MiniMax OAuth, Nous Portal, locais</span><span class="text-neutral-500 text-sm ml-2">- Sem API key, ou Ollama em casa</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">MiniMax OAuth: login browser, sem API key (similar a Codex). Nous Portal: <code class="text-blue-400">hermes auth</code> + <code>provider: "nous"</code>. Local: qualquer endpoint OpenAI-compatible (Ollama, LM Studio, vLLM) com <code>base_url: "http://localhost:1234/v1"</code>.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cenários de privacidade extrema (dados sensíveis nunca saem da rede), uso desconectado, custo zero pra volume infinito (após hardware). Mac Mini M2 com Qwen ou LLaMA roda 90% das tarefas pessoais.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Modelos sem enforcement (confiados): Claude, DeepSeek, Qwen, LLaMA. Modelos com enforcement automático: gpt, codex, gemini, gemma, grok. Local exige hardware: 16GB+ pra modelo de 7B, 32GB+ pra 13B.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🏆</span>
+            <div><span class="font-medium">Modelos recomendados em 2026</span><span class="text-neutral-500 text-sm ml-2">- gpt-5.3-codex, deepseek-v4-pro, grok-4.3</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Top picks da release v0.13.0: <code class="text-blue-400">gpt-5.3-codex</code> (padrão Codex OAuth), <code>deepseek/deepseek-v4-pro</code> (raciocínio forte e barato), <code>x-ai/grok-4.3</code> (resposta longa), <code>claude-opus-4.6</code> (qualidade premium), <code>MiniMax-M2.7</code> (sem API key).</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O modelo certo na tarefa certa muda 10x a experiência. Codex pra geral, DeepSeek pra raciocínio matemático, Claude pra texto longo, Gemini Flash pra compressão. Misturar é o jeito otimizado.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Vision: gpt-5.3-codex e Claude Opus suportam. Tool use enforcement: gpt/codex/gemini/gemma/grok recebem reforço automático; Claude/DeepSeek/Qwen/LLaMA são confiados nativamente.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">Como decidir: tabela de critérios</span><span class="text-neutral-500 text-sm ml-2">- Volume × privacidade × custo × qualidade</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Árvore de decisão: já tem ChatGPT Plus? Codex OAuth. Quer flexibilidade entre modelos? OpenRouter. Privacidade extrema? Local via Ollama. Tarefas top-quality? Anthropic. Volume alto barato? OpenRouter + DeepSeek/Gemini.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem critério, você fica trocando provedor toda hora. Com critério, você escolhe uma vez e otimiza ao longo do tempo. Trocar é trivial (uma linha em config.yaml), mas pular sem razão queima energia.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Recomendação inicial: Codex OAuth como principal + OpenRouter como fallback (Gemini Flash pra compressão). Privacidade alta? Adiciona endpoint local. Migração entre provedores: zero trabalho — só edita config.yaml + restart.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-3.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.4 -->
+    <div id="modulo-2-4" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">📱 Telegram: BotFather + autorização</h3>
+        <p class="text-neutral-400 text-sm">Por que começar pelo Telegram, como criar o bot, pegar seu user ID, configurar o gateway e debug se a primeira conversa não responder.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🚀</span>
+            <div><span class="font-medium">Por que Telegram primeiro</span><span class="text-neutral-500 text-sm ml-2">- BotFather trivial, comunidade ativa</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Telegram é a mensageria com menor fricção pra criar bot. BotFather é um bot oficial do próprio Telegram que cria outros bots em 30 segundos via comandos no chat. Sem developer portal, sem aprovação.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Discord exige cadastro de aplicação. WhatsApp passa por gateway pago (Whapi) ou Meta Business Manager. iMessage exige BlueBubbles num Mac. Telegram resolve em 5 minutos — você valida o setup completo antes de complicar.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Hermes suporta 20+ plataformas, mas Telegram é o caminho de menor resistência. Voice notes, comandos slash, anexos, stickers — tudo funciona. App tem cliente desktop e mobile sólido.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🤖</span>
+            <div><span class="font-medium">Criar bot com BotFather</span><span class="text-neutral-500 text-sm ml-2">- /newbot, nome, username, token</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Abra o Telegram, busque <code class="text-blue-400">@BotFather</code>. Envie <code>/newbot</code>. Ele pergunta o nome (display) e o username (terminado em "bot"). Devolve um token tipo <code>1234567890:AAH...</code> — esse é o segredo do seu bot.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O token é a credencial completa do bot — quem tiver ele controla. Tratar como senha é crítico. Nunca cole em chat público, nunca commite em repositório. Use <code>hermes config set TELEGRAM_TOKEN xxx</code> dentro do container.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Username precisa ser único globalmente no Telegram. Customizações úteis no BotFather: <code>/setdescription</code>, <code>/setuserpic</code>, <code>/setcommands</code> (lista de comandos slash). Pode revogar token com <code>/revoke</code> se vazar.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🆔</span>
+            <div><span class="font-medium">Pegar seu user ID via @userinfobot</span><span class="text-neutral-500 text-sm ml-2">- Autorização da pessoa certa</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes precisa saber quem está autorizado a falar com ele. Não basta ter o bot — qualquer um que descubra o username poderia mandar mensagem. Usar <code class="text-blue-400">@userinfobot</code> retorna seu numerical user ID (ex: <code>123456789</code>).</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem authorized users configurado, o bot ou aceita qualquer um (perigoso) ou ignora você (frustrante). User ID é a forma estável de autorizar — username pode mudar, ID não.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">User ID é numérico, único, permanente. Pode autorizar múltiplos IDs se compartilha o agente com cônjuge/sócio. Para grupos, o ID começa com sinal negativo (<code>-100...</code>).</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">⚙️</span>
+            <div><span class="font-medium">hermes gateway setup</span><span class="text-neutral-500 text-sm ml-2">- Wizard interativo, home channel</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Dentro do container: <code class="text-blue-400">hermes gateway setup</code> abre um wizard. Cole o token do bot, cole seu user ID, escolha o home channel (canal padrão para entregas de cron). Ele salva em <code>~/.hermes/.env</code> e <code>~/.hermes/config.yaml</code>.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Tentar editar arquivos manualmente costuma quebrar formatação. O wizard valida cada passo e testa conexão antes de salvar. <code>hermes gateway start</code> sobe o gateway depois.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Home channel = canal/chat padrão pra entregas automáticas (crons). Pode ser DM com você ou grupo dedicado. Variáveis: <code>TELEGRAM_TOKEN</code>, <code>TELEGRAM_HOME_CHANNEL</code>, <code>TELEGRAM_AUTHORIZED_USERS</code>.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">💬</span>
+            <div><span class="font-medium">Primeira conversa + debug</span><span class="text-neutral-500 text-sm ml-2">- Logs em ~/.hermes/logs/gateway.log</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Mande <em>"Olá"</em> pro bot. Resposta esperada: o agente responde apresentando-se. Se não responder: <code class="text-blue-400">hermes gateway status</code> mostra estado, <code>tail -f ~/.hermes/logs/gateway.log</code> mostra erro em tempo real.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Primeira mensagem é o teste mais importante. Se passar, todo o setup está OK. Se falhar, o erro nos logs é objetivo (token errado, usuário não autorizado, sem internet). Resolver é literalmente seguir o erro.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Erros frequentes: <em>"401 Unauthorized"</em> = token errado; <em>"user not authorized"</em> = ID não está em <code>TELEGRAM_AUTHORIZED_USERS</code>; <em>"connection timeout"</em> = firewall bloqueando saída do container pra api.telegram.org.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎚️</span>
+            <div><span class="font-medium">Customização: voice, slash, permissões</span><span class="text-neutral-500 text-sm ml-2">- allow once, session, always</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Voice notes são entendidas (Telegram envia áudio, Hermes transcreve e responde). Comandos slash <code class="text-blue-400">/cron</code>, <code>/usage</code>, <code>/compress</code>, <code>/skills</code> funcionam direto. Permissões: cada ação sensível pergunta <em>allow once / session / always</em>.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mensagem de voz acelera muito comunicação em movimento (no carro, andando). Slash commands viram seu controle remoto: ver crons agendados, comprimir contexto, listar skills, ver gasto de tokens.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Permissões persistem em <code>~/.hermes/permissions.json</code>. <em>Always</em> só pra coisas confiáveis (git push em repo seu). <em>Session</em> pra exploração. <em>Once</em> pra ação destrutiva única.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-4.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.5 -->
+    <div id="modulo-2-5" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.5</span><span class="text-xs text-neutral-500">~30 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">🐙 GitHub: token + .gitignore + hermes config</h3>
+        <p class="text-neutral-400 text-sm">Como conectar o GitHub com segurança, criar token de escopo apertado, evitar commit de secret e onde realmente fica o .env do agente.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">💾</span>
+            <div><span class="font-medium">Por que conectar GitHub</span><span class="text-neutral-500 text-sm ml-2">- Versionar skills, memory, soul</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">GitHub vira o backup oficial do seu agente: SKILL.md, MEMORY.md, USER.md, SOUL.md, config.yaml versionados em repo privado. Se o VPS pegar fogo, você restaura tudo em outro servidor em minutos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hermes constrói valor com o tempo: meses de feedback, dezenas de skills criadas, memória rica. Perder isso por uma falha de hardware é trauma. Git resolve com 0 esforço operacional após setup.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Repo privado = ninguém vê. Skills viajam entre máquinas via clone. Múltiplos agentes apontam pro mesmo repo de skills compartilhadas. Você pode até montar o repo no <code>~/.hermes/skills</code> via <code>git clone</code>.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🔐</span>
+            <div><span class="font-medium">Personal Access Token (PAT)</span><span class="text-neutral-500 text-sm ml-2">- Fine-grained vs classic, escopos</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">No GitHub: Settings → Developer settings → Personal access tokens. Fine-grained PAT permite limitar a repos específicos com escopos cirúrgicos (apenas push/pull, sem delete). Classic PAT é mais antigo, escopos amplos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Princípio do menor privilégio. Token classic com <code>repo</code> permite apagar todos os seus repos se vazar. Fine-grained limitado a 1 repo + permissões mínimas reduz blast radius drasticamente.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Validade do token: defina expiração (90 dias é razoável). Escopos sugeridos para Hermes: <em>Contents: Read and write</em>, <em>Metadata: Read</em>. Nada além disso. Quando expirar, gere novo e atualize.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🚨</span>
+            <div><span class="font-medium">NUNCA cole token no chat do agente</span><span class="text-neutral-500 text-sm ml-2">- Use hermes config set</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Forma certa: <code class="text-blue-400">docker exec -it hermes hermes config set GITHUB_TOKEN ghp_xxx</code>. Isso escreve no <code>~/.hermes/.env</code> dentro do container, com auto-redação aplicada nos logs.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Tokens colados no chat acabam no histórico SQLite, em logs sem redação, em sessões pesquisáveis. <code>config set</code> é o único caminho que coloca em local seguro com proteção de log.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Hermes tem auto-redação de secrets em <code>~/.hermes/logs/errors.log</code>. <code>config set</code> é o único método garantido a passar pela redação. Cola direto no chat = logs em texto puro.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🚫</span>
+            <div><span class="font-medium">.gitignore: bloquear .env, secrets, state.db</span><span class="text-neutral-500 text-sm ml-2">- Antes do primeiro commit</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Antes de qualquer <code>git add .</code>, crie <code class="text-blue-400">.gitignore</code> com: <code>.env</code>, <code>.env.*</code>, <code>state.db</code>, <code>state.db-*</code>, <code>logs/</code>, <code>*.key</code>, <code>*.pem</code>, <code>permissions.json</code>.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Commit acidental de .env é o erro mais comum em VPS pessoal. Se foi pra repo público, o token vaza em segundos (bots de scraping). Mesmo em privado, history fica permanente — quem entrar no repo vê.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Se já commitou .env: revogue o token IMEDIATAMENTE no GitHub e regere. <code>git filter-repo</code> ou BFG removem do histórico, mas o segredo já vazou. Prevenção &gt; remediação.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🤝</span>
+            <div><span class="font-medium">Peça pro Hermes configurar tudo</span><span class="text-neutral-500 text-sm ml-2">- "Crie repo privado e .gitignore seguro"</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Com token configurado, mande no Telegram: <em>"Configure este agente como repo privado no GitHub. Crie .gitignore bloqueando .env, state.db, logs e permissions.json. Faça primeiro commit com SKILL, MEMORY, USER, SOUL, config.yaml."</em></p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Aplicação direta da mentalidade da T1.2: pergunte ao próprio Hermes. A skill <code>github</code> bundled já sabe criar repo, gerar gitignore correto e fazer push inicial — você não precisa decorar comandos git.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Antes de aprovar a ação destrutiva (push), revise o .gitignore que ele propôs. Se faltar algo, corrija. Marca <em>always allow</em> só depois que validar funcionando.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">📂</span>
+            <div><span class="font-medium">.env do container vs .env do host</span><span class="text-neutral-500 text-sm ml-2">- Edição, deleção, distinção</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Existem DOIS .env: o do host (<code class="text-blue-400">~/hermes-deploy/.env</code>, lido pelo docker compose) e o do container (<code>/root/.hermes/.env</code>, lido pelo Hermes). O agente lê o segundo. Editar com <code>docker exec -it hermes nano /root/.hermes/.env</code>.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Editar o errado = mudança não tem efeito. Você restarta achando que vai pegar nova chave, mas o agente continua usando a antiga. Confundir os dois é fonte clássica de horas perdidas debugando.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Após editar o .env do container: <code>docker compose restart</code>. Para deletar uma chave: editar e remover a linha. <code>hermes config get GITHUB_TOKEN</code> mostra o valor atual (com mask) pra confirmar qual está ativo.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-5')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-5.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.6 -->
+    <div id="modulo-2-6" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.6</span><span class="text-xs text-neutral-500">~25 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">🌙 Primeiro cron: backup diário automático</h3>
+        <p class="text-neutral-400 text-sm">Por que esse é o cron ideal pra começar, sintaxe natural vs CLI, timezone, permissões persistentes e como verificar que rodou.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🛡️</span>
+            <div><span class="font-medium">Por que esse é o primeiro cron</span><span class="text-neutral-500 text-sm ml-2">- Proteção alta, risco baixo</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Backup diário pro GitHub é o cron de menor risco e maior valor. Ele só faz <code class="text-blue-400">git add . && git commit -m "..." && git push</code> dentro de <code>~/.hermes</code>. Não toca em sistema, não chama API externa de risco, não gasta tokens caros.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a forma certa de testar o sistema de cron com confiança. Se quebrar, nada de grave acontece. Se funcionar, você ganha resilência permanente. É o "Hello World" pragmático do Hermes.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Princípio: comece pelo cron mais útil e mais seguro. Crons ambiciosos no dia 1 (responder email, postar conteúdo) são frágeis e perigosos. Backup é trivial e produtivo.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">💬</span>
+            <div><span class="font-medium">Sintaxe natural via Telegram</span><span class="text-neutral-500 text-sm ml-2">- /cron add "every 1d at 00:00"</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">No chat do Telegram: <code class="text-blue-400">/cron add "every 1d at 00:00" "Faça commit e push das mudanças do agente pro GitHub"</code>. O Hermes interpreta linguagem natural, gera o job e confirma agendamento.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Forma mais rápida de criar cron. Você não precisa decorar sintaxe cron clássica (<code>0 0 * * *</code>). Linguagem natural é traduzida pra estrutura interna do Hermes (jobs.json).</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Aceita: <em>"every 30m"</em>, <em>"every 2h"</em>, <em>"every 1d at 09:00"</em>, <em>"every monday at 08:00"</em>, <em>"weekly"</em>. <code>/cron list</code> mostra todos os jobs. <code>/cron remove ID</code> apaga.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">⌨️</span>
+            <div><span class="font-medium">Sintaxe CLI: hermes cron create</span><span class="text-neutral-500 text-sm ml-2">- --workdir e flags</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Equivalente CLI: <code class="text-blue-400">hermes cron create "every 1d at 00:00" "Backup do agente" --workdir /root/.hermes</code>. Executa dentro do container. Mais explícito, ideal pra script idempotente de provisioning.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quando você for replicar o setup em outro VPS, comandos CLI são reproduzíveis. Pode versionar como bootstrap.sh. Telegram é melhor pra exploração; CLI é melhor pra automação.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Flags principais: <code>--workdir</code> (define cwd, carrega AGENTS.md dali), <code>--no-agent</code> (script puro sem LLM), <code>--deliver telegram</code> (canal), <code>--skill nome</code> (injeta skill). <code>--name backup-diario</code> facilita identificar.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🌍</span>
+            <div><span class="font-medium">Timezone: UTC vs local</span><span class="text-neutral-500 text-sm ml-2">- TZ=America/Sao_Paulo</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Container Docker roda em UTC por padrão. <em>"every 1d at 00:00"</em> dispara à meia-noite UTC, que é 21:00 em Brasília (UTC-3). Para corrigir: <code class="text-blue-400">TZ=America/Sao_Paulo</code> nas env vars do container OU <code>timezone: "America/Sao_Paulo"</code> em config.yaml.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cron rodando 3 horas antes do esperado é confusão garantida. <em>"Backup às 00:00"</em> que dispara às 21:00 do dia anterior bagunça percepção e logs. Configurar timezone certo no início economiza muito retrabalho.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">IANA timezone string: <code>America/Sao_Paulo</code>, <code>America/Bahia</code>, <code>Europe/Lisbon</code>. Após configurar, restart do container e checar com <code>docker exec hermes date</code>.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">✅</span>
+            <div><span class="font-medium">Permissões: always allow git push</span><span class="text-neutral-500 text-sm ml-2">- Confiança recorrente</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Na primeira execução, Hermes vai pedir permissão pra rodar <code>git commit</code> e <code>git push</code>. Marque <em>always allow</em> — é uma ação segura, recorrente, com escopo travado pelo PAT fine-grained.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem <em>always allow</em>, todo cron diário trava esperando você responder o prompt — defeitando o propósito de ser automático. Marcar uma vez resolve permanentemente.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Persistência em <code>~/.hermes/permissions.json</code>. Pode listar permissões aprovadas com <code>hermes permissions list</code>. Revogar uma com <code>hermes permissions revoke ID</code>. Auditar regularmente.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🔍</span>
+            <div><span class="font-medium">Verificação: /cron list, logs, GitHub</span><span class="text-neutral-500 text-sm ml-2">- Confirmar próximo run e push real</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Após criar: <code class="text-blue-400">/cron list</code> mostra job + <code>next_run_at</code>. No primeiro disparo, Hermes responde no canal home com resultado. Conferir no GitHub: novo commit aparece com mensagem do agente.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">"Achar que rodou" é diferente de "ter rodado". Confirmar com fato — commit visível no GitHub — fecha o loop. Se não rodou, logs em <code>~/.hermes/logs/cron.log</code> mostram exatamente o que falhou.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Lock file <code>~/.hermes/cron/.tick.lock</code> previne double-run. <code>~/.hermes/cron/jobs.json</code> tem todo o estado. Histórico de execuções fica na sessão SQLite — pesquisável via <code>session_search</code>.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-6')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-6.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- NAV ENTRE TRILHAS -->
+    <div class="flex flex-col sm:flex-row gap-4 mt-12">
+      <a href="../trilha1/index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Trilha 1: Fundamentos</a>
+      <a href="../trilha3/index.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">Próxima trilha: Pilares →</a>
+    </div>
+  </main>
+
+  <!-- MODAIS -->
+  <div id="modal-2-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.1</span><span class="font-semibold">Contratando VPS</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-2-1.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-2-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.2</span><span class="font-semibold">Docker + auto-deploy</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-2-2.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-2-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.3</span><span class="font-semibold">Provedor e modelo</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-2-3.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-2-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.4</span><span class="font-semibold">Telegram + BotFather</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-2-4.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-2-5" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.5</span><span class="font-semibold">GitHub + config set</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-2-5.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-2-6" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.6</span><span class="font-semibold">Primeiro cron</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-2-6.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Trilha 2 • 2026</p></div>
+  </footer>
+
+  <script>
+    function toggleTopic(button) {
+      const topicItem = button.closest('.topic-item');
+      const explanation = topicItem.querySelector('.topic-explanation');
+      const moduleCard = button.closest('.bg-dark-800');
+      moduleCard.querySelectorAll('.topic-explanation.active').forEach(exp => { if (exp !== explanation) exp.classList.remove('active'); });
+      explanation.classList.toggle('active');
+    }
+    function openModal(modalId) { const modal = document.getElementById(modalId); if (modal) { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal() { document.querySelectorAll('.modal').forEach(modal => modal.classList.add('hidden')); document.body.style.overflow = 'auto'; }
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+  </script>
+</body>
+</html>

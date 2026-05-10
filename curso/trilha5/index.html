@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha 5 - Hermes vs o Mercado | Agente Hermes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    html:not(.dark) .text-teal-400 { color: #0d9488; }
+    html:not(.dark) .bg-teal-500\/20 { background-color: rgba(13,148,136,0.12); }
+    html:not(.dark) .bg-teal-500\/10 { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .border-teal-500\/30 { border-color: rgba(13,148,136,0.25); }
+    html:not(.dark) .hover\:bg-teal-500\/30:hover { background-color: rgba(13,148,136,0.18); }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .group:hover .group-hover\:text-teal-400 { color: #0d9488; }
+    html:not(.dark) .hover\:border-teal-500\/30:hover { border-color: rgba(13,148,136,0.25); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .text-rose-400 { color: #9f1239; }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225,29,72,0.08); }
+
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🪽</span>
+            <span class="font-bold text-lg hidden sm:inline">Agente Hermes</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
+          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">TRILHA 5</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🆚 Hermes vs o Mercado</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Onde Hermes ganha, onde perde e onde combina com a concorrência. Comparações concretas com Claude Code, OpenCode, Codex CLI, Cursor, n8n, LangChain/LangGraph, CrewAI e AutoGen — e como montar a stack híbrida real.</p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Módulos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">36</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">~3h</div><div class="text-xs text-neutral-400">Duração</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Estratégico</div><div class="text-xs text-neutral-400">Nível</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- NAVEGACAO RAPIDA -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="#modulo-5-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold text-sm">5.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-teal-400 transition-colors">🆚 Hermes vs Claude Code</h3>
+          <p class="text-xs text-neutral-400">Gateway, cron, multi-provedor e Kanban</p>
+        </a>
+        <a href="#modulo-5-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold text-sm">5.2</span><span class="text-xs text-neutral-500">~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-teal-400 transition-colors">⌨️ Hermes vs OpenCode / Codex / Cursor</h3>
+          <p class="text-xs text-neutral-400">Os concorrentes diretos no coding</p>
+        </a>
+        <a href="#modulo-5-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold text-sm">5.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-teal-400 transition-colors">🔄 Hermes vs n8n</h3>
+          <p class="text-xs text-neutral-400">Workflows visuais vs raciocínio dinâmico</p>
+        </a>
+        <a href="#modulo-5-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold text-sm">5.4</span><span class="text-xs text-neutral-500">~30 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-teal-400 transition-colors">🔗 Hermes vs LangChain / LangGraph</h3>
+          <p class="text-xs text-neutral-400">Framework Python vs agente pronto</p>
+        </a>
+        <a href="#modulo-5-5" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold text-sm">5.5</span><span class="text-xs text-neutral-500">~30 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-teal-400 transition-colors">👥 Hermes vs CrewAI / AutoGen</h3>
+          <p class="text-xs text-neutral-400">Multi-agente: Kanban vs papéis fixos</p>
+        </a>
+        <a href="#modulo-5-6" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-5 transition-all">
+          <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold text-sm">5.6</span><span class="text-xs text-neutral-500">~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-teal-400 transition-colors">🧩 Como combinar: arquitetura híbrida</h3>
+          <p class="text-xs text-neutral-400">A stack real do dia a dia</p>
+        </a>
+      </div>
+    </section>
+
+    <h2 class="text-2xl font-bold mb-6 pt-8 border-t border-dark-600">Conteúdo detalhado</h2>
+
+    <!-- MODULO 5.1 -->
+    <div id="modulo-5-1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold">5.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">🆚 Hermes vs Claude Code</h3>
+        <p class="text-neutral-400 text-sm">A pergunta que mais aparece: "se eu já uso Claude Code, preciso de Hermes?". Resposta curta: são produtos com nichos distintos. Veja as 5 diferenças que decidem.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">📱</span>
+            <div><span class="font-medium">Gateway de mensagens</span><span class="text-neutral-500 text-sm ml-2">- Hermes 20+, Claude Code só terminal</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes tem gateway nativo para Telegram, Discord, WhatsApp, Slack, iMessage, Signal, Teams, Matrix e mais 12 plataformas. Claude Code roda exclusivamente no terminal — sem gateway de mensagens.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mensageria é o que transforma o agente em "sempre disponível". Sem gateway você só usa quando está no PC. Pra agente proativo via celular, Hermes é a única opção entre os dois.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Gateway = módulo do projeto, não wrapper externo. <code class="text-teal-400">hermes gateway setup</code> roda wizard. Claude Code precisaria de stack extra (bot custom + bridge) pra equivalente.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">⏰</span>
+            <div><span class="font-medium">Cron nativo</span><span class="text-neutral-500 text-sm ml-2">- Hermes tem, Claude Code não</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes inclui agendador de tarefas com entrega direta no canal de mensagem ("todo dia 8h, manda resumo no Telegram"). Claude Code não tem cron embutido — você teria que orquestrar via crontab do sistema.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Tarefas recorrentes (resumos, alertas, auditorias, backups) são onde agente proativo brilha. Sem cron + gateway nativo, o operacional cresce muito.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Hermes cron = jobs que o agente executa em runtime, com LLM raciocinando o resultado. Crontab + Claude Code = você precisa codar o passo de envio + a chamada.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">📚</span>
+            <div><span class="font-medium">Skills persistentes vs CLAUDE.md livre</span><span class="text-neutral-500 text-sm ml-2">- Catálogo indexado vs prompt aberto</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes mantém SKILL.md como documentos YAML estruturados com progressive disclosure (só carrega o que importa pra tarefa atual). Claude Code usa CLAUDE.md e system prompts livres, sem catálogo indexado.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Em projetos pequenos, CLAUDE.md livre é mais simples. Em escala (centenas de procedimentos), o catálogo de skills evita estourar contexto e facilita reuso entre máquinas.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Skills hub = compartilhamento entre usuários. CLAUDE.md = só seu projeto. Hermes carrega skill por demanda; Claude Code carrega CLAUDE.md inteiro toda sessão.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🔌</span>
+            <div><span class="font-medium">Multi-provedor</span><span class="text-neutral-500 text-sm ml-2">- OpenAI, Anthropic, OpenRouter, local</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes conecta a OpenAI, Anthropic, OpenRouter, modelos locais (Ollama/llama.cpp), MiniMax OAuth e Codex OAuth. Claude Code é acoplado ao modelo Claude via API Anthropic.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Multi-provedor importa pra controle de custo, fallback quando uma API cai e privacidade (modelo local). Lock-in num único provedor é risco operacional.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Hermes pode usar Codex OAuth (ChatGPT Plus $20/mês) — barato pra coding. Claude Code = pay-per-token Anthropic ou Claude Pro. Cada um otimiza pra um perfil de gasto.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">📋</span>
+            <div><span class="font-medium">Multi-agente Kanban v0.13.0</span><span class="text-neutral-500 text-sm ml-2">- Hermes coordena workers, Claude Code não</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">v0.13.0 introduz Kanban multi-agente com heartbeat, reclaim e zombie detection. Workers pegam tarefas, marcam status, devolvem pro pool se travarem. Claude Code não tem coordenação multi-agente nativa.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quando uma tarefa é grande demais pra um agente só (ex: refactor multi-repo, processar 1000 emails), você precisa coordenar workers. Sem Kanban, vira gambiarra com filas externas.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Kanban = board de tarefas (To Do / Doing / Done). Heartbeat = worker prova que está vivo. Reclaim = se travou, outro worker pega. Zombie detection = ninguém respondeu, marca pra revisão.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">Conclusão: cenários onde cada um ganha</span><span class="text-neutral-500 text-sm ml-2">- Quando escolher</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes ganha em: assistência 24/7 via mensagem, automações agendadas, usuários não-técnicos no Telegram/WhatsApp, multi-agente Kanban. Claude Code ganha em: raciocínio profundo de código, refactor complexo, review de PR sentado no PC.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Forçar a ferramenta errada gera atrito. Tentar usar Hermes pra hardcore coding com Claude Sonnet 4.5 raciocinando 30 min num PR é frustrante. Tentar usar Claude Code pra cron de marketing também.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Default profissional em 2026: Claude Code no PC + Hermes no Telegram, ambos apontando ao mesmo repo Git. Não é "ou", é "e". Detalhamos a stack híbrida em 5.6.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-5-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-5-1.html" class="px-4 py-2 text-sm bg-teal-600 hover:bg-teal-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 5.2 -->
+    <div id="modulo-5-2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold">5.2</span><span class="text-xs text-neutral-500">~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">⌨️ Hermes vs OpenCode / Codex CLI / Cursor</h3>
+        <p class="text-neutral-400 text-sm">Os três concorrentes diretos no mundo "agente de coding". Cada um com paradigma próprio. E todos podem coexistir com Hermes.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🟢</span>
+            <div><span class="font-medium">Hermes vs OpenCode</span><span class="text-neutral-500 text-sm ml-2">- Generalista vs especialista em código</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">OpenCode é CLI puro de coding open source. Hermes é generalista com gateway, skills hub, memória persistente. Hermes tem skill bundled <code class="text-teal-400">opencode</code> que delega tarefas de coding ao OpenCode CLI — coexistem.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Pra workflow de vida completa (código + comunicação + automação), Hermes é mais amplo. Pra engenharia de software pura, OpenCode foca melhor. Saber a divisão evita escolha errada.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Diferenciais Hermes: gateway 20+ plataformas, skills hub agentskills.io, MEMORY.md/USER.md, multi-provedor com OAuth. OpenCode: foco exclusivo em desenvolvimento de software.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🤖</span>
+            <div><span class="font-medium">Hermes vs OpenAI Codex CLI</span><span class="text-neutral-500 text-sm ml-2">- Codex como provedor opcional</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Codex CLI é o CLI da OpenAI, requer conta OpenAI/ChatGPT. Hermes usa Codex como <em>um dos</em> provedores opcionais via OAuth. E tem skill bundled <code class="text-teal-400">codex</code> que delega tarefas ao Codex CLI como subagente.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Codex via ChatGPT Plus ($20/mês) sai mais barato que pay-per-token Anthropic pra uso pesado. Saber que Hermes consome Codex permite usar a subscription que você já paga.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Codex CLI = terminal-only, sem cron, sem skills, sem gateway. Hermes oferece tudo isso por cima e ainda usa Codex como motor quando você manda. Combinação forte.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🖱️</span>
+            <div><span class="font-medium">Hermes vs Cursor</span><span class="text-neutral-500 text-sm ml-2">- Paradigmas diferentes (IDE vs headless)</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Cursor é IDE com copilot embutido (autocompletion inline, chat lateral). Hermes é agente headless rodando em VPS, respondendo via Telegram. Hermes detecta e respeita <code class="text-teal-400">.cursorrules</code> e <code class="text-teal-400">.cursor/rules/*.mdc</code>.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Não competem diretamente. Cursor é pra desenvolvimento interativo. Hermes é pra automação 24/7 e ambientes sem GUI. Saber que regras de projeto são compartilhadas entre os dois evita duplicação.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Cursor = pago (plano separado). Hermes = open source, custo só da inferência. Mesma <code class="text-teal-400">.cursorrules</code> pode guiar Cursor no PC e Hermes no servidor.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🔄</span>
+            <div><span class="font-medium">Cursor + Hermes coexistindo</span><span class="text-neutral-500 text-sm ml-2">- Rules file compartilhado</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Você usa Cursor sentado no PC (autocomplete, chat inline). Quando precisa que o agente faça algo no servidor (deploy, cron, leitura de email), pede pro Hermes via Telegram. Os dois leem a mesma <code class="text-teal-400">.cursorrules</code>.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Esse fluxo é o sweet spot pra dev solo. Cursor produz código, Hermes opera infra. Sem conflito de regra porque a fonte de verdade é uma só (Git + rules file).</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Convenção: commit das rules → ambos puxam ao iniciar sessão. Memória do Hermes (MEMORY.md) registra o que foi feito; Cursor segue contexto interativo.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🎛️</span>
+            <div><span class="font-medium">Codex CLI como subagente do Hermes</span><span class="text-neutral-500 text-sm ml-2">- Skill bundled "codex"</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes vem com skill <code class="text-teal-400">codex</code> que sabe invocar o Codex CLI como subprocess pra tarefas de código pesadas. Você fala "Hermes, usa Codex pra refatorar esse módulo" e ele orquestra.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Junta o melhor dos dois: Hermes coordena, recebe contexto via Telegram, gerencia memória; Codex executa o trabalho de coding com modelo otimizado. Sem você ter que escolher.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Mesmo padrão funciona com Aider (skill <code class="text-teal-400">aider</code>) e OpenCode (skill <code class="text-teal-400">opencode</code>). O Hermes vira o "controller" que decide qual subagente chamar pra cada tipo de tarefa.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">Decisão: quando usar cada um</span><span class="text-neutral-500 text-sm ml-2">- Árvore prática</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Coding interativo no IDE? Cursor. Coding via terminal? OpenCode ou Codex CLI. Agente proativo via mensagem com automações? Hermes. Tudo junto na rotina? Os quatro coexistem com Hermes orquestrando.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decisão errada gera atrito diário. Decisão certa = você acelera 3x sem ficar trocando de ferramenta toda hora.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Stack típica de dev solo em 2026: Cursor + Codex CLI (subscription Plus) + Hermes (Telegram + cron). 100% cobrado em uma única subscription OpenAI + um VPS barato.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-5-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-5-2.html" class="px-4 py-2 text-sm bg-teal-600 hover:bg-teal-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 5.3 -->
+    <div id="modulo-5-3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold">5.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">🔄 Hermes vs n8n</h3>
+        <p class="text-neutral-400 text-sm">Workflow visual com nós conectados vs linguagem natural com skills. Dois paradigmas opostos — e que se complementam mais do que parecem.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🎨</span>
+            <div><span class="font-medium">Paradigma: visual vs natural</span><span class="text-neutral-500 text-sm ml-2">- Workflows vs skills</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">n8n usa workflows visuais com nós conectados (drag-and-drop, igual Zapier mas open source e auto-hospedável). Hermes usa linguagem natural + skills em Markdown — sem interface de desenho de fluxo.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quem prefere visual e tem fluxos determinísticos vai pra n8n. Quem prefere chat e quer raciocínio adaptativo vai pra Hermes. A escolha define a mentalidade da equipe.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Workflow n8n = sequência de nós (Trigger → HTTP → Code → Webhook). Skill Hermes = procedimento Markdown que o LLM lê e adapta na hora.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🧠</span>
+            <div><span class="font-medium">Raciocínio dinâmico vs sequência fixa</span><span class="text-neutral-500 text-sm ml-2">- LLM decide vs fluxo pré-definido</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes usa LLM para decidir próximos passos em runtime — se algo muda no input, ele adapta. n8n executa a sequência exata que você desenhou — se input quebrar o esperado, o nó falha.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Adaptativo é melhor pra entrada não-estruturada (mensagem do usuário, email, documento livre). Determinístico é melhor pra integração de APIs com schema fixo.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">"Resume esse email e responda no tom da empresa" — Hermes ganha. "Quando webhook X chegar, chama API Y, salva no Postgres, manda Slack" — n8n ganha.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🏗️</span>
+            <div><span class="font-medium">Infraestrutura: leve vs pesada</span><span class="text-neutral-500 text-sm ml-2">- pip install vs DB + webhook server</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">n8n requer banco de dados (Postgres ou SQLite), webhook server, configuração de cada nó. Hermes roda com <code class="text-teal-400">pip install hermes-agent</code> + uma API key — pronto.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Pra começar e validar uma ideia, Hermes sai em 10 min. n8n exige planejamento de infra (DB, backup, secrets). Em produção pesada, a infra do n8n compensa.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Hermes em VPS minúsculo (1GB RAM) já roda. n8n recomenda 2GB+ por causa do DB. Em Hostinger, ambos têm one-click separado.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">📈</span>
+            <div><span class="font-medium">Curva de aprendizado</span><span class="text-neutral-500 text-sm ml-2">- Nós e conectores vs chat</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">n8n requer entender cada nó (HTTP Request, Code, Webhook, IF, Loop, etc), credenciais, expressões. Hermes aceita instruções em linguagem natural — você descreve a tarefa.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Equipe não-técnica adota Hermes em horas. n8n tem barreira de entrada maior (semanas pra dominar). Em compensação, n8n dá controle visual cirúrgico.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">"Pesquise como agendar um cron no Hermes" → ele responde em texto. n8n: você lê doc, arrasta nó "Schedule Trigger", configura cron expression, salva.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🤝</span>
+            <div><span class="font-medium">Hermes + n8n no Hostinger</span><span class="text-neutral-500 text-sm ml-2">- Coexistência prática</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hostinger lista n8n como aplicação one-click separada do Hermes. Os dois podem coexistir no mesmo VPS, com Hermes como camada de inteligência sobre automações n8n.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Combinação real: n8n executa workflow visual (sincroniza CRM, dispara webhook). Hermes adiciona raciocínio adaptativo (resume, classifica, decide tom). Pipe de webhook entre os dois.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">n8n chama webhook do Hermes via HTTP node. Hermes recebe via gateway "browser/http", processa, devolve. Você ganha visualização do n8n + inteligência do Hermes.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">Quando escolher cada um</span><span class="text-neutral-500 text-sm ml-2">- Árvore de decisão</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">n8n: workflows determinísticos pesados (ETL, sync entre 5+ sistemas, webhooks com schema rígido), audit trail visual, equipe ops/marketing. Hermes: inteligência adaptativa (mensagens humanas, decisões com contexto), automação pessoal, equipe pequena.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Forçar Hermes pra ETL repetitivo é caro (LLM em cada execução). Forçar n8n pra "respondam emails no tom da empresa" é improdutivo (regex não cobre nuance).</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Combo recomendado: n8n na camada de integração + Hermes na camada de raciocínio. Webhook entre os dois é colinha simples.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-5-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-5-3.html" class="px-4 py-2 text-sm bg-teal-600 hover:bg-teal-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 5.4 -->
+    <div id="modulo-5-4" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold">5.4</span><span class="text-xs text-neutral-500">~30 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">🔗 Hermes vs LangChain / LangGraph</h3>
+        <p class="text-neutral-400 text-sm">Framework Python para construir aplicação LLM vs agente pronto para uso. Não competem — atendem perfis diferentes.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">📐</span>
+            <div><span class="font-medium">Nível de abstração</span><span class="text-neutral-500 text-sm ml-2">- Framework vs agente pronto</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">LangChain/LangGraph são frameworks Python para desenvolvedores construírem aplicações LLM. Hermes é agente pronto com instalador, gateway e interface — você baixa e usa.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quem precisa embedar IA em produto custom usa LangChain. Quem precisa de agente operável imediatamente usa Hermes. Confundir os dois gera projeto que nunca termina.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">LangChain te entrega blocos de Lego (LLM, Tool, Memory, Retriever, Chain, Agent). Hermes te entrega o brinquedo montado e pronto pra rodar via Telegram.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">👤</span>
+            <div><span class="font-medium">Usuário alvo</span><span class="text-neutral-500 text-sm ml-2">- Dev que constrói app vs operador</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">LangGraph: desenvolvedor Python que quer definir grafos de agentes em código. Hermes: usuário (técnico ou não) que quer um agente funcionando via <code class="text-teal-400">hermes</code> no terminal ou Telegram.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada um se vende pra quem se beneficia. Forçar não-dev a montar grafo LangGraph é frustrante. Forçar dev profissional a operar só em chat é limitante pra produto.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">LangGraph = control flow explícito (nodes, edges, state). Hermes = control flow implícito (LLM decide). Trade-off entre controle e simplicidade.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">📝</span>
+            <div><span class="font-medium">Skills (Markdown) vs chains/tools (Python)</span><span class="text-neutral-500 text-sm ml-2">- Texto vs código</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">SKILL.md são procedimentos em Markdown — qualquer um edita no editor. LangChain usa chains e tools em Python — muito mais poder programático, mas requer código e testes.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Markdown é leve mas limitado a linguagem natural. Python é poderoso mas exige skill técnica. Escolha alinhada ao perfil do mantenedor.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Skill: progressive disclosure, YAML front matter, lido pelo LLM em runtime. Tool LangChain: função Python tipada, executada determinísticamente.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🧩</span>
+            <div><span class="font-medium">Extensibilidade</span><span class="text-neutral-500 text-sm ml-2">- 500+ integrações vs plugin system</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">LangChain tem ecosystem de 500+ integrações (vector stores, retrievers, parsers, document loaders). Hermes tem plugin system para hooks + skills hub com centenas de skills.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Pra RAG complexo com 10 vector stores e parsers exóticos, LangChain ganha. Pra agente operacional com gateway de mensagem e cron, Hermes ganha. Cada um especializa onde investe.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Hermes plugin = hook em ciclo de vida (pre-tool, post-message). Skill = procedimento. LangChain integration = adapter pra serviço externo.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🚀</span>
+            <div><span class="font-medium">Deploy</span><span class="text-neutral-500 text-sm ml-2">- Standalone vs servidor próprio</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes roda standalone com gateway nativo. LangChain requer servidor próprio (FastAPI, Flask, LangServe), infraestrutura de hosting, autenticação custom.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hermes em produção em 1h. LangChain em produção é projeto de semanas (auth, frontend, observabilidade, escala). Custo de tempo é diferente.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">LangServe ajuda a expor LangChain como API. Hermes já é a API + interface + persistência. Trade-off: customização vs velocidade.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">Quando escolher</span><span class="text-neutral-500 text-sm ml-2">- App embedado vs agente pessoal</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">LangChain/LangGraph: você está construindo um SaaS, app interno ou produto que precisa de IA embarcada com control flow customizado. Hermes: você quer um agente operacional funcionando hoje.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decidir errado custa meses. Time-to-value Hermes = horas. Time-to-value LangChain = semanas/meses. Avalie o que você está construindo.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Combinação avançada: você pode chamar LangChain de dentro de uma skill ou plugin do Hermes pra um nó específico. Hermes vira o "frontend" e LangChain o "backend de raciocínio".</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-5-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-5-4.html" class="px-4 py-2 text-sm bg-teal-600 hover:bg-teal-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 5.5 -->
+    <div id="modulo-5-5" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold">5.5</span><span class="text-xs text-neutral-500">~30 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">👥 Hermes vs CrewAI / AutoGen</h3>
+        <p class="text-neutral-400 text-sm">Multi-agente é tema da moda. CrewAI usa papéis fixos, AutoGen usa conversação multi-agente, Hermes v0.13.0 usa Kanban com workers dinâmicos. Qual ganha em qual cenário.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🎭</span>
+            <div><span class="font-medium">CrewAI: papéis fixos vs Kanban dinâmico</span><span class="text-neutral-500 text-sm ml-2">- Researcher/Writer vs workers</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">CrewAI coordena múltiplos agentes com papéis fixos (Researcher, Writer, Editor, etc) definidos em código. Hermes v0.13.0 usa Kanban com workers dinâmicos que pegam tarefas conforme disponibilidade.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Papel fixo é bom pra pipeline previsível (pesquisa → escrita → revisão). Worker dinâmico é melhor pra fila de tarefas heterogêneas onde quem está livre pega o próximo.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">CrewAI = "uma empresa com cargos". Hermes Kanban = "uma fila com trabalhadores intercambiáveis". Os dois resolvem multi-agente, mas com filosofias opostas.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">💾</span>
+            <div><span class="font-medium">Persistência</span><span class="text-neutral-500 text-sm ml-2">- SQLite + FTS5 vs sem persistência</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes persiste sessões em SQLite com índice full-text FTS5 — qualquer conversa antiga é pesquisável. CrewAI não tem sistema de persistência equivalente por padrão.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem histórico, multi-agente vira execução one-shot. Você perde contexto entre runs. Pra agente operacional 24/7, persistência é diferencial enorme.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Tool <code class="text-teal-400">session_search</code> consulta histórico. CrewAI requer você implementar storage manualmente (Redis, Postgres, etc).</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🎮</span>
+            <div><span class="font-medium">Interface</span><span class="text-neutral-500 text-sm ml-2">- Framework Python vs TUI + CLI + gateway</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">CrewAI é framework Python puro — você escreve script, executa. Hermes tem TUI (terminal interativo), CLI e gateway de mensagens.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Pra produção que rodam pipelines automatizados, framework basta. Pra agente que recebe input humano em runtime via Telegram, framework não cobre.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">CrewAI bom pra batch jobs. Hermes bom pra ambiente online com interação. Você pode chamar uma "crew" de dentro do Hermes pra etapas específicas.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">💬</span>
+            <div><span class="font-medium">AutoGen: conversação vs ownership</span><span class="text-neutral-500 text-sm ml-2">- Diálogo entre agentes vs Kanban</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">AutoGen foca em conversações multi-agente onde agentes dialogam entre si até chegar a uma resposta. Hermes Kanban tem ownership de tarefa — um worker pega, executa, devolve.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Conversação é boa pra resolver problema com debate (cada agente questiona o outro). Ownership é melhor pra fila de trabalho com SLA (quem pega, é responsável).</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">AutoGen = "comitê deliberando". Hermes = "kanban de equipe". AutoGen pode entrar em loop (debate infinito); Hermes tem heartbeat e zombie detection.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🏢</span>
+            <div><span class="font-medium">Integração enterprise</span><span class="text-neutral-500 text-sm ml-2">- Azure/Teams vs Teams via gateway</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">AutoGen tem integração com Azure OpenAI e Microsoft Teams nativamente. Hermes tem integração com Microsoft Teams via gateway, sem dependência Azure obrigatória.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Empresa Microsoft-shop com Azure OpenAI tende a AutoGen. Empresa multi-cloud ou que quer manter portabilidade tende a Hermes.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Ambos MIT. AutoGen tem suporte corporativo Microsoft. Hermes tem comunidade NousResearch + fork <code class="text-teal-400">openclaw</code> migrado.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">Quando escolher</span><span class="text-neutral-500 text-sm ml-2">- Pipeline codificado vs operável</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">CrewAI/AutoGen: você quer pipeline multi-agente codificado, com papéis estáveis e execução em batch. Hermes: você quer agente operável via mensagem, com workers que escalam dinamicamente.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Pra pesquisa acadêmica em multi-agente, AutoGen é referência. Pra produção operacional pessoal/pequena equipe, Hermes ganha em ergonomia.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Avalie quem opera o sistema. Dev Python sentado no PC? CrewAI/AutoGen funciona. Operador em Telegram precisando agendar tarefa? Hermes ganha de longe.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-5-5')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-5-5.html" class="px-4 py-2 text-sm bg-teal-600 hover:bg-teal-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 5.6 -->
+    <div id="modulo-5-6" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2"><span class="text-teal-400 font-bold">5.6</span><span class="text-xs text-neutral-500">~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">🧩 Como combinar: arquitetura híbrida real</h3>
+        <p class="text-neutral-400 text-sm">A pergunta certa não é "qual escolher", é "como combinar". A stack do dia a dia em 2026 mistura várias dessas ferramentas — desde que você saiba onde cada uma encaixa.</p>
+      </div>
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🏆</span>
+            <div><span class="font-medium">Stack recomendada</span><span class="text-neutral-500 text-sm ml-2">- Hermes + Claude Code + GitHub</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes (proativo via msg, cron, gateway) + Claude Code (cockpit de coding sentado no PC) + GitHub (fonte de verdade pra contexto, skills, configs). Os três apontam ao mesmo repo.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada um cobre uma fricção diferente: Hermes pra tarefas em movimento, Claude Code pra raciocínio profundo, GitHub pra estado compartilhado. Sinergia maior que escolher um único.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Repo central tem CLAUDE.md, AGENTS.md, .hermes.md, skills/, soul.md. Cada agente lê seu próprio formato. Commits viram source of truth.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🔗</span>
+            <div><span class="font-medium">Apontar Claude Code e Hermes ao mesmo repo</span><span class="text-neutral-500 text-sm ml-2">- CLAUDE.md vs .hermes.md</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">CLAUDE.md fica na raiz do repo, lido pelo Claude Code. .hermes.md (ou MEMORY.md/USER.md) fica no mesmo repo, lido pelo Hermes. Cada um respeita seu próprio formato sem conflito.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Tentar fazer um único arquivo pra ambos vira bagunça. Cada agente tem convenção própria; respeitar isso simplifica manutenção.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Conteúdo comum (overview do projeto, regras gerais) pode estar em README.md e ambos lêem. Específico vai no arquivo do agente.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🔁</span>
+            <div><span class="font-medium">n8n + Hermes</span><span class="text-neutral-500 text-sm ml-2">- Workflow visual + inteligência adaptativa</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">n8n executa workflow visual determinístico (sincroniza CRM, dispara webhook). Hermes adiciona inteligência adaptativa onde precisa de raciocínio (resumir email, classificar ticket, ajustar tom).</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você economiza custo de inferência (n8n faz a parte determinística sem LLM) e aproveita raciocínio onde dá retorno. Combo barato e poderoso.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Padrão: n8n recebe trigger, decide se precisa de LLM, chama webhook do Hermes via HTTP, recebe resposta, continua o workflow. Hermes vira "função de raciocínio".</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🐍</span>
+            <div><span class="font-medium">LangChain dentro do Hermes</span><span class="text-neutral-500 text-sm ml-2">- Plugin custom</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes tem plugin system. Você cria plugin Python que importa LangChain e expõe como ferramenta. Hermes chama a ferramenta quando precisa de RAG complexo, parsing de documento ou retriever especializado.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você ganha o ecossistema LangChain (vector stores, document loaders) sem ter que construir o agente do zero. Hermes vira a casca operacional, LangChain o miolo de retrieval.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Padrão: skill <code class="text-teal-400">rag-search</code> chama plugin <code class="text-teal-400">langchain-retriever</code> que devolve trechos relevantes. Hermes raciocina em cima.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🤖</span>
+            <div><span class="font-medium">Codex CLI ou Aider como subagente</span><span class="text-neutral-500 text-sm ml-2">- Skill bundled</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Skills bundled <code class="text-teal-400">codex</code> e <code class="text-teal-400">aider</code> permitem ao Hermes invocar Codex CLI ou Aider como subprocess pra tarefas de coding pesadas. Hermes coordena, eles executam.</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Codex e Aider têm modelos otimizados pra código com integração git superior. Em vez de Hermes fazer coding mediano, ele delega pra ferramenta especializada.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Padrão: você manda mensagem "refatora módulo X usando Aider". Hermes lê contexto, chama Aider via skill, recebe diff, mostra resumo no Telegram.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">⚠️</span>
+            <div><span class="font-medium">Anti-pattern: forçar substituição</span><span class="text-neutral-500 text-sm ml-2">- Hermes ≠ Claude Code, e vice-versa</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-teal-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Tentar substituir Claude Code por Hermes em coding pesado é frustrante (modelo via Codex Plus não é Sonnet 4.5). Tentar substituir Hermes por Claude Code em automação proativa também (sem cron, sem gateway).</p></div>
+              <div><span class="text-teal-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada ferramenta foi otimizada pra um nicho. Forçar fora dele = trabalho extra, qualidade baixa, frustração diária. Aceitar a divisão = stack mais produtiva.</p></div>
+              <div><span class="text-teal-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Regra: cada agente faz aquilo que ele faz melhor. Hermes orquestra. Claude Code raciocina código. n8n integra serviços. LangChain busca em vector store. Aider commita diffs limpos.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-5-6')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-5-6.html" class="px-4 py-2 text-sm bg-teal-600 hover:bg-teal-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- NAV ENTRE TRILHAS -->
+    <div class="flex flex-col sm:flex-row gap-4 mt-12">
+      <a href="../trilha4/index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Trilha 4: Segurança</a>
+      <a href="../trilha6/index.html" class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors">Próxima trilha: Escala →</a>
+    </div>
+  </main>
+
+  <!-- MODAIS -->
+  <div id="modal-5-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-teal-400 font-bold">5.1</span><span class="font-semibold">Hermes vs Claude Code</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-5-1.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-5-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-teal-400 font-bold">5.2</span><span class="font-semibold">Hermes vs OpenCode/Codex/Cursor</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-5-2.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-5-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-teal-400 font-bold">5.3</span><span class="font-semibold">Hermes vs n8n</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-5-3.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-5-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-teal-400 font-bold">5.4</span><span class="font-semibold">Hermes vs LangChain/LangGraph</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-5-4.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-5-5" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-teal-400 font-bold">5.5</span><span class="font-semibold">Hermes vs CrewAI/AutoGen</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-5-5.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-5-6" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-teal-400 font-bold">5.6</span><span class="font-semibold">Arquitetura híbrida</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-5-6.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Trilha 5 • 2026</p></div>
+  </footer>
+
+  <script>
+    function toggleTopic(button) {
+      const topicItem = button.closest('.topic-item');
+      const explanation = topicItem.querySelector('.topic-explanation');
+      const moduleCard = button.closest('.bg-dark-800');
+      moduleCard.querySelectorAll('.topic-explanation.active').forEach(exp => { if (exp !== explanation) exp.classList.remove('active'); });
+      explanation.classList.toggle('active');
+    }
+    function openModal(modalId) { const modal = document.getElementById(modalId); if (modal) { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal() { document.querySelectorAll('.modal').forEach(modal => modal.classList.add('hidden')); document.body.style.overflow = 'auto'; }
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+  </script>
+</body>
+</html>

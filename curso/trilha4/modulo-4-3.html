@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.3 Menor privilégio + contas separadas | Agente Hermes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .bg-amber-500\/20 { background-color: rgba(217,119,6,0.12); }
+    html:not(.dark) .bg-amber-500\/10 { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .border-amber-500\/30 { border-color: rgba(217,119,6,0.25); }
+    html:not(.dark) .bg-amber-900\/20 { background-color: rgba(146,64,14,0.08); }
+    html:not(.dark) .bg-amber-900\/30 { background-color: rgba(146,64,14,0.10); }
+    html:not(.dark) .bg-amber-900\/40 { background-color: rgba(146,64,14,0.12); }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .bg-blue-900\/20 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) .text-red-400 { color: #b91c1c; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(185,28,28,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(185,28,28,0.25); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.9em; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
+          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
+          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-amber-400">Início</a><span>/</span>
+      <a href="index.html" class="hover:text-amber-400">Trilha 4</a><span>/</span>
+      <span class="text-amber-400">Módulo 4.3</span>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">MÓDULO 4.3</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🪪 Princípio do menor privilégio + contas separadas</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Trate o agente como funcionário novo: dia 1 com escopos mínimos. Email dedicado, chaves nomeadas, cartão limitado, permissões granulares e isolamento entre Hermes diferentes.</p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">25</div><div class="text-xs text-neutral-400">Minutos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Inter.</div><div class="text-xs text-neutral-400">Nível</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Concept</div><div class="text-xs text-neutral-400">Tipo</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">👷 Trate como funcionário novo</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        A mentalidade que destrava tudo: Hermes não é "robô infalível", é <strong class="text-amber-400">funcionário recém-contratado com latência baixa e zero malícia, mas também zero contexto</strong>. Você não dá acesso total a um estagiário no dia 1. Mesma lógica.
+      </p>
+      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-amber-400 mb-4">📈 Confiança gradual (exemplo de timeline)</h3>
+        <div class="space-y-4 text-neutral-300">
+          <div class="flex items-start space-x-3"><span class="font-bold text-amber-400 w-20 flex-shrink-0">Dia 1:</span><div>Ler arquivos no repo, mandar mensagem no Telegram, consultar APIs públicas. Sem write em nada.</div></div>
+          <div class="flex items-start space-x-3"><span class="font-bold text-amber-400 w-20 flex-shrink-0">Semana 2:</span><div>Commitar em branch, abrir PR, escrever em arquivos do repo. Nunca push direto na main.</div></div>
+          <div class="flex items-start space-x-3"><span class="font-bold text-amber-400 w-20 flex-shrink-0">Mês 1:</span><div>Deploy em ambiente de staging. Acesso a banco de dados read-only. Cron de baixo risco.</div></div>
+          <div class="flex items-start space-x-3"><span class="font-bold text-amber-400 w-20 flex-shrink-0">Mês 3:</span><div>Produção sob revisão. Banco read-write em tabelas específicas. Crons que afetam clientes.</div></div>
+        </div>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🎯</span>Por que funciona</h3>
+        <p class="text-neutral-300 text-sm">Erro do agente nas primeiras semanas é prejuízo limitado. Erro com permissão total no primeiro dia pode quebrar produção, corromper banco, vazar dados. Confiança expandida gradualmente é confiança ganha.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">📧 Contas separadas</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Crie identidade nova para o agente. <strong class="text-amber-400">Nunca</strong> use sua conta principal (Gmail pessoal, GitHub principal). Se o agente for comprometido, você quer blast radius mínimo.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
+          <h4 class="font-bold text-amber-400 mb-4">📬 Email dedicado</h4>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li class="flex items-start space-x-2"><span class="text-amber-400">•</span><span><strong>AgentMail</strong> — serviço criado especificamente pra agentes</span></li>
+            <li class="flex items-start space-x-2"><span class="text-amber-400">•</span><span><strong>Gmail dedicado</strong> — ex: <code>seunome.hermes@gmail.com</code></span></li>
+            <li class="flex items-start space-x-2"><span class="text-amber-400">•</span><span><strong>ProtonMail</strong> — se quiser maior privacidade</span></li>
+          </ul>
+        </div>
+        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+          <h4 class="font-bold text-blue-400 mb-4">🐙 GitHub do agente</h4>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Conta GitHub separada com email do agente</span></li>
+            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Adicionado como collaborator nos repos específicos</span></li>
+            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Nunca dono dos repos importantes</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Por que separar</h3>
+        <p class="text-neutral-300 text-sm">Se a conta do agente for comprometida, sua identidade pessoal, recovery de bancos, 2FA de tudo — fica intacto. O atacante pega só o que o agente tinha acesso. Você revoga, troca chaves e segue.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">🏷️ Chaves nomeadas por agente</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        OpenRouter, OpenAI, Anthropic, GitHub — todos permitem nomear chaves. Use isso. Uma chave por agente, com nome descritivo. Quando algo dá errado, você sabe quem queimou tokens, quem foi comprometido, qual revogar.
+      </p>
+      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-amber-400 mb-4">🏷️ Padrão de nomenclatura</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><code class="text-amber-400">hermes-pessoal</code> — agente do dia a dia, baixo risco</li>
+          <li><code class="text-amber-400">hermes-marketing</code> — automação de redes sociais, conteúdo</li>
+          <li><code class="text-amber-400">hermes-financeiro</code> — relatórios, alertas, contas separadas</li>
+          <li><code class="text-amber-400">hermes-cliente-acme</code> — agente exclusivo de um cliente</li>
+          <li><code class="text-amber-400">hermes-experimental</code> — testes, skills novas, limite baixo</li>
+        </ul>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span>Benefícios do isolamento</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Auditoria de gasto granular</strong> — você vê exatamente qual agente queimou X dólares</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Revogação cirúrgica</strong> — apaga uma chave sem afetar os outros</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Limites independentes</strong> — agente experimental tem cap de $10/mês, pessoal tem $50</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Logs separados</strong> — analytics do provedor mostra padrão de cada agente</span></li>
+        </ul>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Não compartilhe</h3>
+        <p class="text-neutral-300 text-sm">"Vou usar a mesma chave nos dois agentes pra economizar tempo" → não. É exatamente o atalho que se paga caro depois. Um vazamento contamina os outros, auditoria fica embaralhada, revogação derruba tudo.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">💳 Cartão de crédito limitado</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Loop infinito de uma skill mal escrita pode queimar centenas de dólares numa noite. Hard cap impede o estrago. Alerta avisa antes. <strong class="text-amber-400">Sempre use cartão virtual com limite baixo</strong> para serviços pay-per-token.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
+          <h4 class="font-bold text-amber-400 mb-4">💳 Cartão virtual</h4>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li class="flex items-start space-x-2"><span class="text-amber-400">•</span><span><strong>Nubank Ultravioleta</strong> — virtual com limite custom</span></li>
+            <li class="flex items-start space-x-2"><span class="text-amber-400">•</span><span><strong>Revolut</strong> — disposable cards</span></li>
+            <li class="flex items-start space-x-2"><span class="text-amber-400">•</span><span><strong>Privacy.com</strong> (US) — cards descartáveis com cap mensal</span></li>
+            <li class="flex items-start space-x-2"><span class="text-amber-400">•</span><span><strong>BTG Mais</strong> — virtual com limite ajustável</span></li>
+          </ul>
+        </div>
+        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+          <h4 class="font-bold text-blue-400 mb-4">🚦 Hard cap nos provedores</h4>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>OpenRouter:</strong> monthly limit por chave</span></li>
+            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>OpenAI:</strong> usage limits por project</span></li>
+            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Anthropic:</strong> spending threshold por workspace</span></li>
+            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Hostinger:</strong> auto-shutdown da VPS quando estora budget</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-amber-400 mb-4">📊 Estratégia em 3 níveis</h3>
+        <ol class="space-y-3 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-3"><span class="font-bold text-amber-400">1.</span><div><strong>Alerta</strong> em 50% do budget — você é avisado</div></li>
+          <li class="flex items-start space-x-3"><span class="font-bold text-amber-400">2.</span><div><strong>Soft limit</strong> em 80% — agente é avisado, ainda funciona</div></li>
+          <li class="flex items-start space-x-3"><span class="font-bold text-amber-400">3.</span><div><strong>Hard cap</strong> em 100% — chave para de aceitar requests</div></li>
+        </ol>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>História real</h3>
+        <p class="text-neutral-300 text-sm">Skill mal escrita entrou em loop chamando GPT-4 a cada 100ms. Sem hard cap, queimou $800 em 4 horas durante a madrugada. Com hard cap em $50, teria parado em 15 minutos com perda de $50. Use hard cap.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">✋ Permissões granulares: once / session / always</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Quando o Hermes pede para rodar comando ou usar tool sensível, ele oferece três níveis de aprovação. Cada um tem trade-off entre segurança e fricção. Saber qual usar quando é metade da disciplina operacional.
+      </p>
+      <div class="space-y-4 mb-6">
+        <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
+          <h4 class="font-bold text-amber-400 mb-2">🔒 Once (uma vez)</h4>
+          <p class="text-neutral-300 text-sm mb-2">Aprova só essa execução específica. Próxima vez pergunta de novo.</p>
+          <p class="text-neutral-400 text-xs"><strong>Use quando:</strong> comandos destrutivos (<code>rm -rf</code>, <code>git push --force</code>), mudanças em produção, ações irreversíveis.</p>
+        </div>
+        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+          <h4 class="font-bold text-blue-400 mb-2">⏱️ Session (sessão atual)</h4>
+          <p class="text-neutral-300 text-sm mb-2">Aprova até a sessão acabar. Quando você reinicia, pergunta de novo.</p>
+          <p class="text-neutral-400 text-xs"><strong>Use quando:</strong> trabalho focado em uma tarefa, comandos da mesma família repetidos, instalações de pacote durante setup.</p>
+        </div>
+        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+          <h4 class="font-bold text-red-400 mb-2">♾️ Always (sempre)</h4>
+          <p class="text-neutral-300 text-sm mb-2">Aprova permanentemente. Vira backdoor sem mais perguntas. <strong>Cuidado.</strong></p>
+          <p class="text-neutral-400 text-xs"><strong>Use quando:</strong> comandos de leitura puros (<code>ls</code>, <code>cat</code>, <code>git status</code>), tools que você confia 100% (envio de Telegram pra você mesmo).</p>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-amber-400 mb-4">🎯 Regra prática</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><strong class="text-amber-400">Leitura</strong> (cat, ls, git status, curl GET) → <strong>always</strong></li>
+          <li><strong class="text-amber-400">Escrita controlada</strong> (git commit, criar arquivo) → <strong>session</strong></li>
+          <li><strong class="text-amber-400">Destrutivo</strong> (rm, push --force, drop table) → <strong>once</strong></li>
+          <li><strong class="text-amber-400">Externo com custo</strong> (criar VM, comprar API credits) → <strong>once</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🔀 Multi-agente = múltiplas chaves</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Cada Hermes (pessoal, marketing, financeiro) deve ser <strong class="text-amber-400">silo</strong>. Container separado, volume separado, .env separado, chaves separadas, perfil de Telegram/Discord separado. Compromisso de um não cascateia.
+      </p>
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center"><span class="mr-2">📁</span>Layout em disco</h3>
+        <pre class="bg-dark-900 rounded p-4 text-sm text-amber-400 overflow-x-auto"><code>/home/user/
+├── hermes-pessoal/
+│   ├── docker-compose.yml
+│   └── data/.hermes/      → /root/.hermes do container
+├── hermes-marketing/
+│   ├── docker-compose.yml
+│   └── data/.hermes/
+└── hermes-financeiro/
+    ├── docker-compose.yml
+    └── data/.hermes/</code></pre>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">🧪 docker-compose por agente</h3>
+        <pre class="bg-dark-900 rounded p-4 text-sm text-blue-400 overflow-x-auto"><code>services:
+  hermes-pessoal:
+    image: nousresearch/hermes-agent:latest
+    container_name: hermes-pessoal
+    volumes:
+      - ./data/.hermes:/root/.hermes
+    restart: unless-stopped</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-amber-400 mb-4">📋 Checklist de isolamento</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Containers diferentes (<code>container_name</code> distintos)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Volumes diferentes (cada um aponta pra seu <code>~/.hermes-X</code>)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Chaves de API diferentes (uma por agente)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Bots de Telegram diferentes (um por agente)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Email/GitHub diferentes (quando faz sentido)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Documentar tudo em <code>SECURITY.md</code> no repo central</span></li>
+        </ul>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Documente</h3>
+        <p class="text-neutral-300 text-sm">Crie um <code>SECURITY.md</code> no repo central com: nome do agente, propósito, chaves usadas, escopo de cada chave, dono humano responsável, data da última rotação. Em 6 meses você não lembra.</p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-amber-900/40 via-dark-800 to-dark-800 rounded-xl border border-amber-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
+        <div class="space-y-3 mb-8">
+          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Trate o agente como funcionário novo</strong><span class="text-neutral-400"> — confiança gradual, escopo expandido conforme prova.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Email e GitHub dedicados ao agente</strong><span class="text-neutral-400"> — nunca a sua identidade principal.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Uma chave nomeada por agente</strong><span class="text-neutral-400"> — auditoria, revogação e limites granulares.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Cartão virtual com hard cap mensal</strong><span class="text-neutral-400"> — protege contra loop infinito caro.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Permissões: leitura always, escrita session, destrutivo once</strong><span class="text-neutral-400"> — disciplina mínima diária.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Multi-agente = silos completos</strong><span class="text-neutral-400"> — containers, volumes, chaves, bots — tudo separado.</span></div></div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-amber-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">4.4 - 📋 Auditoria recorrente + skill semanal</p></div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="modulo-4-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
+          <a href="modulo-4-4.html" class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors">Próximo Módulo →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 4.3 • 2026</p></div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+  </script>
+</body>
+</html>

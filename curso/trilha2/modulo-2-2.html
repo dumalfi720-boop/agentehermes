@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2 Docker + auto-deploy | Agente Hermes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .bg-blue-900\/20 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .bg-blue-900\/30 { background-color: rgba(37,99,235,0.10); }
+    html:not(.dark) .bg-blue-900\/40 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) .text-red-400 { color: #b91c1c; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(185,28,28,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(185,28,28,0.25); }
+    html:not(.dark) .bg-emerald-900\/20 { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.9em; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
+          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
+          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-blue-400">Início</a><span>/</span>
+      <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
+      <span class="text-blue-400">Módulo 2.2</span>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.2</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🐳 Instalação Docker + auto-deploy do Hermes</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Por que rodar dentro de container, como subir o Hermes via docker compose, comandos do dia-a-dia e como atualizar sem perder memória nem skills.</p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Prático</div><div class="text-xs text-neutral-400">Nível</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Setup</div><div class="text-xs text-neutral-400">Tipo</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">📦 Por que rodar Docker</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Você poderia instalar o Hermes direto no Ubuntu com <code class="text-blue-400">pip install hermes-agent</code>. Vai funcionar. <strong class="text-blue-400">Mas vai virar pesadelo</strong> assim que você quiser rodar 2 perfis em paralelo, atualizar o Python ou desinstalar limpo. Docker resolve isso de uma vez.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎁</span>O que Docker entrega ao Hermes</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><strong class="text-blue-400">Isolamento:</strong> filesystem próprio, dependências próprias, .env próprio. Não polui o host.</li>
+          <li><strong class="text-blue-400">Multi-agente:</strong> rodar pessoal + marketing + financeiro lado a lado, cada um com chaves diferentes.</li>
+          <li><strong class="text-blue-400">Atualização atômica:</strong> <code>docker compose pull && up -d</code> troca a imagem inteira sem mexer em nada do host.</li>
+          <li><strong class="text-blue-400">Reprodutibilidade:</strong> mesmo <code>docker-compose.yml</code> sobe agente idêntico em qualquer VPS.</li>
+          <li><strong class="text-blue-400">Rollback:</strong> deu errado? Volta pra imagem anterior em 30 segundos.</li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🧠</span>Mental model</h3>
+        <p class="text-neutral-300 text-sm"><strong>Imagem</strong> = template congelado, vem do Docker Hub. <strong>Container</strong> = imagem em execução, descartável. <strong>Volume</strong> = pasta persistente fora do container — é onde memória, skills e SQLite vivem. Atualizar a imagem destrói o container, mas o volume permanece. Se você botou tudo no volume, a atualização é zero-loss.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">⬇️ Instalar Docker no Ubuntu</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        A forma certa em 2026: <strong class="text-blue-400">script oficial da Docker</strong> ou <strong class="text-blue-400">app one-click do Hostinger</strong>. Evite <code>apt install docker.io</code> — pacote do Ubuntu costuma estar 6+ meses atrasado e quase nunca traz o compose plugin v2.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">📜 Instalação via script oficial</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Conectado como hermes (com sudo)
+curl -fsSL https://get.docker.com | sudo sh
+
+# Adicionar usuário ao grupo docker (rodar sem sudo)
+sudo usermod -aG docker $USER
+
+# Logout e login pra ativar grupo (ou: newgrp docker)
+exit
+ssh hermes@SEU_IP
+
+# Verificar instalação
+docker --version
+docker compose version  # nota: SEM hífen
+docker run hello-world</code></pre>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Pegadinha do compose v1 vs v2</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>v1 (descontinuado):</strong> <code>docker-compose</code> (com hífen), Python.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><strong>v2 (atual):</strong> <code>docker compose</code> (sem hífen), Go, plugin do Docker Engine.</span></li>
+          <li><strong class="text-red-400">Tutoriais antigos</strong> usam v1 e quebram silenciosamente. Sempre use o v2.</li>
+        </ul>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Atalho Hostinger</h3>
+        <p class="text-neutral-300 text-sm">No painel da Hostinger, em VPS → Marketplace, "Docker" é one-click. Sobe Ubuntu 24.04 + Docker Engine + Compose v2 já configurados. Pula os passos manuais. Útil pra primeira vez.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">📜 docker-compose.yml para Hermes</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Esse é o arquivo que orquestra tudo. <strong class="text-blue-400">Volume bind mount</strong> garante persistência. <strong class="text-blue-400">env_file</strong> isola secrets. <strong class="text-blue-400">restart policy</strong> traz o agente de volta após reboot. <strong class="text-blue-400">TZ</strong> evita pegadinha de horário.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">📄 docker-compose.yml mínimo</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400">services:
+  hermes:
+    image: nousresearch/hermes-agent:latest
+    container_name: hermes
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    env_file: .env
+    environment:
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ~/.hermes:/root/.hermes
+    networks:
+      - hermes-net
+
+networks:
+  hermes-net:
+    driver: bridge</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-4">🔍 Decifrando linha por linha</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><code class="text-emerald-400">image:</code> qual versão do Hermes baixar. <code>:latest</code> pega sempre a mais nova.</li>
+          <li><code class="text-emerald-400">restart: unless-stopped:</code> sobe sozinho após reboot, mas não reinicia se você parou manualmente.</li>
+          <li><code class="text-emerald-400">tty + stdin_open:</code> habilita <code>docker exec -it hermes hermes</code> com TUI completa.</li>
+          <li><code class="text-emerald-400">env_file: .env:</code> lê variáveis do .env do host pra dentro do container.</li>
+          <li><code class="text-emerald-400">volumes ~/.hermes:/root/.hermes:</code> pasta do host vira pasta do container — persistência.</li>
+          <li><code class="text-emerald-400">TZ=America/Sao_Paulo:</code> ajusta timezone do container (default é UTC).</li>
+        </ul>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Erros comuns nesse arquivo</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><strong>Esquecer o volume:</strong> recriou o container? Memória, skills, SQLite — tudo perdido.</li>
+          <li><strong>Path relativo no volume:</strong> <code>./hermes:/root/.hermes</code> depende do diretório de execução. Use absoluto ou <code>~/</code>.</li>
+          <li><strong>Sem <code>tty</code>:</strong> a CLI do Hermes vira um log de strings sem cor nem formatação.</li>
+          <li><strong>Sem <code>TZ</code>:</strong> crons disparam 3 horas antes do esperado (UTC vs Brasília).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">🚀 Primeira subida: docker compose up</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Tudo pronto no <code>docker-compose.yml</code>. Hora da subida. <strong class="text-blue-400">A primeira vez é onde quase tudo dá errado</strong> — token faltando, volume com permissão errada, .env não montado. Saber ler logs e identificar sintoma encurta horas em minutos.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">⚡ Sequência de subida</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Na pasta com docker-compose.yml e .env
+cd ~/hermes-deploy
+
+# Subir em background (-d = detached)
+docker compose up -d
+
+# Acompanhar logs em tempo real (-f = follow)
+docker logs -f hermes
+
+# Entrar na CLI interativa do agente
+docker exec -it hermes hermes
+
+# Verificar que está rodando
+docker ps</code></pre>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+          <h4 class="font-bold text-emerald-400 mb-4">✓ Sinais de sucesso</h4>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><code>docker ps</code> mostra container <code>hermes</code> com status <em>Up X minutes</em></span></li>
+            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Logs sem erros vermelhos, mensagem <em>"Agent ready"</em> ou similar</span></li>
+            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><code>docker exec -it hermes hermes</code> abre o prompt interativo</span></li>
+            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><code>~/.hermes/</code> no host tem arquivos (SOUL.md, state.db) criados pelo container</span></li>
+          </ul>
+        </div>
+        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+          <h4 class="font-bold text-red-400 mb-4">✗ Sintomas de problema</h4>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><em>"Permission denied"</em> no volume → ajuste UID/GID ou <code>chown</code></span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><em>"Missing API key"</em> → .env não está sendo lido (path errado ou nome errado)</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Container reinicia em loop → ver <code>docker logs hermes --tail 50</code></span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><em>"image not found"</em> → typo no nome da imagem ou tag inexistente</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">🔧 Comandos do dia-a-dia</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Cinco comandos cobrem 90% das operações com Hermes em Docker. Decorar é o que separa quem volta no Stack Overflow toda vez de quem opera o agente em fluxo.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">🛠️ Os 5 comandos essenciais</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># 1. Subir / atualizar
+docker compose up -d
+
+# 2. Reiniciar (após mudar config ou .env do container)
+docker compose restart
+
+# 3. CLI interativa do agente
+docker exec -it hermes hermes
+
+# 4. Setar config dentro do container (escreve em /root/.hermes/.env)
+docker exec -it hermes hermes config set TELEGRAM_TOKEN xxx
+
+# 5. Ver logs
+docker logs hermes --tail 100
+docker logs -f hermes  # follow modo</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">📚 Comandos secundários úteis</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><code class="text-blue-400">docker compose pull</code> — baixa imagem nova sem subir</li>
+          <li><code class="text-blue-400">docker compose down</code> — para tudo (preserva volumes!)</li>
+          <li><code class="text-blue-400">docker compose ps</code> — status de cada serviço</li>
+          <li><code class="text-blue-400">docker compose logs hermes --since 1h</code> — logs da última hora</li>
+          <li><code class="text-blue-400">docker stats hermes</code> — uso de CPU e memória em tempo real</li>
+          <li><code class="text-blue-400">docker exec hermes env | grep TELEGRAM</code> — checar variáveis carregadas</li>
+        </ul>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🔥</span>Comandos perigosos — atenção</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><code class="text-red-400">docker compose down -v</code> — apaga VOLUMES junto. Adeus memória, skills, SQLite. NUNCA em produção.</li>
+          <li><code class="text-red-400">docker system prune -a</code> — apaga TODAS as imagens não usadas. Cuidado se tiver outros projetos.</li>
+          <li><code class="text-red-400">docker rm -f hermes</code> — remove o container forçado. Volume sobrevive, mas confunde compose.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🔄 Atualização sem perder dados</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Hermes lança versões frequentes (v0.13.0 em 7 de maio de 2026, "The Tenacity Release"). Você precisa <strong class="text-blue-400">atualizar com confiança</strong>. O fluxo correto preserva tudo que importa — memória, skills, SQLite, configs — porque está no volume.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">🔁 Fluxo de atualização seguro</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># 1. Backup do volume (sempre antes de atualizar)
+tar czf hermes-backup-$(date +%Y%m%d).tgz ~/.hermes
+
+# 2. Baixar imagem nova
+docker compose pull
+
+# 3. Recriar container com nova imagem
+docker compose up -d
+
+# 4. Verificar versão
+docker exec hermes hermes --version
+
+# 5. Conferir logs por 1-2 minutos
+docker logs -f hermes
+
+# Se algo deu errado, voltar para tag específica:
+# editar docker-compose.yml: image: nousresearch/hermes-agent:0.12.5
+# docker compose up -d</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>Por que esse fluxo é seguro</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><strong class="text-emerald-400">Tar de backup:</strong> 30 segundos, salva sua vida em rollback.</li>
+          <li><strong class="text-emerald-400">Pull antes de up:</strong> imagem baixada com sucesso antes de mexer no container atual.</li>
+          <li><strong class="text-emerald-400">Volume preservado:</strong> <code>~/.hermes</code> não é tocado quando o container é recriado.</li>
+          <li><strong class="text-emerald-400">Rollback fácil:</strong> trocar tag pra versão anterior + <code>up -d</code> volta tudo.</li>
+        </ul>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Dica de pinning</h3>
+        <p class="text-neutral-300 text-sm">Em produção crítica, evite <code>:latest</code>. Use tag explícita (<code>:0.13.0</code>). Você decide quando atualizar e tem rollback determinístico. <code>:latest</code> é cômodo pra exploração, mas pode quebrar inesperadamente quando uma versão major sai com breaking change.</p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
+        <div class="space-y-3 mb-8">
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Docker isola o Hermes</strong><span class="text-neutral-400"> — filesystem, deps, .env e volume próprios.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Instalar via script oficial (get.docker.com)</strong><span class="text-neutral-400"> — traz engine + compose v2 atualizados.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>docker-compose.yml com volume, env_file, restart, TZ</strong><span class="text-neutral-400"> — receita pronta pra subir e voltar após reboot.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Cinco comandos do dia-a-dia</strong><span class="text-neutral-400"> — up, restart, exec, config set, logs.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Pull + up -d atualiza sem perder dados</strong><span class="text-neutral-400"> — volumes preservam memória, skills, SQLite.</span></div></div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">2.3 - 🤖 Provedor de inferência e modelo</p></div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="modulo-2-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
+          <a href="modulo-2-3.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próximo Módulo →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 2.2 • 2026</p></div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.5 GitHub + config set | Agente Hermes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .bg-blue-900\/20 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .bg-blue-900\/30 { background-color: rgba(37,99,235,0.10); }
+    html:not(.dark) .bg-blue-900\/40 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) .text-red-400 { color: #b91c1c; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(185,28,28,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(185,28,28,0.25); }
+    html:not(.dark) .bg-emerald-900\/20 { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.9em; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
+          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
+          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-blue-400">Início</a><span>/</span>
+      <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
+      <span class="text-blue-400">Módulo 2.5</span>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.5</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🐙 GitHub: token + .gitignore + hermes config</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Versionar o agente é o que separa um setup descartável de um agente que evolui ao longo de meses. Token cirúrgico, .gitignore completo, .env certo no lugar certo.</p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Prático</div><div class="text-xs text-neutral-400">Nível</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Setup</div><div class="text-xs text-neutral-400">Tipo</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">💾 Por que conectar GitHub</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Hermes acumula valor com o tempo: <strong class="text-blue-400">meses de feedback, dezenas de skills criadas, memória rica, configurações refinadas</strong>. Perder isso por uma falha de hardware ou um <code>docker compose down -v</code> errado é traumático. Git resolve com zero esforço operacional após setup.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎁</span>O que você ganha</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><strong class="text-blue-400">Backup completo:</strong> SKILL.md, MEMORY.md, USER.md, SOUL.md, config.yaml versionados</li>
+          <li><strong class="text-blue-400">Resiliência:</strong> VPS pegou fogo? <code>git clone</code> em outro servidor, restore em minutos</li>
+          <li><strong class="text-blue-400">Histórico:</strong> ver evolução das suas skills ao longo de meses, fazer rollback</li>
+          <li><strong class="text-blue-400">Compartilhamento:</strong> múltiplos agentes apontam pro mesmo repo de skills</li>
+          <li><strong class="text-blue-400">Confiança pra experimentar:</strong> testou skill nova quebrou tudo? <code>git checkout</code> volta</li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🧠</span>Mental model</h3>
+        <p class="text-neutral-300 text-sm"><strong>Repo privado</strong> = ninguém vê (mesmo se username conhecido). <strong>Você</strong> = único developer + único usuário do agente. <strong>Commit message</strong> = "snapshot do dia X". <strong>Push automático via cron</strong> = backup contínuo sem você lembrar.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">🔐 Personal Access Token (PAT)</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        GitHub aposentou autenticação por senha em 2021. Hoje usa <strong class="text-blue-400">Personal Access Token</strong>. Existem dois tipos: <strong class="text-blue-400">classic</strong> (mais antigo, escopos amplos) e <strong class="text-blue-400">fine-grained</strong> (mais novo, escopo cirúrgico). <strong>Sempre prefira fine-grained.</strong>
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">📍 Onde criar</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400">GitHub → Foto perfil (canto superior direito)
+       → Settings
+       → Developer settings (rolar até o fim do menu lateral)
+       → Personal access tokens
+       → Fine-grained tokens
+       → Generate new token</code></pre>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+          <h4 class="font-bold text-emerald-400 mb-4">✓ Configuração recomendada</h4>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li><strong>Expiration:</strong> 90 dias (renovação periódica força revisão)</li>
+            <li><strong>Repository access:</strong> Only select repositories → seu repo do Hermes</li>
+            <li><strong>Permissions:</strong> Contents: Read and write, Metadata: Read</li>
+            <li><strong>Nada além disso</strong> — sem Workflows, sem Issues, sem Actions</li>
+          </ul>
+        </div>
+        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+          <h4 class="font-bold text-red-400 mb-4">✗ Configuração arriscada</h4>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li><strong>Classic token com <code>repo</code> scope:</strong> acesso a TODOS seus repos</li>
+            <li><strong>Sem expiração:</strong> esquecer de revogar é fácil</li>
+            <li><strong>"All repositories":</strong> escopo amplo demais para 1 agente</li>
+            <li><strong>Workflows + admin:</strong> token vazado pode mexer em CI/CD</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Princípio do menor privilégio</h3>
+        <p class="text-neutral-300 text-sm">Token cirúrgico limita o estrago se vazar. <strong>Pense:</strong> "Se esse token caísse na rede agora, qual seria o pior cenário?" Com fine-grained limitado, o pior é alguém alterar um repo seu — recuperável via histórico. Com classic <code>repo</code>, alguém apaga tudo.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">🚨 NUNCA cole token no chat do agente</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Esse é o erro mais comum de quem está começando. <strong class="text-red-400">Tokens colados no chat acabam no histórico SQLite, em logs, em sessões pesquisáveis.</strong> A forma certa é usar <code class="text-blue-400">hermes config set</code>, que escreve em local seguro com auto-redação aplicada.
+      </p>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">❌</span>O que NÃO fazer</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-red-400"># ERRADO — token vai pro histórico em texto puro
+"Use o token ghp_xxxxxxxxxxxxxxx pra fazer push"
+
+# ERRADO — log SQLite captura tudo
+"Salva esse token na memória: ghp_xxx"</code></pre>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">✅</span>A forma correta</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># 1. Setar via config set (escreve em /root/.hermes/.env, com redação)
+docker exec -it hermes hermes config set GITHUB_TOKEN ghp_xxxxxxxxxxxxxxx
+
+# 2. Verificar (mostra valor mascarado)
+docker exec hermes hermes config get GITHUB_TOKEN
+
+# 3. Restart pra Hermes reler o .env
+docker compose restart
+
+# 4. Agora você pode pedir no chat sem expor o token:
+"Faça commit e push do estado atual do agente"</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🛡️</span>Auto-redação de logs</h3>
+        <p class="text-neutral-300 text-sm">Hermes redige automaticamente secrets conhecidos em <code class="text-emerald-400">~/.hermes/logs/errors.log</code> e <code class="text-emerald-400">gateway.log</code>. Mas isso só funciona pra valores que ele <em>sabe</em> que são secret — variáveis de ambiente terminadas em <code>_TOKEN</code>, <code>_KEY</code>, etc. Cola em chat livre não passa pela redação.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">🚫 .gitignore: bloquear .env, secrets, state.db</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Antes de qualquer <code class="text-blue-400">git add .</code>, crie o <code class="text-blue-400">.gitignore</code> certo. Commit acidental de <code>.env</code> é o erro mais comum em VPS pessoal — uma vez no repo, mesmo apagando depois, ele permanece no histórico para sempre.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">📄 .gitignore mínimo para Hermes</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># .env e variantes
+.env
+.env.*
+!.env.example
+
+# Banco de sessões SQLite + auxiliares
+state.db
+state.db-*
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logs (geralmente grandes e mutáveis)
+logs/
+*.log
+
+# Permissões e tokens em cache
+permissions.json
+.tick.lock
+auth_cache/
+
+# Chaves criptográficas
+*.key
+*.pem
+*.p12
+id_rsa*
+id_ed25519*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/</code></pre>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🚨</span>Se já commitou .env por engano</h3>
+        <ol class="space-y-2 text-neutral-300 text-sm list-decimal pl-5">
+          <li><strong>Revogue IMEDIATAMENTE</strong> todos os tokens/secrets que estavam ali (GitHub Settings → revoke)</li>
+          <li>Gere novos tokens com escopo cirúrgico</li>
+          <li>Atualize <code>~/.hermes/.env</code> com os novos via <code>hermes config set</code></li>
+          <li>Use <code>git filter-repo</code> ou BFG pra remover do histórico</li>
+          <li>Force push (cuidado): <code>git push --force-with-lease</code></li>
+        </ol>
+        <p class="text-neutral-300 text-sm mt-3"><strong>Mas saiba:</strong> se foi pra repo público mesmo por 1 minuto, bots de scraping já capturaram. <strong>Prevenção &gt; remediação.</strong></p>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">🤝 Peça pro Hermes configurar tudo</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Aplicação direta da mentalidade da T1.2: <strong class="text-blue-400">pergunte ao próprio Hermes</strong>. A skill <code class="text-blue-400">github</code> bundled já sabe criar repo via API, gerar <code>.gitignore</code> correto, fazer primeiro commit. Você não precisa decorar comandos git.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">💬 Prompt completo via Telegram</h3>
+        <div class="bg-dark-900 rounded-lg p-4 text-neutral-300 italic text-sm border-l-4 border-blue-500">
+          "Configure este agente como repo privado no GitHub chamado <em>hermes-pessoal-backup</em>. Crie .gitignore bloqueando .env, .env.*, state.db, state.db-*, logs/, *.log, permissions.json, *.key, *.pem. Faça primeiro commit incluindo SOUL.md, MEMORY.md, USER.md, config.yaml, e a pasta skills/. Configure remote e push. Me mostre o link do repo no final."
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>O que vai acontecer</h3>
+        <ol class="space-y-2 text-neutral-300 text-sm list-decimal pl-5">
+          <li>Hermes carrega skill <code>github</code> via progressive disclosure</li>
+          <li>Cria repo privado via API GitHub usando seu token</li>
+          <li>Gera <code>.gitignore</code> incluindo os patterns que você pediu</li>
+          <li>Vai pedir permissão pra rodar <code>git init</code>, <code>git commit</code>, <code>git push</code> — aprove com <em>session</em></li>
+          <li>Te devolve o link do repo</li>
+        </ol>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Antes de aprovar permissão "always"</h3>
+        <p class="text-neutral-300 text-sm">Revise o <code>.gitignore</code> que ele propôs. Se faltar algo (ex: ele esqueceu <code>auth_cache/</code>), peça pra adicionar. Só marque <em>always allow</em> pra <code>git push</code> quando o setup estiver validado e você tiver certeza que <code>.env</code> está bloqueado. Um cron de backup só funciona com <em>always allow</em> — mas vale a pena testar manual primeiro.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">📂 .env do container vs .env do host</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Existem <strong class="text-blue-400">DOIS arquivos .env</strong> e confundi-los é fonte clássica de horas perdidas debugando. O Hermes lê o do container. Edita o do host = mudança não tem efeito.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">📍 Os dois .env</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-neutral-300">
+            <thead><tr class="border-b border-dark-600 text-blue-400"><th class="text-left py-2">Arquivo</th><th class="text-left py-2">Quem lê</th><th class="text-left py-2">Quando se aplica</th></tr></thead>
+            <tbody>
+              <tr class="border-b border-dark-700"><td class="py-2"><code>~/hermes-deploy/.env</code> (host)</td><td>docker compose</td><td>Subida do container, injeta env vars iniciais</td></tr>
+              <tr><td class="py-2"><code>/root/.hermes/.env</code> (container)</td><td>O Hermes em runtime</td><td>Sempre que precisa de TOKEN, KEY, etc</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">✏️ Editar / deletar key</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Forma recomendada — config set
+docker exec -it hermes hermes config set GITHUB_TOKEN ghp_novo
+docker compose restart
+
+# Edição manual (se precisar)
+docker exec -it hermes nano /root/.hermes/.env
+# remove ou altera linha
+# salva, sai (Ctrl+O, Ctrl+X)
+docker compose restart
+
+# Ver o que está ativo
+docker exec hermes hermes config get GITHUB_TOKEN  # mascarado
+docker exec hermes env | grep GITHUB</code></pre>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🤔</span>Sintoma típico de confusão</h3>
+        <p class="text-neutral-300 text-sm">"Mudei o token no <code>.env</code> mas o Hermes continua usando o antigo." Você editou o <code>.env</code> errado (do host) ou esqueceu de fazer <code>docker compose restart</code>. Sempre: <strong>config set + restart</strong>, ou <strong>edit no container + restart</strong>. Esquecer o restart é o erro #2 mais comum.</p>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Regra mnemônica</h3>
+        <p class="text-neutral-300 text-sm"><strong>Host .env</strong> = receita pra subir container. Mexe raramente. <strong>Container .env</strong> = configuração do agente em runtime. Mexe sempre via <code>config set</code>. Sempre <code>restart</code> depois de qualquer mudança.</p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
+        <div class="space-y-3 mb-8">
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>GitHub é backup vivo do agente</strong><span class="text-neutral-400"> — skills, memória, config viajam entre VPSs.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Fine-grained PAT &gt; classic</strong><span class="text-neutral-400"> — escopo cirúrgico (1 repo, contents R/W), expiração 90 dias.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Token via config set, NUNCA no chat</strong><span class="text-neutral-400"> — auto-redação só protege quem segue a regra.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>.gitignore antes do primeiro commit</strong><span class="text-neutral-400"> — .env, state.db, logs, *.key bloqueados.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>.env do container ≠ .env do host</strong><span class="text-neutral-400"> — Hermes lê o do container; sempre restart após editar.</span></div></div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">2.6 - 🌙 Primeiro cron: backup diário automático</p></div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="modulo-2-4.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
+          <a href="modulo-2-6.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próximo Módulo →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 2.5 • 2026</p></div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+  </script>
+</body>
+</html>

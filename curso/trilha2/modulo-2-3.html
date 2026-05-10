@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.3 Provedor e modelo | Agente Hermes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .bg-blue-900\/20 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .bg-blue-900\/30 { background-color: rgba(37,99,235,0.10); }
+    html:not(.dark) .bg-blue-900\/40 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) .text-red-400 { color: #b91c1c; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(185,28,28,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(185,28,28,0.25); }
+    html:not(.dark) .bg-emerald-900\/20 { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.9em; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
+          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
+          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-blue-400">Início</a><span>/</span>
+      <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
+      <span class="text-blue-400">Módulo 2.3</span>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.3</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🤖 Provedor de inferência e modelo</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Codex OAuth, OpenRouter, Anthropic, MiniMax, modelos locais. Como decidir entre custo, privacidade, qualidade e volume sem ficar pulando provedor.</p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Decisão</div><div class="text-xs text-neutral-400">Tipo</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Médio</div><div class="text-xs text-neutral-400">Nível</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">🟢 Codex OAuth via ChatGPT Plus/Pro</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O caminho mais barato pra uso intenso em 2026. <strong class="text-blue-400">Sem API key.</strong> Login OAuth via browser usando sua conta ChatGPT Plus ($20/mês) ou Pro ($200/mês). Modelo padrão: <code class="text-blue-400">gpt-5.3-codex</code>, com vision incluída.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">💰</span>Por que é tão barato</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><strong class="text-blue-400">ChatGPT Plus ($20):</strong> uso ilimitado dentro do rate limit do plano. Cabe 10+ conversas longas/dia tranquilo.</li>
+          <li><strong class="text-blue-400">ChatGPT Pro ($200):</strong> acesso a o3, o4-pro, GPT-5 com limites maiores. Para uso pesado profissional.</li>
+          <li><strong class="text-blue-400">Comparação API direta:</strong> mesmo uso pela API custa $100+/mês. Plus economiza 5x.</li>
+          <li><strong class="text-blue-400">Sem API key:</strong> autentica via browser, token captado pelo Hermes — nada a gerenciar manualmente.</li>
+        </ul>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">⚙️ Configuração</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># config.yaml dentro do container (~/.hermes/config.yaml)
+provider: "codex"
+model: "gpt-5.3-codex"
+
+# Login OAuth (abre URL no browser)
+docker exec -it hermes hermes auth codex</code></pre>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Limitação importante</h3>
+        <p class="text-neutral-300 text-sm">"Ilimitado" tem rate limit invisível. Pra uso muito pesado (centenas de chamadas/hora), a OpenAI pode reduzir velocidade ou bloquear temporariamente. Em uso pessoal normal, você nunca encosta no teto.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">🌐 OpenRouter — pay-per-token flexível</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        OpenRouter é o agregador mais usado: você bota crédito uma vez, escolhe qualquer modelo (Claude, Gemini, DeepSeek, Grok, GPT) e paga por token consumido. <strong class="text-blue-400">Vantagem-chave: trocar modelo por tarefa</strong>, dentro do mesmo provedor.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎁</span>Modelos destaque (mai/2026)</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><code class="text-blue-400">openrouter/owl-alpha</code> — gratuito, bom pra crons leves</li>
+          <li><code class="text-blue-400">google/gemini-2.5-flash</code> — ~$0,075/1M tokens, ideal pra compressão de contexto</li>
+          <li><code class="text-blue-400">deepseek/deepseek-v4-pro</code> — adicionado no v0.13.0, raciocínio top barato</li>
+          <li><code class="text-blue-400">x-ai/grok-4.3</code> — adicionado no v0.13.0, resposta longa</li>
+          <li><code class="text-blue-400">anthropic/claude-opus-4.6</code> — qualidade premium, custo elevado</li>
+          <li><code class="text-blue-400">tencent/hy3-preview</code> — adicionado por contribuidor</li>
+        </ul>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">⚙️ Configuração</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Setar API key
+docker exec -it hermes hermes config set OPENROUTER_API_KEY sk-or-...
+
+# config.yaml
+provider: "openrouter"
+model: "deepseek/deepseek-v4-pro"
+
+# Compressão de contexto separada (opcional)
+compression:
+  provider: "openrouter"
+  model: "google/gemini-2.5-flash"</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">💡</span>Estratégia split de custo</h3>
+        <p class="text-neutral-300 text-sm">Use modelo top (Claude/DeepSeek-Pro) pra conversa principal, e modelo barato (Gemini Flash) pra compressão de contexto. Hermes suporta provedor diferente por slot. Conversa fica top-quality, compressão fica em centavos.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">🎭 Anthropic / Claude via API ou GMI</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Quando a tarefa é crítica — review de código complexo, escrita longa de qualidade, planejamento estratégico —, <strong class="text-blue-400">Claude Opus tem qualidade superior</strong> a qualquer outro modelo aberto ou OpenAI em 2026. Custo é alto, mas vale pontualmente.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🛣️</span>Dois caminhos pra Claude</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li><strong class="text-blue-400">Anthropic API direta:</strong> conta na anthropic.com, <code>ANTHROPIC_API_KEY</code>. Faturamento próprio.</li>
+          <li><strong class="text-blue-400">Via OpenRouter:</strong> <code>anthropic/claude-opus-4.6</code> sem precisar abrir conta na Anthropic. Markup pequeno.</li>
+          <li><strong class="text-blue-400">Via GMI:</strong> revendedor, <code>GMI_API_KEY</code>. Útil para faturamento centralizado em empresas.</li>
+        </ul>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">⚙️ Configuração via OpenRouter</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400">provider: "openrouter"
+model: "anthropic/claude-opus-4.6"
+
+# Ou via Anthropic direto (requer ANTHROPIC_API_KEY)
+provider: "anthropic"
+model: "claude-opus-4.6"</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>Quando vale o custo</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li>Refatoração ou review de código complexo (1k+ linhas)</li>
+          <li>Escrita longa profissional (artigos, ebooks, documentação técnica)</li>
+          <li>Planejamento estratégico com análise de múltiplos cenários</li>
+          <li>Tarefas onde 5% de qualidade extra muda o resultado final</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">🔌 MiniMax OAuth, Nous Portal, locais</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Casos especiais: <strong class="text-blue-400">privacidade extrema</strong> (dados sensíveis nunca saem da rede), <strong class="text-blue-400">custo zero pra volume infinito</strong> (após investimento de hardware), ou <strong class="text-blue-400">acesso a modelos chineses</strong> de alta qualidade via OAuth.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">🌍 Provedores menos comuns mas úteis</h3>
+        <ul class="space-y-3 text-neutral-300 text-sm">
+          <li><strong class="text-blue-400">MiniMax OAuth:</strong> login browser sem API key, modelo <code>MiniMax-M2.7</code>. Boa qualidade pra preço zero direto.</li>
+          <li><strong class="text-blue-400">Nous Portal:</strong> <code>hermes auth</code> + <code>provider: "nous"</code>. Conta NousResearch (mantenedora do Hermes).</li>
+          <li><strong class="text-blue-400">OpenAI API direta:</strong> <code>OPENAI_API_KEY</code>, útil se você já tem créditos OpenAI Enterprise.</li>
+          <li><strong class="text-blue-400">Local (Ollama, LM Studio, vLLM):</strong> qualquer endpoint OpenAI-compatible. Setup: <code>base_url: "http://host.docker.internal:11434/v1"</code>.</li>
+        </ul>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">💻 Endpoint local exemplo</h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Mac Mini com Ollama rodando Qwen ou Llama
+provider: "openai"
+base_url: "http://192.168.1.10:11434/v1"
+model: "qwen2.5:14b"
+api_key: "ollama"  # placeholder, Ollama não valida</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🧠</span>Tool-use enforcement</h3>
+        <p class="text-neutral-300 text-sm">Modelos com <em>auto enforcement</em> (Hermes injeta reforço de tool-use): <code>gpt</code>, <code>codex</code>, <code>gemini</code>, <code>gemma</code>, <code>grok</code>. Modelos confiados nativamente (sem reforço extra): <code>Claude</code>, <code>DeepSeek</code>, <code>Qwen</code>, <code>LLaMA</code>. Saber disso ajuda quando uma tool não está sendo chamada.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">🏆 Modelos recomendados em 2026</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Curadoria baseada nos modelos mencionados na release v0.13.0 (mai/2026) e nos padrões observados em uso real. <strong class="text-blue-400">Misturar é o caminho otimizado</strong> — não existe um modelo único que vença em todas as dimensões.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⭐</span>Top picks por categoria</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-neutral-300">
+            <thead><tr class="border-b border-dark-600 text-blue-400"><th class="text-left py-2">Categoria</th><th class="text-left py-2">Modelo</th><th class="text-left py-2">Provedor</th><th class="text-left py-2">Por quê</th></tr></thead>
+            <tbody>
+              <tr class="border-b border-dark-700"><td class="py-2 font-bold">Geral</td><td><code>gpt-5.3-codex</code></td><td>Codex OAuth</td><td>Vision + tool use, $20 fixo</td></tr>
+              <tr class="border-b border-dark-700"><td class="py-2 font-bold">Raciocínio</td><td><code>deepseek/deepseek-v4-pro</code></td><td>OpenRouter</td><td>Top em matemática/lógica, barato</td></tr>
+              <tr class="border-b border-dark-700"><td class="py-2 font-bold">Texto longo</td><td><code>claude-opus-4.6</code></td><td>OpenRouter/Anthropic</td><td>Qualidade superior em escrita</td></tr>
+              <tr class="border-b border-dark-700"><td class="py-2 font-bold">Compressão</td><td><code>gemini-2.5-flash</code></td><td>OpenRouter</td><td>Ultra-barato, rápido</td></tr>
+              <tr class="border-b border-dark-700"><td class="py-2 font-bold">Watchdog</td><td><code>openrouter/owl-alpha</code></td><td>OpenRouter</td><td>Grátis, bom pra ticks no-agent</td></tr>
+              <tr><td class="py-2 font-bold">Sem custo</td><td><code>MiniMax-M2.7</code></td><td>MiniMax OAuth</td><td>Sem API key, qualidade decente</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🎚️</span>Setup recomendado pra começar</h3>
+        <p class="text-neutral-300 text-sm"><strong>Conversa principal:</strong> <code>gpt-5.3-codex</code> via Codex OAuth (já paga ChatGPT Plus). <strong>Compressão:</strong> <code>gemini-2.5-flash</code> via OpenRouter ($5 de crédito dura meses). <strong>Cron de watchdog:</strong> <code>owl-alpha</code> grátis. Custo total: $20-25/mês para uso pessoal intenso.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🎯 Como decidir: tabela de critérios</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Sem critério, você fica trocando provedor toda hora. Com critério claro, você escolhe uma vez e ajusta ao longo do tempo. Trocar é trivial em Hermes (uma linha em <code class="text-blue-400">config.yaml</code>), mas pular sem razão queima energia mental.
+      </p>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">🌳 Árvore de decisão</h3>
+        <ul class="space-y-3 text-neutral-300 text-sm">
+          <li><strong class="text-blue-400">Já tem ChatGPT Plus/Pro?</strong> → Codex OAuth é o caminho mais barato. Comece por aí.</li>
+          <li><strong class="text-blue-400">Quer flexibilidade entre modelos sem múltiplas contas?</strong> → OpenRouter como hub.</li>
+          <li><strong class="text-blue-400">Tarefas premium (escrita, análise crítica)?</strong> → Claude Opus pontual via OpenRouter.</li>
+          <li><strong class="text-blue-400">Privacidade extrema (dados sensíveis)?</strong> → Local via Ollama (Mac Mini ou desktop com GPU).</li>
+          <li><strong class="text-blue-400">Volume gigante e custo importa?</strong> → DeepSeek/Gemini Flash via OpenRouter.</li>
+          <li><strong class="text-blue-400">Sem cartão de crédito?</strong> → MiniMax OAuth ou modelos free do OpenRouter.</li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔄</span>Quão fácil é trocar</h3>
+        <p class="text-neutral-300 text-sm">Migração entre provedores leva 30 segundos: editar <code>~/.hermes/config.yaml</code> + <code>docker compose restart</code>. Skills, memória, sessões — tudo permanece. Use Codex 3 meses, troca pra OpenRouter, troca pra local — zero dor. Isso significa: <strong>não procrastine a primeira escolha</strong>. Comece pelo Codex OAuth, otimize depois.</p>
+      </div>
+      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Erro comum</h3>
+        <p class="text-neutral-300 text-sm">Tentar configurar 4 provedores simultaneamente "pra ter opção". Resultado: nenhum funcionando direito, debug paralelo virando bola de neve. Comece com UM. Domine. Adiciona o segundo só quando o primeiro estiver sólido.</p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
+        <div class="space-y-3 mb-8">
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Codex OAuth ($20 ChatGPT Plus) é o caminho mais barato</strong><span class="text-neutral-400"> — sem API key, login via browser.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>OpenRouter dá flexibilidade entre modelos</strong><span class="text-neutral-400"> — owl-alpha grátis, Gemini Flash barato, Claude premium.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Anthropic Claude para tarefas críticas</strong><span class="text-neutral-400"> — qualidade superior, custo elevado, uso pontual.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>MiniMax OAuth e local para casos especiais</strong><span class="text-neutral-400"> — sem API key e privacidade extrema.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Misturar é o caminho otimizado</strong><span class="text-neutral-400"> — provedor diferente por slot (conversa, compressão, watchdog).</span></div></div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">2.4 - 📱 Telegram: BotFather, token, autorização</p></div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
+          <a href="modulo-2-4.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próximo Módulo →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 2.3 • 2026</p></div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+  </script>
+</body>
+</html>

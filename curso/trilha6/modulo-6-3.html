@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.3 Troubleshooting completo | Agente Hermes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-rose-400 { color: #9f1239; }
+    html:not(.dark) .bg-rose-500\/20 { background-color: rgba(225,29,72,0.12); }
+    html:not(.dark) .bg-rose-500\/10 { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) .border-rose-500\/30 { border-color: rgba(225,29,72,0.25); }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .bg-blue-900\/20 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13,148,136,0.08); }
+    html:not(.dark) .text-red-400 { color: #b91c1c; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(185,28,28,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(185,28,28,0.25); }
+    html:not(.dark) .bg-rose-900\/20 { background-color: rgba(225,29,72,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.9em; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
+          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-rose-400">Início</a><span>/</span>
+      <a href="index.html" class="hover:text-rose-400">Trilha 6</a><span>/</span>
+      <span class="text-rose-400">Módulo 6.3</span>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MÓDULO 6.3</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🛠️ Troubleshooting completo</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Os 6 problemas que aparecem em quase toda instalação Hermes — e o caminho de solução pra cada um. Telegram, dashboard, .env, contexto, timezone e diagnóstico via terminal.</p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">35</div><div class="text-xs text-neutral-400">Minutos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Avançado</div><div class="text-xs text-neutral-400">Nível</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Diagnóstico</div><div class="text-xs text-neutral-400">Tipo</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">📵 Telegram não responde</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Sintoma: você manda mensagem e não recebe nada. <strong class="text-rose-400">Problema #1 mais comum</strong>. Em 90% dos casos é uma de quatro causas. Vamos pela ordem certa.
+      </p>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-4">📋 Sequência de diagnóstico</h3>
+        <ol class="space-y-3 text-neutral-300 text-sm list-decimal list-inside">
+          <li><strong>Gateway está rodando?</strong><br><code class="text-rose-400">hermes gateway status</code> dentro do container.</li>
+          <li><strong>Re-executar wizard se inconsistente:</strong><br><code class="text-rose-400">hermes gateway setup</code></li>
+          <li><strong>Ler logs:</strong><br><code class="text-rose-400">tail -f ~/.hermes/logs/gateway.log</code></li>
+          <li><strong>Conferir token e home channel:</strong><br><code class="text-rose-400">grep TELEGRAM ~/.hermes/.env</code></li>
+        </ol>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+          <h4 class="font-bold text-rose-400 mb-2">🔑 TELEGRAM_TOKEN</h4>
+          <p class="text-neutral-300 text-sm">Vem do BotFather. Se você revogou e gerou novo, atualiza aqui. Sem token válido = gateway nem inicia.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+          <h4 class="font-bold text-rose-400 mb-2">📮 TELEGRAM_HOME_CHANNEL</h4>
+          <p class="text-neutral-300 text-sm">Chat ID onde o Hermes entrega resultados de cron. Sem isso configurado, mensagens automatizadas viram silêncio.</p>
+        </div>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3">🐳 Em Docker</h3>
+        <p class="text-neutral-300 text-sm">Confirme que o container tem acesso à internet (firewall/iptables). Teste: <code class="text-blue-400">docker exec hermes curl -s https://api.telegram.org</code>. Se não retornar 404 (esperado sem path), tem problema de rede no container.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">🌐 Dashboard não abre</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Sintoma: <code class="text-rose-400">localhost:8080</code> não carrega. Em VPS sem IP público direto, é <strong class="text-rose-400">esperado</strong> — você precisa criar a ponte. Não é bug.
+      </p>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-4">📋 Checklist</h3>
+        <ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
+          <li>Confirme processo rodando na porta correta (dentro do VPS):<br><code class="text-rose-400">ss -tlnp | grep 8080</code></li>
+          <li>Crie SSH tunnel do laptop:<br><code class="text-rose-400">ssh -L 8080:localhost:8080 user@vps</code></li>
+          <li>Acesse <code class="text-rose-400">http://localhost:8080</code> no navegador</li>
+          <li>Se quiser URL fixa: configure nginx como reverse proxy com auth básica + Let's Encrypt</li>
+        </ol>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3">🔄 Alternativas</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>nginx + Let's Encrypt:</strong> URL fixa pública com HTTPS e auth</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Cloudflare Tunnel:</strong> sem expor porta na internet, sem certificado manual</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Tailscale:</strong> rede privada peer-to-peer, dashboard acessível só pelos seus dispositivos</span></li>
+        </ul>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Não confunda</h3>
+        <p class="text-neutral-300 text-sm">"Dashboard não abre" muitas vezes é "ainda não criei o tunnel". Antes de assumir bug do Hermes, confirme que você fez a ponte de rede.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">📦 .env do container vs root no Docker</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Problema clássico de Docker: o <code class="text-rose-400">.env</code> do host <strong>não é</strong> automaticamente disponibilizado dentro do container. O Hermes lê o .env <strong class="text-rose-400">de dentro</strong>, não de fora.
+      </p>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-4">📂 Caminho correto</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span>O .env certo fica em <code class="text-rose-400">/root/.hermes/.env</code> <strong>dentro do container</strong></span></li>
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span>No host, monte o volume: <code class="text-rose-400">~/.hermes:/root/.hermes</code></span></li>
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><strong>Nunca</strong> coloque API keys no <code class="text-rose-400">.env</code> da raiz do projeto sem montar corretamente</span></li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">🔍</span>Como verificar</h3>
+        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code>docker exec -it hermes env | grep TELEGRAM</code></pre>
+        <p class="text-neutral-300 text-sm mt-3">Se não retornar suas vars, é porque o .env certo não está montado. Edite o <code class="text-rose-400">docker-compose.yml</code> e adicione o volume.</p>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3">📜 Logs com auto-redação</h3>
+        <p class="text-neutral-300 text-sm">Hermes redige secrets automaticamente nos logs em <code class="text-blue-400">~/.hermes/logs/errors.log</code>. Você pode mandar pro suporte sem medo de vazar token. Mas confirme antes — auditoria de logs antes de compartilhar nunca é demais.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">🗜️ Compactação automática de contexto</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Sintoma: agente "esquecendo" coisa no meio da sessão. Hermes <strong class="text-rose-400">comprime conversas longas automaticamente</strong> antes do limite de contexto. A compressão é uma chamada LLM separada — pode ser configurada para provedor diferente do principal.
+      </p>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-4">⌨️ Comandos úteis</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><code class="text-rose-400">/compress</code> — força compressão manual</span></li>
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span><code class="text-rose-400">/usage</code> — mostra tokens usados na sessão atual</span></li>
+          <li class="flex items-start space-x-2"><span class="text-rose-400">•</span><span>Status bar do TUI (v0.13.0+) exibe contagem de compressões</span></li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">⚙️</span>Configurar modelo barato pra compressão</h3>
+        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code>compression:
+  provider: "openrouter"
+  model: "google/gemini-2.5-flash"</code></pre>
+        <p class="text-neutral-300 text-sm mt-3">Modelo principal pode ser Claude (caro) e compressor pode ser Gemini Flash (barato). Reduz custo significativamente em sessões longas.</p>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🧠</span>Plugin LCM (lossless context management)</h3>
+        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code>context:
+  engine: "lcm"</code></pre>
+        <p class="text-neutral-300 text-sm mt-3">Compressor alternativo <strong>sem chamada de LLM extra</strong>. Lossless — não perde informação por sumarização. Bom quando o sintoma "agente esqueceu" está aparecendo demais.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">🕐 Timezone: container UTC vs local</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Container Docker roda em <strong class="text-rose-400">UTC por padrão</strong>. Sem configurar timezone, cron pra "09:00" dispara às 09:00 UTC = 06:00 em Brasília. Você acorda 3h antes da expectativa e não entende.
+      </p>
+      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">⚙️</span>Solução 1: config.yaml</h3>
+        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code>timezone: "America/Sao_Paulo"</code></pre>
+        <p class="text-neutral-300 text-sm mt-3">String IANA padrão. Outros exemplos: <code class="text-rose-400">Europe/Lisbon</code>, <code class="text-rose-400">America/New_York</code>, <code class="text-rose-400">Asia/Tokyo</code>.</p>
+      </div>
+      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">🐳</span>Solução 2: env var no Docker</h3>
+        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code>environment:
+  - TZ=America/Sao_Paulo</code></pre>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3">📅 O que isso afeta</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Timestamps em logs</strong> — todos os logs ficam em horário local</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Agendamento de cron</strong> — "09:00 todo dia" vira 09:00 do seu fuso</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Hora injetada no system prompt</strong> — agente sabe que horas são pra você</span></li>
+        </ul>
+      </div>
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Não esqueça</h3>
+        <p class="text-neutral-300 text-sm">Mudou timezone? Reinicie o container. Crons antigos podem ficar com a próxima execução calculada no fuso anterior. Após restart, recalcula corretamente.</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🩺 Diagnóstico via terminal do container</h2>
+      </div>
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Quando Telegram não responde e você precisa de uma porta de diagnóstico fora dele, vá pro terminal do container. É o "modo seguro" do Hermes — o CLI <code class="text-rose-400">hermes</code> tem subcomandos pra inspecionar tudo.
+      </p>
+      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-4">🔧 Comandos essenciais</h3>
+        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code># Entrar no container
+docker exec -it hermes bash
+
+# Status do gateway
+hermes gateway status
+
+# Listar crons
+hermes cron list
+
+# Ler config
+hermes config get TELEGRAM_TOKEN
+
+# Health check completo
+hermes doctor
+
+# Logs ao vivo
+tail -f ~/.hermes/logs/gateway.log
+tail -f ~/.hermes/logs/errors.log</code></pre>
+      </div>
+      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">📜</span>Auto-redação de secrets nos logs</h3>
+        <p class="text-neutral-300 text-sm">Logs em <code class="text-rose-400">~/.hermes/logs/</code> aplicam redação automática: tokens, API keys e segredos viram <code class="text-rose-400">[REDACTED]</code>. Pode compartilhar com suporte sem medo. Ainda assim, leia antes de mandar — paranoia saudável.</p>
+      </div>
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">💡</span>Quando o agente está vivo mas estranho</h3>
+        <p class="text-neutral-300 text-sm">Antes de assumir bug do código, leia <code class="text-blue-400">~/.hermes/MEMORY.md</code> e <code class="text-blue-400">~/.hermes/SOUL.md</code>. 70% dos "comportamentos estranhos" são fato desatualizado lá dentro. Voltamos nisso no módulo 6.4.</p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
+        <div class="space-y-3 mb-8">
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Telegram não responde</strong><span class="text-neutral-400"> — gateway status, gateway.log, TELEGRAM_TOKEN, TELEGRAM_HOME_CHANNEL.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Dashboard não abre</strong><span class="text-neutral-400"> — SSH tunnel ou nginx; quase sempre é falta da ponte de rede.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>.env certo é dentro do container</strong><span class="text-neutral-400"> — montar volume <code>~/.hermes:/root/.hermes</code>.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Compressão automática + LCM</strong><span class="text-neutral-400"> — modelo barato pra compressão, ou plugin LCM lossless.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Timezone vai em config.yaml ou TZ env var</strong><span class="text-neutral-400"> — sem isso, cron dispara em UTC.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Terminal do container é o modo seguro</strong><span class="text-neutral-400"> — <code>hermes doctor</code>, logs com auto-redação.</span></div></div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-rose-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">6.4 - 🔁 Rotina de manutenção contínua</p></div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="modulo-6-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
+          <a href="modulo-6-4.html" class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors">Próximo Módulo →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 6.3 • 2026</p></div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+  </script>
+</body>
+</html>
