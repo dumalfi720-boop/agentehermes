@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5.1 Hermes vs Claude Code | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>5.1 Hermes vs Claude Code | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -59,243 +59,218 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-teal-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-teal-400">Trilha 5</a><span>/</span>
-      <span class="text-teal-400">Módulo 5.1</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MÓDULO 5.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🆚 Hermes vs Claude Code</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Cinco diferenças concretas entre Hermes e Claude Code, com cenários onde cada lado ganha. Não é "ou um ou outro" — é entender o nicho de cada produto pra montar a stack certa.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Estratégico</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Comparação</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">📱 Gateway de mensagens nativo</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes tem <strong class="text-teal-400">gateway nativo</strong> que conecta o agente a 20+ plataformas de mensageria — Telegram, Discord, WhatsApp, Slack, Signal, iMessage (BlueBubbles), Microsoft Teams, Matrix, Google Chat e outras. Claude Code opera <strong class="text-teal-400">exclusivamente no terminal</strong>: sem gateway, sem bots, sem entrega de mensagem fora do terminal.
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10" href="index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-teal-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-teal-400" href="index.html">Track 5</a><span>/</span>
+<span class="text-teal-400">Module 5.1</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MODULE 5.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🆚 Hermes vs Claude Code</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Five concrete differences between Hermes and Claude Code, with scenarios where each side wins. It's not "one or the other" — it's understanding the niche of each product to build the right stack.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Strategic</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Comparison</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📱 Native Messaging Gateway</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes has<strong class="text-teal-400">native gateway</strong>which connects the agent to 20+ messaging platforms — Telegram, Discord, WhatsApp, Slack, Signal, iMessage (BlueBubbles), Microsoft Teams, Matrix, Google Chat and others. Claude Code operates<strong class="text-teal-400">exclusively in the terminal</strong>: no gateway, no bots, no message delivery outside the terminal.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🌐</span>What does this change in practice</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Hermes:</strong>you walk down the street, send audio on Telegram, it transcribes, reasons, executes skills, responds.</li>
+<li><strong class="text-blue-400">Claude Code:</strong>It only works when you sit at the PC and open the terminal — it doesn't respond on the cell phone alone.</li>
+<li><strong class="text-blue-400">Claude Code equivalent:</strong>would require an extra stack (custom bot + bridge + remote execution), assembled by hand.</li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Command that illustrates</h3>
+<p class="text-neutral-300 text-sm"><code class="text-teal-400" data-notranslate="True">hermes gateway setup</code>runs an interactive wizard that asks which platform, requests token, generates config, tests. In 5 minutes the agent is responding on Telegram. In Claude Code there is no equivalent — what you have is a CLI instance running locally.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">⏰ Native Cron</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes includes<strong class="text-teal-400">built-in task scheduler</strong>with direct delivery to the message channel. You say "every day at 8 am, send a summary of priorities on Telegram" and cron runs it. Claude Code<strong class="text-teal-400">doesn't have cron</strong>— you would have to orchestrate via the system crontab, write wrapper script and manage delivery manually.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h4 class="font-bold text-teal-400 mb-4">✓ Hermes (cron + gateway)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>"Every day at 8 am, summarize priorities on Telegram"</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>"Friday 6pm, send a summary of the week on Slack"</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>"Sunday, audit server and alert if anything suspicious"</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>LLM reasons the output at runtime</span></li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ Claude Code (without cron)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>System crontab calls wrapper script</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>You code delivery (curl for Telegram bot)</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Token management and manual context</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Operational grows a lot in scale</span></li>
+</ul>
+</div>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">📚 Persistent Skills vs free CLAUDE.md</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes maintains skills like<strong class="text-teal-400">structured YAML documents</strong> em <code class="text-teal-400" data-notranslate="True">~/.hermes/skills/</code>with progressive disclosure — only uploads what is important for the current task. Claude Code uses<strong class="text-teal-400">CLAUDE.md</strong>and free system prompts, without indexed catalog or progressive disclosure.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🧬 Technical comparison</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">Hermes SKILL.md:</strong>YAML front matter (name, description, when_to_use), structured procedure, versioned in<code data-notranslate="True">~/.hermes/skills/</code>, synchronizable via Skills Hub.</div>
+<div><strong class="text-teal-400">Claude Code CLAUDE.md:</strong>single file in the project root, free system prompt, no catalog, read in full every session.</div>
+<div><strong class="text-teal-400">Trade-off:</strong>CLAUDE.md is simpler for small projects; SKILL.md scales better to hundreds of procedures without overflowing context.</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Synergy</h3>
+<p class="text-neutral-300 text-sm">You can have CLAUDE.md (for Claude Code) and .hermes.md/skills/ (for Hermes) in the same repo. Each agent reads its format. No conflict.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🔌 Multi-inference provider</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes connects to<strong class="text-teal-400">OpenAI, Anthropic, OpenRouter, local models (Ollama/llama.cpp), MiniMax OAuth and Codex OAuth</strong>. Claude Code is<strong class="text-teal-400">coupled to the Claude model</strong>via Anthropic API or Claude Pro/Max.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">💰 Why it matters for cost control</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Codex via ChatGPT Plus ($20/month):</strong>heavy use of non-pay-per-token coding. Hermes consumes this subscription.</li>
+<li><strong class="text-blue-400">OpenRouter:</strong>200+ models via single API, model exchange at runtime depending on the task.</li>
+<li><strong class="text-blue-400">Local model:</strong>Qwen, Llama, DeepSeek running on personal GPU — extreme privacy, zero inference cost.</li>
+<li><strong class="text-blue-400">Fallback:</strong>if Anthropic goes down, Hermes stays with OpenAI. Claude Code for.</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Lock-in is a risk</h3>
+<p class="text-neutral-300 text-sm">Coupling production to a single provider is an operational risk. If the API goes down, the price goes up or the model is discontinued, you are held hostage. Multi-provider is continuity insurance.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">📋 Multi-agent Kanban (v0.13.0)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">v0.13.0 "The Tenacity Release" introduces<strong class="text-teal-400">multi-agent Kanban orchestration</strong>with heartbeat, reclaim and zombie detection. Workers pick up tasks, mark statuses, return them to the pool if they get stuck. Claude Code<strong class="text-teal-400">does not have native multi-agent coordination</strong>.
       </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🌐</span>O que isso muda na prática</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Hermes:</strong> você anda na rua, manda áudio no Telegram, ele transcreve, raciocina, executa skill, responde.</li>
-          <li><strong class="text-blue-400">Claude Code:</strong> só funciona quando você senta no PC e abre terminal — não responde no celular sozinho.</li>
-          <li><strong class="text-blue-400">Equivalente Claude Code:</strong> exigiria stack extra (bot custom + bridge + execução remota), montada à mão.</li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Comando que ilustra</h3>
-        <p class="text-neutral-300 text-sm"><code class="text-teal-400">hermes gateway setup</code> roda um wizard interativo que pergunta qual plataforma, pede token, gera config, testa. Em 5 minutos o agente está respondendo no Telegram. Em Claude Code não há equivalente — o que tem é instância CLI rodando localmente.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">⏰ Cron nativo</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes inclui <strong class="text-teal-400">agendador de tarefas embutido</strong> com entrega direta no canal de mensagem. Você fala "todo dia 8h, manda resumo das prioridades no Telegram" e o cron executa. Claude Code <strong class="text-teal-400">não tem cron</strong> — você teria que orquestrar via crontab do sistema, escrever script wrapper e gerenciar entrega manualmente.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-          <h4 class="font-bold text-teal-400 mb-4">✓ Hermes (cron + gateway)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>"Todo dia 8h, resume prioridades no Telegram"</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>"Sexta 18h, manda resumo da semana no Slack"</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>"Domingo, audita servidor e alerta se algo suspeito"</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>LLM raciocina o output em runtime</span></li>
-          </ul>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Claude Code (sem cron)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Crontab do sistema chama script wrapper</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Você codifica entrega (curl pra bot Telegram)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Manage de tokens e contexto manual</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Operacional cresce muito em escala</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">📚 Skills persistentes vs CLAUDE.md livre</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes mantém skills como <strong class="text-teal-400">documentos YAML estruturados</strong> em <code class="text-teal-400">~/.hermes/skills/</code> com progressive disclosure — só carrega o que importa pra tarefa atual. Claude Code usa <strong class="text-teal-400">CLAUDE.md</strong> e system prompts livres, sem catálogo indexado nem progressive disclosure.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🧬 Comparação técnica</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">Hermes SKILL.md:</strong> YAML front matter (name, description, when_to_use), procedimento estruturado, versionado em <code>~/.hermes/skills/</code>, sincronizável via Skills Hub.</div>
-          <div><strong class="text-teal-400">Claude Code CLAUDE.md:</strong> arquivo único na raiz do projeto, prompt de sistema livre, sem catálogo, lido inteiro toda sessão.</div>
-          <div><strong class="text-teal-400">Trade-off:</strong> CLAUDE.md é mais simples pra projeto pequeno; SKILL.md escala melhor pra centenas de procedimentos sem estourar contexto.</div>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Sinergia</h3>
-        <p class="text-neutral-300 text-sm">Você pode ter CLAUDE.md (pra Claude Code) e .hermes.md/skills/ (pra Hermes) no mesmo repo. Cada agente lê seu formato. Sem conflito.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🔌 Multi-provedor de inferência</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes conecta a <strong class="text-teal-400">OpenAI, Anthropic, OpenRouter, modelos locais (Ollama/llama.cpp), MiniMax OAuth e Codex OAuth</strong>. Claude Code é <strong class="text-teal-400">acoplado ao modelo Claude</strong> via API Anthropic ou Claude Pro/Max.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">💰 Por que importa pra controle de custo</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Codex via ChatGPT Plus ($20/mês):</strong> uso pesado de coding sem pay-per-token. Hermes consome essa subscription.</li>
-          <li><strong class="text-blue-400">OpenRouter:</strong> 200+ modelos via single API, troca de modelo em runtime conforme tarefa.</li>
-          <li><strong class="text-blue-400">Modelo local:</strong> Qwen, Llama, DeepSeek rodando em GPU pessoal — privacidade extrema, custo zero de inferência.</li>
-          <li><strong class="text-blue-400">Fallback:</strong> se Anthropic cair, Hermes continua com OpenAI. Claude Code para.</li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Lock-in é risco</h3>
-        <p class="text-neutral-300 text-sm">Acoplar produção a um único provedor é risco operacional. Se a API cair, sobe preço ou descontinua modelo, você fica refém. Multi-provedor é seguro de continuidade.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">📋 Multi-agente Kanban (v0.13.0)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A v0.13.0 "The Tenacity Release" introduz <strong class="text-teal-400">orquestração Kanban multi-agente</strong> com heartbeat, reclaim e zombie detection. Workers pegam tarefas, marcam status, devolvem pro pool se travarem. Claude Code <strong class="text-teal-400">não tem coordenação multi-agente nativa</strong>.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🏗️ Como o Kanban funciona</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">Board:</strong> colunas To Do / Doing / Done. Tarefas entram pelo To Do.</div>
-          <div><strong class="text-teal-400">Workers:</strong> agentes pegam tarefas do topo do To Do, movem pra Doing, executam.</div>
-          <div><strong class="text-teal-400">Heartbeat:</strong> worker prova que está vivo a cada N segundos. Se parar, tarefa é marcada zombie.</div>
-          <div><strong class="text-teal-400">Reclaim:</strong> outro worker pega a tarefa zombie, retoma do estado salvo.</div>
-          <div><strong class="text-teal-400">Done:</strong> conclusão move pra coluna Done. Você revisa o resultado.</div>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Quando isso importa</h3>
-        <p class="text-neutral-300 text-sm">Refactor multi-repo (1 worker por repo). Processar 1000 emails (workers paralelos). Auditar 50 servidores (1 por host). Sem Kanban, vira gambiarra com fila externa (Redis, RabbitMQ).</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🎯 Conclusão: cenários onde cada um ganha</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A pergunta não é "qual escolher". É "<strong class="text-teal-400">em qual cenário cada um é melhor</strong>" — e o profissional sério usa os dois.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-          <h4 class="font-bold text-teal-400 mb-4">🪽 Hermes ganha quando...</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Você está em movimento e quer agente via Telegram/WhatsApp</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Precisa de automações agendadas (cron)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Quer agente sempre on, 24/7, em VPS</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Precisa multi-provedor (custo, fallback, local)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Tarefa pede Kanban multi-agente coordenado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Equipe não-técnica precisa interagir com agente</span></li>
-          </ul>
-        </div>
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">🤖 Claude Code ganha quando...</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Você está sentado no PC, dentro de projeto</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Tarefa exige raciocínio profundo de código</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Refactor complexo, review de PR, debug intricado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Quer modelo Claude Sonnet 4.5/Opus em IDE</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Workflow é interativo, não agendado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Single dev sentado fazendo trabalho profundo</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Gateway nativo 20+ plataformas</strong><span class="text-neutral-400"> — Hermes ganha por design; Claude Code é terminal-only.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Cron embutido com entrega no canal</strong><span class="text-neutral-400"> — Hermes orquestra fim-a-fim; Claude Code precisa crontab + script wrapper.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>SKILL.md com progressive disclosure</strong><span class="text-neutral-400"> — escala melhor que CLAUDE.md livre em projetos grandes.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Multi-provedor (OpenAI, Anthropic, local, OAuth)</strong><span class="text-neutral-400"> — controle de custo e fallback; Claude Code só Claude.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Kanban multi-agente v0.13.0</strong><span class="text-neutral-400"> — orquestra workers com heartbeat/reclaim/zombie detection.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Não é "ou"; é "e"</strong><span class="text-neutral-400"> — Claude Code no PC + Hermes no Telegram, mesmo repo Git, é o default profissional.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-teal-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">5.2 - ⌨️ Hermes vs OpenCode / Codex CLI / Cursor</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a>
-          <a href="modulo-5-2.html" class="flex-1 text-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 5.1 • 2026</p></div>
-  </footer>
-
-  <script>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🏗️ How Kanban works</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">Board:</strong>To Do/Doing/Done columns. Tasks are entered via To Do.</div>
+<div><strong class="text-teal-400">workers:</strong>agents take tasks from the top of To Do, move them to Doing, and execute them.</div>
+<div><strong class="text-teal-400">Heartbeat:</strong>worker proves it is alive every N seconds. If it stops, task is marked zombie.</div>
+<div><strong class="text-teal-400">Claim:</strong>another worker takes the zombie task, resumes from the saved state.</div>
+<div><strong class="text-teal-400">Done:</strong>completion moves to the Done column. You review the result.</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>When it matters</h3>
+<p class="text-neutral-300 text-sm">Multi-repo refactor (1 worker per repo). Process 1000 emails (parallel workers). Audit 50 servers (1 per host). Without Kanban, it becomes a compromise with an external queue (Redis, RabbitMQ).</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🎯 Conclusion: scenarios where everyone wins</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The question is not "which one to choose". It's "<strong class="text-teal-400">in which scenario each is better</strong>" — and the serious professional uses both.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h4 class="font-bold text-teal-400 mb-4">🪽 Hermes wins when...</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>You are on the move and want an agent via Telegram/WhatsApp</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Need scheduled automations (cron)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Do you want an agent always on, 24/7, on VPS</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Need multi-provider (cost, fallback, location)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Task calls for coordinated multi-agent Kanban</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Non-technical staff need to interact with agent</span></li>
+</ul>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">🤖 Claude Code wins when...</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>You are sitting at the PC, inside the project</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Task requires deep code reasoning</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Complex refactor, PR review, intricate debugging</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Want Claude Sonnet 4.5/Opus model in IDE</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Workflow is interactive, not scheduled</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Single dev sitting doing deep work</span></li>
+</ul>
+</div>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Native gateway 20+ platforms</strong><span class="text-neutral-400">— Hermes wins by design; Claude Code is terminal-only.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Built-in cron with in-channel delivery</strong><span class="text-neutral-400">— Hermes orchestrates end-to-end; Claude Code needs crontab + wrapper script.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>SKILL.md with progressive disclosure</strong><span class="text-neutral-400">— scales better than free CLAUDE.md on large projects.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Multi-provider (OpenAI, Anthropic, local, OAuth)</strong><span class="text-neutral-400">— cost control and fallback; Claude Code just Claude.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Multi-Agent Kanban v0.13.0</strong><span class="text-neutral-400">— orchestrates workers with heartbeat/reclaim/zombie detection.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>It's not "or"; is "and"</strong><span class="text-neutral-400">— Claude Code on PC + Hermes on Telegram, same Git repo, is the professional default.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-teal-400 mb-2">Next module:</h3><p class="text-neutral-300">5.2 - ⌨️ Hermes vs OpenCode / Codex CLI / Cursor</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Back to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors" href="modulo-5-2.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 5.1 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
