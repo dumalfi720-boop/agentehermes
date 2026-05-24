@@ -1,333 +1,329 @@
-# Hermes Agent: guia completo para criar e evoluir seu próprio assistente pessoal de IA
+# Hermes Agent: Complete guide to creating and evolving your own AI personal assistant
 
-O Hermes Agent é um agente de inteligência artificial open source que pode rodar na sua própria infraestrutura e funcionar como um assistente pessoal de verdade. Ele não é apenas um chatbot em uma página da web. Ele pode usar ferramentas, lembrar preferências, executar comandos, criar automações, trabalhar com arquivos, responder por texto ou áudio, acessar canais de mensagem e melhorar com o tempo.
+Hermes Agent is an open source artificial intelligence agent that can run on your own infrastructure and function as a true personal assistant. It's not just a chatbot on a web page. It can use tools, remember preferences, run commands, create automations, work with files, respond via text or audio, access message channels, and improve over time.
 
-A proposta principal do Hermes é permitir que você crie um agente que cresça junto com você. Quanto mais você usa, corrige, orienta e estrutura seus processos, mais útil ele se torna. Ele pode guardar contexto em arquivos de memória, transformar tarefas repetidas em skills, criar rotinas automáticas e operar por interfaces como Telegram, Discord, Slack, WhatsApp ou até iMessage.
+Hermes' main proposal is to allow you to create an agent that grows with you. The more you use, correct, guide and structure your processes, the more useful it becomes. It can store context in memory files, transform repeated tasks into skills, create automatic routines and operate through interfaces such as Telegram, Discord, Slack, WhatsApp or even iMessage.
 
-O uso mais prático para começar é pelo Telegram. Assim, você consegue conversar com o agente pelo celular, pedir tarefas rápidas, acompanhar automações e receber resultados sem precisar estar no computador o tempo todo.
-
----
-
-## O que é o Hermes Agent
-
-O Hermes Agent é um assistente de IA que roda em infraestrutura própria. Ele pode ser instalado em um VPS, em um laptop, em um Mac Mini, dentro de um container Docker ou até em um Android via Termux.
-
-Ele vem com várias capacidades já disponíveis, como:
-
-- uso de ferramentas;
-- execução de comandos no terminal;
-- visão;
-- automação de navegador;
-- geração de imagens;
-- texto para fala;
-- resposta por áudio;
-- planejamento de tarefas;
-- criação e uso de skills;
-- automações agendadas;
-- busca em conversas anteriores;
-- integração com plataformas de mensagem.
-
-A grande diferença é que ele foi pensado para funcionar como um agente contínuo, não como uma conversa isolada. Ele pode lembrar preferências, aprender processos, criar rotinas e se adaptar com o tempo.
+The most practical use to start with is Telegram. This way, you can talk to the agent on your cell phone, request quick tasks, follow automations and receive results without having to be on the computer all the time.
 
 ---
 
-## Para que ele serve
+## What is Hermes Agent
 
-O Hermes pode ser usado para tarefas pessoais, profissionais e operacionais. Alguns exemplos de uso:
+Hermes Agent is an AI assistant that runs on its own infrastructure. It can be installed on a VPS, on a laptop, on a Mac Mini, inside a Docker container or even on an Android via Termux.
 
-- receber um resumo diário de notícias;
-- monitorar comentários em redes sociais;
-- responder interações com base em contexto;
-- fazer checagens de servidor;
-- gerar relatórios de pesquisa;
-- criar lembretes de follow-up;
-- resumir tarefas do dia;
-- acompanhar projetos;
-- organizar arquivos;
-- criar documentos;
-- executar scripts;
-- manter backups automáticos;
-- instalar e usar novas skills;
-- ajudar a configurar o próprio ambiente.
+It comes with several capabilities already available, such as:
 
-A ideia é que ele funcione como um assistente pessoal ou operacional. Você pode pedir algo em linguagem natural, e ele tenta descobrir quais ferramentas usar, quais comandos executar e como entregar o resultado.
+- use of tools;
+- execution of commands in the terminal;
+- vision;
+- browser automation;
+- image generation;
+- text to speech;
+- audio response;
+- task planning;
+- creation and use of skills;
+- scheduled automations;
+- search in previous conversations;
+- integration with messaging platforms.
 
----
-
-## A mentalidade correta para usar o Hermes
-
-Um dos pontos mais importantes é entender que você não precisa saber tudo antes de usar o Hermes. Se você não sabe como configurar algo, pode pedir para o próprio Hermes pesquisar, ler a documentação e explicar o processo.
-
-Por exemplo, você pode dizer:
-
-> “Quero conectar você ao GitHub. Pesquise como fazer isso e me diga o que precisa de mim.”
-
-Ou:
-
-> “Esse erro apareceu no terminal. Explique o que significa e me diga como corrigir.”
-
-Ou ainda:
-
-> “Achei uma ferramenta interessante neste link. Leia, entenda e veja se dá para implementar aqui.”
-
-Esse é um dos maiores diferenciais do agente: ele pode ajudar a construir e manter o próprio ambiente onde está rodando.
+The big difference is that it was designed to work as a continuous agent, not as an isolated conversation. It can remember preferences, learn processes, create routines and adapt over time.
 
 ---
 
-## Hermes, Claude Code e OpenCode
+## What is it for
 
-Essas ferramentas não precisam competir entre si. Cada uma pode ter uma função diferente.
+Hermes can be used for personal, professional and operational tasks. Some usage examples:
 
-O **Claude Code** é mais indicado para trabalho profundo no computador, principalmente programação, edição de projetos, análise de código e tarefas complexas feitas no terminal. Ele é uma boa escolha quando você está sentado no computador e quer trabalhar com calma.
+- receive a daily news summary;
+- monitor comments on social networks;
+- respond to interactions based on context;
+- perform server checks;
+- generate research reports;
+- create follow-up reminders;
+- summarize tasks for the day;
+- monitor projects;
+- organize files;
+- create documents;
+- run scripts;
+- maintain automatic backups;
+- install and use new skills;
+- help configure the environment itself.
 
-O **OpenCode** também é uma ferramenta open source voltada a agentes de código e automação. Pode ser útil para tarefas rápidas, trabalho remoto e experimentação, mas pode exigir mais manutenção dependendo das atualizações e do ambiente.
-
-O **Hermes** se destaca por ser leve, rápido, voltado para autoaperfeiçoamento e muito útil para automações via Telegram. Ele é especialmente interessante quando você quer pedir coisas pelo celular, criar crons, monitorar tarefas e operar um agente em movimento.
-
-Um bom fluxo é usar cada ferramenta no papel certo:
-
-- Claude Code para trabalho pesado no computador;
-- Hermes para automações, tarefas recorrentes e comandos rápidos;
-- GitHub como repositório central de contexto, skills e configurações;
-- Telegram como controle remoto do agente.
-
----
-
-## Os cinco pilares do Hermes
-
-O Hermes é mais fácil de entender quando você pensa nele a partir de cinco pilares principais: memória, skills, soul, crons e loop de autoaperfeiçoamento.
+The idea is that it works as a personal or operational assistant. You can ask it for something in natural language, and it tries to figure out what tools to use, what commands to run, and how to deliver the result.
 
 ---
 
-## 1. Memória
+## The correct mindset for using Hermes
 
-A memória é o contexto durável que o agente carrega entre sessões. Como uma IA normalmente começa cada sessão sem lembrar de tudo, você precisa dar a ela arquivos de contexto que expliquem quem você é, como trabalha e quais projetos estão em andamento.
+One of the most important points is to understand that you don't need to know everything before using Hermes. If you don't know how to configure something, you can ask Hermes to research it, read the documentation and explain the process.
 
-Os principais arquivos de memória são:
+For example, you might say:
 
-### `user.md`
+> “I want to connect you to GitHub. Research how to do that and let me know what you need from me.”
 
-Esse arquivo guarda informações sobre você:
+Or:
 
-- seu nome;
-- seu estilo de trabalho;
-- preferências;
-- coisas que você gosta;
-- coisas que você não gosta;
-- tom de resposta preferido;
-- hábitos;
-- regras pessoais de uso.
+> “This error appeared in the terminal. Explain what it means and tell me how to fix it.”
 
-### `memory.md`
+Or even:
 
-Esse arquivo guarda informações sobre o ambiente e os projetos:
+> “I found an interesting tool at this link. Read it, understand it and see if it can be implemented here.”
 
-- projetos atuais;
-- contexto de negócio;
-- ferramentas usadas;
-- caminhos importantes;
-- integrações;
-- decisões já tomadas;
-- informações recorrentes.
+This is one of the agent's biggest differentiators: it can help build and maintain the environment in which it runs.
 
-A memória deve guardar informações duráveis. Não é o lugar certo para senhas, tokens, API keys ou tarefas temporárias.
+---
 
-Exemplos bons para memória:
+## Hermes, Claude Code and OpenCode
 
-> “Prefiro respostas diretas e organizadas.”
+These tools do not need to compete with each other. Each one can have a different function.
 
-> “Meu projeto principal usa GitHub como fonte de verdade.”
+**Claude Code** is best suited for in-depth work on the computer, mainly programming, project editing, code analysis and complex tasks performed on the terminal. It is a good choice when you are sitting at the computer and want to work calmly.
 
-> “Sempre que criar uma automação importante, também criar uma skill.”
+**OpenCode** is also an open source tool aimed at code and automation agents. It can be useful for quick tasks, remote work, and experimentation, but may require more maintenance depending on updates and your environment.
 
-Exemplos ruins para memória:
+**Hermes** stands out for being light, fast, aimed at self-improvement and very useful for automations via Telegram. It is especially interesting when you want to order things on your cell phone, create crons, monitor tasks and operate an agent on the move.
 
-> “Hoje preciso responder João às 15h.”
+A good flow is to use each tool in the right role:
 
-> “Minha API key é…”
+- Claude Code for heavy work on the computer;
+- Hermes for automations, recurring tasks and quick commands;
+- GitHub as a central repository for context, skills and configurations;
+- Telegram as remote agent control.
 
-> “O status atual dessa tarefa é pendente.”
+---
 
-A memória é para contexto estável, não para segredos nem informações passageiras.
+## The five pillars of Hermes
+
+Hermes is easier to understand when you think of it in terms of five main pillars: memory, skills, soul, crons and self-improvement loop.
+
+---
+
+## 1. Memory
+
+Memory is the durable context that the agent carries between sessions. Because an AI typically starts each session without remembering everything, you need to give it context files that explain who you are, how you work, and what projects are in progress.
+
+The main memory files are:
+
+###`user.md`This file stores information about you:
+
+- your name;
+- your work style;
+- preferences;
+- things you like;
+- things you don't like;
+- preferred response tone;
+- habits;
+- personal rules of use.
+
+###`memory.md`This file stores information about the environment and projects:
+
+- current projects;
+- business context;
+- used tools;
+- important paths;
+- integrations;
+- decisions already taken;
+- recurring information.
+
+Memory must store durable information. It's not the right place for passwords, tokens, API keys, or temporary tasks.
+
+Good examples for memory:
+
+> “I prefer direct and organized answers.”
+
+> “My main project uses GitHub as its source of truth.”
+
+> “Whenever you create an important automation, also create a skill.”
+
+Bad memory examples:
+
+> “Today I need to respond to João at 3pm.”
+
+> “My API key is…”
+
+> “The current status of this task is pending.”
+
+Memory is for stable context, not for secrets or passing information.
 
 ---
 
 ## 2. Skills
 
-Skills são procedimentos reutilizáveis. Elas funcionam como receitas que ensinam o agente a fazer uma tarefa do jeito certo.
+Skills are reusable procedures. They work like recipes that teach the agent how to do a task the right way.
 
-Se você pede a mesma coisa várias vezes, aquilo provavelmente deveria virar uma skill.
+If you ask the same thing several times, it should probably become a skill.
 
-Por exemplo:
+For example:
 
-- gerar um relatório semanal;
-- revisar um texto no seu estilo;
-- fazer backup para o GitHub;
-- monitorar comentários;
-- criar posts;
-- revisar segurança do VPS;
-- abrir o dashboard;
-- organizar arquivos de um projeto.
+- generate a weekly report;
+- revise a text in your style;
+- backup to GitHub;
+- monitor comments;
+- create posts;
+- review VPS security;
+- open the dashboard;
+- organize project files.
 
-Uma skill normalmente fica em um arquivo chamado `skill.md`. Ela possui uma parte inicial em YAML, que explica quando a skill deve ser usada, e depois instruções em Markdown explicando como executar o processo.
+A skill is normally in a file called`skill.md`. It has an initial part in YAML, which explains when the skill should be used, and then instructions in Markdown explaining how to execute the process.
 
-A vantagem das skills é consistência. Em vez de o agente tentar lembrar de cabeça como fazer algo, ele consulta a skill e segue o processo definido.
+The advantage of skills is consistency. Instead of the agent trying to remember how to do something in his head, he consults the skill and follows the defined process.
 
-A diferença entre memória e skill é simples:
+The difference between memory and skill is simple:
 
-**Memória é o que lembrar.**  
-**Skill é como fazer novamente.**
+**Memory is what you remember.**  
+**Skill is like doing it again.**
 
-Sempre que você perceber que está repetindo uma instrução, diga ao agente:
+Whenever you notice yourself repeating an instruction, tell the agent:
 
-> “Transforme isso em uma skill para fazer sempre desse jeito.”
+> “Turn this into a skill to always do it this way.”
 
-E se o agente deveria usar uma skill, mas não usou, você pode corrigir:
+And if the agent should use a skill, but didn't, you can correct it:
 
-> “Quando eu pedir algo parecido com isso, use essa skill. Atualize a descrição dela para ser chamada corretamente.”
+> "When I ask for something like this, use this skill. Update its description to be called correctly."
 
 ---
 
 ## 3. Soul
 
-O `soul.md` define a personalidade do agente. Ele controla o estilo, o tom e a forma como o Hermes responde.
+O`soul.md`defines the agent's personality. He controls the style, tone and way Hermes responds.
 
-Você pode configurar o agente para ser:
+You can configure the agent to be:
 
-- direto;
+- direct;
 - formal;
-- descontraído;
-- técnico;
-- sarcástico;
-- motivador;
-- objetivo;
-- detalhado;
-- mais humano;
-- mais operacional.
+- relaxed;
+- technical;
+- sarcastic;
+- motivating;
+- objective;
+- detailed;
+- more human;
+- more operational.
 
-Isso é útil principalmente se outras pessoas também forem interagir com o agente ou se ele for responder comentários, mensagens, clientes ou membros de uma comunidade.
+This is especially useful if other people will also interact with the agent or if the agent will respond to comments, messages, customers or members of a community.
 
-Exemplos de orientação para o `soul.md`:
+Examples of guidance for`soul.md`:
 
-> “Seja direto, útil e sem enrolação.”
+> “Be direct, helpful and without fluff.”
 
-> “Tenha um tom profissional, mas amigável.”
+> “Have a professional but friendly tone.”
 
-> “Use humor leve quando fizer sentido, mas nunca seja rude.”
+> “Use light humor when it makes sense, but never be rude.”
 
-> “Priorize ações práticas em vez de explicações longas.”
+> “Prioritize practical actions over long explanations.”
 
-O soul também pode evoluir. Se o agente estiver muito formal, muito longo ou fora do tom, você pode pedir:
+The soul can also evolve. If the agent is too formal, too long, or off-key, you can ask:
 
-> “Atualize seu soul para ser mais direto e menos verboso.”
+> “Update your soul to be more direct and less verbose.”
 
 ---
 
 ## 4. Crons
 
-Crons são automações agendadas. Eles transformam o Hermes de um agente reativo em um agente proativo.
+Crons are scheduled automations. They transform Hermes from a reactive agent to a proactive agent.
 
-Você pode dizer em linguagem natural:
+You can say in natural language:
 
-> “Todo dia às 8h, me envie um resumo das minhas tarefas.”
+> “Every day at 8am, send me a summary of my tasks.”
 
-Ou:
+Or:
 
-> “A cada 10 minutos pelas próximas 12 horas, verifique os comentários do meu vídeo.”
+> “Every 10 minutes for the next 12 hours, check the comments on my video.”
 
-Ou:
+Or:
 
-> “Toda noite à meia-noite, envie as mudanças para o GitHub.”
+> “Every night at midnight, push changes to GitHub.”
 
-O Hermes pode criar o cron, configurar a rotina, executar a tarefa em uma sessão isolada e depois enviar o resultado para o chat original.
+Hermes can create the cron, configure the routine, execute the task in an isolated session and then send the result to the original chat.
 
-Crons são úteis para:
+Crons are useful for:
 
-- relatórios diários;
-- checagens de servidor;
+- daily reports;
+- server checks;
 - backups;
-- monitoramento de redes sociais;
-- lembretes;
-- auditorias;
-- pesquisas recorrentes;
-- tarefas operacionais.
+- monitoring of social networks;
+- reminders;
+- audits;
+- recurring searches;
+- operational tasks.
 
-Um ponto importante: crons precisam ser bem definidos. Como eles rodam sozinhos, o prompt deve ser claro e completo.
+An important point: crons need to be well defined. Since they run alone, the prompt must be clear and complete.
 
-Um bom cron explica:
+A good cron explains:
 
-- o que fazer;
-- quando fazer;
-- onde executar;
-- quais ferramentas usar;
-- como reportar resultado;
-- o que não fazer.
-
----
-
-## 5. Loop de autoaperfeiçoamento
-
-O Hermes melhora quando o aprendizado vira memória, skill ou histórico pesquisável.
-
-O ciclo é:
-
-1. Você pede uma tarefa.
-2. O agente executa.
-3. Você corrige ou aprova.
-4. O agente salva o aprendizado.
-5. Tarefas repetidas viram skills.
-6. Preferências viram memória.
-7. O agente usa esse contexto em tarefas futuras.
-
-Mas isso não é mágico. O usuário precisa treinar o agente.
-
-Se ele errar, corrija.  
-Se ele acertar, peça para salvar o processo.  
-Se ele repetir um erro, mande atualizar a memória ou a skill.  
-Se você repetir uma instrução, transforme em skill.
-
-Exemplos:
-
-> “Você errou isso de novo. Atualize sua memória para não repetir.”
-
-> “Esse processo ficou bom. Crie uma skill com esses passos.”
-
-> “Da próxima vez, use esse formato de resposta.”
-
-> “Isso não deve ser salvo na memória, é só uma tarefa temporária.”
+- what to do;
+- when to do it;
+- where to perform;
+- what tools to use;
+- how to report results;
+- what not to do.
 
 ---
 
-## Arquivo de contexto do projeto
+## 5. Self-Improvement Loop
 
-Além da memória global, pode existir um arquivo de contexto local do projeto, como `agents.md`.
+Hermes improves when learning becomes memory, skill or searchable history.
 
-Esse arquivo descreve:
+The cycle is:
 
-- objetivo do projeto;
-- estrutura das pastas;
-- regras de trabalho;
-- ferramentas usadas;
-- padrões de código;
-- comandos importantes;
-- decisões técnicas;
-- limites e restrições.
+1. You ask for a task.
+2. The agent executes.
+3. You correct or approve.
+4. The agent saves the learning.
+5. Repeated tasks become skills.
+6. Preferences become memory.
+7. The agent uses this context in future tasks.
 
-Ele é mais útil quando o Hermes está trabalhando em um projeto específico, principalmente com código ou arquivos.
+But this is not magic. The user needs to train the agent.
 
-A diferença é:
+If he makes a mistake, correct it.  
+If he gets it right, ask to save the process.  
+If he repeats a mistake, have the memory or skill updated.  
+If you repeat an instruction, turn it into a skill.
 
-- `user.md`: contexto sobre o usuário;
-- `memory.md`: contexto geral e durável;
-- `soul.md`: personalidade do agente;
-- `agents.md`: contexto de um projeto específico;
-- `skill.md`: procedimento reutilizável.
+Examples:
+
+> "You got that wrong again. Refresh your memory so you don't repeat it."
+
+> “This process was good. Create a skill with these steps.”
+
+> “Next time, use this answer format.”
+
+> “This should not be saved in memory, it is just a temporary task.”
 
 ---
 
-## Onde instalar o Hermes
+## Project context file
 
-Você pode rodar o Hermes em vários ambientes:
+In addition to global memory, there may be a local project context file, such as`agents.md`.
+
+This file describes:
+
+- project objective;
+- folder structure;
+- work rules;
+- used tools;
+- code standards;
+- important commands;
+- technical decisions;
+- limits and restrictions.
+
+It is most useful when Hermes is working on a specific project, especially with code or files.
+
+The difference is:
+
+-`user.md`: context about the user;
+-`memory.md`: general and durable context;
+-`soul.md`: agent personality;
+-`agents.md`: context of a specific project;
+-`skill.md`: reusable procedure.
+
+---
+
+## Where to install Hermes
+
+You can run Hermes in several environments:
 
 - VPS;
 - Docker;
@@ -335,102 +331,100 @@ Você pode rodar o Hermes em vários ambientes:
 - Mac Mini;
 - Android via Termux.
 
-Para começar de forma prática, uma opção comum é usar um VPS com Docker.
+To get started practically, a common option is to use a VPS with Docker.
 
-Um VPS é como um computador alugado na nuvem. Você recebe um IP, usuário e senha, acessa por terminal e instala o que precisa. Ele fica ligado o tempo todo, o que é ideal para automações.
-
----
-
-## Instalação no root ou em Docker
-
-Existem duas formas principais de instalar:
-
-### Instalação no root do VPS
-
-Nesse caso, o Hermes roda diretamente no ambiente principal do servidor.
-
-Vantagens:
-
-- mais direto;
-- menos camadas;
-- pode ser simples para um único agente.
-
-Desvantagens:
-
-- menos isolamento;
-- mais chance de misturar arquivos e configurações;
-- menos organizado para múltiplos agentes.
-
-### Instalação com Docker
-
-Nesse caso, o Hermes roda dentro de um container isolado.
-
-Vantagens:
-
-- mais organizado;
-- facilita rodar vários agentes;
-- cada agente pode ter suas próprias chaves;
-- cada container pode ter sua própria memória;
-- menos conflito entre ambientes;
-- mais fácil separar funções.
-
-A analogia é simples:
-
-O VPS é o prédio.  
-Cada container Docker é uma sala separada.  
-Cada agente tem sua própria sala, suas próprias chaves, suas próprias ferramentas e sua própria memória.
-
-Para a maioria dos casos, Docker é a opção mais organizada.
+A VPS is like a rented computer in the cloud. You receive an IP, username and password, access it via terminal and install what you need. It stays on all the time, which is ideal for automations.
 
 ---
 
-## Configuração inicial recomendada
+## Installation on root or Docker
 
-Um caminho simples para começar:
+There are two main ways to install:
 
-1. Criar um VPS.
-2. Usar Ubuntu 24.04 LTS.
-3. Instalar o Hermes via Docker.
-4. Definir usuário e senha de administrador.
-5. Escolher o provedor de IA.
-6. Escolher o modelo.
-7. Configurar o Telegram.
-8. Criar um bot no BotFather.
-9. Autorizar seu usuário do Telegram.
-10. Testar se o bot responde.
-11. Salvar todas as informações importantes.
-12. Conectar o Hermes ao GitHub.
-13. Criar backup automático.
-14. Criar a primeira skill.
-15. Criar o primeiro cron.
+### VPS root installation
+
+In this case, Hermes runs directly in the main server environment.
+
+Advantages:
+
+- more direct;
+- fewer layers;
+- can be simple for a single agent.
+
+Disadvantages:
+
+- less insulation;
+- more chance to mix files and settings;
+- less organized for multiple agents.
+
+### Installation with Docker
+
+In this case, Hermes runs inside an isolated container.
+
+Advantages:
+
+- more organized;
+- makes it easier to run multiple agents;
+- each agent can have its own keys;
+- each container can have its own memory;
+- less conflict between environments;
+- easier to separate functions.
+
+The analogy is simple:
+
+The VPS is the building.  
+Each Docker container is a separate room.  
+Each agent has their own room, their own keys, their own tools and their own memory.
+
+For most cases, Docker is the most organized option.
 
 ---
 
-## Organização dos seus agentes
+## Recommended initial configuration
 
-Se você pretende usar agentes em VPS, é muito importante manter um projeto de controle com todas as informações operacionais.
+A simple way to get started:
 
-Esse projeto pode conter:
+1. Create a VPS.
+2. Use Ubuntu 24.04 LTS.
+3. Install Hermes via Docker.
+4. Set administrator username and password.
+5. Choose the AI ​​provider.
+6. Choose the model.
+7. Configure Telegram.
+8. Create a bot in BotFather.
+9. Authorize your Telegram user.
+10. Test whether the bot responds.
+11. Save all important information.
+12. Connect Hermes to GitHub.
+13. Create automatic backup.
+14. Create the first skill.
+15. Create the first cron.
 
-- IP do VPS;
+---
+
+## Organization of your agents
+
+If you intend to use agents on VPS, it is very important to maintain a control project with all operational information.
+
+This project may contain:
+
+- VPS IP;
 - hostname;
-- usuário;
-- senha de administrador;
-- nome do container;
-- localização dos arquivos;
-- variáveis de ambiente;
-- integrações;
-- ferramentas disponíveis;
-- comandos úteis;
-- notas de segurança;
-- status dos crons;
-- observações sobre cada agente.
+- user;
+- administrator password;
+- name of the container;
+- location of files;
+- environment variables;
+- integrations;
+- available tools;
+- useful commands;
+- security notes;
+- cron status;
+- observations about each agent.
 
-Isso evita confusão quando você tiver mais de um agente ou quando algo quebrar.
+This avoids confusion when you have more than one agent or when something breaks.
 
-Você pode ter uma estrutura assim:
-
-```text
+You can have a structure like this:```text
 vps-agents/
   pessoal-hermes/
     README.md
@@ -443,531 +437,524 @@ vps-agents/
   financeiro-hermes/
     README.md
     setup-notes.md
-```
-
-Nunca salve segredos diretamente em arquivos que serão enviados ao GitHub. Use `.env` local e garanta que ele esteja no `.gitignore`.
+```Never save secrets directly in files that will be uploaded to GitHub. Use`.env`location and ensure it is in the`.gitignore`.
 
 ---
 
-## Conectando o Hermes ao Telegram
+## Connecting Hermes to Telegram
 
-O Telegram é uma das formas mais práticas de usar o Hermes.
+Telegram is one of the most practical ways to use Hermes.
 
-O fluxo básico é:
+The basic flow is:
 
-1. Abrir o BotFather no Telegram.
-2. Criar um novo bot.
-3. Dar um nome ao bot.
-4. Criar um username único.
-5. Copiar o token do bot.
-6. Inserir o token na configuração do Hermes.
-7. Buscar seu próprio ID de usuário no Telegram.
-8. Autorizar esse ID como usuário permitido.
-9. Testar enviando uma mensagem ao bot.
+1. Open BotFather on Telegram.
+2. Create a new bot.
+3. Give the bot a name.
+4. Create a unique username.
+5. Copy the bot token.
+6. Insert the token in the Hermes configuration.
+7. Search for your own Telegram user ID.
+8. Authorize this ID as a permitted user.
+9. Test by sending a message to the bot.
 
-Se o bot não responder, o próprio Hermes pode ajudar a diagnosticar.
+If the bot doesn't respond, Hermes itself can help diagnose.
 
-Você pode dizer:
+You can say:
 
-> “Enviei mensagem no Telegram, mas você não respondeu. Verifique o gateway e a conexão.”
+> “I sent you a message on Telegram, but you didn't respond. Check the gateway and connection.”
 
-Ele pode checar processos, reiniciar serviços e explicar o problema.
+It can check processes, restart services and explain the problem.
 
 ---
 
 ## CLI vs Telegram
 
-A CLI e o Telegram usam o mesmo agente, mas oferecem experiências diferentes.
+The CLI and Telegram use the same agent but offer different experiences.
 
-### CLI: o cockpit
+### CLI: the cockpit
 
-A CLI é melhor para:
+The CLI is best for:
 
-- programação;
-- tarefas complexas;
-- trabalho profundo;
-- gerenciamento de contexto;
-- uso de comandos avançados;
-- tarefas de maior risco;
-- análise de arquivos e projetos.
+- programming;
+- complex tasks;
+- deep work;
+- context management;
+- use of advanced commands;
+- higher risk tasks;
+- analysis of files and projects.
 
-Na CLI você tem mais visibilidade sobre o que está acontecendo, quais comandos estão rodando, qual modelo está em uso e como o contexto está sendo consumido.
+In the CLI you have more visibility into what is happening, which commands are running, which model is in use and how the context is being consumed.
 
-### Telegram: o controle remoto
+### Telegram: the remote control
 
-O Telegram é melhor para:
+Telegram is best for:
 
-- comandos rápidos;
-- automações;
+- quick commands;
+- automations;
 - check-ins;
-- mensagens em movimento;
-- tarefas de baixo risco;
-- acompanhamento de crons;
-- resumos;
-- lembretes;
-- pequenas operações.
+- messages on the move;
+- low risk tasks;
+- cron monitoring;
+- summaries;
+- reminders;
+- small operations.
 
-O Telegram não é ideal para criar projetos complexos, programar sistemas grandes ou executar tarefas de alto risco sem supervisão. Ele tem menos visibilidade sobre contexto e estado da sessão.
+Telegram is not ideal for creating complex projects, programming large systems, or performing high-risk tasks without supervision. It has less visibility into context and session state.
 
-Uma boa regra:
+A good rule of thumb:
 
-Use CLI para construir.  
-Use Telegram para acionar, acompanhar e operar.
+Use CLI to build.  
+Use Telegram to activate, monitor and operate.
 
 ---
 
-## Contexto: tokens, não mensagens
+## Context: tokens, not messages
 
-Um detalhe importante é que o contexto de um agente é baseado em tokens, não apenas em número de mensagens.
+An important detail is that an agent's context is based on tokens, not just the number of messages.
 
-O modelo precisa carregar:
+The model needs to load:
 
-- instruções do sistema;
-- memória;
-- preferências;
+- system instructions;
+- memory;
+- preferences;
 - soul;
-- contexto do projeto;
-- histórico relevante;
-- mensagens recentes;
-- chamadas de ferramentas.
+- project context;
+- relevant history;
+- recent messages;
+- tool calls.
 
-Em sessões longas, pode acontecer compactação automática de contexto. Isso significa que o agente tenta resumir partes anteriores para continuar trabalhando sem ultrapassar o limite.
+In long sessions, automatic context compression may occur. This means that the agent tries to summarize previous parts to continue working without exceeding the limit.
 
-Na CLI é mais fácil perceber isso. No Telegram, esse processo fica menos visível. Por isso, para tarefas grandes ou sensíveis, é melhor usar a CLI.
+In the CLI it is easier to understand this. On Telegram, this process is less visible. Therefore, for large or sensitive tasks, it is better to use the CLI.
 
 ---
 
-## Conectando ao GitHub
+## Connecting to GitHub
 
-Depois que o Hermes estiver funcionando, uma das primeiras coisas a fazer é conectá-lo a um repositório privado no GitHub.
+Once Hermes is up and running, one of the first things to do is connect it to a private repository on GitHub.
 
-Isso permite versionar:
+This allows you to version:
 
 - skills;
-- arquivos de memória;
-- configurações não sensíveis;
-- documentação;
+- memory files;
+- non-sensitive settings;
+- documentation;
 - scripts;
-- contexto do agente;
-- histórico de mudanças.
+- agent context;
+- change history.
 
-A vantagem é que, se o VPS quebrar, você consegue recriar o agente a partir do repositório.
+The advantage is that if the VPS breaks, you can recreate the agent from the repository.
 
-O GitHub vira a fonte de verdade do agente.
+GitHub becomes the agent's source of truth.
 
 ---
 
-## Segurança com tokens e API keys
+## Security with tokens and API keys
 
-Nunca cole tokens, senhas ou API keys diretamente no chat do agente.
+Never paste tokens, passwords or API keys directly into agent chat.
 
-Mesmo que o ambiente seja privado, isso pode ficar salvo no histórico da conversa. A melhor prática é salvar as chaves em variáveis de ambiente, geralmente dentro de um arquivo `.env`.
+Even if the environment is private, this can be saved in the conversation history. Best practice is to save the keys in environment variables, usually within a file`.env`.
 
-Um exemplo de comando seria:
-
-```bash
+An example command would be:```bash
 hermes config set GITHUB_TOKEN valor_do_token
-```
+```Thus, the key lies in the agent's environment and not in the conversation.
 
-Assim, a chave fica no ambiente do agente e não na conversa.
+If you are using Docker, be careful to edit the`.env`correct. There may be a`.env`on the VPS and another inside the container. The Hermes that runs in the container normally needs to access the`.env`of the container.
 
-Se estiver usando Docker, tome cuidado para editar o `.env` correto. Pode existir um `.env` no VPS e outro dentro do container. O Hermes que roda no container normalmente precisa acessar o `.env` do container.
+Also important:
 
-Também é importante:
-
-- usar tokens com escopo limitado;
-- dar apenas permissões necessárias;
-- criar chaves diferentes para agentes diferentes;
-- nomear as chaves por agente;
-- rotacionar tokens quando necessário;
-- não enviar `.env` para o GitHub.
+- use tokens with limited scope;
+- give only necessary permissions;
+- create different keys for different agents;
+- name the keys by agent;
+- rotate tokens when necessary;
+- do not send`.env`to GitHub.
 
 ---
 
-## Primeiro cron recomendado: backup diário
+## Recommended first cron: daily backup
 
-Uma das primeiras automações úteis é o backup diário para o GitHub.
+One of the first useful automations is the daily backup to GitHub.
 
-Você pode pedir:
+You can order:
 
-> “Toda noite à meia-noite, envie as mudanças deste agente para o repositório privado no GitHub. Crie uma skill para isso e configure um cron.”
+> "Every night at midnight, push changes from this agent to the private repository on GitHub. Create a skill for this and set up a cron."
 
-O Hermes pode:
+Hermes can:
 
-- criar a skill de sincronização;
-- configurar o cron;
-- fazer commit;
-- fazer push;
-- atualizar a memória;
-- lidar com diferenças de fuso horário;
-- manter o repositório atualizado.
+- create the synchronization skill;
+- configure cron;
+- commit;
+- push;
+- update memory;
+- deal with time zone differences;
+- keep the repository updated.
 
-Esse é um ótimo primeiro workflow porque protege o trabalho feito no agente.
-
----
-
-## Permissões durante a execução
-
-Quando o Hermes tenta executar certos comandos, ele pode pedir permissão.
-
-Normalmente existem opções como:
-
-- permitir uma vez;
-- permitir durante a sessão;
-- permitir sempre.
-
-Para ações repetitivas e confiáveis, como um cron de backup para GitHub, pode fazer sentido permitir sempre. Para ações novas, sensíveis ou arriscadas, é melhor permitir apenas uma vez e observar.
-
-Não dê permissões permanentes sem entender o que o agente está fazendo.
+This is a great first workflow because it protects the work done on the agent.
 
 ---
 
-## Primeira conversa com o agente
+## Permissions during execution
 
-Depois de instalar o Hermes, vale a pena fazer uma conversa inicial de onboarding.
+When Hermes tries to execute certain commands, it may ask for permission.
 
-Você pode dizer:
+Typically there are options such as:
 
-> “Meu nome é X. Quero que você seja meu assistente pessoal de IA. Vou te explicar meus objetivos, projetos, ferramentas e estilo de trabalho. Salve apenas o que for durável e importante.”
+- allow once;
+- allow during the session;
+- always allow.
 
-Depois, fale sobre:
+For repetitive and reliable actions, like a cron backup to GitHub, it may make sense to always allow. For new, sensitive, or risky actions, it is best to only allow it once and observe.
 
-- quem você é;
-- no que trabalha;
-- quais ferramentas usa;
-- quais projetos são importantes;
-- como prefere receber respostas;
-- que tipo de automações quer criar;
-- o que o agente não deve fazer;
-- quais limites ele deve respeitar.
-
-Essa conversa ajuda o Hermes a construir a memória inicial.
+Don't give permanent permissions without understanding what the agent is doing.
 
 ---
 
-## Como criar boas skills
+## First conversation with the agent
 
-Uma skill deve ser criada quando existe um processo repetível.
+After installing Hermes, it's worth having an initial onboarding conversation.
 
-Exemplo de pedido:
+You can say:
 
-> “Crie uma skill para revisar meus textos no meu estilo. Sempre corrija clareza, estrutura e tom, mas sem mudar demais minha voz.”
+> “My name is X. I want you to be my personal AI assistant. I will explain my goals, projects, tools and work style. Only save what is durable and important.”
 
-Outro exemplo:
+Then talk about:
 
-> “Crie uma skill para gerar relatório semanal dos projetos, separando progresso, bloqueios e próximos passos.”
+- who you are;
+- what you work on;
+- what tools you use;
+- which projects are important;
+- how you prefer to receive responses;
+- what type of automations do you want to create;
+- what the agent should not do;
+- what limits he must respect.
 
-Uma boa skill deve conter:
-
-- quando usar;
-- quando não usar;
-- passos do processo;
-- formato de saída;
-- ferramentas necessárias;
-- cuidados;
-- exemplos;
-- critérios de sucesso.
-
-Se o agente não estiver usando a skill certa, ajuste a descrição dela. Muitas vezes, o problema está no YAML inicial, que não explica bem quando a skill deve ser chamada.
+This conversation helps Hermes build his initial memory.
 
 ---
 
-## Como usar feedback para melhorar o Hermes
+## How to create good skills
 
-O feedback é essencial.
+A skill should be created when there is a repeatable process.
 
-Quando o agente fizer algo errado:
+Order example:
 
-> “Isso não está correto. Da próxima vez, faça assim. Atualize a skill.”
+> “Create a skill to revise my texts in my style. Always correct clarity, structure and tone, but without changing my voice too much.”
 
-Quando ele responder longo demais:
+Another example:
 
-> “Seja mais direto. Atualize seu soul para evitar respostas longas nesse tipo de tarefa.”
+> “Create a skill to generate a weekly project report, separating progress, blocks and next steps.”
 
-Quando ele repetir uma pergunta:
+A good skill should contain:
 
-> “Você já tem essa informação. Salve na memória para não perguntar de novo.”
+- when to use;
+- when not to use;
+- process steps;
+- output format;
+- necessary tools;
+- care;
+- examples;
+- success criteria.
 
-Quando um processo ficar bom:
-
-> “Esse fluxo funcionou. Transforme em skill.”
-
-Quando uma informação for temporária:
-
-> “Não salve isso na memória. É válido só para esta tarefa.”
-
-Esse cuidado impede que a memória fique poluída ou ultrapassada.
-
----
-
-## Segurança: trate o agente como um funcionário novo
-
-Um agente autônomo deve receber apenas os acessos necessários.
-
-Não dê acesso total logo no começo.
-
-Boas práticas:
-
-- criar email separado para o agente;
-- usar contas específicas por função;
-- evitar usar sua conta pessoal;
-- limitar escopos de API;
-- usar chaves nomeadas;
-- monitorar gastos;
-- separar agentes por área;
-- bloquear portas desnecessárias;
-- usar firewall;
-- restringir acesso por IP quando possível;
-- revisar permissões com frequência.
-
-Pense assim:
-
-Se você não daria sua senha bancária para um estagiário novo, também não deve dar ao agente.
+If the agent isn't using the right skill, adjust its description. Often, the problem is in the initial YAML, which does not explain well when the skill should be called.
 
 ---
 
-## Firewall e auditoria de segurança
+## How to use feedback to improve Hermes
 
-Se o Hermes roda em VPS, segurança importa.
+Feedback is essential.
 
-Você pode configurar:
+When the agent does something wrong:
+
+> "That's not correct. Next time, do it like this. Update the skill."
+
+When he responds too long:
+
+> “Be more direct. Update your soul to avoid long answers in this type of task.”
+
+When he repeats a question:
+
+> "You already have this information. Save it in your memory so you don't ask again."
+
+When a process is good:
+
+> “That flow worked. Turn it into a skill.”
+
+When information is temporary:
+
+> "Don't commit this to memory. It's only valid for this task."
+
+This precaution prevents the memory from becoming polluted or outdated.
+
+---
+
+## Security: treat the agent like a new employee
+
+An autonomous agent must receive only the necessary accesses.
+
+Don't give full access at the beginning.
+
+Good practices:
+
+- create separate email for the agent;
+- use specific accounts by function;
+- avoid using your personal account;
+- limit API scopes;
+- use named keys;
+- monitor expenses;
+- separate agents by area;
+- block unnecessary ports;
+- use firewall;
+- restrict access by IP when possible;
+- review permissions frequently.
+
+Think of it like this:
+
+If you wouldn't give your bank password to a new intern, you shouldn't give it to the agent either.
+
+---
+
+## Firewall and security audit
+
+If Hermes runs on a VPS, security matters.
+
+You can configure:
 
 - firewall;
-- bloqueio de portas;
-- acesso restrito por IP;
-- usuários separados;
+- blocking of doors;
+- access restricted by IP;
+- separate users;
 - backups;
-- scanner de malware;
+- malware scanner;
 - logs;
-- auditoria periódica.
+- periodic audit.
 
-Também pode criar uma skill de segurança:
+You can also create a security skill:
 
-> “Uma vez por semana, revise a configuração do VPS, portas abertas, permissões, uso de chaves e possíveis riscos. Gere um relatório simples.”
+> “Once a week, review VPS configuration, open ports, permissions, key usage, and potential risks. Generate a simple report.”
 
-Ou:
+Or:
 
-> “Toda noite, verifique se os serviços essenciais estão ativos e se há algo estranho nos logs.”
+> “Every night, check if essential services are active and if there is anything strange in the logs.”
 
-Isso ajuda a manter o ambiente saudável.
-
----
-
-## Quando criar múltiplos agentes
-
-No começo, use apenas um agente principal. Não crie vários agentes cedo demais.
-
-Crie um novo agente quando ele precisar de:
-
-- memória própria;
-- ferramentas próprias;
-- credenciais próprias;
-- permissões diferentes;
-- agenda própria;
-- público diferente;
-- função contínua separada.
-
-Exemplos:
-
-- agente pessoal;
-- agente de marketing;
-- agente financeiro;
-- agente de suporte;
-- agente de operações;
-- agente de pesquisa;
-- agente de conteúdo.
-
-Evite criar um “mega-agente” com todas as chaves, todas as funções, todas as ferramentas e todas as memórias. Isso aumenta risco, confusão e dificuldade de manutenção.
-
-O ideal é separar quando houver motivo real.
+This helps keep the environment healthy.
 
 ---
 
-## Como pensar em múltiplos agentes
+## When creating multiple agents
 
-Uma boa analogia:
+In the beginning, use just one main agent. Don't create multiple agents too early.
 
-O VPS é o prédio.  
-Cada container Docker é uma sala.  
-Cada Hermes é um funcionário.  
-Cada funcionário tem suas ferramentas, chaves, memória e função.
+Create a new agent when it needs:
+- own memory;
+- own tools;
+- own credentials;
+- different permissions;
+- own agenda;
+- different audience;
+- separate continuous function.
 
-Um agente de marketing talvez precise acessar redes sociais, calendário editorial e ferramentas de design.
+Examples:
 
-Um agente financeiro talvez precise acessar planilhas, relatórios e sistema financeiro.
+- personal agent;
+- marketing agent;
+- financial agent;
+- support agent;
+- operations agent;
+- research agent;
+- content agent.
 
-Um agente de suporte talvez precise acessar email, base de conhecimento e histórico de clientes.
+Avoid creating a “mega-agent” with all the keys, all the functions, all the tools and all the memories. This increases risk, confusion and difficulty in maintenance.
 
-Eles não precisam compartilhar todas as chaves entre si.
-
-Isso reduz risco e melhora organização.
+The ideal is to separate when there is a real reason.
 
 ---
 
-## Dashboard do Hermes
+## How to think about multiple agents
 
-O Hermes também pode ter um dashboard visual para acompanhar:
+A good analogy:
 
-- sessões recentes;
-- canais conectados;
+The VPS is the building.  
+Each Docker container is a room.  
+Each Hermes is an employee.  
+Each employee has their own tools, keys, memory and function.
+
+A marketing agent may need access to social media, an editorial calendar, and design tools.
+
+A financial agent may need to access spreadsheets, reports and the financial system.
+
+A support agent may need access to email, knowledge base, and customer history.
+
+They don't need to share all the keys with each other.
+
+This reduces risk and improves organization.
+
+---
+
+## Hermes Dashboard
+
+Hermes can also have a visual dashboard to monitor:
+
+- recent sessions;
+- connected channels;
 - crons;
 - skills;
 - plugins;
-- configurações;
-- chaves;
-- tarefas;
+- settings;
+- keys;
+- tasks;
 - Kanban.
 
-O dashboard pode ser útil quando você tem vários agentes ou quer uma visão mais visual do que está acontecendo.
+The dashboard can be useful when you have several agents or want a more visual view of what is happening.
 
-Porém, em muitos casos, o Telegram já resolve o uso diário. O dashboard pode exigir configuração de gateway ou túnel, então a primeira abertura pode dar um pouco de trabalho.
+However, in many cases, Telegram already solves daily use. The dashboard may require gateway or tunnel configuration, so opening it for the first time may take a bit of work.
 
-Depois que funcionar, uma boa ideia é criar uma skill:
+Once it works, a good idea is to create a skill:
 
-> “Sempre que eu pedir para abrir o dashboard, me mostre os comandos necessários e execute o processo.”
-
----
-
-## Manutenção contínua
-
-O Hermes não é uma ferramenta que você configura uma vez e esquece. Ele é mais parecido com um colega de trabalho que precisa ser treinado.
-
-Regras simples de manutenção:
-
-- se errar duas vezes, atualize memória ou skill;
-- se repetir instrução, crie skill;
-- se estiver fora do tom, ajuste o soul;
-- se algo estranho acontecer, revise o memory;
-- se criar rotina importante, coloque em cron;
-- se criar cron, documente;
-- se usar API key, limite permissões;
-- se algo funcionar bem, salve o processo.
-
-Também vale pedir periodicamente:
-
-> “Leia sua memória e me mostre o que está salvo.”
-
-> “Leia seu soul e me diga qual personalidade você está seguindo.”
-
-> “Liste suas skills principais.”
-
-> “Liste seus crons ativos.”
-
-Isso ajuda a manter controle sobre o agente.
+> “Whenever I ask to open the dashboard, show me the necessary commands and execute the process.”
 
 ---
 
-## Erros comuns
+## Ongoing maintenance
 
-### Colar API key no chat
+Hermes is not a tool that you set up once and forget about. He's more like a co-worker who needs to be trained.
 
-Evite. Use variável de ambiente.
+Simple maintenance rules:
 
-### Usar Telegram para tarefas complexas demais
+- if you make a mistake twice, update memory or skill;
+- if you repeat instructions, create skill;
+- if it is out of tune, adjust the soul;
+- if something strange happens, review the memory;
+- if you create an important routine, put it in cron;
+- if you create cron, document it;
+- if you use API key, limit permissions;
+- if something works fine, save the process.
 
-Telegram é ótimo para comando rápido, mas não para projetos grandes.
+It is also worth asking periodically:
 
-### Criar muitos agentes cedo demais
+> “Read your memory and show me what’s saved.”
 
-Comece com um agente principal. Separe só quando houver necessidade.
+> “Read your soul and tell me which personality you are following.”
 
-### Guardar coisa temporária na memória
+> “List your main skills.”
 
-Memória deve ser durável. Tarefa temporária deve ficar na conversa ou em um sistema de tarefas.
+> “List your active crons.”
 
-### Não revisar skills
-
-Skills ruins geram resultados ruins repetidamente. Ajuste quando necessário.
-
-### Misturar `.env` do VPS com `.env` do container
-
-Se estiver usando Docker, confirme onde o Hermes realmente lê as variáveis.
-
-### Dar permissões demais
-
-Use o princípio do menor privilégio.
+This helps you maintain control over the agent.
 
 ---
 
-## Fluxo recomendado para começar
+## Common mistakes
 
-O caminho mais simples é:
+### Paste API key in chat
 
-1. Instalar o Hermes em Docker.
-2. Conectar ao Telegram.
-3. Fazer o onboarding inicial.
-4. Conectar ao GitHub.
-5. Criar repositório privado.
-6. Configurar `.gitignore`.
-7. Salvar chaves no `.env`, não no chat.
-8. Criar cron de backup diário.
-9. Criar a primeira skill útil.
-10. Ajustar memória e soul.
-11. Usar por alguns dias.
-12. Corrigir erros e transformar processos em skills.
-13. Criar novas automações.
-14. Só depois pensar em múltiplos agentes.
+Avoid. Use environment variable.
 
----
+### Use Telegram for very complex tasks
 
-## Exemplos de comandos úteis para pedir ao Hermes
+Telegram is great for quick command, but not for large projects.
 
-Você pode usar frases como:
+### Create too many agents too soon
 
-> “Leia sua memória e me mostre o que você sabe sobre mim.”
+Start with a lead agent. Only separate when necessary.
 
-> “Atualize sua memória com essa preferência.”
+### Store temporary thing in memory
 
-> “Não salve isso na memória.”
+Memory must be durable. Temporary task must be in the conversation or in a task system.
 
-> “Crie uma skill para esse processo.”
+### Do not review skills
 
-> “Atualize essa skill para ser chamada sempre que eu pedir esse tipo de tarefa.”
+Bad skills generate bad results over and over again. Adjust when necessary.
 
-> “Crie um cron diário para executar isso às 8h.”
+### Mix`.env`of VPS with`.env`of the container
 
-> “Liste todos os crons ativos.”
+If you are using Docker, confirm where Hermes actually reads the variables.
 
-> “Pause esse cron por enquanto.”
+### Give too many permissions
 
-> “Conecte este projeto a um repositório privado no GitHub.”
-
-> “Explique esse erro do terminal.”
-
-> “Verifique se o Telegram está conectado corretamente.”
-
-> “Abra o dashboard e me diga quais comandos preciso rodar.”
-
-> “Faça uma auditoria de segurança do VPS.”
+Use the principle of least privilege.
 
 ---
 
-## Exemplo de estrutura ideal de agente
+## Recommended flow to get started
 
-Um agente Hermes bem configurado pode ter:
+The simplest way is:
 
-- Telegram conectado;
-- GitHub privado conectado;
-- backup diário automático;
-- memória limpa;
-- soul ajustado;
-- skills para tarefas recorrentes;
-- crons documentados;
-- API keys em `.env`;
-- firewall configurado;
-- permissões mínimas;
-- logs e auditorias;
-- documentação em Markdown;
-- rotina de manutenção.
-
-Com isso, ele deixa de ser apenas um chatbot e passa a funcionar como uma camada operacional de automação.
+1. Install Hermes in Docker.
+2. Connect to Telegram.
+3. Carry out initial onboarding.
+4. Connect to GitHub.
+5. Create private repository.
+6. Configure`.gitignore`.
+7. Save keys to`.env`, not in chat.
+8. Create daily backup cron.
+9. Create the first useful skill.
+10. Adjust memory and soul.
+11. Use for a few days.
+12. Correct errors and transform processes into skills.
+13. Create new automations.
+14. Only then think about multiple agents.
 
 ---
 
-## Ideia central
+## Examples of useful commands to ask Hermes
 
-O Hermes Agent é uma forma de criar seu próprio assistente pessoal de IA, rodando em infraestrutura própria, com memória, personalidade, skills e automações. Ele pode ser usado pelo Telegram como controle remoto, pela CLI para trabalho profundo e pelo GitHub como fonte de verdade.
+You can use phrases like:
 
-O melhor caminho é começar simples: instalar, conectar ao Telegram, conectar ao GitHub, criar backup automático e transformar tarefas repetidas em skills. Depois, com o uso, o agente vai ficando mais alinhado ao seu estilo, seus projetos e suas necessidades.
+> “Read your memory and show me what you know about me.”
 
-O segredo não é configurar tudo de uma vez. O segredo é usar, corrigir, salvar aprendizados e evoluir aos poucos.
+> “Refresh your memory with this preference.”
+
+> “Don’t commit this to memory.”
+
+> “Create a skill for this process.”
+
+> “Update this skill to be called whenever I ask for this type of task.”
+
+> “Create a daily cron to run this at 8am.”
+
+> “List all active crons.”
+
+> “Pause this cron for now.”
+
+> “Connect this project to a private repository on GitHub.”
+
+> “Explain this terminal error.”
+
+> “Check if Telegram is connected correctly.”
+
+> “Open the dashboard and tell me which commands I need to run.”
+
+> “Do a VPS security audit.”
+
+---
+
+## Example of ideal agent structure
+
+A well-configured Hermes agent can have:
+
+- Telegram connected;
+- Private GitHub connected;
+- automatic daily backup;
+- clean memory;
+- adjusted soul;
+- skills for recurring tasks;
+- documented crons;
+- API keys in`.env`;
+- configured firewall;
+- minimum permissions;
+- logs and audits;
+- documentation in Markdown;
+- maintenance routine.
+
+With this, it stops being just a chatbot and starts functioning as an operational layer of automation.
+
+---
+
+## Central idea
+
+Hermes Agent is a way to create your own personal AI assistant, running on your own infrastructure, with memory, personality, skills and automations. It can be used by Telegram as a remote control, by the CLI for deep work, and by GitHub as a source of truth.
+
+The best way is to start simple: install, connect to Telegram, connect to GitHub, create automatic backup and transform repeated tasks into skills. Then, with use, the agent becomes more aligned with your style, your projects and your needs.
+
+The secret is not to configure everything at once. The secret is to use, correct, save learning and evolve little by little.
