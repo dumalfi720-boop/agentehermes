@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.6 Primeiro cron: backup | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2.6 First cron: backup | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -60,166 +60,151 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">Módulo 2.6</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.6</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🌙 Primeiro cron: backup diário automático</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Hello World pragmático do Hermes: o cron mais útil e mais seguro pra começar. Sintaxe natural, timezone, permissões e como verificar que rodou.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">25</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Prático</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Hands-on</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🛡️ Por que esse é o primeiro cron</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Backup diário pro GitHub é o cron de <strong class="text-blue-400">menor risco e maior valor</strong> que você pode criar no dia 1. Ele só faz <code>git add && commit && push</code> dentro de <code>~/.hermes</code>. Não toca em sistema, não chama API externa de risco, não gasta tokens caros, não tem efeito colateral além de subir um commit.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⚖️</span>Por que NÃO começar com cron ambicioso</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-red-400">"Responder email automaticamente"</strong> → risco alto de enviar mensagem errada antes de você confiar</li>
-          <li><strong class="text-red-400">"Postar conteúdo no Twitter/IG"</strong> → impacto público se errar tom</li>
-          <li><strong class="text-red-400">"Pagar boleto/agendar transferência"</strong> → financeiro merece muita validação manual</li>
-          <li><strong class="text-emerald-400">"Backup pro GitHub"</strong> → puramente útil, zero efeito colateral, falha é silenciosa</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>Princípio de progressão</h3>
-        <p class="text-neutral-300 text-sm">Começar pelo cron mais útil e mais seguro testa o sistema inteiro (gateway → AIAgent → tools → permissions → entrega) sem pôr nada importante em risco. Se funcionar, você ganha confiança e proteção real. Se quebrar, você não perde nada além de tempo de debug.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">💬 Sintaxe natural via Telegram</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A forma mais rápida de criar um cron: <strong class="text-blue-400">comando slash no Telegram</strong>. Você não precisa decorar a sintaxe cron clássica (<code>0 0 * * *</code>) — Hermes interpreta linguagem natural e gera o job estruturado.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">📤 Comando completo</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400">/cron add "every 1d at 00:00" "Faça commit com timestamp e push das mudanças do agente para o GitHub. Use mensagem 'Backup automático {data}'. Se não houver mudanças, apenas reporte 'Sem alterações'."</code></pre>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🕐 Sintaxes aceitas</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-blue-400">"every 30m"</code> — a cada 30 minutos</li>
-          <li><code class="text-blue-400">"every 2h"</code> — a cada 2 horas</li>
-          <li><code class="text-blue-400">"every 1d at 09:00"</code> — diariamente às 9h</li>
-          <li><code class="text-blue-400">"every 1d at 00:00"</code> — diariamente meia-noite</li>
-          <li><code class="text-blue-400">"every monday at 08:00"</code> — toda segunda às 8h</li>
-          <li><code class="text-blue-400">"weekly"</code> — uma vez por semana</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔧</span>Comandos relacionados</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-blue-400">/cron list</code> — todos os jobs agendados, com next_run_at</li>
-          <li><code class="text-blue-400">/cron remove ID</code> — apaga um job</li>
-          <li><code class="text-blue-400">/cron run ID</code> — força execução agora (útil pra testar)</li>
-          <li><code class="text-blue-400">/cron pause ID</code> / <code>/cron resume ID</code> — pausar temporariamente</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">⌨️ Sintaxe CLI: hermes cron create</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Equivalente CLI da criação de cron. Mais explícito que o slash command — ideal para script de provisioning idempotente quando você for replicar o setup em outro VPS. Pode versionar como <code class="text-blue-400">bootstrap.sh</code> e rodar em ambientes novos.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">⚡ Comando equivalente</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400">docker exec -it hermes hermes cron create \
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-blue-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-blue-400" href="index.html">Track 2</a><span>/</span>
+<span class="text-blue-400">Module 2.6</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MODULE 2.6</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🌙 First cron: automatic daily backup</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Pragmatic Hello World from Hermes: the most useful and safest cron to start with. Natural syntax, timezone, permissions and how to check that it ran.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">25</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Practical</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Hands-on</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🛡️ Why is this the first cron</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Daily backup for GitHub is the cron of<strong class="text-blue-400">lower risk and higher value</strong>that you can create on day 1. It only does<code data-notranslate="True">git add &amp;&amp; commit &amp;&amp; push</code>inside<code data-notranslate="True">~/.hermes</code>. It doesn't touch the system, it doesn't call risky external APIs, it doesn't spend expensive tokens, it has no side effects other than uploading a commit.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⚖️</span>Why NOT start with ambitious cron</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-red-400">"Automatically reply to email"</strong>→ high risk of sending wrong message before you trust</li>
+<li><strong class="text-red-400">"Post content to Twitter/IG"</strong>→ public impact if you get the tone wrong</li>
+<li><strong class="text-red-400">"Pay bill/schedule transfer"</strong>→ finance deserves a lot of manual validation</li>
+<li><strong class="text-emerald-400">"Backup to GitHub"</strong>→ purely useful, zero side effects, failure is silent</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>Progression principle</h3>
+<p class="text-neutral-300 text-sm">Starting with the most useful and secure cron tests the entire system (gateway → AIAgent → tools → permissions → delivery) without putting anything important at risk. If it works, you gain real confidence and protection. If it breaks, you lose nothing but debugging time.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">💬 Natural syntax via Telegram</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The fastest way to create a cron:<strong class="text-blue-400">slash command on Telegram</strong>. You don't need to memorize the classic cron syntax (<code data-notranslate="True">0 0 * * *</code>) — Hermes interprets natural language and generates the structured job.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">📤 Complete command</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True">/cron add "every 1d at 00:00" "Faça commit com timestamp e push das mudanças do agente para o GitHub. Use mensagem 'Backup automático {data}'. Se não houver mudanças, apenas reporte 'Sem alterações'."</code></pre>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🕐 Accepted syntaxes</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-blue-400" data-notranslate="True">"every 30m"</code>— every 30 minutes</li>
+<li><code class="text-blue-400" data-notranslate="True">"every 2h"</code>— every 2 hours</li>
+<li><code class="text-blue-400" data-notranslate="True">"every 1d at 09:00"</code>— daily at 9am</li>
+<li><code class="text-blue-400" data-notranslate="True">"every 1d at 00:00"</code>— daily midnight</li>
+<li><code class="text-blue-400" data-notranslate="True">"every monday at 08:00"</code>— every Monday at 8am</li>
+<li><code class="text-blue-400" data-notranslate="True">"weekly"</code>— once a week</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔧</span>Related commands</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-blue-400" data-notranslate="True">/cron list</code>— all scheduled jobs, with next_run_at</li>
+<li><code class="text-blue-400" data-notranslate="True">/cron remove ID</code>— delete a job</li>
+<li><code class="text-blue-400" data-notranslate="True">/cron run ID</code>— force execution now (useful for testing)</li>
+<li><code class="text-blue-400" data-notranslate="True">/cron pause ID</code> / <code data-notranslate="True">/cron resume ID</code>— temporarily pause</li>
+</ul>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">⌨️ CLI syntax: hermes cron create</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">CLI equivalent of cron creation. More explicit than the slash command — ideal for an idempotent provisioning script when you replicate the setup on another VPS. You can version it like<code class="text-blue-400" data-notranslate="True">bootstrap.sh</code>and run in new environments.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">⚡ Equivalent command</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True">docker exec -it hermes hermes cron create \
   "every 1d at 00:00" \
   "Backup do agente: commit + push das mudanças" \
   --workdir /root/.hermes \
   --deliver telegram \
   --name backup-diario</code></pre>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🚩 Flags principais</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm text-neutral-300">
-            <thead><tr class="border-b border-dark-600 text-blue-400"><th class="text-left py-2">Flag</th><th class="text-left py-2">Função</th></tr></thead>
-            <tbody>
-              <tr class="border-b border-dark-700"><td class="py-2"><code>--workdir &lt;path&gt;</code></td><td>cwd do job; carrega AGENTS.md/CLAUDE.md daqui</td></tr>
-              <tr class="border-b border-dark-700"><td class="py-2"><code>--deliver &lt;plat&gt;</code></td><td>destino: telegram, discord, all, origin</td></tr>
-              <tr class="border-b border-dark-700"><td class="py-2"><code>--skill &lt;name&gt;</code></td><td>injeta skill no início da sessão fresh</td></tr>
-              <tr class="border-b border-dark-700"><td class="py-2"><code>--no-agent</code></td><td>script-only sem LLM (pra watchdogs)</td></tr>
-              <tr class="border-b border-dark-700"><td class="py-2"><code>--script &lt;path&gt;</code></td><td>(com --no-agent) script .sh ou .py a executar</td></tr>
-              <tr><td class="py-2"><code>--name &lt;str&gt;</code></td><td>identificador legível pra você (default: gerado)</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Telegram vs CLI: quando usar qual</h3>
-        <p class="text-neutral-300 text-sm"><strong>Telegram</strong> = exploração interativa, feedback imediato, ajuste rápido. <strong>CLI</strong> = automação, replicação, scripts de bootstrap. Pra criar 1 cron, Telegram é mais rápido. Pra subir 10 crons numa VPS nova, CLI num <code>.sh</code> é determinístico.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🌍 Timezone: UTC vs local</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        <strong class="text-red-400">Pegadinha clássica:</strong> container Docker roda em UTC por padrão. <em>"every 1d at 00:00"</em> dispara à meia-noite UTC, que é <strong class="text-red-400">21:00 do dia anterior</strong> em Brasília (UTC-3). Cron rodando 3 horas antes do esperado destrói percepção e bagunça logs.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🛠️ Duas formas de configurar</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Opção 1: env var no docker-compose.yml (preferida)
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🚩 Main Flags</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-neutral-300">
+<thead><tr class="border-b border-dark-600 text-blue-400"><th class="text-left py-2">Flag</th><th class="text-left py-2">Function</th></tr></thead>
+<tbody>
+<tr class="border-b border-dark-700"><td class="py-2"><code data-notranslate="True">--workdir &lt;path&gt;</code></td><td>job cwd; load AGENTS.md/CLAUDE.md from here</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2"><code data-notranslate="True">--deliver &lt;plat&gt;</code></td><td>destination: telegram, discord, all, origin</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2"><code data-notranslate="True">--skill &lt;name&gt;</code></td><td>injects skill at the beginning of the fresh session</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2"><code data-notranslate="True">--no-agent</code></td><td>script-only without LLM (for watchdogs)</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2"><code data-notranslate="True">--script &lt;path&gt;</code></td><td>(with --no-agent) .sh or .py script to run</td></tr>
+<tr><td class="py-2"><code data-notranslate="True">--name &lt;str&gt;</code></td><td>identifier readable to you (default: generated)</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Telegram vs CLI: when to use which</h3>
+<p class="text-neutral-300 text-sm"><strong>Telegram</strong>= interactive exploration, immediate feedback, quick adjustment.<strong>CLI</strong>= automation, replication, bootstrap scripts. To create 1 cron, Telegram is faster. To upload 10 crons to a new VPS, CLI on a<code data-notranslate="True">.sh</code>is deterministic.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🌍 Timezone: UTC vs local</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">
+<strong class="text-red-400">Classic prank:</strong>Docker container runs in UTC by default.<em>"every 1d at 00:00"</em>fires at midnight UTC, which is<strong class="text-red-400">9pm the day before</strong>in Brasília (UTC-3). Cron running 3 hours earlier than expected destroys perception and messes up logs.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🛠️ Two ways to configure</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True"># Opção 1: env var no docker-compose.yml (preferida)
 services:
   hermes:
     environment:
@@ -234,45 +219,42 @@ docker compose restart
 # Verificar timezone ativo
 docker exec hermes date
 # Esperado: "Sun May 10 18:32:00 -03 2026" (não UTC)</code></pre>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🗺️</span>IANA timezone strings comuns</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-blue-400">America/Sao_Paulo</code> — Brasil sudeste (UTC-3)</li>
-          <li><code class="text-blue-400">America/Bahia</code> — Bahia (UTC-3, mesmo offset)</li>
-          <li><code class="text-blue-400">America/Manaus</code> — Amazonas (UTC-4)</li>
-          <li><code class="text-blue-400">Europe/Lisbon</code> — Portugal (UTC+0/+1 com DST)</li>
-          <li><code class="text-blue-400">UTC</code> — meridiano de Greenwich (default container)</li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Sintoma típico</h3>
-        <p class="text-neutral-300 text-sm">"Marquei o cron pra meia-noite mas ele rodou às 21h." Container ainda em UTC. Hermes injeta timezone do sistema no system prompt — sem TZ certo, ele "pensa" estar 3 horas adiantado. Configurar timezone certo no início economiza muito retrabalho.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">✅ Permissões: always allow git push</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Na primeira execução do cron, Hermes vai pedir permissão pra rodar <code class="text-blue-400">git commit</code> e <code class="text-blue-400">git push</code>. <strong class="text-blue-400">Marque "always allow"</strong> — é uma ação segura, recorrente, com escopo travado pelo PAT fine-grained do módulo 2.5.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🤝</span>Por que confiar nessa permissão</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Token cirúrgico:</strong> só permite mexer em 1 repo (o de backup)</li>
-          <li><strong class="text-blue-400">Operação reversível:</strong> commits sempre podem ser revertidos com <code>git revert</code></li>
-          <li><strong class="text-blue-400">.gitignore protege segredos:</strong> mesmo se commit estranho, .env não vai junto</li>
-          <li><strong class="text-blue-400">Audit trail:</strong> cada push fica registrado no GitHub com timestamp</li>
-          <li><strong class="text-blue-400">Sem "always":</strong> cron diário trava esperando você responder — quebra o propósito</li>
-        </ul>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🔍 Auditar permissões periodicamente</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Listar permissões aprovadas
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🗺️</span>IANA timezone common strings</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-blue-400" data-notranslate="True">America/Sao_Paulo</code>— Southeast Brazil (UTC-3)</li>
+<li><code class="text-blue-400" data-notranslate="True">America/Bahia</code>— Bahia (UTC-3, same offset)</li>
+<li><code class="text-blue-400" data-notranslate="True">America/Manaus</code>— Amazonas (UTC-4)</li>
+<li><code class="text-blue-400" data-notranslate="True">Europe/Lisbon</code>— Portugal (UTC+0/+1 with DST)</li>
+<li><code class="text-blue-400" data-notranslate="True">UTC</code>— Greenwich meridian (default container)</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Typical symptom</h3>
+<p class="text-neutral-300 text-sm">"I set the cron for midnight but it ran at 9pm." Container still in UTC. Hermes injects the system timezone into the system prompt — without the right TZ, it "thinks" it is 3 hours ahead. Setting timezone right at the beginning saves a lot of rework.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">✅ Permissions: always allow git push</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">On the first run of the cron, Hermes will ask for permission to run<code class="text-blue-400" data-notranslate="True">git commit</code> e <code class="text-blue-400" data-notranslate="True">git push</code>. <strong class="text-blue-400">Check "always allow"</strong>— is a safe, recurring action, with scope locked by the fine-grained PAT of module 2.5.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🤝</span>Why trust this permission</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Surgical Token:</strong>only allows you to touch 1 repo (the backup one)</li>
+<li><strong class="text-blue-400">Reversible Operation:</strong>commits can always be rolled back with<code data-notranslate="True">git revert</code></li>
+<li><strong class="text-blue-400">.gitignore protects secrets:</strong>even if strange commit, .env doesn't go along</li>
+<li><strong class="text-blue-400">Audit trail:</strong>each push is registered on GitHub with a timestamp</li>
+<li><strong class="text-blue-400">Without "always":</strong>daily cron hangs waiting for you to respond — breaks the purpose</li>
+</ul>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🔍 Audit permissions periodically</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True"># Listar permissões aprovadas
 docker exec hermes hermes permissions list
 
 # Revogar uma específica
@@ -280,30 +262,27 @@ docker exec hermes hermes permissions revoke ID
 
 # Arquivo bruto (raramente preciso)
 docker exec hermes cat /root/.hermes/permissions.json</code></pre>
-      </div>
-      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📋</span>Checklist mensal de auditoria</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li>Listar permissions e revogar as que você não reconhece</li>
-          <li>Confirmar que tokens (GitHub, OpenRouter) ainda estão ativos e com escopo certo</li>
-          <li>Olhar último push no GitHub — algum dia sem backup?</li>
-          <li>Verificar <code>~/.hermes/logs/</code> por erros recorrentes</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🔍 Verificação: /cron list, logs, GitHub</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        "Achar que rodou" é diferente de "ter rodado". <strong class="text-blue-400">Confirmar com fato fecha o loop.</strong> Três pontos de verificação: <code>/cron list</code> (mostra próximo run), logs (mostram execução), GitHub (mostra commit real).
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">✓ Checklist de verificação</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># 1. Cron está agendado?
+</div>
+<div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📋</span>Monthly audit checklist</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li>List permissions and revoke those you don't recognize</li>
+<li>Confirm tokens (GitHub, OpenRouter) are still active and scoped correctly</li>
+<li>Look at last push on GitHub — ever without a backup?</li>
+<li>To check<code data-notranslate="True">~/.hermes/logs/</code>due to recurring errors</li>
+</ul>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔍 Check: /cron list, logs, GitHub</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">"Thinking that it ran" is different from "having run".<strong class="text-blue-400">Confirming with fact closes the loop.</strong>Three checkpoints:<code data-notranslate="True">/cron list</code>(show next run), logs (show execution), GitHub (show actual commit).</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">✓ Verification checklist</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True"># 1. Cron está agendado?
 /cron list   # via Telegram, ou:
 docker exec hermes hermes cron list
 
@@ -318,55 +297,51 @@ docker exec hermes tail -50 /root/.hermes/logs/cron.log
 
 # 5. Buscar histórico via session_search
 "Mostre as últimas execuções do cron de backup"</code></pre>
-      </div>
-      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📁</span>Onde fica o estado do cron</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-emerald-400">~/.hermes/cron/jobs.json</code> — todos os jobs com next_run_at</li>
-          <li><code class="text-emerald-400">~/.hermes/cron/.tick.lock</code> — lockfile previne double-run</li>
-          <li><code class="text-emerald-400">~/.hermes/logs/cron.log</code> — execuções, erros, exit codes</li>
-          <li><code class="text-emerald-400">~/.hermes/state.db</code> — sessões SQLite com histórico de cada cron</li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🔧</span>Se não rodou no horário esperado</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong>Container parou:</strong> <code>docker ps</code>; se off, <code>docker compose up -d</code></li>
-          <li><strong>Timezone errado:</strong> <code>docker exec hermes date</code>, ajustar TZ se UTC</li>
-          <li><strong>Lock file travado:</strong> apagar <code>~/.hermes/cron/.tick.lock</code> e restart</li>
-          <li><strong>Permissão bloqueada:</strong> ver <code>permissions list</code>, marcar <em>always allow</em></li>
-          <li><strong>Token expirado:</strong> regere PAT no GitHub, atualize via <code>config set</code></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Backup diário pro GitHub é o cron ideal pra começar</strong><span class="text-neutral-400"> — risco baixo, valor alto, testa o sistema inteiro.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Sintaxe natural via /cron add</strong><span class="text-neutral-400"> — "every 1d at 00:00" + descrição da tarefa.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>CLI hermes cron create para automação</strong><span class="text-neutral-400"> — flags: --workdir, --deliver, --skill, --name.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>TZ=America/Sao_Paulo evita 3h de defasagem</strong><span class="text-neutral-400"> — container default é UTC.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Always allow para git push (token cirúrgico)</strong><span class="text-neutral-400"> — auditar mensalmente.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Verificação tripla: /cron list + logs + GitHub</strong><span class="text-neutral-400"> — fechar o loop com fato, não suposição.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Próxima trilha:</h3><p class="text-neutral-300">Trilha 3 - 🏛️ Os 6 pilares do Hermes (Soul, Memory, Skills, Crons, Permissions, Sessions)</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-2-5.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="../trilha3/index.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">Próxima Trilha: Pilares →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 2.6 • 2026</p></div>
-  </footer>
-
-  <script>
+</div>
+<div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📁</span>Where is the cron state</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-emerald-400" data-notranslate="True">~/.hermes/cron/jobs.json</code>— all jobs with next_run_at</li>
+<li><code class="text-emerald-400" data-notranslate="True">~/.hermes/cron/.tick.lock</code>— lockfile prevents double-run</li>
+<li><code class="text-emerald-400" data-notranslate="True">~/.hermes/logs/cron.log</code>— executions, errors, exit codes</li>
+<li><code class="text-emerald-400" data-notranslate="True">~/.hermes/state.db</code>— SQLite sessions with history of each cron</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🔧</span>If it didn't run at the expected time</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong>Container stopped:</strong> <code data-notranslate="True">docker ps</code>; if off,<code data-notranslate="True">docker compose up -d</code></li>
+<li><strong>Wrong timezone:</strong> <code data-notranslate="True">docker exec hermes date</code>, adjust TZ if UTC</li>
+<li><strong>Lock file locked:</strong>to switch off<code data-notranslate="True">~/.hermes/cron/.tick.lock</code>and restart</li>
+<li><strong>Permission blocked:</strong>see<code data-notranslate="True">permissions list</code>, to mark<em>always allow</em></li>
+<li><strong>Expired Token:</strong>governs PAT on GitHub, update via<code data-notranslate="True">config set</code></li>
+</ul>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Daily backup for GitHub is the ideal cron to start with</strong><span class="text-neutral-400">— low risk, high value, tests the entire system.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Natural syntax via /cron add</strong><span class="text-neutral-400">— "every 1d at 00:00" + task description.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>CLI hermes cron create for automation</strong><span class="text-neutral-400">— flags: --workdir, --deliver, --skill, --name.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>TZ=America/Sao_Paulo avoids 3h lag</strong><span class="text-neutral-400">— default container is UTC.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Always allow for git push (surgical token)</strong><span class="text-neutral-400">— audit monthly.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Triple check: /cron list + logs + GitHub</strong><span class="text-neutral-400">— close the loop with fact, not assumption.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Next track:</h3><p class="text-neutral-300">Track 3 - 🏛️ The 6 pillars of Hermes (Soul, Memory, Skills, Crons, Permissions, Sessions)</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-2-5.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="../trilha3/index.html">Next Trail: Pilares →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 2.6 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
