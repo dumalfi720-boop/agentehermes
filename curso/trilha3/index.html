@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trilha 3 - Os 5 Pilares na Prática | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track 3 - The 5 Pillars in Practice | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -64,598 +64,584 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🪽</span>
-            <span class="font-bold text-lg hidden sm:inline">Agente Hermes</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">TRILHA 3</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🏛️ Os 5 Pilares na Prática</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Memória, Skills, Soul, Crons e o loop de auto-aperfeiçoamento. Aqui você sai do "instalei o Hermes" para "configurei um agente que aprende, sabe quem ele é e age sozinho".</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">5</div><div class="text-xs text-neutral-400">Módulos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">30</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~2,5h</div><div class="text-xs text-neutral-400">Duração</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Médio</div><div class="text-xs text-neutral-400">Nível</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- NAVEGACAO RAPIDA -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-        <a href="#modulo-3-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🧠 Memory</h3>
-          <p class="text-xs text-neutral-400">USER.md + MEMORY.md, snapshot frozen no system prompt</p>
-        </a>
-        <a href="#modulo-3-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.2</span><span class="text-xs text-neutral-500">~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🛠️ Skills</h3>
-          <p class="text-xs text-neutral-400">SKILL.md, YAML front matter e progressive disclosure</p>
-        </a>
-        <a href="#modulo-3-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.3</span><span class="text-xs text-neutral-500">~25 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">👻 Soul</h3>
-          <p class="text-xs text-neutral-400">SOUL.md, identidade do agente sempre carregada</p>
-        </a>
-        <a href="#modulo-3-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.4</span><span class="text-xs text-neutral-500">~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">⏰ Crons</h3>
-          <p class="text-xs text-neutral-400">Agendamento, --workdir, --no-agent, --deliver, --skill</p>
-        </a>
-        <a href="#modulo-3-5" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.5</span><span class="text-xs text-neutral-500">~25 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🔄 Auto-aperfeiçoamento</h3>
-          <p class="text-xs text-neutral-400">Como o agente aprende sessão após sessão</p>
-        </a>
-      </div>
-    </section>
-
-    <h2 class="text-2xl font-bold mb-6 pt-8 border-t border-dark-600">Conteúdo detalhado</h2>
-
-    <!-- MODULO 3.1 -->
-    <div id="modulo-3-1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🧠 Memory: USER.md + MEMORY.md</h3>
-        <p class="text-neutral-400 text-sm">Os dois arquivos que o agente injeta no system prompt como snapshot frozen no início de cada sessão. Limites de tamanho rígidos, auto-gerenciados via tool.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">🧊</span>
-            <div><span class="font-medium">Memória persistente como snapshot frozen</span><span class="text-neutral-500 text-sm ml-2">- Injetado no system prompt</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">No início de cada sessão, o conteúdo de USER.md e MEMORY.md é lido e injetado no system prompt como um bloco fixo. Modificações durante a sessão usam a tool <code class="text-purple-400">memory</code>.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Entender que é frozen explica por que o agente "esquece" alterações feitas no meio da sessão até a próxima. Você decide o que merece persistir.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Os arquivos ficam em <code class="text-purple-400">~/.hermes/memories/</code>. Snapshot frozen = lido uma vez por sessão. A tool <code class="text-purple-400">memory</code> é o mecanismo oficial pra alterar entre sessões.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">👤</span>
-            <div><span class="font-medium">USER.md (~500 tokens)</span><span class="text-neutral-500 text-sm ml-2">- Quem é VOCÊ, limite 1.375 chars</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Arquivo com o seu perfil: nome, papel, preferências, estilo de comunicação, idiomas, contextos relevantes. Limite rígido de <strong>1.375 caracteres</strong> (~500 tokens).</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o que faz o agente parar de te tratar como estranho a cada sessão. Sem USER.md útil, você repete contexto sempre.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Foco em fatos estáveis (não em status atual). Bom: "Falo PT-BR, prefiro respostas curtas, programo em Python." Ruim: "Estou trabalhando no projeto X agora."</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">📓</span>
-            <div><span class="font-medium">MEMORY.md (~800 tokens)</span><span class="text-neutral-500 text-sm ml-2">- Notas do agente, limite 2.200 chars</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Notas pessoais do agente sobre o ambiente: paths importantes, fatos aprendidos, decisões fechadas, atalhos. Limite rígido de <strong>2.200 caracteres</strong> (~800 tokens).</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a memória "de trabalho" do agente. Sem ela, ele redescobre o ambiente toda vez (onde fica o repo X, qual o stack Y, como você prefere commits).</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Limite apertado obriga a consolidar. Quando enche, o próprio agente reescreve entradas mais antigas pra abrir espaço. Foco em conhecimento durável, não em tarefas.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🔧</span>
-            <div><span class="font-medium">Tool memory: add, replace, remove</span><span class="text-neutral-500 text-sm ml-2">- Auto-gerenciada</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A ferramenta <code class="text-purple-400">memory</code> tem três operações: <strong>add</strong> (adicionar entrada), <strong>replace</strong> (substituir), <strong>remove</strong> (apagar). O agente usa sozinho quando você pede "salva isso".</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber que existe te dá o vocabulário pra pedir certo: "salva na memória X", "remove a entrada Y do MEMORY.md", "atualiza o que sabe sobre meu setup".</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Quando o arquivo enche, o agente consolida automaticamente — junta entradas redundantes pra liberar espaço. Você pode auditar manualmente abrindo os MD.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🔍</span>
-            <div><span class="font-medium">session_search: SQLite + FTS5</span><span class="text-neutral-500 text-sm ml-2">- Histórico antigo de conversas</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Cada sessão é gravada em SQLite (<code class="text-purple-400">~/.hermes/state.db</code>) com índice full-text (FTS5). A tool <code class="text-purple-400">session_search</code> permite achar conversas antigas por palavra-chave.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a "memória longa". Quando algo não cabe em MEMORY.md mas você sabe que falou disso, peça pro agente buscar no histórico de sessões.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Memória ≠ histórico. MEMORY.md é o que está sempre carregado; SQLite é o arquivo morto pesquisável sob demanda. Backup do <code class="text-purple-400">state.db</code> = backup da história toda.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🚫</span>
-            <div><span class="font-medium">O que NUNCA salvar na memória</span><span class="text-neutral-500 text-sm ml-2">- Secrets, status temporário</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Memória NÃO é cofre de senhas. NÃO é to-do list. NÃO é status atual. Salvar tipo errado polui o snapshot e desperdiça os 1.375/2.200 chars de orçamento.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Memória mal usada vira ruído que prejudica o raciocínio. Secret salvo lá pode vazar em logs ou prompts de modelos remotos.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Secrets vão em <code class="text-purple-400">~/.hermes/.env</code>. Tarefas temporárias ficam na conversa. Status atual é volátil. Memória = conhecimento durável que vai te servir em sessões futuras.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-3-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-3-1.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 3.2 -->
-    <div id="modulo-3-2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.2</span><span class="text-xs text-neutral-500">~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🛠️ Skills: SKILL.md + Progressive Disclosure</h3>
-        <p class="text-neutral-400 text-sm">Procedimentos reutilizáveis em Markdown com YAML front matter. Padrão aberto (agentskills.io). Skills são como funções que o agente aprende a chamar com nome e descrição.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">📜</span>
-            <div><span class="font-medium">O que é uma skill</span><span class="text-neutral-500 text-sm ml-2">- Procedimento reutilizável em Markdown</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Skill é um arquivo SKILL.md com YAML front matter no topo e instruções abaixo. Diz ao agente "quando usar isto", "como executar passo-a-passo", "armadilhas", "como verificar".</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Skill transforma "instrução repetida toda sessão" em "procedimento documentado uma vez". Cada tarefa que você fez 3 vezes vira candidata a skill.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Skill ≠ código. É linguagem natural estruturada. O modelo lê e segue. Padrão aberto: agentskills.io/specification.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">📋</span>
-            <div><span class="font-medium">Anatomia do YAML front matter</span><span class="text-neutral-500 text-sm ml-2">- name, description, version, platforms, metadata</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Cabeçalho YAML com campos: <code class="text-purple-400">name</code>, <code class="text-purple-400">description</code>, <code class="text-purple-400">version</code>, <code class="text-purple-400">platforms</code> (opcional), e <code class="text-purple-400">metadata.hermes</code> com tags, category, fallback_for_toolsets, requires_toolsets, config.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o que aparece no <code class="text-purple-400">skills_list()</code>. Description ruim = skill nunca chamada. Tags e category ajudam a filtrar e ativar condicionalmente.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">platforms restringe a OS (macos, linux). fallback_for_toolsets ativa quando outro toolset falha. requires_toolsets ativa só quando tem o toolset disponível. config gera prompts no setup.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🧱</span>
-            <div><span class="font-medium">Estrutura padrão do corpo</span><span class="text-neutral-500 text-sm ml-2">- When to Use, Procedure, Pitfalls, Verification</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Quatro seções: <strong>When to Use</strong> (gatilhos), <strong>Procedure</strong> (passos), <strong>Pitfalls</strong> (armadilhas conhecidas), <strong>Verification</strong> (como saber que deu certo).</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o esqueleto que o modelo espera. Skill sem "When to Use" é chamada errada. Sem "Verification" é dada como sucesso quando falhou.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Procedure deve ser numerado e direto. Pitfalls vem da experiência: o que já quebrou antes e como contornou. Verification é teste curto de saída esperada.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🪜</span>
-            <div><span class="font-medium">Progressive Disclosure (3 níveis)</span><span class="text-neutral-500 text-sm ml-2">- Token-eficiente</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Padrão de carregamento em 3 níveis: <strong>L0 skills_list()</strong> (~3k tokens, só nome+descrição+categoria), <strong>L1 skill_view(name)</strong> (corpo completo), <strong>L2 skill_view(name, path)</strong> (referência específica).</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Permite ter centenas de skills sem estourar contexto. O agente só carrega corpo completo quando decide usar.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Description curta e poderosa importa MUITO — é o que entra no L0. Referências grandes ficam em <code class="text-purple-400">references/</code> e são puxadas só no L2.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">📁</span>
-            <div><span class="font-medium">Estrutura de diretórios</span><span class="text-neutral-500 text-sm ml-2">- references, templates, scripts, assets</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Skill mora em <code class="text-purple-400">~/.hermes/skills/category/skill-name/</code>. Dentro: SKILL.md (obrigatório), <code class="text-purple-400">references/</code>, <code class="text-purple-400">templates/</code>, <code class="text-purple-400">scripts/</code>, <code class="text-purple-400">assets/</code>.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Permite skill rica sem inflar SKILL.md principal. Scripts ficam separados para execução, templates pra outputs, references pra docs longas.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Categoria do diretório é tipicamente igual ao <code class="text-purple-400">metadata.hermes.category</code>. Versionamento da skill toda via git fica trivial — é só Markdown e arquivos auxiliares.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🌐</span>
-            <div><span class="font-medium">Skills Hub (agentskills.io)</span><span class="text-neutral-500 text-sm ml-2">- Múltiplas fontes de instalação</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hub público em <code class="text-purple-400">agentskills.io</code>. Cinco fontes de instalação: <strong>official</strong> (bundled), <strong>skills-sh</strong> (hub), <strong>GitHub</strong> (user/repo/path), <strong>URL direta</strong>, <strong>well-known</strong> (auto-discovery via /.well-known/agent-skills).</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você não precisa criar tudo do zero. Vê demo no X → cola link da skill → o agente instala e usa.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Auto-discovery em <code class="text-purple-400">/.well-known/agent-skills</code> permite que sites publiquem skills oficiais — basta apontar o agente pro domínio.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-3-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-3-2.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 3.3 -->
-    <div id="modulo-3-3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.3</span><span class="text-xs text-neutral-500">~25 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">👻 Soul: identidade do agente</h3>
-        <p class="text-neutral-400 text-sm">SOUL.md ocupa o slot #1 do system prompt. É a identidade — quem o agente é, como fala, no que acredita. Diferente de USER.md.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">🎭</span>
-            <div><span class="font-medium">SOUL.md no slot #1 do system prompt</span><span class="text-neutral-500 text-sm ml-2">- Sempre carregado</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">SOUL.md é o primeiro bloco do system prompt — antes de memória, antes de skills. É a base da identidade que o modelo lê pra qualquer interação.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Posição importa. Coisa no slot #1 tem mais peso na decisão do modelo. Tom errado lá ecoa em tudo. Tom certo lá molda toda a conversa.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Sempre carregado (não condicional). É a única peça desse trio (SOUL/USER/MEMORY) que NÃO tem limite rígido documentado, mas mantenha conciso pra economizar tokens.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">📍</span>
-            <div><span class="font-medium">Localização: ~/.hermes/SOUL.md</span><span class="text-neutral-500 text-sm ml-2">- Global, sem YAML front matter</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Arquivo único em <code class="text-purple-400">~/.hermes/SOUL.md</code>. Escopo global (vale pra qualquer projeto). Markdown puro — não tem YAML front matter como SKILL.md.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Está no home do Hermes, não dentro de projeto. Por isso não muda quando você troca de pasta — a identidade do agente é constante.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Pra ter identidades diferentes (marketing alegre, financeiro sério), você usa <strong>perfis Hermes diferentes</strong> — cada perfil com seu próprio diretório <code class="text-purple-400">~/.hermes-marketing/</code>, <code class="text-purple-400">~/.hermes-financeiro/</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🎨</span>
-            <div><span class="font-medium">O que SOUL define</span><span class="text-neutral-500 text-sm ml-2">- Tom, personalidade, princípios</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Bom SOUL.md cobre: <strong>tom</strong> (formal, descontraído, direto), <strong>personalidade</strong> (quem é o agente), <strong>princípios</strong> (o que sempre/nunca faz), <strong>regras de comunicação</strong> (idioma, comprimento, emojis).</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a diferença entre "ChatGPT padrão" e "agente que parece COM você". Quanto mais específico, mais característico fica.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Evite contradições internas. "Seja sucinto" + "explique cada decisão em detalhe" briga. Soul deve ser coerente como personagem.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🎯</span>
-            <div><span class="font-medium">Por que importa em multi-agente</span><span class="text-neutral-500 text-sm ml-2">- Cada agente tem soul próprio</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Em setups com múltiplos perfis, soul é o que dá personalidade distinta a cada um. Marketing pode ser leve e usar emojis. Financeiro deve ser sóbrio e direto.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem soul próprio, todos os perfis soam igual e perdem o sentido de existir separados. Cada um carrega sua voz.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Soul define voz; skills definem capacidades; memory carrega fatos. Os três se combinam pra dar caráter ao perfil.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🔄</span>
-            <div><span class="font-medium">Como evoluir o SOUL</span><span class="text-neutral-500 text-sm ml-2">- Pedir ao próprio Hermes</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">"Atualize seu soul para ser X" → o próprio agente edita SOUL.md. Funciona surpreendentemente bem porque ele entende o efeito de cada linha.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você não precisa virar designer de prompts. Descreve o ajuste em linguagem natural ("seja mais direto", "menos emojis", "use exemplos práticos") e o agente formaliza.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Sempre revise o diff antes de aceitar. Soul é arquivo crítico — uma reescrita ruim degrada o agente todo.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">⚖️</span>
-            <div><span class="font-medium">Soul vs USER.md</span><span class="text-neutral-500 text-sm ml-2">- Quem ELE é vs quem VOCÊ é</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Diferença fundamental: <strong>SOUL.md = quem o agente é</strong> (identidade dele). <strong>USER.md = quem você é</strong> (perfil seu). Confundir os dois é erro comum.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Misturar gera coisas estranhas. Colocar "sou Nei, programador" em SOUL.md faz o agente achar que ELE é Nei. Colocar "seja sucinto" em USER.md desperdiça espaço.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Teste mental: "Se eu trocasse o usuário, isto continuaria valendo?" Se sim → SOUL. Se não → USER.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-3-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-3-3.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 3.4 -->
-    <div id="modulo-3-4" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.4</span><span class="text-xs text-neutral-500">~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">⏰ Crons: agendamento e flags</h3>
-        <p class="text-neutral-400 text-sm">Crons transformam o Hermes de reativo em proativo. Sessão fresh por execução, file lock, flags --workdir, --no-agent, --deliver, --skill.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">🚀</span>
-            <div><span class="font-medium">Reativo → proativo</span><span class="text-neutral-500 text-sm ml-2">- Sessão fresh por execução</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Cron = job agendado. A cada disparo o gateway scheduler abre uma <strong>sessão fresh</strong> de AIAgent — sem histórico de conversa anterior, mas com SOUL.md, USER.md e MEMORY.md carregados.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o que faz o agente ser realmente útil 24/7. Você dorme, ele trabalha. Acorda com resumo no Telegram.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Sessão fresh = prompt deve ser <strong>auto-contido</strong>. "Continua o que estava fazendo" não funciona — não há contexto. Bom: "Audite PRs abertos no repo X e poste resumo no Telegram."</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">💬</span>
-            <div><span class="font-medium">Sintaxe natural via chat</span><span class="text-neutral-500 text-sm ml-2">- /cron add 30m "..."</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Comandos no chat criam crons sem CLI: <code class="text-purple-400">/cron add 30m "..."</code>, <code class="text-purple-400">/cron add "every 2h" "..."</code>, <code class="text-purple-400">/cron add "every 1h" "..." --skill blogwatcher</code>.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o jeito mais rápido de criar cron — direto do Telegram. Não precisa SSH no servidor.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Aceita expressões naturais ("every 2h", "every 1d at 09:00") e durações ("30m", "1h", "2d"). Múltiplas skills com <code class="text-purple-400">--skill A --skill B</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🖥️</span>
-            <div><span class="font-medium">CLI standalone: hermes cron create</span><span class="text-neutral-500 text-sm ml-2">- Ideal para scripts e provisionamento</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Mesma capacidade via terminal: <code class="text-purple-400">hermes cron create "every 1d at 09:00" "Audit PRs" --workdir /path/projeto</code>. Ideal pra scripts de setup e infra-as-code.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">CLI permite versionar crons no repositório (script <code class="text-purple-400">setup-crons.sh</code> que recria tudo). Reproduzível.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Outras subcomandos úteis: <code class="text-purple-400">hermes cron list</code>, <code class="text-purple-400">hermes cron remove &lt;id&gt;</code>. Definição persiste em <code class="text-purple-400">~/.hermes/cron/jobs.json</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">📂</span>
-            <div><span class="font-medium">Flag --workdir &lt;path&gt;</span><span class="text-neutral-500 text-sm ml-2">- Carrega AGENTS.md/CLAUDE.md dali</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Define o diretório de trabalho da sessão fresh. O scheduler faz <code class="text-purple-400">cd</code> pra lá antes de rodar e detecta os arquivos de contexto do projeto: .hermes.md, AGENTS.md ou CLAUDE.md.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cron pra um projeto específico precisa do contexto desse projeto. Sem <code class="text-purple-400">--workdir</code>, ele roda em <code class="text-purple-400">~</code> e não acha nada.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Ordem de prioridade do contexto de projeto: <code class="text-purple-400">.hermes.md → AGENTS.md → CLAUDE.md → .cursorrules</code>. Apenas UM tipo é carregado por sessão.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🔇</span>
-            <div><span class="font-medium">Flag --no-agent (NOAGENT mode)</span><span class="text-neutral-500 text-sm ml-2">- Script-only, sem LLM</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Modo que pula o LLM completamente. O cron roda só um script <code class="text-purple-400">.sh/.bash/.py</code>. Saída vazia = silêncio. Saída não-zero = alerta entregue.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Watchdogs (memória, disco, heartbeat) não precisam de IA. Usar LLM aí é desperdício de token. NOAGENT mantém custo zero.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Padrão: stdout vazio = tick silencioso, stderr ou exit não-zero = alerta. Scripts <code class="text-purple-400">.sh</code> rodam sob bash, outros sob Python interpreter.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">📡</span>
-            <div><span class="font-medium">Flags --deliver e --skill</span><span class="text-neutral-500 text-sm ml-2">- Destino e injeção de skill</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm"><code class="text-purple-400">--deliver &lt;plataforma&gt;</code> escolhe o destino: <strong>telegram</strong>, <strong>discord</strong>, <strong>all</strong>, <strong>origin</strong>. <code class="text-purple-400">--skill &lt;name&gt;</code> injeta uma skill no início da sessão fresh.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem <code class="text-purple-400">--deliver</code>, a saída vai pro canal padrão. Com <code class="text-purple-400">--skill</code>, você garante que o procedimento certo está disponível mesmo numa sessão fresh.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">File lock <code class="text-purple-400">~/.hermes/cron/.tick.lock</code> previne double-run quando o tick demora. Você pode passar múltiplas <code class="text-purple-400">--skill</code> pra combinar habilidades.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-3-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-3-4.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 3.5 -->
-    <div id="modulo-3-5" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.5</span><span class="text-xs text-neutral-500">~25 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🔄 Loop de Auto-Aperfeiçoamento</h3>
-        <p class="text-neutral-400 text-sm">Como os 4 pilares (memória, skills, soul, histórico) se combinam num loop que faz o agente ficar melhor com uso. Não é mágico — exige feedback.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">🧬</span>
-            <div><span class="font-medium">3 camadas de aprendizado</span><span class="text-neutral-500 text-sm ml-2">- Memória, skills, histórico</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Memória (MEMORY.md/USER.md) = fatos. Skills (SKILL.md) = procedimentos. Histórico (SQLite FTS5) = conversa. As três funcionam juntas pra acumular contexto útil.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber qual camada usar para qual tipo de aprendizado evita inflar memória com coisas que deveriam virar skill, ou virar skill coisa que é só fato isolado.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Fato pontual → memória. Procedimento repetível → skill. Conversa específica → fica no histórico (busca via session_search).</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">♻️</span>
-            <div><span class="font-medium">Ciclo: tarefa → execução → correção → persistência</span><span class="text-neutral-500 text-sm ml-2">- Loop completo</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Você pede tarefa → ele executa → você corrige se errado → o aprendizado é persistido em memória ou skill → próxima sessão usa isso.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a regra do jogo. Sem o passo 4 (persistência), você vai corrigir os mesmos erros sempre. Tudo o que evolui o agente passa por esse ciclo.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Frases de gatilho: "salva isso na memória", "vira skill", "atualiza seu soul", "lembra disso pra próxima". Sem elas, o aprendizado some no fim da sessão.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">2️⃣</span>
-            <div><span class="font-medium">Regra dos 2 erros</span><span class="text-neutral-500 text-sm ml-2">- Errou 2x = atualiza skill ou memória</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Heurística simples: errou uma vez, é descuido. Errou duas vezes na mesma coisa, é padrão — atualize o pilar correspondente.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem critério você ou inflama memória pra qualquer detalhe ou ignora o que precisaria ser corrigido. O 2 é um bom limiar pragmático.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Erro de fato → memória. Erro de processo → skill. Erro de tom → soul. A camada certa depende do tipo de erro.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🪄</span>
-            <div><span class="font-medium">Repetir instrução = candidato a skill</span><span class="text-neutral-500 text-sm ml-2">- Sinal claro</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Toda vez que você se pega digitando "primeiro faz X, depois Y, cuidado com Z" pela 3ª vez, é a deixa: vire skill.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Identificar o gatilho cedo economiza horas. A skill paga investimento em poucas execuções.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Frase pronta: "Transforma esse procedimento numa skill chamada X, com when-to-use, procedure, pitfalls e verification." O agente formaliza.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🎚️</span>
-            <div><span class="font-medium">Tom errado = soul; fato repetido = memória</span><span class="text-neutral-500 text-sm ml-2">- Diagnóstico rápido</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Diagnóstico simples: "ele falou de um jeito que não gostei" → soul. "ele esqueceu fato sobre meu setup" → memória. "ele errou o passo a passo" → skill.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Roteamento claro evita gastar tempo editando a coisa errada. Soul mais grosso não conserta falta de fato; memória mais cheia não conserta tom.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">A tabela mental: tipo do erro → camada correspondente. Aplicar errado degrada tudo (memória virando soul fica longa demais e desperdiça os 2.200 chars).</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🩺</span>
-            <div><span class="font-medium">Manutenção periódica</span><span class="text-neutral-500 text-sm ml-2">- "Lê sua memória/soul/skills e me mostra"</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A cada poucas semanas, peça: "Mostre o conteúdo atual de SOUL.md, USER.md, MEMORY.md e a lista de skills. O que está obsoleto, contraditório ou redundante?"</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem revisão, esses arquivos viram lixo acumulado. Entradas antigas brigam com novas. O agente perde clareza.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Auditoria mensal de 10 minutos vale mais que reescrever do zero. Comite os arquivos no GitHub — assim você tem histórico de evolução do agente.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-3-5')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-3-5.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- NAV ENTRE TRILHAS -->
-    <div class="flex flex-col sm:flex-row gap-4 mt-12">
-      <a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Trilha 2: Setup do Zero</a>
-      <a href="../trilha4/index.html" class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors">Próxima trilha: Segurança →</a>
-    </div>
-  </main>
-
-  <!-- MODAIS -->
-  <div id="modal-3-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.1</span><span class="font-semibold">Memory: USER.md + MEMORY.md</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-3-1.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-3-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.2</span><span class="font-semibold">Skills: SKILL.md + Progressive Disclosure</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-3-2.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-3-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.3</span><span class="font-semibold">Soul: identidade do agente</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-3-3.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-3-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.4</span><span class="font-semibold">Crons: agendamento e flags</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-3-4.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-3-5" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.5</span><span class="font-semibold">Loop de Auto-Aperfeiçoamento</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-3-5.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Trilha 3 • 2026</p></div>
-  </footer>
-
-  <script>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🪽</span>
+<span class="font-bold text-lg hidden sm:inline">Agent Hermes</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">TRACK 3</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🏛️ The 5 Pillars in Practice</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Memory, Skills, Soul, Crons and the self-improvement loop. Here you go from "I installed Hermes" to "I configured an agent that learns, knows who it is and acts on its own".</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">5</div><div class="text-xs text-neutral-400">Modules</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">30</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~2.5h</div><div class="text-xs text-neutral-400">Duration</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Average</div><div class="text-xs text-neutral-400">Level</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+QUICK NAVIGATION
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Trail map</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all" href="#modulo-3-1">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🧠 Memory</h3>
+<p class="text-xs text-neutral-400">USER.md + MEMORY.md, snapshot frozen at system prompt</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all" href="#modulo-3-2">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.2</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🛠️ Skills</h3>
+<p class="text-xs text-neutral-400">SKILL.md, YAML front matter and progressive disclosure</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all" href="#modulo-3-3">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.3</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">👻Soul</h3>
+<p class="text-xs text-neutral-400">SOUL.md, agent identity always loaded</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all" href="#modulo-3-4">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.4</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">⏰ Crons</h3>
+<p class="text-xs text-neutral-400">Scheduling, --workdir, --no-agent, --deliver, --skill</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all" href="#modulo-3-5">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.5</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🔄 Self-improvement</h3>
+<p class="text-xs text-neutral-400">How the agent learns session after session</p>
+</a>
+</div>
+</section>
+<h2 class="text-2xl font-bold mb-6 pt-8 border-t border-dark-600">Detailed content</h2>
+MODULE 3.1
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-3-1">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🧠 Memory: USER.md + MEMORY.md</h3>
+<p class="text-neutral-400 text-sm">The two files that the agent injects into the system prompt as frozen snapshots at the beginning of each session. Strict size limits, self-managed via tool.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🧊</span>
+<div><span class="font-medium">Persistent memory as frozen snapshot</span><span class="text-neutral-500 text-sm ml-2">- Injected into system prompt</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">At the start of each session, the contents of USER.md and MEMORY.md are read and injected into the system prompt as a fixed block. Modifications during the session use the tool<code class="text-purple-400" data-notranslate="True">memory</code>.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Understanding that it is frozen explains why the agent "forgets" changes made in the middle of the session until the next one. You decide what deserves to persist.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">The files are in<code class="text-purple-400" data-notranslate="True">~/.hermes/memories/</code>. Snapshot frozen = read once per session. The tool<code class="text-purple-400" data-notranslate="True">memory</code>It is the official mechanism for changing between sessions.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">👤</span>
+<div><span class="font-medium">USER.md (~500 tokens)</span><span class="text-neutral-500 text-sm ml-2">- Who are YOU, limit 1,375 chars</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">File with your profile: name, role, preferences, communication style, languages, relevant contexts. Hard limit of<strong>1,375 characters</strong>(~500 tokens).</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's what stops the agent from treating you like a stranger every session. Without useful USER.md, you repeat context every time.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Focus on stable facts (not current status). Good: "I speak PT-BR, I prefer short answers, I program in Python." Bad: "I'm working on project X right now."</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">📓</span>
+<div><span class="font-medium">MEMORY.md (~800 tokens)</span><span class="text-neutral-500 text-sm ml-2">- Agent notes, limit 2,200 characters</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">The agent's personal notes about the environment: important paths, learned facts, closed decisions, shortcuts. Hard limit of<strong>2,200 characters</strong>(~800 tokens).</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It is the agent's "working" memory. Without it, it rediscovers the environment every time (where repo X is, what stack Y is, how you prefer commits).</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Tight limit forces you to consolidate. When it fills up, the agent itself rewrites older entries to make room. Focus on durable knowledge, not tasks.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🔧</span>
+<div><span class="font-medium">Tool memory: add, replace, remove</span><span class="text-neutral-500 text-sm ml-2">- Self-managed</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">The tool<code class="text-purple-400" data-notranslate="True">memory</code>has three operations:<strong>add</strong>(add entry),<strong>replace</strong>(to replace),<strong>remove</strong>(to switch off). The agent uses it alone when you ask "save this".</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Knowing that it exists gives you the vocabulary to ask correctly: "save in memory X", "remove entry Y from MEMORY.md", "update what you know about my setup".</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">When the file fills up, the agent automatically consolidates — adding redundant entries to free up space. You can audit manually by opening MDs.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🔍</span>
+<div><span class="font-medium">session_search: SQLite + FTS5</span><span class="text-neutral-500 text-sm ml-2">- Old conversation history</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Each session is recorded in SQLite (<code class="text-purple-400" data-notranslate="True">~/.hermes/state.db</code>) with full-text index (FTS5). The tool<code class="text-purple-400" data-notranslate="True">session_search</code>allows you to find old conversations by keyword.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's the "long memory". When something doesn't fit in MEMORY.md but you know it was mentioned, ask the agent to look for it in the session history.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Memory ≠ history. MEMORY.md is the one that is always loaded; SQLite is the on-demand searchable archive. Backup<code class="text-purple-400" data-notranslate="True">state.db</code>= backup of the entire history.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🚫</span>
+<div><span class="font-medium">What to NEVER save in memory</span><span class="text-neutral-500 text-sm ml-2">- Secrets, temporary status</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Memory is NOT a password vault. It is NOT a to-do list. NOT current status. Saving the wrong type pollutes the snapshot and wastes the 1,375/2,200 char budget.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Poorly used memory becomes noise that impairs reasoning. Secret saved there may leak into remote model logs or prompts.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Secrets go on<code class="text-purple-400" data-notranslate="True">~/.hermes/.env</code>. Temporary tasks are left in the conversation. Current status is volatile. Memory = durable knowledge that will serve you in future sessions.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-3-1')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors" href="modulo-3-1.html">See Full</a>
+</div>
+</div>
+MODULE 3.2
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-3-2">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.2</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🛠️ Skills: SKILL.md + Progressive Disclosure</h3>
+<p class="text-neutral-400 text-sm">Reusable procedures in Markdown with YAML front matter. Open standard (agentskills.io). Skills are like functions that the agent learns to call with a name and description.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">📜</span>
+<div><span class="font-medium">What is a skill</span><span class="text-neutral-500 text-sm ml-2">- Reusable procedure in Markdown</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Skill is a SKILL.md file with YAML front matter at the top and instructions below. It tells the agent "when to use this", "how to do it step-by-step", "pitfalls", "how to check".</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Skill turns "instruction repeated every session" into "procedure documented once". Each task you have done 3 times becomes a candidate for a skill.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Skill ≠ code. It is structured natural language. The model reads and follows. Open standard: agentskills.io/specification.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">📋</span>
+<div><span class="font-medium">Anatomy of YAML front matter</span><span class="text-neutral-500 text-sm ml-2">- name, description, version, platforms, metadata</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">YAML header with fields:<code class="text-purple-400" data-notranslate="True">name</code>, <code class="text-purple-400" data-notranslate="True">description</code>, <code class="text-purple-400" data-notranslate="True">version</code>, <code class="text-purple-400" data-notranslate="True">platforms</code>(optional), and<code class="text-purple-400" data-notranslate="True">metadata.hermes</code>with tags, category, fallback_for_toolsets, requires_toolsets, config.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">This is what appears in<code class="text-purple-400" data-notranslate="True">skills_list()</code>. Bad description = skill never called. Tags and category help you filter and conditionally activate.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">platforms restricts to OS (macos, linux). fallback_for_toolsets activates when another toolset fails. requires_toolsets activates only when the toolset is available. config generates prompts in setup.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🧱</span>
+<div><span class="font-medium">Standard body structure</span><span class="text-neutral-500 text-sm ml-2">- When to Use, Procedure, Pitfalls, Verification</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Four sections:<strong>When to Use</strong>(triggers),<strong>Procedure</strong>(steps),<strong>Pitfalls</strong>(known pitfalls),<strong>Verification</strong>(how to know it worked).</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It is the skeleton that the model expects. Skill without "When to Use" is wrong call. Without "Verification" it is considered successful when it failed.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Procedure must be numbered and direct. Pitfalls come from experience: what has broken before and how you got around it. Verification is short test of expected output.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🪜</span>
+<div><span class="font-medium">Progressive Disclosure (3 levels)</span><span class="text-neutral-500 text-sm ml-2">- Token-efficient</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">3-level charging pattern:<strong>L0 skills_list()</strong>(~3k tokens, just name+description+category),<strong>L1 skill_view(name)</strong>(full body),<strong>L2 skill_view(name, path)</strong>(specific reference).</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Allows you to have hundreds of skills without overflowing context. The agent only carries a full body when he decides to use it.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Short and powerful description matters A LOT — that's what goes into L0. Large references are in<code class="text-purple-400" data-notranslate="True">references/</code>and are only pulled at L2.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">📁</span>
+<div><span class="font-medium">Directory structure</span><span class="text-neutral-500 text-sm ml-2">- references, templates, scripts, assets</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Skill lives in<code class="text-purple-400" data-notranslate="True">~/.hermes/skills/category/skill-name/</code>. Inside: SKILL.md (required),<code class="text-purple-400" data-notranslate="True">references/</code>, <code class="text-purple-400" data-notranslate="True">templates/</code>, <code class="text-purple-400" data-notranslate="True">scripts/</code>, <code class="text-purple-400" data-notranslate="True">assets/</code>.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Allows rich skill without inflating main SKILL.md. Scripts are separated for execution, templates for outputs, references for long docs.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Directory Category is typically the same as<code class="text-purple-400" data-notranslate="True">metadata.hermes.category</code>. Versioning the entire skill via git is trivial — it's just Markdown and auxiliary files.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🌐</span>
+<div><span class="font-medium">Skills Hub (agentskills.io)</span><span class="text-neutral-500 text-sm ml-2">- Multiple installation sources</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Public hub in<code class="text-purple-400" data-notranslate="True">agentskills.io</code>. Five installation sources:<strong>official</strong>(bundled),<strong>skills-sh</strong>(hub),<strong>GitHub</strong>(user/repo/path),<strong>Direct URL</strong>, <strong>well-known</strong>(auto-discovery via /.well-known/agent-skills).</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">You don't need to create everything from scratch. Watch the demo on X → paste the skill link → the agent installs and uses it.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Auto-discovery in<code class="text-purple-400" data-notranslate="True">/.well-known/agent-skills</code>allows websites to publish official skills — just point the agent to the domain.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-3-2')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors" href="modulo-3-2.html">See Full</a>
+</div>
+</div>
+MODULE 3.3
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-3-3">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.3</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="text-2xl font-bold mb-2">👻 Soul: agent identity</h3>
+<p class="text-neutral-400 text-sm">SOUL.md occupies slot #1 of the system prompt. It’s identity — who the agent is, how they talk, what they believe. Different from USER.md.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🎭</span>
+<div><span class="font-medium">SOUL.md in system prompt slot #1</span><span class="text-neutral-500 text-sm ml-2">- Always loaded</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">SOUL.md is the first block of the system prompt — before memory, before skills. It is the basis of the identity that the model reads for any interaction.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Position matters. Thing in slot #1 has more weight in the model decision. Wrong tone there echoes in everything. The right tone there shapes the entire conversation.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Always loaded (not conditional). It's the only piece of this trio (SOUL/USER/MEMORY) that has NO documented hard limit, but keep it concise to save tokens.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">📍</span>
+<div><span class="font-medium">Location: ~/.hermes/SOUL.md</span><span class="text-neutral-500 text-sm ml-2">- Global, without YAML front matter</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Single file in<code class="text-purple-400" data-notranslate="True">~/.hermes/SOUL.md</code>. Global scope (applies to any project). Pure Markdown — does not have YAML front matter like SKILL.md.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's at Hermes' home, not within the project. That's why it doesn't change when you change folders — the agent's identity is constant.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">To have different identities (cheerful marketing, serious finance), you use<strong>different Hermes profiles</strong>— each profile with its own directory<code class="text-purple-400" data-notranslate="True">~/.hermes-marketing/</code>, <code class="text-purple-400" data-notranslate="True">~/.hermes-financeiro/</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🎨</span>
+<div><span class="font-medium">What SOUL defines</span><span class="text-neutral-500 text-sm ml-2">- Tone, personality, principles</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Good SOUL.md covers:<strong>tone</strong>(formal, relaxed, direct),<strong>personality</strong>(who is the agent),<strong>principles</strong>(what always/never does),<strong>communication rules</strong>(language, length, emojis).</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's the difference between "standard ChatGPT" and "agent that looks LIKE you". The more specific, the more characteristic it becomes.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Avoid internal contradictions. “Be succinct” + “explain each decision in detail” fights. Soul must be coherent as a character.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🎯</span>
+<div><span class="font-medium">Why does it matter in multi-agent</span><span class="text-neutral-500 text-sm ml-2">- Each agent has their own soul</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">In setups with multiple profiles, soul is what gives each one a distinct personality. Marketing can be light and use emojis. Finance must be sober and direct.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Without their own soul, all profiles sound the same and lose the sense of existing separately. Everyone carries their voice.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Soul defines voice; skills define capabilities; memory carries facts. The three combine to give character to the profile.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🔄</span>
+<div><span class="font-medium">How to evolve SOUL</span><span class="text-neutral-500 text-sm ml-2">- Ask Hermes himself</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">"Upgrade your soul to be X" → the agent himself edits SOUL.md. It works surprisingly well because he understands the effect of each line.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">You don't need to become a prompt designer. Describe the adjustment in natural language ("be more direct", "fewer emojis", "use practical examples") and the agent formalizes it.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Always review the diff before accepting. Soul is a critical file — a bad rewrite degrades the entire agent.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">⚖️</span>
+<div><span class="font-medium">Soul vs USER.md</span><span class="text-neutral-500 text-sm ml-2">- Who HE is vs who YOU ​​are</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Fundamental difference:<strong>SOUL.md = who the agent is</strong>(his identity).<strong>USER.md = who you are</strong>(your profile). Confusing the two is a common mistake.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Mixing creates strange things. Putting "I'm Nei, programmer" in SOUL.md makes the agent think HE is Nei. Putting "be succinct" in USER.md wastes space.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Mental test: "If I changed the user, would this still be valid?" If yes → SOUL. If not → USER.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-3-3')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors" href="modulo-3-3.html">See Full</a>
+</div>
+</div>
+MODULE 3.4
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-3-4">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.4</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="text-2xl font-bold mb-2">⏰ Crons: scheduling and flags</h3>
+<p class="text-neutral-400 text-sm">Crons transform Hermes from reactive to proactive. Session fresh per run, file lock, flags --workdir, --no-agent, --deliver, --skill.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🚀</span>
+<div><span class="font-medium">Reactive → proactive</span><span class="text-neutral-500 text-sm ml-2">- Fresh session per run</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Cron = scheduled job. With each trigger, the gateway scheduler opens a<strong>fresh session</strong>from AIAgent — no previous conversation history, but with SOUL.md, USER.md, and MEMORY.md loaded.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's what makes the agent truly useful 24/7. You sleep, he works. Wake up to a summary on Telegram.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Session fresh = prompt should be<strong>self-contained</strong>. "Continue what you were doing" doesn't work — there's no context. Good: "Audite open PRs in repo X and post summary on Telegram."</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">💬</span>
+<div><span class="font-medium">Natural syntax via chat</span><span class="text-neutral-500 text-sm ml-2">- /cron add 30m "..."</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Chat commands create crons without CLI:<code class="text-purple-400" data-notranslate="True">/cron add 30m "..."</code>, <code class="text-purple-400" data-notranslate="True">/cron add "every 2h" "..."</code>, <code class="text-purple-400" data-notranslate="True">/cron add "every 1h" "..." --skill blogwatcher</code>.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's the fastest way to create cron — straight from Telegram. No need to SSH into the server.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Accepts natural expressions ("every 2h", "every 1d at 09:00") and durations ("30m", "1h", "2d"). Multiple skills with<code class="text-purple-400" data-notranslate="True">--skill A --skill B</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🖥️</span>
+<div><span class="font-medium">Standalone CLI: hermes cron create</span><span class="text-neutral-500 text-sm ml-2">- Ideal for scripting and provisioning</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Same capacity via terminal:<code class="text-purple-400" data-notranslate="True">hermes cron create "every 1d at 09:00" "Audit PRs" --workdir /path/projeto</code>. Ideal for setup and infra-as-code scripts.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">CLI allows versioning crons in the repository (script<code class="text-purple-400" data-notranslate="True">setup-crons.sh</code>which recreates everything). Reproducible.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Other useful subcommands:<code class="text-purple-400" data-notranslate="True">hermes cron list</code>, <code class="text-purple-400" data-notranslate="True">hermes cron remove &lt;id&gt;</code>. Definition persists in<code class="text-purple-400" data-notranslate="True">~/.hermes/cron/jobs.json</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">📂</span>
+<div><span class="font-medium">Flag --workdir &lt;path&gt;</span><span class="text-neutral-500 text-sm ml-2">- Load AGENTS.md/CLAUDE.md from there</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Sets the fresh session working directory. The scheduler does<code class="text-purple-400" data-notranslate="True">cd</code>there before running and detects the project context files: .hermes.md, AGENTS.md or CLAUDE.md.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Cron for a specific project needs the context of that project. Without<code class="text-purple-400" data-notranslate="True">--workdir</code>, it runs on<code class="text-purple-400" data-notranslate="True">~</code>and finds nothing.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Project context priority order:<code class="text-purple-400" data-notranslate="True">.hermes.md → AGENTS.md → CLAUDE.md → .cursorrules</code>. Only ONE type is loaded per session.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🔇</span>
+<div><span class="font-medium">Flag --no-agent (NOAGENT mode)</span><span class="text-neutral-500 text-sm ml-2">- Script-only, no LLM</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Mode that skips the LLM completely. Cron only runs one script<code class="text-purple-400" data-notranslate="True">.sh/.bash/.py</code>. Empty output = silence. Non-zero output = alert delivered.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Watchdogs (memory, disk, heartbeat) do not need AI. Using LLM there is a waste of tokens. NOAGENT maintains zero costs.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Default: empty stdout = silent tick, non-zero stderr or exit = alert. Scripts<code class="text-purple-400" data-notranslate="True">.sh</code>run under bash, others under Python interpreter.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">📡</span>
+<div><span class="font-medium">Flags --deliver and --skill</span><span class="text-neutral-500 text-sm ml-2">- Fate and skill injection</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm"><code class="text-purple-400" data-notranslate="True">--deliver &lt;plataforma&gt;</code>choose destination:<strong>telegram</strong>, <strong>discord</strong>, <strong>all</strong>, <strong>origin</strong>. <code class="text-purple-400" data-notranslate="True">--skill &lt;name&gt;</code>injects a skill at the beginning of the fresh session.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Without<code class="text-purple-400" data-notranslate="True">--deliver</code>, the output goes to the standard channel. With<code class="text-purple-400" data-notranslate="True">--skill</code>, you guarantee that the right procedure is available even in a fresh session.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">File lock<code class="text-purple-400" data-notranslate="True">~/.hermes/cron/.tick.lock</code>prevents double-run when the tick delays. You can pass multiple<code class="text-purple-400" data-notranslate="True">--skill</code>to combine skills.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-3-4')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors" href="modulo-3-4.html">See Full</a>
+</div>
+</div>
+MODULE 3.5
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-3-5">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.5</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🔄 Self-Improvement Loop</h3>
+<p class="text-neutral-400 text-sm">How the 4 pillars (memory, skills, soul, history) combine in a loop that makes the agent better with use. It’s not magic — it requires feedback.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🧬</span>
+<div><span class="font-medium">3 layers of learning</span><span class="text-neutral-500 text-sm ml-2">- Memory, skills, history</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Memory (MEMORY.md/USER.md) = facts. Skills (SKILL.md) = procedures. History (SQLite FTS5) = conversation. The three work together to accumulate useful context.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Knowing which layer to use for which type of learning avoids inflating memory with things that should become a skill, or becoming a skill with something that is just an isolated fact.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Specific fact → memory. Repeatable procedure → skill. Specific conversation → remains in the history (search via session_search).</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">♻️</span>
+<div><span class="font-medium">Cycle: task → execution → correction → persistence</span><span class="text-neutral-500 text-sm ml-2">- Full loop</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">You ask for a task → it executes → you correct it if wrong → learning is persisted in memory or skill → next session uses this.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's the rule of the game. Without step 4 (persistence), you will fix the same mistakes over and over again. Everything that evolves the agent goes through this cycle.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Trigger phrases: "save this in memory", "turns into a skill", "updates your soul", "remember this for next time". Without them, learning disappears at the end of the session.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">2️⃣</span>
+<div><span class="font-medium">2 error rule</span><span class="text-neutral-500 text-sm ml-2">- Missed 2x = update skill or memory</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Simple heuristic: make a mistake once, it's carelessness. Got the same thing wrong twice, it's standard — update the corresponding pillar.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Without criteria, you either inflame memory for any detail or ignore what would need to be corrected. 2 is a good pragmatic threshold.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Error of fact → memory. Process error → skill. Tone error → soul. The right layer depends on the type of error.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🪄</span>
+<div><span class="font-medium">Repeat instruction = skill candidate</span><span class="text-neutral-500 text-sm ml-2">- Clear signal</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Every time you find yourself typing "first do X, then Y, watch out for Z" for the 3rd time, that's your cue: become a skill.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Identifying the trigger early saves hours. The skill pays for the investment in just a few executions.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Ready phrase: "Transform this procedure into a skill called X, with when-to-use, procedure, pitfalls and verification." The agent formalizes.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🎚️</span>
+<div><span class="font-medium">Wrong tone = soul; repeated fact = memory</span><span class="text-neutral-500 text-sm ml-2">- Quick diagnosis</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Simple diagnosis: "he spoke in a way I didn't like" → soul. "he forgot fact about my setup" → memory. "he got the step by step wrong" → skill.</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Clear routing avoids spending time editing the wrong thing. Thicker Soul doesn't actually fix a lack; Fuller memory doesn't fix tone.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">The mental table: error type → corresponding layer. Applying it wrong degrades everything (memory becoming soul takes too long and wastes the 2,200 chars).</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🩺</span>
+<div><span class="font-medium">Periodic maintenance</span><span class="text-neutral-500 text-sm ml-2">- "Read your memory/soul/skills and show me"</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-purple-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Every few weeks, ask: "Show the current contents of SOUL.md, USER.md, MEMORY.md, and the skills list. What is obsolete, contradictory, or redundant?"</p></div>
+<div><span class="text-purple-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Without review, these files become accumulated garbage. Old entries fight with new ones. The agent loses clarity.</p></div>
+<div><span class="text-purple-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">A 10-minute monthly audit is worth more than a rewrite from scratch. Commit the files on GitHub — this way you have a history of the agent’s evolution.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-3-5')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors" href="modulo-3-5.html">See Full</a>
+</div>
+</div>
+NAV BETWEEN TRACKS
+<div class="flex flex-col sm:flex-row gap-4 mt-12">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../trilha2/index.html">← Track 2: Setup from Scratch</a>
+<a class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors" href="../trilha4/index.html">Next track: Security →</a>
+</div>
+</main>
+MODES
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-3-1" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.1</span><span class="font-semibold">Memory: USER.md + MEMORY.md</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-3-1.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-3-2" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.2</span><span class="font-semibold">Skills: SKILL.md + Progressive Disclosure</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-3-2.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-3-3" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.3</span><span class="font-semibold">Soul: agent identity</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-3-3.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-3-4" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.4</span><span class="font-semibold">Crons: scheduling and flags</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-3-4.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-3-5" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.5</span><span class="font-semibold">Self-Improvement Loop</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-3-5.html"></iframe></div></div>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Track 3 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
       const explanation = topicItem.querySelector('.topic-explanation');
