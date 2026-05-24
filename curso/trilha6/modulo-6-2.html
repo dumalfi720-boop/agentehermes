@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>6.2 Dashboard, gateway, túnel | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>6.2 Dashboard, gateway, tunnel | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -58,275 +58,249 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-rose-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-rose-400">Trilha 6</a><span>/</span>
-      <span class="text-rose-400">Módulo 6.2</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MÓDULO 6.2</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">📊 Dashboard, gateway, túnel, Kanban</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">A web UI do Hermes: o que cabe nela, como abrir com segurança, automação via skill, Kanban view multi-agente e quando o Telegram puro ainda é o melhor caminho.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Avançado</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Operação</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🖥️ O que tem na dashboard</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A web UI do Hermes (módulo <code class="text-rose-400">web/</code> no repositório) é um painel completo. Não é gimmick — é interface de administração séria com tudo que você precisa para operar múltiplos agentes.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">💬 Sessões</h4>
-          <p class="text-neutral-300 text-sm">Histórico completo de conversas, com busca FTS5. Reabrir sessão antiga, exportar transcrição, podar conversas obsoletas.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">📡 Canais</h4>
-          <p class="text-neutral-300 text-sm">Lista de plataformas de mensagem ativas (Telegram, Discord, etc), status do gateway, métricas de mensagem por canal.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">⏰ Crons</h4>
-          <p class="text-neutral-300 text-sm">Todos os agendamentos ativos, próxima execução, histórico de runs, botões para pausar/editar/duplicar cron.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🛠️ Skills</h4>
-          <p class="text-neutral-300 text-sm">Skills bundled, instaladas via hub, e custom locais. Editor de SKILL.md inline. Indicador de uso (quantas vezes invocada).</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🔌 Plugins</h4>
-          <p class="text-neutral-300 text-sm">LCM, Kanban, integrações da comunidade. Versão, status, atualizar/desabilitar com 1 clique.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🗒️ Kanban</h4>
-          <p class="text-neutral-300 text-sm">Novo no v0.13.0. Boards com cards de tarefa, swim lanes por worker, indicadores de heartbeat e zombie.</p>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">📌 Importante</h3>
-        <p class="text-neutral-300 text-sm">Tudo que a dashboard mostra também está em arquivos texto em <code class="text-blue-400">~/.hermes/</code>. A UI é conveniência visual, não banco oculto. Você pode editar tudo via terminal e a dashboard reflete na hora.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🚪 Como abrir: SSH tunnel ou nginx</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Por padrão a dashboard sobe em <code class="text-rose-400">localhost:8080</code> dentro do VPS. Não é exposta na internet. Você precisa criar uma <strong class="text-rose-400">ponte segura</strong> — duas opções comuns:
-      </p>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">🚇</span>Opção 1: SSH Tunnel (recomendado pra uso individual)</h3>
-        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code>ssh -L 8080:localhost:8080 user@vps.exemplo.com</code></pre>
-        <p class="text-neutral-300 text-sm mt-3">Depois abra <code class="text-rose-400">http://localhost:8080</code> no seu navegador. O tráfego trafega criptografado pelo SSH. Ninguém de fora vê nada.</p>
-      </div>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">🌐</span>Opção 2: nginx reverse proxy + auth</h3>
-        <p class="text-neutral-300 text-sm mb-3">Para múltiplos usuários ou URL fixa: configure nginx como reverse proxy com HTTPS (Let's Encrypt) e autenticação básica ou Cloudflare Access.</p>
-        <pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm"><code>location / {
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10" href="index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-rose-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-rose-400" href="index.html">Track 6</a><span>/</span>
+<span class="text-rose-400">Module 6.2</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MODULE 6.2</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">📊 Dashboard, gateway, tunnel, Kanban</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">The Hermes web UI: what fits into it, how to open it safely, automation via skill, multi-agent Kanban view and when pure Telegram is still the best way.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Advanced</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Operation</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🖥️ What's on the dashboard</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The Hermes web UI (module<code class="text-rose-400" data-notranslate="True">web/</code>in the repository) is a complete dashboard. It's not a gimmick — it's a serious administration interface with everything you need to operate multiple agents.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">💬 Sessions</h4>
+<p class="text-neutral-300 text-sm">Complete conversation history, with FTS5 search. Reopen old session, export transcript, prune stale conversations.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">📡 Channels</h4>
+<p class="text-neutral-300 text-sm">List of active messaging platforms (Telegram, Discord, etc), gateway status, messaging metrics per channel.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">⏰ Crons</h4>
+<p class="text-neutral-300 text-sm">All active schedules, next run, run history, buttons to pause/edit/duplicate cron.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🛠️ Skills</h4>
+<p class="text-neutral-300 text-sm">Skills bundled, installed via hub, and local custom. Inline SKILL.md editor. Usage indicator (how many times invoked).</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🔌Plugins</h4>
+<p class="text-neutral-300 text-sm">LCM, Kanban, community integrations. Version, status, update/disable with 1 click.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🗒️ Kanban</h4>
+<p class="text-neutral-300 text-sm">New in v0.13.0. Boards with task cards, swim lanes per worker, heartbeat and zombie indicators.</p>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">📌 Important</h3>
+<p class="text-neutral-300 text-sm">Everything the dashboard shows is also in text files in<code class="text-blue-400" data-notranslate="True">~/.hermes/</code>. UI is visual convenience, not hidden banking. You can edit everything via the terminal and the dashboard reflects it instantly.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🚪 How to open: SSH tunnel or nginx</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">By default, the dashboard goes up in<code class="text-rose-400" data-notranslate="True">localhost:8080</code>inside the VPS. It is not exposed on the internet. You need to create a<strong class="text-rose-400">safe bridge</strong>— two common options:</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">🚇</span>Option 1: SSH Tunnel (recommended for individual use)</h3>
+<pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm" data-notranslate="True"><code data-notranslate="True">ssh -L 8080:localhost:8080 user@vps.exemplo.com</code></pre>
+<p class="text-neutral-300 text-sm mt-3">Then open<code class="text-rose-400" data-notranslate="True">http://localhost:8080</code>in your browser. Traffic travels encrypted via SSH. No one from the outside sees anything.</p>
+</div>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-3 flex items-center"><span class="mr-2">🌐</span>Option 2: nginx reverse proxy + auth</h3>
+<p class="text-neutral-300 text-sm mb-3">For multiple users or fixed URL: configure nginx as a reverse proxy with HTTPS (Let's Encrypt) and basic authentication or Cloudflare Access.</p>
+<pre class="bg-dark-700/70 text-neutral-100 rounded-lg p-4 overflow-x-auto text-sm" data-notranslate="True"><code data-notranslate="True">location / {
   auth_basic "Hermes Dashboard";
   auth_basic_user_file /etc/nginx/.htpasswd;
   proxy_pass http://localhost:8080;
 }</code></pre>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Não fazer</h3>
-        <p class="text-neutral-300 text-sm">Nunca abrir a porta 8080 direto na internet sem auth. Token de admin não é firewall. Mesmo que o Hermes tenha login, você está expondo superfície de ataque desnecessária.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">⚡ Skill abrir-dashboard</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Esquecer comando SSH a cada vez é fricção desnecessária. A skill bundled <code class="text-rose-400">abrir-dashboard</code> automatiza: você diz pelo Telegram <em>"abre minha dashboard"</em> e ela executa o tunnel local, espera a porta abrir, e te entrega o link.
-      </p>
-      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4">🔧 O que a skill faz</h3>
-        <ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
-          <li>Confirma que o host VPS está configurado em <code class="text-rose-400">~/.ssh/config</code></li>
-          <li>Roda <code class="text-rose-400">ssh -fN -L 8080:localhost:8080 vps</code> em background</li>
-          <li>Aguarda porta 8080 ficar disponível (timeout 10s)</li>
-          <li>Te entrega <code class="text-rose-400">http://localhost:8080</code> clicável</li>
-          <li>Opcionalmente, abre o navegador automaticamente (em Mac/Linux com GUI)</li>
-        </ol>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">📌 Limitação</h3>
-        <p class="text-neutral-300 text-sm">A skill assume que sua chave SSH e host estão configurados <strong>localmente</strong>. Não funciona se o agente está rodando dentro do VPS — ele estaria tentando criar túnel pra ele mesmo. Faz sentido em setup laptop → VPS.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🗒️ Kanban view</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Quando você ativa o sistema multi-agente da v0.13.0, a Kanban view se torna seu painel de comando. Layout clássico (To Do, In Progress, Done) com camadas extras pra dar visibilidade dos workers.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">📋 To Do</h4>
-          <p class="text-neutral-300 text-sm">Cards aguardando worker disponível. Cada card mostra título, descrição e contagem de retries (se houver).</p>
-        </div>
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">⚙️ In Progress</h4>
-          <p class="text-neutral-300 text-sm">Cards ativos com nome do worker, tempo desde início, indicador de heartbeat (verde/amarelo/vermelho).</p>
-        </div>
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">✅ Done</h4>
-          <p class="text-neutral-300 text-sm">Concluídas. Hallucination gate marca verde se passou, vermelho se foi rejeitada e voltou pro topo.</p>
-        </div>
-      </div>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-3">🎯 Sinais visuais úteis</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Heartbeat verde</strong> = worker batendo ping nos últimos 30s</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Heartbeat amarelo</strong> = worker silencioso há 1-3 min, monitorando</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Heartbeat vermelho / "zombie"</strong> = worker considerado travado, tarefa será reclaimed</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Retry count visível</strong> = você vê na hora se uma tarefa está caindo repetidamente</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔌 Manutenção dos plugins</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A aba de plugins na dashboard é onde você administra extensões: <strong class="text-rose-400">LCM</strong> (compressão lossless), <strong class="text-rose-400">Kanban</strong> (multi-agente), integrações de calendário, plugins da comunidade. Atualização vira clique em vez de pull + restart manual.
-      </p>
-      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4">🛠️ O que você administra ali</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Listar:</strong> ver todos os plugins instalados, versão atual, versão disponível</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Atualizar:</strong> 1 clique pra puxar nova versão; restart automático do plugin</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Desativar:</strong> sem desinstalar; útil pra debug ("é o plugin X que está causando isso?")</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Configurar:</strong> editar settings.yaml do plugin direto na UI</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Logs:</strong> stream de logs do plugin pra debug em tempo real</span></li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Cuidado com auto-update</h3>
-        <p class="text-neutral-300 text-sm">Atualizar plugin pode quebrar skill que dependia da versão antiga. Em produção, leia o changelog antes de atualizar. Em desenvolvimento, atualize logo — você quer descobrir quebras cedo.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">📵 Quando NÃO usar dashboard</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A maioria do uso diário <strong class="text-rose-400">cabe no Telegram</strong>. Dashboard é ferramenta de manutenção, não de operação. Quem se acostuma a abrir dashboard pra qualquer coisa perde a praticidade do agente "no bolso".
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">✓ Telegram cobre</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Pedir tarefas, fazer perguntas</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Conferir cron de hoje, próximas execuções</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Ler resumos diários/semanais</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Ajustar memória ("anota que...")</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Adicionar skill simples por descrição</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Pausar/retomar cron</span></li>
-          </ul>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6">
-          <h4 class="font-bold text-rose-400 mb-4">✓ Dashboard ganha quando</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Editar arquivo Markdown longo (skill complexa)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Triar dezenas de cards Kanban</span></li>
-            <li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Buscar texto em sessões antigas</span></li>
-            <li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Atualizar 5 plugins de uma vez</span></li>
-            <li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Ver gráfico de uso de tokens</span></li>
-            <li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Configurar canais novos (Discord, Slack)</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Regra prática</h3>
-        <p class="text-neutral-300">Se você consegue pedir em texto, peça via Telegram. Se está editando arquivo grande ou triando muitos itens visuais, abre dashboard. <strong>80/20 vai pro Telegram.</strong></p>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Dashboard cobre sessões, canais, crons, skills, plugins, configs e Kanban</strong><span class="text-neutral-400"> — tudo espelhado em <code>~/.hermes/</code>.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>SSH tunnel é o caminho default seguro</strong><span class="text-neutral-400"> — nginx + auth para múltiplos usuários.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Skill abrir-dashboard automatiza o túnel</strong><span class="text-neutral-400"> — útil em setup laptop → VPS.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Kanban view mostra heartbeat por worker</strong><span class="text-neutral-400"> — verde/amarelo/vermelho indica saúde da execução.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Plugins atualizam por 1 clique na UI</strong><span class="text-neutral-400"> — leia changelog antes de atualizar produção.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>80% do uso diário cabe no Telegram</strong><span class="text-neutral-400"> — dashboard é manutenção, não operação.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-rose-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">6.3 - 🛠️ Troubleshooting completo</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-6-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="modulo-6-3.html" class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 6.2 • 2026</p></div>
-  </footer>
-
-  <script>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Don't do</h3>
+<p class="text-neutral-300 text-sm">Never open port 8080 directly on the internet without authentication. Admin token is not a firewall. Even if Hermes has login, you are exposing unnecessary attack surface.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">⚡ Skill open-dashboard</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Forgetting SSH command each time is unnecessary friction. The bundled skill<code class="text-rose-400" data-notranslate="True">abrir-dashboard</code>automates: you say it via Telegram<em>"open my dashboard"</em>and it runs the local tunnel, waits for the door to open, and gives you the link.</p>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4">🔧 What the skill does</h3>
+<ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
+<li>Confirms that the VPS host is configured on<code class="text-rose-400" data-notranslate="True">~/.ssh/config</code></li>
+<li>Wheel<code class="text-rose-400" data-notranslate="True">ssh -fN -L 8080:localhost:8080 vps</code>in background</li>
+<li>Wait for port 8080 to become available (timeout 10s)</li>
+<li>give you away<code class="text-rose-400" data-notranslate="True">http://localhost:8080</code>clickable</li>
+<li>Optionally opens the browser automatically (on Mac/Linux with GUI)</li>
+</ol>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">📌 Limitation</h3>
+<p class="text-neutral-300 text-sm">The skill assumes your SSH key and host are configured<strong>locally</strong>. It doesn't work if the agent is running inside the VPS — it would be trying to create a tunnel for itself. It makes sense in laptop setup → VPS.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🗒️ Kanban view</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">When you activate the v0.13.0 multi-agent system, the Kanban view becomes your dashboard. Classic layout (To Do, In Progress, Done) with extra layers to give workers visibility.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">📋 To Do</h4>
+<p class="text-neutral-300 text-sm">Cards waiting for available worker. Each card shows title, description and retries count (if any).</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">⚙️ In Progress</h4>
+<p class="text-neutral-300 text-sm">Active cards with worker name, time since start, heartbeat indicator (green/yellow/red).</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">✅ Done</h4>
+<p class="text-neutral-300 text-sm">Completed. Hallucination gate green mark if passed, red if rejected and returned to the top.</p>
+</div>
+</div>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-3">🎯 Helpful visual cues</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Green Heartbeat</strong>= worker pinging in the last 30s</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Yellow Heartbeat</strong>= silent worker for 1-3 min, monitoring</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Red heartbeat / "zombie"</strong>= worker considered locked, task will be reclaimed</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Retry count visible</strong>= you see right away if a task is falling repeatedly</span></li>
+</ul>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔌 Plugin maintenance</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The plugins tab on the dashboard is where you manage extensions:<strong class="text-rose-400">LCM</strong>(lossless compression),<strong class="text-rose-400">Kanban</strong>(multi-agent), calendar integrations, community plugins. Update becomes click instead of manual pull + restart.</p>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4">🛠️ What do you manage there</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>List:</strong>see all installed plugins, current version, available version</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>To update:</strong>1 click to pull up new version; automatic restart of the plugin</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Disable:</strong>without uninstalling; useful for debugging ("is plugin X causing this?")</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Configure:</strong>edit plugin settings.yaml directly in the UI</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Logs:</strong>Plugin log stream for real-time debugging</span></li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Be careful with auto-update</h3>
+<p class="text-neutral-300 text-sm">Updating the plugin can break skills that depended on the old version. In production, read the changelog before upgrading. In development, update soon — you want to catch breaks early.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">📵 When NOT to use a dashboard</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Most daily use<strong class="text-rose-400">fits on Telegram</strong>. Dashboard is a maintenance tool, not an operation tool. Anyone who gets used to opening a dashboard for anything loses the practicality of the agent “in their pocket”.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">✓ Telegram covers</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Asking for tasks, asking questions</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Check today's cron, upcoming executions</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Read daily/weekly summaries</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Adjust memory ("note that...")</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Add simple skill by description</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Pause/resume cron</span></li>
+</ul>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6">
+<h4 class="font-bold text-rose-400 mb-4">✓ Dashboard wins when</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Edit long Markdown file (complex skill)</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Sort dozens of Kanban cards</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Search text in old sessions</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Update 5 plugins at once</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>View token usage chart</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400">✓</span><span>Configure new channels (Discord, Slack)</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Rule of thumb</h3>
+<p class="text-neutral-300">If you can order in text, order via Telegram. If you are editing a large file or sorting many visual items, open the dashboard.<strong>80/20 goes to Telegram.</strong></p>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Dashboard covers sessions, channels, crons, skills, plugins, configs and Kanban</strong><span class="text-neutral-400">— everything mirrored in<code data-notranslate="True">~/.hermes/</code>.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>SSH tunnel is the default secure path</strong><span class="text-neutral-400">— nginx + auth for multiple users.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Skill open-dashboard automates the tunnel</strong><span class="text-neutral-400">— useful in laptop setup → VPS.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Kanban view shows heartbeat per worker</strong><span class="text-neutral-400">— green/yellow/red indicates execution health.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Plugins update by 1 click in the UI</strong><span class="text-neutral-400">— read changelog before upgrading production.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>80% of daily use falls on Telegram</strong><span class="text-neutral-400">— dashboard is maintenance, not operation.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-rose-400 mb-2">Next module:</h3><p class="text-neutral-300">6.3 - 🛠️ Complete troubleshooting</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-6-1.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors" href="modulo-6-3.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 6.2 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
