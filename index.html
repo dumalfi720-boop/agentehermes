@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agente Hermes | Curso Completo</title>
-  <meta name="description" content="Curso completo do Agente Hermes: configuração, pilares, segurança, comparações e escala. Formato INEMA.CLUB.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agent Hermes | Complete Course</title>
+<meta content="Curso completo do Agente Hermes: configuração, pilares, segurança, comparações e escala. Formato duclub." name="description"/>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -19,8 +19,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
 
@@ -104,195 +104,166 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAV -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🪽</span>
-            <span class="font-bold text-lg hidden sm:inline">Agente Hermes</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors">
-          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BANNER HERO -->
-  <header class="bg-dark-900 border-b border-dark-600">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
-      <img src="assets/banner-hermes.png" alt="Hermes Agent - do zero ao seu assistente de IA pessoal" class="w-full rounded-xl shadow-2xl border border-purple-500/20">
-    </div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 pt-8 text-center">
-      <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-6 border border-primary/40">
-        CURSO COMPLETO • FORMATO INEMA.CLUB
-      </span>
-      <p class="text-lg sm:text-xl text-neutral-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-        Aprenda a configurar, evoluir e escalar o seu próprio assistente pessoal de IA com memória, skills, soul, crons e auto-aperfeiçoamento. Open source, MIT, rodando em VPS, Docker, laptop ou Termux.
-      </p>
-
-      <!-- Stats -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10">
-        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
-          <div class="text-3xl font-bold text-primary">6</div>
-          <div class="text-xs text-neutral-400 mt-1">Trilhas</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
-          <div class="text-3xl font-bold text-primary">29</div>
-          <div class="text-xs text-neutral-400 mt-1">Módulos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
-          <div class="text-3xl font-bold text-primary">174+</div>
-          <div class="text-xs text-neutral-400 mt-1">Tópicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
-          <div class="text-3xl font-bold text-primary">~15h</div>
-          <div class="text-xs text-neutral-400 mt-1">Duração</div>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="curso/trilha1/index.html" class="px-8 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-yellow-300 transition-colors">
-          Começar pela Trilha 1 →
-        </a>
-        <a href="#trilhas" class="px-8 py-3 bg-dark-700 text-neutral-100 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-          Ver todas as trilhas
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- INTRO -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-8">
-        <h2 class="text-2xl font-bold mb-4">Para quem é este curso</h2>
-        <ul class="space-y-3 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-primary mt-1">→</span><span>Quem quer um assistente IA <strong class="text-primary">na própria infra</strong>, sem depender só de SaaS</span></li>
-          <li class="flex items-start space-x-2"><span class="text-primary mt-1">→</span><span>Founders e operadores que querem <strong class="text-primary">automações via Telegram</strong></span></li>
-          <li class="flex items-start space-x-2"><span class="text-primary mt-1">→</span><span>Devs que já usam Claude Code e querem complementar com Hermes</span></li>
-          <li class="flex items-start space-x-2"><span class="text-primary mt-1">→</span><span>Curiosos de open source, Qwen, LLaMA e self-hosting</span></li>
-        </ul>
-      </div>
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-8">
-        <h2 class="text-2xl font-bold mb-4">O que você vai conseguir fazer</h2>
-        <ul class="space-y-3 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>Subir um Hermes em Docker num VPS, conectar Telegram e GitHub</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>Configurar memória, skills, soul e crons que funcionam de verdade</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>Fazer auditoria de segurança, gerenciar tokens e separar agentes</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>Escolher entre Hermes, Claude Code, n8n, LangChain ou CrewAI</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRILHAS -->
-  <section id="trilhas" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4">As 6 trilhas do curso</h2>
-      <p class="text-lg text-neutral-400 max-w-2xl mx-auto">Do conceito ao agente proativo escalando em produção. Cada trilha pode ser estudada de forma independente.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- T1 Emerald -->
-      <a href="curso/trilha1/index.html" class="group bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-6 transition-all">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-full">TRILHA 1</span>
-          <span class="text-xs text-neutral-500">4 módulos</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">🌱 Fundamentos do Hermes</h3>
-        <p class="text-sm text-neutral-400 mb-4">O que é, mentalidade correta, onde rodar e casos de uso reais.</p>
-        <div class="text-emerald-400 text-sm font-semibold">Começar →</div>
-      </a>
-
-      <!-- T2 Blue -->
-      <a href="curso/trilha2/index.html" class="group bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-6 transition-all">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full">TRILHA 2</span>
-          <span class="text-xs text-neutral-500">6 módulos</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">⚙️ Setup do Zero</h3>
-        <p class="text-sm text-neutral-400 mb-4">VPS, Docker, modelo, Telegram, GitHub e o primeiro cron.</p>
-        <div class="text-blue-400 text-sm font-semibold">Começar →</div>
-      </a>
-
-      <!-- T3 Purple -->
-      <a href="curso/trilha3/index.html" class="group bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-6 transition-all">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full">TRILHA 3</span>
-          <span class="text-xs text-neutral-500">5 módulos</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">🏛️ Os 5 Pilares na Prática</h3>
-        <p class="text-sm text-neutral-400 mb-4">Memory, Skills, Soul, Crons e Loop de Auto-Aperfeiçoamento.</p>
-        <div class="text-purple-400 text-sm font-semibold">Começar →</div>
-      </a>
-
-      <!-- T4 Amber -->
-      <a href="curso/trilha4/index.html" class="group bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-6 transition-all">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-full">TRILHA 4</span>
-          <span class="text-xs text-neutral-500">4 módulos</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">🛡️ Segurança e Operação</h3>
-        <p class="text-sm text-neutral-400 mb-4">Tokens, .env, firewall, least privilege e auditoria recorrente.</p>
-        <div class="text-amber-400 text-sm font-semibold">Começar →</div>
-      </a>
-
-      <!-- T5 Teal -->
-      <a href="curso/trilha5/index.html" class="group bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-6 transition-all">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-bold rounded-full">TRILHA 5</span>
-          <span class="text-xs text-neutral-500">6 módulos</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2 group-hover:text-teal-400 transition-colors">⚖️ Hermes vs o Mercado</h3>
-        <p class="text-sm text-neutral-400 mb-4">Comparações com Claude Code, OpenCode, n8n, LangChain, CrewAI, AutoGen.</p>
-        <div class="text-teal-400 text-sm font-semibold">Começar →</div>
-      </a>
-
-      <!-- T6 Rose -->
-      <a href="curso/trilha6/index.html" class="group bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-6 transition-all">
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-bold rounded-full">TRILHA 6</span>
-          <span class="text-xs text-neutral-500">4 módulos</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2 group-hover:text-rose-400 transition-colors">🚀 Escala e Maestria</h3>
-        <p class="text-sm text-neutral-400 mb-4">Multi-agente, dashboard, troubleshooting e manutenção contínua.</p>
-        <div class="text-rose-400 text-sm font-semibold">Começar →</div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- FILOSOFIA -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="bg-gradient-to-br from-yellow-900/20 via-dark-800 to-dark-800 rounded-xl border border-primary/40 p-8 sm:p-12 text-center">
-      <h2 class="text-3xl font-bold mb-4">A ideia central</h2>
-      <p class="text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed mb-6">
-        O Hermes não é um chatbot que você configura uma vez e esquece. É um <strong class="text-primary">colega de trabalho</strong> que precisa ser treinado: corrigido quando erra, ensinado quando repete, separado quando cresce.
-      </p>
-      <p class="text-base text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-        O segredo não é configurar tudo de uma vez. É usar, corrigir, salvar aprendizados e evoluir aos poucos. Este curso te leva por esse caminho.
-      </p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Agente Hermes • Curso INEMA.CLUB • 2026</p>
-      <p class="mt-2">Hermes Agent é um projeto open source da Noose Research, MIT licensed.</p>
-    </div>
-  </footer>
-
-  <script>
+NAV
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="index.html">
+<span class="text-2xl">🪽</span>
+<span class="font-bold text-lg hidden sm:inline">Agent Hermes</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</nav>
+BANNER HERO
+<header class="bg-dark-900 border-b border-dark-600">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+<img alt="Hermes Agent - do zero ao seu assistente de IA pessoal" class="w-full rounded-xl shadow-2xl border border-purple-500/20" src="assets/banner-hermes.png"/>
+</div>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 pt-8 text-center">
+<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-6 border border-primary/40">COMPLETE COURSE • duclub FORMAT</span>
+<p class="text-lg sm:text-xl text-neutral-400 max-w-3xl mx-auto mb-8 leading-relaxed">Learn how to configure, evolve and scale your own personal AI assistant with memory, skills, soul, crons and self-improvement. Open source, MIT, running on VPS, Docker, laptop or Termux.</p>
+Stats
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10">
+<div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+<div class="text-3xl font-bold text-primary">6</div>
+<div class="text-xs text-neutral-400 mt-1">Trails</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+<div class="text-3xl font-bold text-primary">29</div>
+<div class="text-xs text-neutral-400 mt-1">Modules</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+<div class="text-3xl font-bold text-primary">174+</div>
+<div class="text-xs text-neutral-400 mt-1">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+<div class="text-3xl font-bold text-primary">~3pm</div>
+<div class="text-xs text-neutral-400 mt-1">Duration</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a class="px-8 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-yellow-300 transition-colors" href="curso/trilha1/index.html">Start with Track 1 →</a>
+<a class="px-8 py-3 bg-dark-700 text-neutral-100 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="#trilhas">See all trails</a>
+</div>
+</div>
+</header>
+INTRO
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-8">
+<h2 class="text-2xl font-bold mb-4">Who is this course for?</h2>
+<ul class="space-y-3 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-primary mt-1">→</span><span>Who wants an AI assistant<strong class="text-primary">in the infrastructure itself</strong>, without relying solely on SaaS</span></li>
+<li class="flex items-start space-x-2"><span class="text-primary mt-1">→</span><span>Founders and operators who want<strong class="text-primary">automations via Telegram</strong></span></li>
+<li class="flex items-start space-x-2"><span class="text-primary mt-1">→</span><span>Devs who already use Claude Code and want to complement it with Hermes</span></li>
+<li class="flex items-start space-x-2"><span class="text-primary mt-1">→</span><span>Curious about open source, Qwen, LLaMA and self-hosting</span></li>
+</ul>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-8">
+<h2 class="text-2xl font-bold mb-4">What will you be able to do</h2>
+<ul class="space-y-3 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>Upload a Hermes in Docker on a VPS, connect Telegram and GitHub</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>Configure memory, skills, soul and crons that really work</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>Perform security audit, manage tokens and separate agents</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>Choose between Hermes, Claude Code, n8n, LangChain or CrewAI</span></li>
+</ul>
+</div>
+</div>
+</section>
+TRAILS
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="trilhas">
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4">The 6 trails of the course</h2>
+<p class="text-lg text-neutral-400 max-w-2xl mx-auto">From concept to proactive agent scaling into production. Each track can be studied independently.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+T1 Emerald
+<a class="group bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-6 transition-all" href="curso/trilha1/index.html">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-full">TRACK 1</span>
+<span class="text-xs text-neutral-500">4 modules</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">🌱 Hermes Fundamentals</h3>
+<p class="text-sm text-neutral-400 mb-4">What it is, right mindset, where to run it and real use cases.</p>
+<div class="text-emerald-400 text-sm font-semibold">Get started →</div>
+</a>
+T2 Blue
+<a class="group bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-6 transition-all" href="curso/trilha2/index.html">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full">TRACK 2</span>
+<span class="text-xs text-neutral-500">6 modules</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">⚙️ Setup from Scratch</h3>
+<p class="text-sm text-neutral-400 mb-4">VPS, Docker, template, Telegram, GitHub and the first cron.</p>
+<div class="text-blue-400 text-sm font-semibold">Get started →</div>
+</a>
+T3 Purple
+<a class="group bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-6 transition-all" href="curso/trilha3/index.html">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full">TRACK 3</span>
+<span class="text-xs text-neutral-500">5 modules</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">🏛️ The 5 Pillars in Practice</h3>
+<p class="text-sm text-neutral-400 mb-4">Memory, Skills, Soul, Crons and Self-Improvement Loop.</p>
+<div class="text-purple-400 text-sm font-semibold">Get started →</div>
+</a>
+T4 Amber
+<a class="group bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-6 transition-all" href="curso/trilha4/index.html">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-full">TRACK 4</span>
+<span class="text-xs text-neutral-500">4 modules</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">🛡️ Security and Operation</h3>
+<p class="text-sm text-neutral-400 mb-4">Tokens, .env, firewall, least privilege and recurring audit.</p>
+<div class="text-amber-400 text-sm font-semibold">Get started →</div>
+</a>
+T5 Teal
+<a class="group bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-6 transition-all" href="curso/trilha5/index.html">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-bold rounded-full">TRACK 5</span>
+<span class="text-xs text-neutral-500">6 modules</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-teal-400 transition-colors">⚖️ Hermes vs the Market</h3>
+<p class="text-sm text-neutral-400 mb-4">Comparisons with Claude Code, OpenCode, n8n, LangChain, CrewAI, AutoGen.</p>
+<div class="text-teal-400 text-sm font-semibold">Get started →</div>
+</a>
+T6 Rose
+<a class="group bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-6 transition-all" href="curso/trilha6/index.html">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-bold rounded-full">TRACK 6</span>
+<span class="text-xs text-neutral-500">4 modules</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-rose-400 transition-colors">🚀 Scale and Mastery</h3>
+<p class="text-sm text-neutral-400 mb-4">Multi-agent, dashboard, troubleshooting and ongoing maintenance.</p>
+<div class="text-rose-400 text-sm font-semibold">Get started →</div>
+</a>
+</div>
+</section>
+PHILOSOPHY
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="bg-gradient-to-br from-yellow-900/20 via-dark-800 to-dark-800 rounded-xl border border-primary/40 p-8 sm:p-12 text-center">
+<h2 class="text-3xl font-bold mb-4">The central idea</h2>
+<p class="text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed mb-6">Hermes is not a chatbot that you set up once and forget about. It's a<strong class="text-primary">coworker</strong>that needs to be trained: corrected when it makes mistakes, taught when it repeats, separated when it grows.</p>
+<p class="text-base text-neutral-400 max-w-3xl mx-auto leading-relaxed">The secret is not to configure everything at once. It's about using, correcting, saving learning and evolving little by little. This course takes you down that path.</p>
+</div>
+</section>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>Agent Hermes • duclub course • 2026</p>
+<p class="mt-2">Hermes Agent is an open source project from Noose Research, MIT licensed.</p>
+</div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
