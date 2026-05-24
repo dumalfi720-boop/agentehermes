@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5.4 Hermes vs LangChain / LangGraph | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>5.4 Hermes vs LangChain/LangGraph | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -59,250 +59,225 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-teal-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-teal-400">Trilha 5</a><span>/</span>
-      <span class="text-teal-400">Módulo 5.4</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MÓDULO 5.4</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔗 Hermes vs LangChain / LangGraph</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Framework Python para construir aplicação LLM vs agente pronto para uso. Não competem — atendem perfis diferentes. Quem confunde os dois perde tempo e dinheiro.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Estratégico</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Comparação</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">📐 Nível de abstração</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        LangChain/LangGraph são <strong class="text-teal-400">frameworks Python</strong> para desenvolvedores construírem aplicações LLM. Hermes é <strong class="text-teal-400">agente pronto</strong> com instalador, gateway e interface — você baixa e usa.
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10" href="index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-teal-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-teal-400" href="index.html">Track 5</a><span>/</span>
+<span class="text-teal-400">Module 5.4</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MODULE 5.4</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔗 Hermes vs LangChain/LangGraph</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Python framework to build ready-to-use LLM application vs agent. They don’t compete — they serve different profiles. Anyone who confuses the two wastes time and money.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Strategic</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Comparison</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📐 Level of abstraction</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">LangChain/LangGraph are<strong class="text-teal-400">Python frameworks</strong>for developers to build LLM applications. Hermes is<strong class="text-teal-400">ready agent</strong>with installer, gateway and interface — you download and use.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🧱 Lego vs assembled toy</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">LangChain gives you blocks:</strong>LLM, Tool, Memory, Retriever, Chain, Agent, Embeddings, VectorStore. You compose.</div>
+<div><strong class="text-teal-400">LangGraph gives you control flow blocks:</strong>Nodes, Edges, State, conditional routing.</div>
+<div><strong class="text-teal-400">Hermes gives you the assembled toy:</strong>agent running, with gateway, skills, memory, cron — ready via Telegram.</div>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">⏱️ Time until production</h3>
+<p class="text-neutral-300 text-sm">Hermes in production in 1h. LangChain in production is a weeks to months project (auth, frontend, observability, scale). Assessing this before choosing is critical.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">👤Target user</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Each product is sold to those who benefit.<strong class="text-teal-400">LangGraph: Python developer</strong>who wants to define agent graphs in code.<strong class="text-teal-400">Hermes: user</strong>(technical or not) who wants an agent working via<code class="text-teal-400" data-notranslate="True">hermes</code>in the terminal or Telegram.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">🐍LangChain/LangGraph Profile</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Senior Python Dev</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Building SaaS or in-house product</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Need explicit control flow</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Want full customization</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>There is a team to maintain code</span></li>
+</ul>
+</div>
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h4 class="font-bold text-teal-400 mb-4">🪽 Hermes Profile</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Operator (technical or not)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Want personal agent working today</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Accepts implicit control flow (LLM decides)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Prioritizes speed over customization</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Solo or small team without dedicated dev</span></li>
+</ul>
+</div>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">📝 Skills (Markdown) vs chains/tools (Python)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">SKILL.md are<strong class="text-teal-400">procedures in Markdown</strong>— anyone edits in the text editor. LangChain uses<strong class="text-teal-400">chains and tools in Python</strong>— much more programmatic power, but requires code and testing.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🔍 Technical comparison</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">SKILL.md:</strong>progressive disclosure, YAML front matter, read by LLM at runtime, anyone edits.</div>
+<div><strong class="text-teal-400">LangChain Tool:</strong>Typed Python function, executed deterministically, requires unit testing, deploy.</div>
+<div><strong class="text-teal-400">LangGraph Node:</strong>Python function that receives State, processes it, returns State. Composes directed graph.</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Real trade-off</h3>
+<p class="text-neutral-300 text-sm">Markdown is lightweight but limited to natural language. Python is powerful but requires technical skill. Choice aligned to the maintainer's profile: marketing edits Markdown, dev writes Python.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🧩 Extensibility</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">LangChain has an ecosystem of<strong class="text-teal-400">500+ integrations</strong>(vector stores, retrievers, parsers, document loaders). Hermes has<strong class="text-teal-400">plugin system for hooks</strong>+ skills hub with hundreds of community skills.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🌐LangChain ecosystem</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Vector stores:</strong>Pinecone, Weaviate, Chroma, Qdrant, Milvus, FAISS, pgvector — 30+</li>
+<li><strong class="text-blue-400">Document loaders:</strong>PDF, DOCX, HTML, Notion, Google Drive, S3, Confluence — 100+</li>
+<li><strong class="text-blue-400">Retrievers:</strong>BM25, MMR, Self-Query, Multi-Query, Contextual Compression — 20+</li>
+<li><strong class="text-blue-400">LLMs:</strong>any provider — OpenAI, Anthropic, Mistral, Cohere, AI21, etc.</li>
+</ul>
+</div>
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🪽 Hermes plugins/skills</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-teal-400">Plugin system:</strong>lifecycle hooks (pre-tool, post-message, on-cron).</li>
+<li><strong class="text-teal-400">Skills hub agentskills.io:</strong>hundreds of community skills ready to install.</li>
+<li><strong class="text-teal-400">Specialized category:</strong>91 skills bundled in 20+ categories (devops, github, productivity, social-media, etc).</li>
+<li><strong class="text-teal-400">Different focus:</strong>operational integrations (message, cron, terminal) vs retrieval/parsing.</li>
+</ul>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🚀 Deploy</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes wheel<strong class="text-teal-400">standalone with native gateway</strong>. LangChain requires<strong class="text-teal-400">own server</strong>(FastAPI, Flask, LangServe), hosting infrastructure, custom authentication, observability.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🏗️ Deploy compared</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">Hermes:</strong> <code data-notranslate="True">pip install</code>→ API key →<code data-notranslate="True">hermes setup</code> → <code data-notranslate="True">hermes gateway setup</code>→ replying on Telegram. ~1 hour.</div>
+<div><strong class="text-teal-400">LangChain:</strong>write FastAPI app → authentication → frontend or API → deploy → observability → scalability. ~Weeks.</div>
+<div><strong class="text-teal-400">LangServe:</strong>helps to expose LangChain as REST API. Reduces time, but still requires your own code + deployment.</div>
+</div>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Time cost</h3>
+<p class="text-neutral-300 text-sm">Time is the most expensive resource. Evaluate: do you want an operational agent this month or a custom product in 6 months? The answer defines the right tool.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🎯 When to choose</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The direct question:<strong class="text-teal-400">are you building a custom product or looking for an operational agent</strong>?
       </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🧱 Lego vs brinquedo montado</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">LangChain te entrega blocos:</strong> LLM, Tool, Memory, Retriever, Chain, Agent, Embeddings, VectorStore. Você compõe.</div>
-          <div><strong class="text-teal-400">LangGraph te entrega blocos de control flow:</strong> Nodes, Edges, State, conditional routing.</div>
-          <div><strong class="text-teal-400">Hermes te entrega o brinquedo montado:</strong> agente rodando, com gateway, skills, memória, cron — pronto via Telegram.</div>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">⏱️ Tempo até produção</h3>
-        <p class="text-neutral-300 text-sm">Hermes em produção em 1h. LangChain em produção é projeto de semanas a meses (auth, frontend, observabilidade, escala). Avaliar isso antes de escolher é crítico.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">👤 Usuário alvo</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Cada produto se vende pra quem se beneficia. <strong class="text-teal-400">LangGraph: desenvolvedor Python</strong> que quer definir grafos de agentes em código. <strong class="text-teal-400">Hermes: usuário</strong> (técnico ou não) que quer um agente funcionando via <code class="text-teal-400">hermes</code> no terminal ou Telegram.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">🐍 Perfil LangChain/LangGraph</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Dev Python sênior</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Construindo SaaS ou produto interno</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Precisa de control flow explícito</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Quer customização total</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Tem time pra manter código</span></li>
-          </ul>
-        </div>
-        <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-          <h4 class="font-bold text-teal-400 mb-4">🪽 Perfil Hermes</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Operador (técnico ou não)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Quer agente pessoal funcionando hoje</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Aceita control flow implícito (LLM decide)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Prioriza velocidade sobre customização</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Solo ou equipe pequena sem dev dedicado</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">📝 Skills (Markdown) vs chains/tools (Python)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        SKILL.md são <strong class="text-teal-400">procedimentos em Markdown</strong> — qualquer um edita no editor de texto. LangChain usa <strong class="text-teal-400">chains e tools em Python</strong> — muito mais poder programático, mas requer código e testes.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🔍 Comparação técnica</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">SKILL.md:</strong> progressive disclosure, YAML front matter, lido pelo LLM em runtime, qualquer pessoa edita.</div>
-          <div><strong class="text-teal-400">LangChain Tool:</strong> função Python tipada, executada determinísticamente, requer testes unitários, deploy.</div>
-          <div><strong class="text-teal-400">LangGraph Node:</strong> função Python que recebe State, processa, retorna State. Compõe grafo direcionado.</div>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Trade-off real</h3>
-        <p class="text-neutral-300 text-sm">Markdown é leve mas limitado a linguagem natural. Python é poderoso mas exige skill técnica. Escolha alinhada ao perfil do mantenedor: marketing edita Markdown, dev escreve Python.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🧩 Extensibilidade</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        LangChain tem ecosystem de <strong class="text-teal-400">500+ integrações</strong> (vector stores, retrievers, parsers, document loaders). Hermes tem <strong class="text-teal-400">plugin system para hooks</strong> + skills hub com centenas de skills da comunidade.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🌐 LangChain ecosystem</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Vector stores:</strong> Pinecone, Weaviate, Chroma, Qdrant, Milvus, FAISS, pgvector — 30+</li>
-          <li><strong class="text-blue-400">Document loaders:</strong> PDF, DOCX, HTML, Notion, Google Drive, S3, Confluence — 100+</li>
-          <li><strong class="text-blue-400">Retrievers:</strong> BM25, MMR, Self-Query, Multi-Query, Contextual Compression — 20+</li>
-          <li><strong class="text-blue-400">LLMs:</strong> qualquer provedor — OpenAI, Anthropic, Mistral, Cohere, AI21, etc.</li>
-        </ul>
-      </div>
-      <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🪽 Hermes plugins/skills</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-teal-400">Plugin system:</strong> hooks em ciclo de vida (pre-tool, post-message, on-cron).</li>
-          <li><strong class="text-teal-400">Skills hub agentskills.io:</strong> centenas de skills da comunidade prontas pra instalar.</li>
-          <li><strong class="text-teal-400">Categoria especializada:</strong> 91 skills bundled em 20+ categorias (devops, github, productivity, social-media, etc).</li>
-          <li><strong class="text-teal-400">Foco diferente:</strong> integrações operacionais (mensagem, cron, terminal) vs retrieval/parsing.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🚀 Deploy</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes roda <strong class="text-teal-400">standalone com gateway nativo</strong>. LangChain requer <strong class="text-teal-400">servidor próprio</strong> (FastAPI, Flask, LangServe), infraestrutura de hosting, autenticação custom, observabilidade.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🏗️ Deploy comparado</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">Hermes:</strong> <code>pip install</code> → API key → <code>hermes setup</code> → <code>hermes gateway setup</code> → respondendo no Telegram. ~1 hora.</div>
-          <div><strong class="text-teal-400">LangChain:</strong> escrever app FastAPI → autenticação → frontend ou API → deploy → observabilidade → escalabilidade. ~Semanas.</div>
-          <div><strong class="text-teal-400">LangServe:</strong> ajuda a expor LangChain como API REST. Reduz tempo, mas ainda exige código + deploy próprio.</div>
-        </div>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Custo de tempo</h3>
-        <p class="text-neutral-300 text-sm">Tempo é o recurso mais caro. Avalie: você quer agente operacional este mês ou produto custom em 6 meses? A resposta define a ferramenta certa.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🎯 Quando escolher</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A pergunta direta: <strong class="text-teal-400">você está construindo um produto custom ou querendo um agente operacional</strong>?
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">🐍 Escolha LangChain quando</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Construindo SaaS ou app custom</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Precisa control flow explícito</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>RAG complexo com vector stores específicos</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Embedando IA em produto de software</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Tem time Python pra manter</span></li>
-          </ul>
-        </div>
-        <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-          <h4 class="font-bold text-teal-400 mb-4">🪽 Escolha Hermes quando</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Quer agente operacional hoje</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Setup zero-code</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Usuário não-desenvolvedor opera</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Agente pessoal sempre on</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Velocidade > customização</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Combinação avançada</h3>
-        <p class="text-neutral-300 text-sm">Você pode chamar LangChain de dentro de uma <strong>skill ou plugin do Hermes</strong> pra um nó específico. Hermes vira o "frontend" operacional e LangChain o "backend de raciocínio" pra retrieval/parsing complexo. Stack híbrida — detalhamos em 5.6.</p>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Framework Python vs agente pronto</strong><span class="text-neutral-400"> — LangChain te dá Lego; Hermes te dá brinquedo montado.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Usuário alvo é diferente</strong><span class="text-neutral-400"> — dev Python sênior vs operador.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Skills (.md) vs Tools (.py)</strong><span class="text-neutral-400"> — leve e edição em texto vs poderoso e tipado.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>500+ integrações LangChain vs plugin system Hermes</strong><span class="text-neutral-400"> — focos diferentes: retrieval/parsing vs operacional.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Time-to-value oposto</strong><span class="text-neutral-400"> — Hermes em horas; LangChain em semanas/meses.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Combinação avançada possível</strong><span class="text-neutral-400"> — LangChain dentro de plugin Hermes para RAG.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-teal-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">5.5 - 👥 Hermes vs CrewAI / AutoGen</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-5-3.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="modulo-5-5.html" class="flex-1 text-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 5.4 • 2026</p></div>
-  </footer>
-
-  <script>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">🐍 Choose LangChain when</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Building SaaS or custom app</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Need explicit control flow</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Complex RAG with specific vector stores</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Embedding AI into software products</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>There is a Python team to maintain</span></li>
+</ul>
+</div>
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h4 class="font-bold text-teal-400 mb-4">🪽 Choose Hermes when</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Want operational agent today</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Zero-code setup</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Non-developer user operates</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Personal agent always on</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Speed ​​&gt; customization</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Advanced combination</h3>
+<p class="text-neutral-300 text-sm">You can call LangChain from within a<strong>Hermes skill or plugin</strong>for a specific node. Hermes becomes the operational "frontend" and LangChain the "reasoning backend" for complex retrieval/parsing. Hybrid stack — we detail it in 5.6.</p>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Python framework vs ready-made agent</strong><span class="text-neutral-400">— LangChain gives you Lego; Hermes gives you assembled toy.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Target user is different</strong><span class="text-neutral-400">— senior Python dev vs operator.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Skills (.md) vs Tools (.py)</strong><span class="text-neutral-400">— lightweight and text editing vs powerful and typed.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>500+ LangChain integrations vs Hermes plugin system</strong><span class="text-neutral-400">— different focuses: retrieval/parsing vs operational.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Opposite time-to-value</strong><span class="text-neutral-400">— Hermes in hours; LangChain in weeks/months.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Advanced combination possible</strong><span class="text-neutral-400">— LangChain inside Hermes plugin for RAG.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-teal-400 mb-2">Next module:</h3><p class="text-neutral-300">5.5 - 👥 Hermes vs CrewAI / AutoGen</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-5-3.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors" href="modulo-5-5.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 5.4 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
