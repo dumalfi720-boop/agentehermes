@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.1 Contratando VPS | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2.1 Hiring VPS | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -60,196 +60,178 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">Módulo 2.1</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">☁️ Contratando e configurando VPS</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Da escolha do provedor ao hardening básico: cada decisão para deixar o servidor confiável, seguro e econômico antes de instalar o Hermes.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Prático</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Setup</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🤔 Por que VPS e não laptop pessoal</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes pode rodar no seu laptop. <strong class="text-blue-400">Mas você não vai querer</strong> depois que entender o trade-off. Uma máquina pessoal foi feita pra você usar — fechar a tampa, dormir, viajar, reiniciar. Um agente que serve crons e responde Telegram precisa do oposto: <strong class="text-blue-400">estar sempre ligado, com IP estável, internet permanente e zero supervisão</strong>.
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-blue-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-blue-400" href="index.html">Track 2</a><span>/</span>
+<span class="text-blue-400">Module 2.1</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MODULE 2.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">☁️ Hiring and configuring VPS</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">From choosing a provider to basic hardening: every decision to make your server reliable, secure and cost-effective before installing Hermes.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Practical</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Setup</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🤔 Why VPS and not personal laptop</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes can run on your laptop.<strong class="text-blue-400">But you won't want</strong>once you understand the trade-off. A personal machine was made for you to use — close the lid, sleep, travel, reboot. An agent that serves crons and responds to Telegram needs the opposite:<strong class="text-blue-400">always be connected, with stable IP, permanent internet and zero supervision</strong>.
       </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⚖️</span>VPS vs Laptop — comparação direta</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Uptime:</strong> VPS roda 24/7 com SLA. Laptop dorme quando você fecha.</li>
-          <li><strong class="text-blue-400">IP:</strong> VPS tem IP público fixo. Laptop muda toda vez que troca de Wi-Fi.</li>
-          <li><strong class="text-blue-400">Custo:</strong> VPS ~$9/mês. Laptop ligado 24/7 gasta luz e ventilador.</li>
-          <li><strong class="text-blue-400">Manutenção:</strong> VPS isolada do seu uso pessoal. Crash no laptop derruba o agente junto.</li>
-          <li><strong class="text-blue-400">Acesso:</strong> VPS via SSH de qualquer lugar. Laptop precisa estar fisicamente acessível.</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">💰</span>Custo de não ter VPS</h3>
-        <p class="text-neutral-300 text-sm">Imagine cron de backup falhando 3 dias seguidos porque o laptop estava desligado. Cron de monitoramento perdendo 2 alertas críticos. Resposta de Telegram chegando 6 horas depois. <strong>O custo de "economizar" $9/mês é dor crônica.</strong></p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🏷️ Escolhendo o provedor</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Quatro opções dominam o mercado em 2026 para Hermes. Cada uma com perfil próprio. <strong class="text-blue-400">Hostinger</strong> é a recomendação padrão pra primeiro setup; as outras viram opção quando você já tem maturidade técnica ou requisitos específicos.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-4">✓ Hostinger (recomendado)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Painel em PT-BR, suporte em PT-BR</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>One-click apps (Docker, Ubuntu LTS)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>NVMe nativo, AMD EPYC</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>$8,99/mês com desconto (KVM 2)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Backup diário automático ~$1/mês</span></li>
-          </ul>
-        </div>
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">→ Alternativas viáveis</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li><strong class="text-blue-400">Hetzner:</strong> mais barato (~€4 equiv KVM 2), painel em inglês, datacenter Europa</li>
-            <li><strong class="text-blue-400">DigitalOcean:</strong> ecossistema rico, $12+/mês, marketplace de apps</li>
-            <li><strong class="text-blue-400">Oracle Always Free:</strong> ARM64 com 24GB RAM grátis, mas cadastro burocrático e instabilidade ocasional</li>
-            <li><strong class="text-blue-400">Vultr/Linode:</strong> performance similar a DO, regiões variadas</li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Recomendação prática</h3>
-        <p class="text-neutral-300">Se é seu primeiro Hermes, vá de Hostinger. Painel simples, suporte em português, NVMe rápido, descontos significativos. Quando você dominar, pode migrar pra Hetzner pra economizar 30-40%. A migração é trivial: <code>tar</code> do <code>~/.hermes</code> + clone do GitHub no novo VPS.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">📊 Plano: KVM 2 da Hostinger</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O sweet-spot para Hermes em 2026 é o <strong class="text-blue-400">KVM 2</strong>: 2 vCPUs, 8 GB RAM, 100 GB NVMe, 8 TB de banda. Cabe Hermes + Docker + skills pesadas (browser automation com Chromium, vision com modelos vision) sem suar.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📋</span>Tabela de planos KVM (Hostinger, mai/2026)</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm text-neutral-300">
-            <thead><tr class="border-b border-dark-600 text-blue-400"><th class="text-left py-2">Plano</th><th class="text-left py-2">vCPUs</th><th class="text-left py-2">RAM</th><th class="text-left py-2">NVMe</th><th class="text-left py-2">Banda</th><th class="text-left py-2">Preço</th></tr></thead>
-            <tbody>
-              <tr class="border-b border-dark-700"><td class="py-2">KVM 1</td><td>1</td><td>4 GB</td><td>50 GB</td><td>4 TB</td><td>$6,49</td></tr>
-              <tr class="border-b border-dark-700 bg-blue-500/10"><td class="py-2 font-bold text-blue-400">KVM 2 ★</td><td>2</td><td>8 GB</td><td>100 GB</td><td>8 TB</td><td class="font-bold text-blue-400">$8,99</td></tr>
-              <tr class="border-b border-dark-700"><td class="py-2">KVM 4</td><td>4</td><td>16 GB</td><td>200 GB</td><td>16 TB</td><td>$12,99</td></tr>
-              <tr><td class="py-2">KVM 8</td><td>8</td><td>32 GB</td><td>400 GB</td><td>32 TB</td><td>$25,99</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-xs text-neutral-400 mt-4">Preços com desconto de boas-vindas. Renovação ~60% acima. Hardware: HPE/Dell, AMD EPYC, NVMe SSD, KVM virtualization.</p>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🎯</span>Quando subir de plano</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">KVM 1:</strong> só pra teste curto. Docker + Hermes engasgam na primeira skill com Chromium.</li>
-          <li><strong class="text-blue-400">KVM 2:</strong> agente único pessoal/profissional, até 3 perfis simples.</li>
-          <li><strong class="text-blue-400">KVM 4:</strong> múltiplos perfis (pessoal + marketing + financeiro), Kanban com 2-3 workers.</li>
-          <li><strong class="text-blue-400">KVM 8:</strong> Kanban com 5+ workers, modelos locais (Ollama com Qwen 14B).</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🐧 Sistema operacional: Ubuntu 24.04 LTS</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Na hora do deploy, escolha <strong class="text-blue-400">Ubuntu 24.04 LTS</strong>. É o padrão da comunidade — todos os tutoriais usam, suporte garantido até 2029, comunidade ativa, repositórios atualizados. Distros alternativas (Debian, Alpine, CentOS) têm pegadinhas com Docker, NodeJS, Python que custam tempo.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🔧</span>Configurações iniciais no painel</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Hostname:</strong> escolha algo memorável (<code>hermes-pessoal</code>, <code>hermes-prod</code>). Aparece no prompt do shell.</li>
-          <li><strong class="text-blue-400">Datacenter:</strong> escolha o mais próximo (São Paulo se Hostinger oferecer, senão Miami).</li>
-          <li><strong class="text-blue-400">Backup automático:</strong> ATIVE. Custa ~$1/mês a mais e salva sua vida quando algo dá errado às 23h de uma sexta.</li>
-          <li><strong class="text-blue-400">Senha root:</strong> gere forte (passphrase 4+ palavras) — você só vai usar uma vez, depois substitui por SSH key.</li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>O que NÃO escolher</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>CentOS/Rocky/AlmaLinux:</strong> menos tutoriais, gerenciador de pacote diferente (yum/dnf), incompatibilidade com scripts da comunidade.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Alpine:</strong> minimalista demais — falta libc completa, problemas com binários precompilados Python.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Ubuntu não-LTS:</strong> 23.10, 24.10 perdem suporte em 9 meses. LTS dura 5 anos.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Imagens "com Docker pré-instalado":</strong> versões desatualizadas. Prefira instalar via script oficial.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔑 Primeiro SSH e comandos básicos</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Servidor provisionado, IP em mãos. Hora do primeiro SSH e da rotina de update + criação de usuário. Esses 4 comandos são quase universais para qualquer VPS Linux fresh.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">📝 Sequência inicial</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># 1. Conectar
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⚖️</span>VPS vs Laptop — direct comparison</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Uptime:</strong>VPS runs 24/7 with SLA. Laptop sleeps when you close it.</li>
+<li><strong class="text-blue-400">IP:</strong>VPS has fixed public IP. Laptop changes every time it changes Wi-Fi.</li>
+<li><strong class="text-blue-400">Cost:</strong>VPS ~$9/month. Laptop running 24/7 consumes electricity and fans.</li>
+<li><strong class="text-blue-400">Maintenance:</strong>VPS isolated from your personal use. Crash on the laptop takes the agent down with it.</li>
+<li><strong class="text-blue-400">Access:</strong>VPS via SSH from anywhere. Laptop needs to be physically accessible.</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">💰</span>Cost of not having a VPS</h3>
+<p class="text-neutral-300 text-sm">Imagine backup cron failing 3 days in a row because the laptop was turned off. Monitoring cron missing 2 critical alerts. Telegram response arriving 6 hours later.<strong>The cost of "saving" $9/month is chronic pain.</strong></p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🏷️ Choosing the provider</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Four options dominate the market in 2026 for Hermes. Each with its own profile.<strong class="text-blue-400">Hostinger</strong>is the standard recommendation for the first setup; the others become an option when you already have technical maturity or specific requirements.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-4">✓ Hostinger (recommended)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Panel in PT-BR, support in PT-BR</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>One-click apps (Docker, Ubuntu LTS)</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Native NVMe, AMD EPYC</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>$8.99/month discounted (KVM 2)</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Automatic daily backup ~$1/month</span></li>
+</ul>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">→ Viable alternatives</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Hetzner:</strong>cheapest (~€4 KVM 2 equiv), panel in English, Europe datacenter</li>
+<li><strong class="text-blue-400">DigitalOcean:</strong>rich ecosystem, $12+/month, app marketplace</li>
+<li><strong class="text-blue-400">Oracle Always Free:</strong>ARM64 with free 24GB RAM, but bureaucratic registration and occasional instability</li>
+<li><strong class="text-blue-400">Vultr/Linode:</strong>performance similar to DO, varied regions</li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical recommendation</h3>
+<p class="text-neutral-300">If it's your first Hermes, go with Hostinger. Simple panel, support in Portuguese, fast NVMe, significant discounts. When you master it, you can migrate to Hetzner to save 30-40%. The migration is trivial:<code data-notranslate="True">tar</code> do <code data-notranslate="True">~/.hermes</code>+ GitHub clone on new VPS.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">📊 Plan: KVM 2 by Hostinger</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The sweet-spot for Hermes in 2026 is the<strong class="text-blue-400">KVM 2</strong>: 2 vCPUs, 8 GB RAM, 100 GB NVMe, 8 TB bandwidth. It fits Hermes + Docker + heavy skills (browser automation with Chromium, vision with vision models) without breaking a sweat.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📋</span>KVM plan table (Hostinger, May/2026)</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-neutral-300">
+<thead><tr class="border-b border-dark-600 text-blue-400"><th class="text-left py-2">Flat</th><th class="text-left py-2">vCPUs</th><th class="text-left py-2">RAM</th><th class="text-left py-2">NVMe</th><th class="text-left py-2">Band</th><th class="text-left py-2">Price</th></tr></thead>
+<tbody>
+<tr class="border-b border-dark-700"><td class="py-2">KVM 1</td><td>1</td><td>4GB</td><td>50GB</td><td>4TB</td><td>$6.49</td></tr>
+<tr class="border-b border-dark-700 bg-blue-500/10"><td class="py-2 font-bold text-blue-400">KVM 2 ★</td><td>2</td><td>8GB</td><td>100GB</td><td>8TB</td><td class="font-bold text-blue-400">$8.99</td></tr>
+<tr class="border-b border-dark-700"><td class="py-2">KVM 4</td><td>4</td><td>16 GB</td><td>200GB</td><td>16TB</td><td>$12.99</td></tr>
+<tr><td class="py-2">KVM 8</td><td>8</td><td>32GB</td><td>400GB</td><td>32TB</td><td>$25.99</td></tr>
+</tbody>
+</table>
+</div>
+<p class="text-xs text-neutral-400 mt-4">Welcome discount prices. Renovation ~60% up. Hardware: HPE/Dell, AMD EPYC, NVMe SSD, KVM virtualization.</p>
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🎯</span>When to upgrade</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">KVM 1:</strong>just for short test. Docker + Hermes choke on the first skill with Chromium.</li>
+<li><strong class="text-blue-400">KVM 2:</strong>single personal/professional agent, up to 3 simple profiles.</li>
+<li><strong class="text-blue-400">KVM 4:</strong>multiple profiles (personal + marketing + financial), Kanban with 2-3 workers.</li>
+<li><strong class="text-blue-400">KVM 8:</strong>Kanban with 5+ workers, local models (Ollama with Qwen 14B).</li>
+</ul>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🐧 Operating system: Ubuntu 24.04 LTS</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">When deploying, choose<strong class="text-blue-400">Ubuntu 24.04 LTS</strong>. It's the community standard — all tutorials use it, guaranteed support until 2029, active community, updated repositories. Alternative distros (Debian, Alpine, CentOS) have gotchas with Docker, NodeJS, Python that cost time.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🔧</span>Initial settings in the dashboard</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Hostname:</strong>choose something memorable (<code data-notranslate="True">hermes-pessoal</code>, <code data-notranslate="True">hermes-prod</code>). Appears at the shell prompt.</li>
+<li><strong class="text-blue-400">Datacenter:</strong>choose the closest one (São Paulo if Hostinger offers it, otherwise Miami).</li>
+<li><strong class="text-blue-400">Automatic backup:</strong>ACTIVATE. It costs ~$1/month more and saves your life when something goes wrong at 11pm on a Friday.</li>
+<li><strong class="text-blue-400">Root password:</strong>generate strong (passphrase 4+ words) — you will only use it once, then replace it with SSH key.</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>What NOT to choose</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>CentOS/Rocky/AlmaLinux:</strong>fewer tutorials, different package manager (yum/dnf), incompatibility with community scripts.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Alpine:</strong>too minimalistic — lacks complete libc, problems with precompiled Python binaries.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Non-LTS Ubuntu:</strong>23.10, 24.10 lose support in 9 months. LTS lasts 5 years.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>"With Docker pre-installed" images:</strong>outdated versions. Prefer to install via official script.</span></li>
+</ul>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔑 First SSH and basic commands</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Server provisioned, IP in hand. Time for the first SSH and the update + user creation routine. These 4 commands are almost universal for any fresh Linux VPS.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">📝 Starting Sequence</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True"># 1. Conectar
 ssh root@SEU_IP
 
 # 2. Atualizar tudo
-apt update && apt upgrade -y
+apt update &amp;&amp; apt upgrade -y
 
 # 3. Criar usuário não-root e dar sudo
 adduser hermes
@@ -261,30 +243,27 @@ ufw default allow outgoing
 ufw allow 22/tcp        # SSH
 ufw enable
 ufw status</code></pre>
-      </div>
-      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>Por que cada comando importa</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-emerald-400">apt upgrade:</strong> aplica patches de segurança pendentes na imagem padrão (sempre tem alguns).</li>
-          <li><strong class="text-emerald-400">Usuário não-root:</strong> rodar Hermes como root expande blast radius. Erro do agente em <code>/etc</code> destrói o servidor.</li>
-          <li><strong class="text-emerald-400">UFW deny incoming:</strong> bloqueia tudo por padrão. Você abre só o necessário.</li>
-          <li><strong class="text-emerald-400">Allow 22 antes de enable:</strong> esquecer essa ordem corta seu próprio acesso. Esse erro derruba uns 20% dos novatos.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🛡️ Hardening básico antes do Hermes</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Servidor público em 2026 leva milhares de tentativas de login por dia. Sem hardening, é só questão de tempo até alguém entrar. Com 3 medidas simples — <strong class="text-blue-400">SSH key obrigatória, root login desabilitado, fail2ban</strong> — o servidor fica praticamente intocável pra brute-force.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🔐 Hardening em 3 passos</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># 1. Gerar chave no SEU LAPTOP (não no VPS!)
+</div>
+<div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>Why Every Command Matters</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-emerald-400">apt upgrade:</strong>applies outstanding security patches to the default image (there are always some).</li>
+<li><strong class="text-emerald-400">Non-root user:</strong>Running Hermes as root expands blast radius. Agent error in<code data-notranslate="True">/etc</code>destroys the server.</li>
+<li><strong class="text-emerald-400">UFW deny incoming:</strong>blocks everything by default. You only open what is necessary.</li>
+<li><strong class="text-emerald-400">Allow 22 before enable:</strong>forgetting this order cuts off your own access. This error brings down about 20% of newbies.</li>
+</ul>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🛡️ Basic hardening before Hermes</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Public server in 2026 takes thousands of login attempts per day. Without hardening, it's just a matter of time before someone joins. With 3 simple measures —<strong class="text-blue-400">SSH key required, root login disabled, fail2ban</strong>— the server is practically untouchable by brute-force.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🔐 Hardening in 3 steps</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True"># 1. Gerar chave no SEU LAPTOP (não no VPS!)
 ssh-keygen -t ed25519 -C "hermes-vps"
 
 # 2. Copiar pro VPS
@@ -300,47 +279,43 @@ sudo systemctl restart sshd
 # 4. Instalar fail2ban
 sudo apt install -y fail2ban
 sudo systemctl enable --now fail2ban</code></pre>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Antes de fechar a sessão</h3>
-        <p class="text-neutral-300 text-sm"><strong>NUNCA</strong> reinicie o sshd e feche a sessão sem testar. Abra outra janela de terminal, tente conectar com a chave. Se funcionar, OK. Se quebrar, você ainda tem a sessão original aberta pra desfazer. Esse hábito salva muitas horas (e o custo de pedir reset no painel da Hostinger).</p>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Avançado (opcional, pra depois)</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong>Mudar porta SSH:</strong> de 22 pra algo aleatório (ex: 2222) reduz 99% dos scans automáticos.</li>
-          <li><strong>Tailscale:</strong> esconde o SSH atrás de VPN mesh, IP público pode ficar fechado pro mundo.</li>
-          <li><strong>Cloudflare Tunnel:</strong> alternativa pra expor serviços HTTP sem abrir porta no firewall.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>VPS supera laptop pro Hermes</strong><span class="text-neutral-400"> — uptime 24/7, IP fixo, isolamento de uso pessoal.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Hostinger é o ponto de partida ideal</strong><span class="text-neutral-400"> — painel PT-BR, NVMe rápido, suporte humano em português.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>KVM 2 ($8,99/mês) é o sweet-spot</strong><span class="text-neutral-400"> — 8GB RAM cabe Hermes + Docker + skills pesadas.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Ubuntu 24.04 LTS, hostname memorável, backup ON</strong><span class="text-neutral-400"> — escolhas que evitam dor depois.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Hardening: usuário não-root + UFW + SSH key + fail2ban</strong><span class="text-neutral-400"> — antes de instalar qualquer coisa.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">2.2 - 🐳 Instalação Docker e auto-deploy do Hermes</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a>
-          <a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 2.1 • 2026</p></div>
-  </footer>
-
-  <script>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Before closing the session</h3>
+<p class="text-neutral-300 text-sm"><strong>NEVER</strong>restart sshd and close the session without testing. Open another terminal window, try connecting with the key. If it works, OK. If it breaks, you still have the original session open to undo. This habit saves many hours (and the cost of requesting a reset on the Hostinger panel).</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Advanced (optional, for later)</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong>Change SSH port:</strong>from 22 to something random (ex: 2222) reduces 99% of automatic scans.</li>
+<li><strong>Tailscale:</strong>hides SSH behind mesh VPN, public IP can be closed to the world.</li>
+<li><strong>Cloudflare Tunnel:</strong>alternative to exposing HTTP services without opening a port on the firewall.</li>
+</ul>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>VPS outperforms Hermes laptop</strong><span class="text-neutral-400">— 24/7 uptime, fixed IP, personal use isolation.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Hostinger is the ideal starting point</strong><span class="text-neutral-400">— PT-BR panel, fast NVMe, human support in Portuguese.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>KVM 2 ($8.99/month) is the sweet spot</strong><span class="text-neutral-400">— 8GB RAM fits Hermes + Docker + heavy skills.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Ubuntu 24.04 LTS, memorable hostname, backup ON</strong><span class="text-neutral-400">— choices that avoid pain later.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Hardening: non-root user + UFW + SSH key + fail2ban</strong><span class="text-neutral-400">— before installing anything.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Next module:</h3><p class="text-neutral-300">2.2 - 🐳 Docker installation and self-deployment of Hermes</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Back to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="modulo-2-2.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 2.1 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
