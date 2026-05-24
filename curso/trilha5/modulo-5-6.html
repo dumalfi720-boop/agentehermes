@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5.6 Como combinar: arquitetura híbrida | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>5.6 How to combine: hybrid architecture | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -59,76 +59,69 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-teal-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-teal-400">Trilha 5</a><span>/</span>
-      <span class="text-teal-400">Módulo 5.6</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MÓDULO 5.6</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🧩 Como combinar: arquitetura híbrida real</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">A pergunta certa não é "qual escolher", é "como combinar". A stack do dia a dia em 2026 mistura várias ferramentas — desde que você saiba onde cada uma encaixa.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Estratégico</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Síntese</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🏆 Stack recomendada</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A combinação que cobre 90% dos casos: <strong class="text-teal-400">Hermes (proativo via msg, cron, gateway) + Claude Code (cockpit de coding sentado no PC) + GitHub (fonte de verdade pra contexto, skills, configs)</strong>. Os três apontam ao mesmo repositório.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🏗️ Por que essa stack ganha</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">Hermes:</strong> tarefas em movimento, automações cron, gateway 20+ plataformas, agente sempre on.</div>
-          <div><strong class="text-teal-400">Claude Code:</strong> raciocínio profundo de código, refactor, review de PR, modelo Claude Sonnet 4.5/Opus.</div>
-          <div><strong class="text-teal-400">GitHub:</strong> source of truth pra CLAUDE.md, AGENTS.md, .hermes.md, skills/, soul.md. Versionamento garantido.</div>
-          <div><strong class="text-teal-400">Sinergia:</strong> cada um cobre fricção diferente. Sinergia maior que escolher um único.</div>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">📁 Estrutura típica do repo central</h3>
-        <pre class="text-neutral-300 text-xs leading-relaxed"><code>repo/
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10" href="index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-teal-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-teal-400" href="index.html">Track 5</a><span>/</span>
+<span class="text-teal-400">Module 5.6</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MODULE 5.6</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧩 How to combine: real hybrid architecture</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">The right question is not “which one to choose”, it is “how to combine”. The everyday stack in 2026 mixes several tools — as long as you know where each one fits.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">35</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Strategic</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Synthesis</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🏆 Recommended stack</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The combination that covers 90% of cases:<strong class="text-teal-400">Hermes (proactive via msg, cron, gateway) + Claude Code (coding cockpit sitting on the PC) + GitHub (source of truth for context, skills, configs)</strong>. All three point to the same repository.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🏗️ Why this stack wins</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">Hermes:</strong>tasks on the move, cron automations, gateway 20+ platforms, agent always on.</div>
+<div><strong class="text-teal-400">Claude Code:</strong>deep code reasoning, refactor, PR review, Claude Sonnet 4.5/Opus model.</div>
+<div><strong class="text-teal-400">GitHub:</strong>source of truth for CLAUDE.md, AGENTS.md, .hermes.md, skills/, soul.md. Guaranteed versioning.</div>
+<div><strong class="text-teal-400">Synergy:</strong>each covers different friction. Greater synergy than choosing just one.</div>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">📁 Typical core repo structure</h3>
+<pre class="text-neutral-300 text-xs leading-relaxed" data-notranslate="True"><code data-notranslate="True">repo/
 ├── README.md           # overview compartilhado
 ├── CLAUDE.md           # contexto do Claude Code
 ├── AGENTS.md           # contexto multi-agente
@@ -140,171 +133,155 @@
 │   └── ...
 ├── soul.md             # personalidade do agente
 └── memory.md           # MEMORY.md (auto-gerenciada)</code></pre>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🔗 Apontar Claude Code e Hermes ao mesmo repo</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        <strong class="text-teal-400">CLAUDE.md fica na raiz do repo</strong>, lido pelo Claude Code. <strong class="text-teal-400">.hermes.md (ou MEMORY.md/USER.md)</strong> fica no mesmo repo, lido pelo Hermes. Cada um respeita seu próprio formato sem conflito.
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🔗 Point Claude Code and Hermes to the same repo</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">
+<strong class="text-teal-400">CLAUDE.md is in the root of the repo</strong>, read by Claude Code.<strong class="text-teal-400">.hermes.md (or MEMORY.md/USER.md)</strong>It's in the same repo, read by Hermes. Each respects its own format without conflict.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">📜 File convention</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">README.md:</strong>overview of the project that both agents read.</div>
+<div><strong class="text-teal-400">CLAUDE.md:</strong>specific instructions for Claude Code (long context, coding rules).</div>
+<div><strong class="text-teal-400">.hermes.md:</strong>specific instructions for Hermes (tone, preferences, reminders).</div>
+<div><strong class="text-teal-400">skills/:</strong>directory with SKILL.md — Hermes loads via progressive disclosure.</div>
+<div><strong class="text-teal-400">.cursorrules / .cursor/rules/*.mdc:</strong>Cursor rules that Hermes also reads.</div>
+</div>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Anti-pattern: single file for all</h3>
+<p class="text-neutral-300 text-sm">Trying to create a single file for all agents becomes a mess. Each agent has its own convention; respecting this simplifies maintenance. Common content goes in README.md; specific in the agent file.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🔁 n8n + Hermes</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">
+<strong class="text-teal-400">n8n runs deterministic visual workflow</strong>(synchronizes CRM, triggers webhook).<strong class="text-teal-400">Hermes adds adaptive intelligence</strong>where you need reasoning (summarize email, classify ticket, adjust tone).</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🔄 Integration pattern</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">n8n receives trigger:</strong>Stripe webhook, GitHub event, schedule cron.</div>
+<div><strong class="text-teal-400">n8n decides if he needs LLM:</strong>payload-based IF condition.</div>
+<div><strong class="text-teal-400">n8n calls Hermes via HTTP:</strong>"HTTP Request" node points to the Hermes webhook (browser/http gateway).</div>
+<div><strong class="text-teal-400">Hermes reasons:</strong>summarize, classify, adjust tone. Returns JSON.</div>
+<div><strong class="text-teal-400">n8n continues the workflow:</strong>Use Hermes' answer for the next step (SendGrid, Slack, Postgres).</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Cost Savings</h3>
+<p class="text-neutral-300 text-sm">n8n does the deterministic part without LLM (free once created). Hermes is called only where it returns value (adaptive reasoning). Cheap and powerful combo — you don't pay LLM on each workflow node.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🐍 LangChain inside Hermes</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes has<strong class="text-teal-400">plugin system</strong>. You create a Python plugin that imports LangChain and exposes it as a tool. Hermes calls the tool when it needs complex RAG, document parsing or specialized retriever.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🧠 Usage pattern</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">Plugin<code data-notranslate="True">langchain-retriever</code>:</strong>Python wrapper that connects to Pinecone/Weaviate/Chroma and exposes it as a Hermes tool.</div>
+<div><strong class="text-teal-400">Skill<code data-notranslate="True">rag-search</code>:</strong>Markdown procedure that guides the agent to use the plugin for retrieval.</div>
+<div><strong class="text-teal-400">Hermes reasons above:</strong>receives relevant excerpts from the retriever, synthesizes response, communicates via gateway.</div>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">🌐 Combination advantage</h3>
+<p class="text-neutral-300 text-sm">You get the LangChain ecosystem (500+ integrations, vector stores, document loaders) without having to build the agent from scratch. Hermes becomes the operational shell, LangChain the retrieval core.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🤖 Codex CLI or Aider as sub-agent</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Skills bundled<strong class="text-teal-400"><code data-notranslate="True">codex</code> e <code data-notranslate="True">aider</code></strong>allow Hermes to invoke Codex CLI or Aider as a subprocess for heavy coding tasks.<strong class="text-teal-400">Hermes coordinates, experts execute</strong>.
       </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">📜 Convenção de arquivos</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">README.md:</strong> overview do projeto que ambos os agentes leem.</div>
-          <div><strong class="text-teal-400">CLAUDE.md:</strong> instruções específicas pro Claude Code (contexto longo, regras de coding).</div>
-          <div><strong class="text-teal-400">.hermes.md:</strong> instruções específicas pro Hermes (tom, preferências, lembretes).</div>
-          <div><strong class="text-teal-400">skills/:</strong> diretório com SKILL.md — Hermes carrega via progressive disclosure.</div>
-          <div><strong class="text-teal-400">.cursorrules / .cursor/rules/*.mdc:</strong> regras do Cursor que Hermes também lê.</div>
-        </div>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Anti-pattern: arquivo único pra todos</h3>
-        <p class="text-neutral-300 text-sm">Tentar fazer um único arquivo pra todos os agentes vira bagunça. Cada agente tem convenção própria; respeitar isso simplifica manutenção. Conteúdo comum vai no README.md; específico no arquivo do agente.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🔁 n8n + Hermes</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        <strong class="text-teal-400">n8n executa workflow visual determinístico</strong> (sincroniza CRM, dispara webhook). <strong class="text-teal-400">Hermes adiciona inteligência adaptativa</strong> onde precisa de raciocínio (resumir email, classificar ticket, ajustar tom).
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🔄 Padrão de integração</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">n8n recebe trigger:</strong> webhook do Stripe, evento do GitHub, schedule cron.</div>
-          <div><strong class="text-teal-400">n8n decide se precisa de LLM:</strong> condição IF baseada no payload.</div>
-          <div><strong class="text-teal-400">n8n chama Hermes via HTTP:</strong> nó "HTTP Request" aponta pra webhook do Hermes (gateway browser/http).</div>
-          <div><strong class="text-teal-400">Hermes raciocina:</strong> resumir, classificar, ajustar tom. Devolve JSON.</div>
-          <div><strong class="text-teal-400">n8n continua o workflow:</strong> usa resposta do Hermes pra próximo passo (SendGrid, Slack, Postgres).</div>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Economia de custo</h3>
-        <p class="text-neutral-300 text-sm">n8n faz a parte determinística sem LLM (grátis depois de criado). Hermes é chamado só onde retorna valor (raciocínio adaptativo). Combo barato e poderoso — você não paga LLM em cada nó do workflow.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🐍 LangChain dentro do Hermes</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes tem <strong class="text-teal-400">plugin system</strong>. Você cria plugin Python que importa LangChain e expõe como ferramenta. Hermes chama a ferramenta quando precisa de RAG complexo, parsing de documento ou retriever especializado.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🧠 Padrão de uso</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">Plugin <code>langchain-retriever</code>:</strong> wrapper Python que conecta a Pinecone/Weaviate/Chroma e expõe como tool do Hermes.</div>
-          <div><strong class="text-teal-400">Skill <code>rag-search</code>:</strong> procedimento Markdown que orienta o agente a usar o plugin pra retrieval.</div>
-          <div><strong class="text-teal-400">Hermes raciocina em cima:</strong> recebe trechos relevantes do retriever, sintetiza resposta, comunica via gateway.</div>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">🌐 Vantagem da combinação</h3>
-        <p class="text-neutral-300 text-sm">Você ganha o ecossistema LangChain (500+ integrações, vector stores, document loaders) sem ter que construir o agente do zero. Hermes vira a casca operacional, LangChain o miolo de retrieval.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🤖 Codex CLI ou Aider como subagente</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Skills bundled <strong class="text-teal-400"><code>codex</code> e <code>aider</code></strong> permitem ao Hermes invocar Codex CLI ou Aider como subprocess pra tarefas de coding pesadas. <strong class="text-teal-400">Hermes coordena, especialistas executam</strong>.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">⚙️ Fluxo prático</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">Você manda Telegram:</strong> "refatora o módulo X usando Aider".</div>
-          <div><strong class="text-teal-400">Hermes lê contexto:</strong> identifica o repo, carrega skill <code>aider</code>, monta prompt apropriado.</div>
-          <div><strong class="text-teal-400">Hermes invoca Aider:</strong> <code>subprocess</code> com argumentos certos. Aider executa refactor com modelo otimizado.</div>
-          <div><strong class="text-teal-400">Aider retorna diff:</strong> Hermes recebe, resume mudanças.</div>
-          <div><strong class="text-teal-400">Hermes te responde no Telegram:</strong> "Refactor pronto. Mudanças em arquivos X, Y. Diff salvo em <code>diffs/2026-05-10.diff</code>."</div>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Por que delegar?</h3>
-        <p class="text-neutral-300 text-sm">Aider tem integração git superior (commits automáticos, diff view). Codex tem modelo otimizado pra coding. Em vez de Hermes fazer coding mediano, ele delega pra ferramenta especializada. Você ganha o melhor de cada.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">⚠️ Anti-pattern: forçar substituição</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Tentar substituir Claude Code por Hermes em coding pesado é <strong class="text-teal-400">frustrante</strong> (modelo via Codex Plus não é Sonnet 4.5). Tentar substituir Hermes por Claude Code em automação proativa também (sem cron, sem gateway).
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Anti-patterns comuns</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Hermes pra refactor pesado de monorepo</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Claude Code pra cron de marketing</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>n8n pra "responda no tom da empresa"</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>LangChain pra agente pessoal MVP</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>CrewAI pra Telegram bot operacional</span></li>
-          </ul>
-        </div>
-        <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-          <h4 class="font-bold text-teal-400 mb-4">✓ Patterns que funcionam</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Hermes orquestra; Aider/Codex commitam</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Claude Code raciocina; Git é fonte de verdade</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>n8n integra; Hermes raciocina</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>LangChain dentro de plugin Hermes</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>CrewAI batch; Hermes operacional</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-3 flex items-center"><span class="mr-2">📜</span>Regra de ouro</h3>
-        <p class="text-neutral-300 text-sm"><strong>Cada agente faz aquilo que ele faz melhor.</strong> Hermes orquestra. Claude Code raciocina código. n8n integra serviços. LangChain busca em vector store. Aider commita diffs limpos. Aceitar a divisão = stack mais produtiva. Forçar fora do nicho = trabalho extra, qualidade baixa, frustração diária.</p>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Stack ganha de 2026: Hermes + Claude Code + GitHub</strong><span class="text-neutral-400"> — três ferramentas complementares apontando ao mesmo repo.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>CLAUDE.md vs .hermes.md</strong><span class="text-neutral-400"> — cada agente tem seu formato; conteúdo comum vai no README.md.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>n8n + Hermes via webhook</strong><span class="text-neutral-400"> — n8n integra determinístico; Hermes raciocina onde precisa.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>LangChain como plugin do Hermes</strong><span class="text-neutral-400"> — você ganha 500+ integrações sem construir agente do zero.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Codex/Aider como subagente</strong><span class="text-neutral-400"> — Hermes orquestra, especialistas executam coding.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Anti-pattern: forçar substituição</strong><span class="text-neutral-400"> — cada agente faz o que faz melhor; aceitar a divisão é a estratégia.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-teal-400 mb-2">Próxima trilha:</h3><p class="text-neutral-300">Trilha 6 - Escala (rosa)</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-5-5.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="../trilha6/index.html" class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors">Próxima Trilha: Escala →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 5.6 • 2026</p></div>
-  </footer>
-
-  <script>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">⚙️ Practical flow</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">You send Telegram:</strong>"refactor module X using Aider".</div>
+<div><strong class="text-teal-400">Hermes reads context:</strong>identifies repo, loads skill<code data-notranslate="True">aider</code>, mount appropriate prompt.</div>
+<div><strong class="text-teal-400">Hermes summons Aider:</strong> <code data-notranslate="True">subprocess</code>with correct arguments. Aider performs refactor with optimized model.</div>
+<div><strong class="text-teal-400">Aider returns diff:</strong>Hermes receives, summarizes changes.</div>
+<div><strong class="text-teal-400">Hermes responds to you on Telegram:</strong>"Refactor ready. Changes to files X, Y. Diff saved in<code data-notranslate="True">diffs/2026-05-10.diff</code>."</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Why delegate?</h3>
+<p class="text-neutral-300 text-sm">Aider has superior git integration (automatic commits, diff view). Codex has an optimized model for coding. Instead of Hermes doing average coding, he delegates it to a specialized tool. You get the best of each.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">⚠️ Anti-pattern: force replacement</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Trying to replace Claude Code with Hermes in heavy coding is<strong class="text-teal-400">frustrating</strong>(model via Codex Plus is not Sonnet 4.5). Trying to replace Hermes with Claude Code in proactive automation too (no cron, no gateway).</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ Common anti-patterns</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Hermes for heavy monorepo refactor</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Claude Code for marketing cron</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>n8n for "respond in the company's tone"</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>LangChain for personal agent MVP</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>CrewAI for Telegram operational bot</span></li>
+</ul>
+</div>
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h4 class="font-bold text-teal-400 mb-4">✓ Patterns that work</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Hermes orchestra; Aider/Codex commit</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Claude Code reasons; Git is source of truth</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>n8n integrates; Hermes reasons</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>LangChain inside Hermes plugin</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>CrewAI batch; Operational Hermes</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-3 flex items-center"><span class="mr-2">📜</span>Rule of thumb</h3>
+<p class="text-neutral-300 text-sm"><strong>Each agent does what he does best.</strong>Hermes orchestra. Claude Code reasons code. n8n integrates services. LangChain search in vector store. Aider commits clean diffs. Accepting division = more productive stack. Forcing outside the niche = extra work, low quality, daily frustration.</p>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Stack Wins of 2026: Hermes + Claude Code + GitHub</strong><span class="text-neutral-400">— three complementary tools pointing to the same repo.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>CLAUDE.md vs .hermes.md</strong><span class="text-neutral-400">— each agent has its own format; common content goes in README.md.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>n8n + Hermes via webhook</strong><span class="text-neutral-400">— n8n integrates deterministic; Hermes reasons where he needs to.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>LangChain as a Hermes plugin</strong><span class="text-neutral-400">— you get 500+ integrations without building an agent from scratch.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Codex/Aider as sub-agent</strong><span class="text-neutral-400">— Hermes orchestrates, experts perform coding.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Anti-pattern: force replacement</strong><span class="text-neutral-400">— each agent does what they do best; accepting division is the strategy.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-teal-400 mb-2">Next track:</h3><p class="text-neutral-300">Trail 6 - Scale (pink)</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-5-5.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors" href="../trilha6/index.html">Next Trail: Scale →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 5.6 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
