@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3.3 Soul: identidade do agente | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>3.3 Soul: agent identity | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -65,285 +65,259 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-purple-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-purple-400">Trilha 3</a><span>/</span>
-      <span class="text-purple-400">Módulo 3.3</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.3</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">👻 Soul: identidade do agente</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">SOUL.md ocupa o slot #1 do system prompt. É a identidade do agente — quem ele é, como fala, no que acredita. Sempre carregado, global, sem YAML front matter.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">25</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Médio</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Conceitual</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🎭 SOUL.md no slot #1 do system prompt</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        SOUL.md é o <strong class="text-purple-400">primeiro bloco</strong> do system prompt — antes de memória, antes de skills, antes de tudo. É a base da identidade que o modelo lê pra qualquer interação. Sempre carregado, independente do contexto.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📐</span>Ordem do system prompt</h3>
-        <ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
-          <li><strong class="text-blue-400">SOUL.md</strong> — identidade do agente (sempre)</li>
-          <li>Memórias (USER.md + MEMORY.md, snapshot frozen)</li>
-          <li>Contexto de projeto (.hermes.md / AGENTS.md / CLAUDE.md / .cursorrules — apenas UM, na ordem de prioridade)</li>
-          <li>Lista mínima de skills (Level 0 do Progressive Disclosure)</li>
-          <li>Instruções operacionais e ferramentas disponíveis</li>
-        </ol>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🎯</span>Por que a posição importa</h3>
-        <p class="text-neutral-300 text-sm">Modelos costumam dar mais peso ao que aparece cedo no system prompt. Identidade no slot #1 molda como ele interpreta tudo o que vem depois. Tom errado lá ecoa em cada resposta.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">📍 Localização: ~/.hermes/SOUL.md</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Arquivo único em <code class="text-purple-400">~/.hermes/SOUL.md</code>. Escopo <strong class="text-purple-400">global</strong>: vale pra qualquer projeto, qualquer diretório. <strong class="text-purple-400">Markdown puro</strong>, sem YAML front matter (diferente de SKILL.md).
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-2">Características</h4>
-          <ul class="space-y-1 text-neutral-300 text-sm">
-            <li>• Local fixo: <code>~/.hermes/SOUL.md</code></li>
-            <li>• Escopo global (não muda com cwd)</li>
-            <li>• Markdown puro</li>
-            <li>• Sem YAML front matter</li>
-            <li>• Sem limite documentado de chars</li>
-          </ul>
-        </div>
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-2">Boas práticas</h4>
-          <ul class="space-y-1 text-neutral-300 text-sm">
-            <li>• Mantenha conciso (~500-1000 palavras)</li>
-            <li>• Versione no git pra ter histórico</li>
-            <li>• Revise antes de aceitar reescrita do agente</li>
-            <li>• Faça backup do <code>~/.hermes/</code> inteiro</li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-3 flex items-center"><span class="mr-2">🎭</span>Múltiplos perfis = múltiplos souls</h3>
-        <p class="text-neutral-300 text-sm">Pra ter agentes com identidades diferentes (marketing alegre, financeiro sério), use <strong>perfis Hermes diferentes</strong>: cada perfil aponta pra um diretório próprio.</p>
-<pre class="mt-4"><code>~/.hermes-marketing/SOUL.md   # alegre, emojis, tom de voz da marca
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-purple-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a><span>/</span>
+<span class="text-purple-400">Module 3.3</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.3</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">👻 Soul: agent identity</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">SOUL.md occupies slot #1 of the system prompt. It is the identity of the agent — who he is, how he speaks, what he believes. Always loaded, global, no YAML front matter.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">25</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Average</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Conceptual</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🎭 SOUL.md in slot #1 of the system prompt</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">SOUL.md is the<strong class="text-purple-400">first block</strong>from system prompt — before memory, before skills, before everything. It is the basis of the identity that the model reads for any interaction. Always loaded, regardless of context.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📐</span>System prompt order</h3>
+<ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
+<li><strong class="text-blue-400">SOUL.md</strong>— agent identity (always)</li>
+<li>Memories (USER.md + MEMORY.md, snapshot frozen)</li>
+<li>Project context (.hermes.md / AGENTS.md / CLAUDE.md / .cursorrules — only ONE, in priority order)</li>
+<li>Minimum list of skills (Level 0 of Progressive Disclosure)</li>
+<li>Operating instructions and available tools</li>
+</ol>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🎯</span>Why position matters</h3>
+<p class="text-neutral-300 text-sm">Templates tend to give more weight to what appears early in the system prompt. Identity in slot #1 shapes how he interprets everything that comes after. Wrong tone there echoes in every answer.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">📍 Location: ~/.hermes/SOUL.md</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Single file in<code class="text-purple-400" data-notranslate="True">~/.hermes/SOUL.md</code>. Scope<strong class="text-purple-400">global</strong>: applies to any project, any directory.<strong class="text-purple-400">Pure Markdown</strong>, without YAML front matter (unlike SKILL.md).</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-2">Features</h4>
+<ul class="space-y-1 text-neutral-300 text-sm">
+<li>• Fixed location:<code data-notranslate="True">~/.hermes/SOUL.md</code></li>
+<li>• Global scope (does not change with cwd)</li>
+<li>• Pure Markdown</li>
+<li>• No YAML front matter</li>
+<li>• No documented character limit</li>
+</ul>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-2">Good practices</h4>
+<ul class="space-y-1 text-neutral-300 text-sm">
+<li>• Keep it concise (~500-1000 words)</li>
+<li>• Version in git to have history</li>
+<li>• Review before accepting agent rewrite</li>
+<li>• Back up your<code data-notranslate="True">~/.hermes/</code>whole</li>
+</ul>
+</div>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-3 flex items-center"><span class="mr-2">🎭</span>Multiple profiles = multiple souls</h3>
+<p class="text-neutral-300 text-sm">To have agents with different identities (cheerful marketing, serious finance), use<strong>different Hermes profiles</strong>: each profile points to its own directory.</p>
+<pre class="mt-4" data-notranslate="True"><code data-notranslate="True">~/.hermes-marketing/SOUL.md   # alegre, emojis, tom de voz da marca
 ~/.hermes-financeiro/SOUL.md  # sóbrio, direto, sem floreios
 ~/.hermes-pessoal/SOUL.md     # informal, próximo, contextual</code></pre>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🎨 O que SOUL define</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Bom SOUL.md cobre quatro eixos: <strong class="text-purple-400">tom</strong>, <strong class="text-purple-400">personalidade</strong>, <strong class="text-purple-400">princípios</strong> e <strong class="text-purple-400">regras de comunicação</strong>. Quanto mais específico, mais característico fica o agente.
-      </p>
-      <div class="space-y-4 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-2">🎚️ Tom</h4>
-          <p class="text-neutral-300 text-sm mb-2">Como ele se expressa. Formal ou descontraído? Direto ou explicador? Técnico ou acessível?</p>
-          <p class="text-neutral-400 text-xs"><em>Exemplo:</em> "Falo direto, evito formalismo. Não uso superlativos sem evidência. Prefiro frases curtas."</p>
-        </div>
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-2">🧬 Personalidade</h4>
-          <p class="text-neutral-300 text-sm mb-2">Quem o agente é. Curioso? Cético? Pragmático? Provocador? Mentor?</p>
-          <p class="text-neutral-400 text-xs"><em>Exemplo:</em> "Sou pragmático. Prefiro solução simples que funciona a solução elegante que não foi testada."</p>
-        </div>
-        <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-          <h4 class="font-bold text-purple-400 mb-2">⚖️ Princípios</h4>
-          <p class="text-neutral-300 text-sm mb-2">O que sempre faz, o que nunca faz. Linhas duras que não são negociadas por contexto.</p>
-          <p class="text-neutral-400 text-xs"><em>Exemplo:</em> "Sempre cito fonte de fato técnico. Nunca invento URL. Quando não sei, digo que não sei."</p>
-        </div>
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-          <h4 class="font-bold text-primary mb-2">📞 Regras de comunicação</h4>
-          <p class="text-neutral-300 text-sm mb-2">Idioma, tamanho de resposta padrão, uso de emojis, formato de listas, código fence.</p>
-          <p class="text-neutral-400 text-xs"><em>Exemplo:</em> "PT-BR por padrão. Resposta curta primeiro, detalhe se pedirem. Sem emojis em respostas técnicas."</p>
-        </div>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Cuidado com contradições</h3>
-        <p class="text-neutral-300 text-sm">"Seja sucinto" + "Explique cada decisão em detalhe" briga. "Use emojis pra deixar leve" + "Mantenha tom profissional sem floreios" briga. Soul precisa ser coerente como personagem — contradição interna degrada respostas.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🎯 Por que importa em multi-agente</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Em setup com múltiplos perfis (pessoal, marketing, financeiro, ops), <strong class="text-purple-400">soul é o que dá voz distinta</strong> a cada um. Sem soul próprio, todos soam iguais e perdem o sentido de existir separados.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-2">Marketing</h4>
-          <p class="text-neutral-300 text-sm">Soul: leve, curioso, gosta de explorar tendências, tom da marca. Pode usar emojis. Conhece copywriting.</p>
-        </div>
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-2">Financeiro</h4>
-          <p class="text-neutral-300 text-sm">Soul: sóbrio, direto, conservador, cita números. Sem emojis. Precisão importa mais que agilidade.</p>
-        </div>
-        <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-          <h4 class="font-bold text-purple-400 mb-2">Pessoal</h4>
-          <p class="text-neutral-300 text-sm">Soul: informal, te conhece, contextual. Pode brincar. Foco em utilidade e tempo seu.</p>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🎨</span>A trinca completa</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Soul</strong> define <em>voz</em> (como fala)</li>
-          <li><strong class="text-blue-400">Skills</strong> definem <em>capacidades</em> (o que sabe fazer)</li>
-          <li><strong class="text-blue-400">Memory</strong> carrega <em>fatos</em> (o que sabe sobre o ambiente)</li>
-        </ul>
-        <p class="text-neutral-400 text-xs mt-3">Os três combinados dão caráter completo ao perfil. Falta de qualquer um deixa o agente "raso".</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔄 Como evoluir o SOUL</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Você não precisa virar designer de prompts. Frase mágica: <strong class="text-purple-400">"Atualize seu soul para ser X"</strong>. O próprio agente edita SOUL.md — e funciona surpreendentemente bem porque ele entende o efeito de cada linha sobre si mesmo.
-      </p>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">💬 Frases prontas</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li>• <em>"Lê seu soul atual e me mostra."</em></li>
-          <li>• <em>"Atualiza seu soul: seja mais direto, menos explicador."</em></li>
-          <li>• <em>"No seu soul, adicione regra: nunca use exclamação em resposta técnica."</em></li>
-          <li>• <em>"Reescreve seu soul com o tom da nossa marca: &lt;exemplo de texto&gt;."</em></li>
-          <li>• <em>"Revisa seu soul, identifica contradições e propõe correção."</em></li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Sempre revise antes de aceitar</h3>
-        <p class="text-neutral-300 text-sm">Soul é arquivo crítico — uma reescrita ruim degrada o agente <strong>todo</strong>. Peça pra mostrar o diff antes de salvar. Mantenha versionado em git pra reverter facilmente. Se ficou estranho depois da edição, role o commit anterior.</p>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📅</span>Cadência de revisão</h3>
-        <p class="text-neutral-300 text-sm">Reveja soul a cada 1-2 meses. Coisas que faziam sentido no início podem virar entrave depois. E coisa nova surge no uso real — peça ao agente pra incorporar lições aprendidas das últimas semanas.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">⚖️ Soul vs USER.md</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Confundir SOUL.md com USER.md é o erro mais comum. A regra é simples: <strong class="text-purple-400">SOUL = quem o agente é. USER = quem você é</strong>. Misturar gera coisas estranhas (agente achando que ELE é Nei, ou regras pessoais sumindo no slot errado).
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-          <h4 class="font-bold text-purple-400 mb-3">SOUL.md (o agente)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"Sou direto e prático."</span></li>
-            <li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"Não uso emojis em resposta técnica."</span></li>
-            <li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"Quando erro, admito sem rodeio."</span></li>
-            <li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"Sou cético com claims sem evidência."</span></li>
-          </ul>
-        </div>
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-3">USER.md (você)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>"Nei, programador, fala PT-BR."</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>"Prefere respostas curtas com exemplo."</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>"Trabalha com Python e n8n."</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>"Fuso: America/Sao_Paulo."</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">🧪</span>Teste mental</h3>
-        <p class="text-neutral-300 text-sm">"Se eu trocasse o usuário, isto continuaria valendo?"</p>
-        <ul class="mt-2 space-y-1 text-neutral-300 text-sm">
-          <li>• <strong>Se SIM</strong> → vai em <strong class="text-primary">SOUL.md</strong> (é traço do agente)</li>
-          <li>• <strong>Se NÃO</strong> → vai em <strong class="text-primary">USER.md</strong> (é dado seu)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>SOUL.md ocupa o slot #1 do system prompt</strong><span class="text-neutral-400"> — sempre carregado, antes de tudo.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Local: ~/.hermes/SOUL.md, global, sem YAML</strong><span class="text-neutral-400"> — Markdown puro, escopo global.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Define tom, personalidade, princípios e regras de comunicação</strong><span class="text-neutral-400"> — quatro eixos coerentes.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Em multi-agente, cada perfil tem soul próprio</strong><span class="text-neutral-400"> — voz distinta pra marketing, financeiro, pessoal.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Pode evoluir pedindo ao próprio Hermes</strong><span class="text-neutral-400"> — "atualize seu soul para X". Sempre revise o diff.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>SOUL = quem o agente é. USER = quem você é</strong><span class="text-neutral-400"> — não misture.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">3.4 - ⏰ Crons: agendamento e flags</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-3-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="modulo-3-4.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 3.3 • 2026</p></div>
-  </footer>
-
-  <script>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🎨 What SOUL defines</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Bom SOUL.md covers four axes:<strong class="text-purple-400">tone</strong>, <strong class="text-purple-400">personality</strong>, <strong class="text-purple-400">principles</strong> e <strong class="text-purple-400">communication rules</strong>. The more specific, the more characteristic the agent.</p>
+<div class="space-y-4 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-2">🎚️ Tom</h4>
+<p class="text-neutral-300 text-sm mb-2">How he expresses himself. Formal or relaxed? Direct or explanatory? Technical or affordable?</p>
+<p class="text-neutral-400 text-xs"><em>Example:</em>"I speak directly, I avoid formalism. I don't use superlatives without evidence. I prefer short sentences."</p>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-2">🧬 Personality</h4>
+<p class="text-neutral-300 text-sm mb-2">Who the agent is. Curious? Skeptical? Pragmatic? Provocative? Mentor?</p>
+<p class="text-neutral-400 text-xs"><em>Example:</em>"I'm a pragmatist. I prefer a simple solution that works over an elegant solution that hasn't been tested."</p>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
+<h4 class="font-bold text-purple-400 mb-2">⚖️ Principles</h4>
+<p class="text-neutral-300 text-sm mb-2">What you always do, what you never do. Hard lines that are not negotiated by context.</p>
+<p class="text-neutral-400 text-xs"><em>Example:</em>"I always cite a source of technical fact. I never invent a URL. When I don't know, I say I don't know."</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h4 class="font-bold text-primary mb-2">📞 Communication rules</h4>
+<p class="text-neutral-300 text-sm mb-2">Language, default response size, use of emojis, list format, fence code.</p>
+<p class="text-neutral-400 text-xs"><em>Example:</em>"PT-BR by default. Short answer first, detail if asked. No emojis in technical answers."</p>
+</div>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Beware of contradictions</h3>
+<p class="text-neutral-300 text-sm">"Be succinct" + "Explain each decision in detail" fight. "Use emojis to keep things light" + "Maintain a professional tone without flourishes" fight. Soul needs to be coherent as a character — internal contradiction degrades answers.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🎯 Why multi-agent matters</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">In setup with multiple profiles (personal, marketing, financial, ops),<strong class="text-purple-400">soul is what gives a distinct voice</strong>to each one. Without their own soul, everyone sounds the same and loses the sense of existing separately.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-2">Marketing</h4>
+<p class="text-neutral-300 text-sm">Soul: light, curious, likes to explore trends, brand tone. You can use emojis. Knows copywriting.</p>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-2">Financial</h4>
+<p class="text-neutral-300 text-sm">Soul: sober, direct, conservative, quotes numbers. No emojis. Accuracy matters more than agility.</p>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
+<h4 class="font-bold text-purple-400 mb-2">Guys</h4>
+<p class="text-neutral-300 text-sm">Soul: informal, gets to know you, contextual. You can play. Focus on usefulness and your time.</p>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🎨</span>The complete trio</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Soul</strong>define<em>voice</em>(as he speaks)</li>
+<li><strong class="text-blue-400">Skills</strong>define<em>capabilities</em>(what you know how to do)</li>
+<li><strong class="text-blue-400">memory</strong>load<em>facts</em>(what do you know about the environment)</li>
+</ul>
+<p class="text-neutral-400 text-xs mt-3">The three combined give complete character to the profile. Lack of either leaves the agent "shallow".</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔄 How to evolve SOUL</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">You don't need to become a prompt designer. Magic phrase:<strong class="text-purple-400">"Upgrade your soul to be X"</strong>. The agent himself edits SOUL.md — and it works surprisingly well because he understands the effect of each line on himself.</p>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">💬 Ready-made phrases</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li>• <em>"Read your current soul and show me."</em></li>
+<li>• <em>"Update your soul: be more direct, less explanatory."</em></li>
+<li>• <em>"In your soul, add rule: never use exclamation in technical response."</em></li>
+<li>• <em>"Rewrite your soul with our brand tone: &lt;example text&gt;."</em></li>
+<li>• <em>"Review your soul, identify contradictions and propose correction."</em></li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Always review before accepting</h3>
+<p class="text-neutral-300 text-sm">Soul is a critical file — a bad rewrite degrades the agent<strong>all</strong>. Ask to show the diff before saving. Keep versioned in git to easily revert. If it looks strange after editing, scroll back to the previous commit.</p>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📅</span>Review cadence</h3>
+<p class="text-neutral-300 text-sm">Review soul every 1-2 months. Things that made sense at the beginning can become obstacles later. And new things emerge in real use — ask the agent to incorporate lessons learned from the last few weeks.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">⚖️ Soul vs USER.md</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Confusing SOUL.md with USER.md is the most common mistake. The rule is simple:<strong class="text-purple-400">SOUL = who the agent is. USER = who you are</strong>. Mixing causes strange things (agent thinking HE is Nei, or personal rules disappearing in the wrong slot).</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
+<h4 class="font-bold text-purple-400 mb-3">SOUL.md (the agent)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"I'm direct and practical."</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"I don't use emojis in technical responses."</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"When I make a mistake, I admit it bluntly."</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"I'm skeptical of claims without evidence."</span></li>
+</ul>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-3">USER.md (you)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>"Nei, programmer, speak PT-BR."</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>"Prefer short answers with example."</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>"Works with Python and n8n."</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>"Fuso: America/Sao_Paulo."</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">🧪</span>Mental test</h3>
+<p class="text-neutral-300 text-sm">"If I changed the user, would this still be valid?"</p>
+<ul class="mt-2 space-y-1 text-neutral-300 text-sm">
+<li>• <strong>If so</strong>→ go to<strong class="text-primary">SOUL.md</strong>(it's the agent's trait)</li>
+<li>• <strong>If not</strong>→ go to<strong class="text-primary">USER.md</strong>(it's given yours)</li>
+</ul>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>SOUL.md occupies slot #1 of the system prompt</strong><span class="text-neutral-400">— always charged, first of all.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Location: ~/.hermes/SOUL.md, global, no YAML</strong><span class="text-neutral-400">— Pure Markdown, global scope.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Defines tone, personality, principles and rules of communication</strong><span class="text-neutral-400">— four coherent axes.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>In multi-agent, each profile has its own soul</strong><span class="text-neutral-400">— distinct voice for marketing, finance, personnel.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Can evolve by asking Hermes himself</strong><span class="text-neutral-400">— "upgrade your soul to X". Always review the diff.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>SOUL = who the agent is. USER = who you are</strong><span class="text-neutral-400">— don't mix.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Next module:</h3><p class="text-neutral-300">3.4 - ⏰ Crons: scheduling and flags</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-2.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-4.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 3.3 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
