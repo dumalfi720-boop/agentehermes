@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trilha 4 - Segurança e Operação | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track 4 - Safety and Operation | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -64,493 +64,480 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🪽</span>
-            <span class="font-bold text-lg hidden sm:inline">Agente Hermes</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">TRILHA 4</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🛡️ Segurança e Operação</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Hermes mexe em chave, dinheiro e dados — então segurança não é opcional. Aqui você aprende a guardar tokens, blindar o servidor, dar só os privilégios necessários e auditar tudo de forma recorrente.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">4</div><div class="text-xs text-neutral-400">Módulos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">24</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">~2h</div><div class="text-xs text-neutral-400">Duração</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Inter.</div><div class="text-xs text-neutral-400">Nível</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- NAVEGACAO RAPIDA -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="#modulo-4-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🔐 Tokens e .env</h3>
-          <p class="text-xs text-neutral-400">hermes config set, container vs host</p>
-        </a>
-        <a href="#modulo-4-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🛡️ Firewall e portas</h3>
-          <p class="text-xs text-neutral-400">ufw, IP allowlist, SSH hardening</p>
-        </a>
-        <a href="#modulo-4-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.3</span><span class="text-xs text-neutral-500">~25 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🪪 Menor privilégio</h3>
-          <p class="text-xs text-neutral-400">Contas separadas, escopos mínimos</p>
-        </a>
-        <a href="#modulo-4-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">📋 Auditoria recorrente</h3>
-          <p class="text-xs text-neutral-400">Cron semanal, heartbeat, rotação</p>
-        </a>
-      </div>
-    </section>
-
-    <h2 class="text-2xl font-bold mb-6 pt-8 border-t border-dark-600">Conteúdo detalhado</h2>
-
-    <!-- MODULO 4.1 -->
-    <div id="modulo-4-1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🔐 Tokens, .env e hermes config set</h3>
-        <p class="text-neutral-400 text-sm">Onde colocar credenciais, qual .env o Hermes lê, como evitar que apareçam no histórico de chat e como manter logs sem vazar segredos.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">🚫</span>
-            <div><span class="font-medium">Por que NUNCA colar token no chat</span><span class="text-neutral-500 text-sm ml-2">- Histórico = persistência</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Tudo que você cola no chat do Hermes vai pro SQLite (sessions). Token colado fica indexado, pesquisável via session_search e copiado em backups. Para sempre.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Token vazado por descuido é o vetor de ataque mais comum. Você passa o aprendizado adiante, alguém com acesso ao SQLite (ou ao backup, ou a um log) puxa a chave.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Use sempre <code class="text-amber-400">hermes config set KEY value</code>. Se colou por engano, revogue a credencial imediatamente e gere outra. Não tente "limpar" o histórico — assuma vazado.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">⌨️</span>
-            <div><span class="font-medium">hermes config set KEY value</span><span class="text-neutral-500 text-sm ml-2">- Comando oficial pra .env</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Comando que escreve a variável diretamente em <code class="text-amber-400">/root/.hermes/.env</code> (dentro do container) sem passar pelo histórico de chat nem pelos logs.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o caminho seguro. O CLI lê o valor por stdin, persiste no .env e confirma sem ecoar. Funciona em laptop, VPS e Docker.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Exemplos: <code class="text-amber-400">hermes config set TELEGRAM_TOKEN xxx</code>, <code class="text-amber-400">hermes config set OPENROUTER_API_KEY xxx</code>. Quando rodando em Docker, exec no container antes: <code class="text-amber-400">docker exec -it hermes hermes config set ...</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🐳</span>
-            <div><span class="font-medium">.env do container vs .env do host</span><span class="text-neutral-500 text-sm ml-2">- Qual o Hermes lê</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Em Docker, o .env da raiz do projeto no host não chega ao processo. O Hermes lê o .env de <code class="text-amber-400">/root/.hermes/.env</code> dentro do container (volume montado em <code class="text-amber-400">~/.hermes</code> no host).</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a confusão #1 da comunidade. Você edita o .env "errado", reinicia, nada muda, acha que é bug do Hermes — é só caminho equivocado.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Confira com <code class="text-amber-400">docker exec -it hermes env | grep TELEGRAM</code>. Se a var não aparece, o volume não está montando direito ou o nome está errado. Logs de erro: <code class="text-amber-400">~/.hermes/logs/errors.log</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">📝</span>
-            <div><span class="font-medium">Editar/deletar via nano</span><span class="text-neutral-500 text-sm ml-2">- Quando o config set não basta</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Para apagar uma chave antiga, renomear ou organizar comentários, edite direto: <code class="text-amber-400">docker exec -it hermes nano /root/.hermes/.env</code>.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O <code>config set</code> só sobrescreve ou adiciona. Não tem subcomando "delete" amigável. Quando a chave deixa de ser usada (você trocou de provedor), apague manualmente pra reduzir superfície de ataque.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Sempre faça backup antes: <code class="text-amber-400">cp /root/.hermes/.env /root/.hermes/.env.bak</code>. Reinicie o gateway depois: <code class="text-amber-400">hermes gateway restart</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🎯</span>
-            <div><span class="font-medium">Tokens com escopo limitado</span><span class="text-neutral-500 text-sm ml-2">- Fine-grained vs classic</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">No GitHub você escolhe entre token clássico (acesso amplo) e fine-grained (escopo por repositório, expiração obrigatória). Na OpenAI você define scopes do project key.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Token vazado é prejuízo proporcional ao escopo. Token clássico full-access expõe todos seus repos. Fine-grained no repo X só expõe X.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Regra: comece com escopo mínimo, expanda quando o agente reclamar de "permission denied". Sempre defina expiração (90 dias é padrão razoável).</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🔇</span>
-            <div><span class="font-medium">Auto-redação de secrets nos logs</span><span class="text-neutral-500 text-sm ml-2">- Logs ficam limpos por padrão</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes redige automaticamente valores de variáveis de ambiente quando aparecem em mensagens de erro. <code class="text-amber-400">~/.hermes/logs/errors.log</code> raramente tem o token "real" exposto.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você pode pedir suporte, colar pedaços do log, postar no Discord da comunidade — sem vazar credencial. Mas confira sempre antes de compartilhar.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Auto-redação cobre nomes conhecidos (TELEGRAM_TOKEN, *_API_KEY). Valores hardcoded em código ou em mensagem livre podem escapar. Antes de postar log, abra e leia.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-4-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-4-1.html" class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 4.2 -->
-    <div id="modulo-4-2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🛡️ Firewall, portas e IP allowlist</h3>
-        <p class="text-neutral-400 text-sm">Sua VPS é alvo de scan automatizado o tempo todo. Defesa em camadas + ufw + SSH hardening reduzem o ruído de 99% e fecham as portas que ninguém precisa.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">🧅</span>
-            <div><span class="font-medium">Defesa em camadas</span><span class="text-neutral-500 text-sm ml-2">- Provedor + ufw + container</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Três camadas: 1) firewall do provedor (Hostinger/AWS), 2) ufw no host (Ubuntu), 3) isolamento do container Docker. Cada uma bloqueia algo que a outra deixou passar.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Confiar só em uma é frágil. Se você desligar ufw temporariamente para debugar e esquecer, o firewall do provedor ainda te cobre.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Princípio: nada exposto sem motivo claro. Toda porta aberta tem que ter justificativa documentada.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">🏰</span>
-            <div><span class="font-medium">Hostinger Upguard / firewall built-in</span><span class="text-neutral-500 text-sm ml-2">- Fechar antes da VM</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A Hostinger oferece firewall no próprio painel (e Upguard como serviço de monitoramento). Bloqueia tráfego antes de chegar na VM, reduzindo carga e log noise.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Não precisa esperar o pacote chegar no Ubuntu pra ser descartado. Provedor já filtra. Você economiza CPU, banda e linhas de log.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Mínimo recomendado: bloqueie tudo, abra só 22 (SSH), 80/443 (web) e portas específicas que você usa. Reveja a cada 90 dias.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🔥</span>
-            <div><span class="font-medium">ufw no Ubuntu</span><span class="text-neutral-500 text-sm ml-2">- enable, allow, status</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Uncomplicated Firewall — wrapper amigável de iptables. Em quatro linhas você fecha a VPS para o mundo: <code class="text-amber-400">ufw default deny</code>, <code class="text-amber-400">ufw allow 22</code>, <code class="text-amber-400">ufw allow 443</code>, <code class="text-amber-400">ufw enable</code>.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o controle mais granular que você tem do lado da VM. Fecha tráfego que chegou através do firewall do provedor (ex: outro container vizinho).</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Sempre <code class="text-amber-400">ufw allow 22</code> antes de <code class="text-amber-400">ufw enable</code> — sob pena de se trancar fora. Verifique com <code class="text-amber-400">ufw status verbose</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🔑</span>
-            <div><span class="font-medium">SSH hardening</span><span class="text-neutral-500 text-sm ml-2">- Chave-only, porta custom, fail2ban</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Três ajustes no <code class="text-amber-400">/etc/ssh/sshd_config</code>: <code class="text-amber-400">PasswordAuthentication no</code> (chave-only), <code class="text-amber-400">Port 2222</code> (não-padrão) e instalar fail2ban (bana IPs que tentam força bruta).</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">99% dos ataques contra VPS são scan automatizado de SSH na 22 com password fraca. Tirar 22 da equação descarta a maioria. fail2ban resolve o resto.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Antes de desabilitar password, garanta que sua chave funciona. Antes de mudar porta, abra ela no ufw e firewall do provedor. Teste numa segunda sessão antes de fechar a primeira.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">📍</span>
-            <div><span class="font-medium">IP allowlist quando possível</span><span class="text-neutral-500 text-sm ml-2">- Console, security groups</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Restringir SSH apenas a IPs conhecidos. Hostinger permite via console, AWS via Security Groups, ufw via <code class="text-amber-400">ufw allow from 1.2.3.4 to any port 22</code>.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Se você só acessa de dois lugares (casa + escritório), não tem motivo pro mundo inteiro tentar SSH. Reduz superfície de ataque a quase zero.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Cuidado com IP dinâmico — se sua casa muda IP toda madrugada, você vai se trancar fora. Solução: IP fixo via VPN ou Tailscale, e libera só o IP da VPN.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🤖</span>
-            <div><span class="font-medium">Pedir auditoria pro próprio Hermes</span><span class="text-neutral-500 text-sm ml-2">- "Audita firewall e propõe hardening"</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Você pede em linguagem natural: "Faça auditoria do firewall e proponha hardening." O Hermes roda <code>ufw status</code>, <code>ss -tlnp</code>, lista portas ativas, compara com o que faz sentido e sugere mudanças.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você não precisa virar SRE. Ele lista, explica e sugere. Você revisa e aprova. Mantém a operação dentro do seu escopo de tempo disponível.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Permissão para rodar comandos no terminal precisa estar configurada. Sempre revise antes de executar mudanças críticas (especialmente em SSH e firewall).</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-4-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-4-2.html" class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 4.3 -->
-    <div id="modulo-4-3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.3</span><span class="text-xs text-neutral-500">~25 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🪪 Princípio do menor privilégio + contas separadas</h3>
-        <p class="text-neutral-400 text-sm">Trate o agente como funcionário novo: você não dá acesso total no dia 1. Escopos mínimos, contas dedicadas, cartão limitado e chaves nomeadas por agente.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">👷</span>
-            <div><span class="font-medium">Trate como funcionário novo</span><span class="text-neutral-500 text-sm ml-2">- Confiança gradual</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Mentalidade de onboarding aplicada a software: dia 1 com escopo mínimo, expansão gradual conforme prova confiabilidade. Igual estagiário humano — só com latência menor.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Reduz blast radius. Erro do agente nas duas primeiras semanas é prejuízo limitado. Erro com permissão total no primeiro dia pode quebrar produção.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Dia 1: ler arquivos, mandar Telegram. Semana 2: commitar em repos específicos. Mês 1: deploy em staging. Mês 3: produção com revisão.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">📧</span>
-            <div><span class="font-medium">Contas separadas</span><span class="text-neutral-500 text-sm ml-2">- AgentMail, Gmail dedicado</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Crie email novo só pro agente. AgentMail é serviço criado pra isso; Gmail dedicado também serve. Nunca use sua conta principal.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Se a conta do agente for comprometida, o blast radius é só ela. Sua identidade pessoal, recovery de bancos, 2FA de tudo — fica intacto.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Use também para login em serviços de terceiros (OpenRouter, GitHub do agente). Centraliza credenciais "do agente" longe das suas.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🏷️</span>
-            <div><span class="font-medium">Chaves nomeadas por agente</span><span class="text-neutral-500 text-sm ml-2">- agente-pessoal, agente-marketing</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">No OpenRouter (e na maioria dos provedores), você cria chaves com nome. <code class="text-amber-400">hermes-pessoal</code>, <code class="text-amber-400">hermes-marketing</code>, <code class="text-amber-400">hermes-financeiro</code> — uma por agente.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quando algo dá errado, você sabe qual agente queimou tokens. Pode revogar uma chave sem afetar os outros. Auditoria de gasto fica granular.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Nunca compartilhe a mesma chave entre Hermes diferentes. Mesmo que dê preguiça, é o tipo de atalho que se paga caro depois.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">💳</span>
-            <div><span class="font-medium">Cartão de crédito limitado</span><span class="text-neutral-500 text-sm ml-2">- Virtual card + hard cap</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Use cartão virtual (Nubank, Revolut, Privacy.com) com limite pequeno só pras assinaturas do agente. Configure alerta de gasto e hard cap mensal no provedor.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Loop infinito de uma skill mal escrita pode queimar centenas de dólares numa noite. Hard cap impede. Alerta avisa antes do estrago.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">No OpenRouter: defina <code class="text-amber-400">monthly limit</code> por chave. Na OpenAI: <code class="text-amber-400">usage limits</code> por project. No cartão virtual: limite hard de R$ 200/mês para agente experimental.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">✋</span>
-            <div><span class="font-medium">Permissões granulares</span><span class="text-neutral-500 text-sm ml-2">- Once / session / always</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Quando o Hermes pede para rodar comando ou usar tool sensível, ele oferece três níveis: aprovar uma vez, aprovar a sessão inteira, ou aprovar pra sempre.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada escolha tem trade-off. <code class="text-amber-400">once</code> é seguro mas chato (toda hora pergunta). <code class="text-amber-400">always</code> é cômodo mas vira backdoor permanente. <code class="text-amber-400">session</code> é o meio termo.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Regra: comandos destrutivos (<code>rm -rf</code>, <code>git push --force</code>) → <strong>once</strong>. Comandos de leitura (<code>ls</code>, <code>cat</code>) → <strong>always</strong>. Resto → <strong>session</strong>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🔀</span>
-            <div><span class="font-medium">Multi-agente = múltiplas chaves</span><span class="text-neutral-500 text-sm ml-2">- Nunca compartilhar credenciais</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Cada Hermes (pessoal, marketing, financeiro) deve ter seu próprio bloco de credenciais isolado. Containers separados, .env separados, chaves separadas, perfis separados.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Compromisso de um agente não cascateia. Auditoria de cada um é limpa. Você pode aposentar um agente sem mexer nos outros.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Padrão de docker-compose: um service por agente, com volume <code class="text-amber-400">~/.hermes-pessoal</code>, <code class="text-amber-400">~/.hermes-marketing</code>, etc. Documente quem tem acesso a quê em <code>SECURITY.md</code>.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-4-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-4-3.html" class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 4.4 -->
-    <div id="modulo-4-4" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">📋 Auditoria recorrente + skill semanal</h3>
-        <p class="text-neutral-400 text-sm">Segurança que depende da sua memória falha. Cron + skill = auditoria que acontece sozinha. Heartbeat de saúde, rotação de tokens e pós-incidente que vira aprendizado.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">⏰</span>
-            <div><span class="font-medium">Por que automação importa</span><span class="text-neutral-500 text-sm ml-2">- Você não esquece</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Auditoria manual é boa nas duas primeiras semanas. Depois, vira "vou fazer no fim de semana" e nunca mais. Cron resolve: máquina não esquece, não cansa, não posterga.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Segurança é problema de hábito. Se depende da sua disciplina, falha. Se depende da máquina, funciona. Você só revisa o relatório.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Frequência ideal: pesado uma vez por semana, leve a cada 5 minutos. Intervalo curto demais vira ruído ignorado. Longo demais perde o evento.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">📜</span>
-            <div><span class="font-medium">Skill auditoria-vps</span><span class="text-neutral-500 text-sm ml-2">- Portas, processos, disco, logs</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Skill em <code class="text-amber-400">~/.hermes/skills/auditoria-vps/SKILL.md</code> que checa: portas abertas (<code>ss -tlnp</code>), processos suspeitos (top consumidores), disco (<code>df -h</code>), logs estranhos (auth.log, syslog).</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Procedimento claro = execução previsível. Você revisa um relatório consistente, não tenta lembrar do nada o que checar.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">SKILL.md tem YAML front matter (name, description, tags). Procedure lista os checks. Verification confirma que rodou. Pitfalls anota falsos-positivos comuns.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">📅</span>
-            <div><span class="font-medium">Cron semanal de segurança</span><span class="text-neutral-500 text-sm ml-2">- Domingo 9h, relatório no Telegram</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Comando: <code class="text-amber-400">/cron add "every Sunday at 09:00" "Rode auditoria-vps e me mande o relatório no Telegram" --skill auditoria-vps</code>.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Domingo 9h é o slot ideal: você acorda no fim de semana com café, lê o relatório, age se for o caso. Sem pressão da semana de trabalho.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Use <code class="text-amber-400">--skill</code> para injetar a skill na sessão fresh. <code class="text-amber-400">--workdir</code> se houver contexto específico de pasta. <code class="text-amber-400">--deliver telegram</code> garante a entrega.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">💓</span>
-            <div><span class="font-medium">Cron a cada 5 min em --no-agent</span><span class="text-neutral-500 text-sm ml-2">- Heartbeat de RAM/disco</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Modo <code class="text-amber-400">--no-agent</code> roda script sem chamar LLM. Custo zero. Um script Bash checa RAM e disco, sai silencioso se OK, retorna erro se passar do threshold.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Watchdog barato. Você descobre antes do site cair. Sem alerta = tudo bem. Alerta = ação imediata. Sinal-ruído altíssimo.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Comando: <code class="text-amber-400">hermes cron create "every 5m" --no-agent --script memory-watchdog.sh --deliver telegram --name "memory-watchdog"</code>. Script <code>.sh</code> roda em <code>/bin/bash</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🔄</span>
-            <div><span class="font-medium">Rotação de tokens</span><span class="text-neutral-500 text-sm ml-2">- Lembrete trimestral</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A cada 90 dias, gerar novas chaves (GitHub, OpenRouter, Telegram bot se necessário) e revogar as antigas. Cron lembra; você executa.</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Token vazado meses atrás e não trocado é vulnerabilidade silenciosa. Rotação periódica garante que mesmo um leak não-detectado tem janela limitada.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Cron: <code class="text-amber-400">/cron add "every 90 days" "Rote os tokens GitHub, OpenRouter e Telegram. Avise quais foram trocados."</code>. Documente cada rotação na MEMORY.md.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">📒</span>
-            <div><span class="font-medium">Pós-incidente vira MEMORY.md</span><span class="text-neutral-500 text-sm ml-2">- "Não repetir esse erro"</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-amber-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Quando algo deu errado (token vazou, cron consumiu loop infinito, comando destrutivo aprovou sem revisar), peça ao agente: "Salva isso na MEMORY.md como lição".</p></div>
-              <div><span class="text-amber-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a forma mais barata de fazer pós-mortem. Próxima sessão começa lembrando. Reduz reincidência. Vira aprendizado persistente.</p></div>
-              <div><span class="text-amber-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Padrão de entrada: data + sintoma + causa-raiz + ação de correção. Limite ~800 tokens — entradas antigas saem quando memória enche, mas o padrão persiste.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-4-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-4-4.html" class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- NAV ENTRE TRILHAS -->
-    <div class="flex flex-col sm:flex-row gap-4 mt-12">
-      <a href="../trilha3/index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Trilha anterior: Pilares</a>
-      <a href="../trilha5/index.html" class="flex-1 text-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors">Próxima trilha: Comparações →</a>
-    </div>
-  </main>
-
-  <!-- MODAIS -->
-  <div id="modal-4-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.1</span><span class="font-semibold">Tokens e .env</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-4-1.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-4-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.2</span><span class="font-semibold">Firewall e portas</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-4-2.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-4-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.3</span><span class="font-semibold">Menor privilégio</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-4-3.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-4-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.4</span><span class="font-semibold">Auditoria recorrente</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-4-4.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Trilha 4 • 2026</p></div>
-  </footer>
-
-  <script>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🪽</span>
+<span class="font-bold text-lg hidden sm:inline">Agent Hermes</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10" href="index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">TRACK 4</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🛡️ Security and Operation</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Hermes handles keys, money and data — so security is not optional. Here you learn how to store tokens, shield the server, give only the necessary privileges and audit everything on a recurring basis.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">4</div><div class="text-xs text-neutral-400">Modules</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">24</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">~2h</div><div class="text-xs text-neutral-400">Duration</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Inter.</div><div class="text-xs text-neutral-400">Level</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+QUICK NAVIGATION
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Trail map</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all" href="#modulo-4-1">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🔐 Tokens and .env</h3>
+<p class="text-xs text-neutral-400">hermes config set, container vs host</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all" href="#modulo-4-2">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🛡️ Firewall and ports</h3>
+<p class="text-xs text-neutral-400">ufw, IP allowlist, SSH hardening</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all" href="#modulo-4-3">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.3</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🪪 Least Privilege</h3>
+<p class="text-xs text-neutral-400">Separate accounts, minimum scopes</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all" href="#modulo-4-4">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">📋 Recurring audit</h3>
+<p class="text-xs text-neutral-400">Weekly cron, heartbeat, rotation</p>
+</a>
+</div>
+</section>
+<h2 class="text-2xl font-bold mb-6 pt-8 border-t border-dark-600">Detailed content</h2>
+MODULE 4.1
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-4-1">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🔐 Tokens, .env and hermes config set</h3>
+<p class="text-neutral-400 text-sm">Where to put credentials, which .env does Hermes read, how to prevent them from appearing in chat history, and how to keep logs without leaking secrets.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🚫</span>
+<div><span class="font-medium">Why NEVER paste tokens in chat</span><span class="text-neutral-500 text-sm ml-2">- History = persistence</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Everything you paste into the Hermes chat goes to SQLite (sessions). Pasted token is indexed, searchable via session_search and copied in backups. Forever.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Carelessly leaked tokens are the most common attack vector. You pass the learning along, someone with access to SQLite (or the backup, or a log) pulls the key.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Always use<code class="text-amber-400" data-notranslate="True">hermes config set KEY value</code>. If you pasted by mistake, revoke the credential immediately and generate a new one. Don't try to "clear" the history — assume it was leaked.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">⌨️</span>
+<div><span class="font-medium">hermes config set KEY value</span><span class="text-neutral-500 text-sm ml-2">- Official command for .env</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Command that writes the variable directly to<code class="text-amber-400" data-notranslate="True">/root/.hermes/.env</code>(inside the container) without going through the chat history or logs.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's the safe way. The CLI reads the value from stdin, persists it to .env, and commits without echoing. Works on laptop, VPS and Docker.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Examples:<code class="text-amber-400" data-notranslate="True">hermes config set TELEGRAM_TOKEN xxx</code>, <code class="text-amber-400" data-notranslate="True">hermes config set OPENROUTER_API_KEY xxx</code>. When running in Docker, execute in the container before:<code class="text-amber-400" data-notranslate="True">docker exec -it hermes hermes config set ...</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🐳</span>
+<div><span class="font-medium">.env from container vs .env from host</span><span class="text-neutral-500 text-sm ml-2">- Which Hermes reads</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">In Docker, the .env from the project root on the host does not reach the process. Hermes reads the .env of<code class="text-amber-400" data-notranslate="True">/root/.hermes/.env</code>inside the container (volume mounted in<code class="text-amber-400" data-notranslate="True">~/.hermes</code>on the host).</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's the community's #1 confusion. You edit the "wrong" .env, restart, nothing changes, you think it's a Hermes bug — it's just the wrong path.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Check with<code class="text-amber-400" data-notranslate="True">docker exec -it hermes env | grep TELEGRAM</code>. If the var does not appear, the volume is not mounting correctly or the name is wrong. Error logs:<code class="text-amber-400" data-notranslate="True">~/.hermes/logs/errors.log</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">📝</span>
+<div><span class="font-medium">Edit/delete via nano</span><span class="text-neutral-500 text-sm ml-2">- When the config set is not enough</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">To delete an old key, rename it or organize comments, edit directly:<code class="text-amber-400" data-notranslate="True">docker exec -it hermes nano /root/.hermes/.env</code>.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">O <code data-notranslate="True">config set</code>just overwrite or add. It has no friendly "delete" subcommand. When the key is no longer used (you have switched providers), delete it manually to reduce the attack surface.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Always backup before:<code class="text-amber-400" data-notranslate="True">cp /root/.hermes/.env /root/.hermes/.env.bak</code>. Restart the gateway afterwards:<code class="text-amber-400" data-notranslate="True">hermes gateway restart</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🎯</span>
+<div><span class="font-medium">Limited Scope Tokens</span><span class="text-neutral-500 text-sm ml-2">- Fine-grained vs classic</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">On GitHub you choose between classic token (broad access) and fine-grained (scope per repository, mandatory expiration). At OpenAI you define project key scopes.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Leaked token is a loss proportional to the scope. Classic full-access token exposes all your repos. Fine-grained in repo X only exposes X.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Rule: start with minimum scope, expand when the agent complains about "permission denied". Always set expiration (90 days is a reasonable default).</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🔇</span>
+<div><span class="font-medium">Self-writing secrets in logs</span><span class="text-neutral-500 text-sm ml-2">- Logs are clear by default</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Hermes automatically redacts environment variable values ​​when they appear in error messages.<code class="text-amber-400" data-notranslate="True">~/.hermes/logs/errors.log</code>rarely has the "real" token exposed.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">You can ask for support, paste log chunks, post to the community Discord — without leaking credentials. But always check before sharing.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Self-redaction covers known names (TELEGRAM_TOKEN, *_API_KEY). Hardcoded values ​​in code or free message may escape. Before posting log, open and read.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-4-1')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors" href="modulo-4-1.html">See Full</a>
+</div>
+</div>
+MODULE 4.2
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-4-2">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🛡️ Firewall, ports and IP allowlist</h3>
+<p class="text-neutral-400 text-sm">Your VPS is subject to automated scanning all the time. Layered defense + ufw + SSH hardening reduces noise by 99% and closes ports that no one needs.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🧅</span>
+<div><span class="font-medium">Layered defense</span><span class="text-neutral-500 text-sm ml-2">- Provider + ufw + container</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Three layers: 1) provider firewall (Hostinger/AWS), 2) ufw on the host (Ubuntu), 3) Docker container isolation. Each blocks something that the other missed.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Trusting just one is fragile. If you turn off ufw temporarily to debug and forget about it, the provider's firewall still has you covered.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Principle: nothing exposed without a clear reason. Every open door must have documented justification.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">🏰</span>
+<div><span class="font-medium">Hostinger Upguard/built-in firewall</span><span class="text-neutral-500 text-sm ml-2">- Close before VM</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Hostinger offers a firewall in its own panel (and Upguard as a monitoring service). Blocks traffic before reaching the VM, reducing load and log noise.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">You don't need to wait for the package to arrive in Ubuntu to be discarded. Provider already filters. You save CPU, bandwidth and log lines.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Recommended minimum: block everything, open only 22 (SSH), 80/443 (web) and specific ports you use. Review every 90 days.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🔥</span>
+<div><span class="font-medium">ufw on Ubuntu</span><span class="text-neutral-500 text-sm ml-2">- enable, allow, status</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Uncomplicated Firewall — user-friendly iptables wrapper. In four lines you close the VPS to the world:<code class="text-amber-400" data-notranslate="True">ufw default deny</code>, <code class="text-amber-400" data-notranslate="True">ufw allow 22</code>, <code class="text-amber-400" data-notranslate="True">ufw allow 443</code>, <code class="text-amber-400" data-notranslate="True">ufw enable</code>.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's the most granular control you have on the VM side. Closes traffic that arrived through the provider's firewall (e.g. another neighboring container).</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Always<code class="text-amber-400" data-notranslate="True">ufw allow 22</code>before<code class="text-amber-400" data-notranslate="True">ufw enable</code>— under penalty of being locked out. Check with<code class="text-amber-400" data-notranslate="True">ufw status verbose</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🔑</span>
+<div><span class="font-medium">SSH hardening</span><span class="text-neutral-500 text-sm ml-2">- Key-only, custom port, fail2ban</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Three adjustments in<code class="text-amber-400" data-notranslate="True">/etc/ssh/sshd_config</code>: <code class="text-amber-400" data-notranslate="True">PasswordAuthentication no</code>(key-only),<code class="text-amber-400" data-notranslate="True">Port 2222</code>(non-default) and install fail2ban (ban IPs that try to brute force).</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">99% of attacks against VPS are automated SSH scans on 22 with a weak password. Taking 22 out of the equation rules out the majority. fail2ban solves the rest.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Before disabling password, ensure that your key works. Before changing the port, open it in the provider's ufw and firewall. Test in a second session before closing the first.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">📍</span>
+<div><span class="font-medium">IP allowlist when possible</span><span class="text-neutral-500 text-sm ml-2">- Console, security groups</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Restrict SSH to known IPs only. Hostinger allows via console, AWS via Security Groups, ufw via<code class="text-amber-400" data-notranslate="True">ufw allow from 1.2.3.4 to any port 22</code>.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">If you only access it from two places (home + office), there's no reason for the whole world to try SSH. Reduces attack surface to almost zero.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Be careful with dynamic IP — if your house changes IP every morning, you'll be locked out. Solution: Fixed IP via VPN or Tailscale, and only releases the VPN IP.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🤖</span>
+<div><span class="font-medium">Request an audit from Hermes himself</span><span class="text-neutral-500 text-sm ml-2">- "Audites firewall and proposes hardening"</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">You ask in natural language: "Audit the firewall and propose hardening." Hermes rolls<code data-notranslate="True">ufw status</code>, <code data-notranslate="True">ss -tlnp</code>, lists active ports, compares them with what makes sense and suggests changes.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">You don't need to become an SRE. It lists, explains and suggests. You review and approve. Keeps the operation within its available time scope.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Permission to run commands in the terminal must be configured. Always review before making critical changes (especially to SSH and firewall).</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-4-2')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors" href="modulo-4-2.html">See Full</a>
+</div>
+</div>
+MODULE 4.3
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-4-3">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.3</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🪪 Principle of least privilege + separate accounts</h3>
+<p class="text-neutral-400 text-sm">Treat the agent like a new employee: you don't give full access on day 1. Minimum scopes, dedicated accounts, limited card, and agent-appointed keys.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">👷</span>
+<div><span class="font-medium">Treat like a new employee</span><span class="text-neutral-500 text-sm ml-2">- Gradual confidence</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Onboarding mentality applied to software: day 1 with minimum scope, gradual expansion as reliability is proven. Just like a human intern — just with lower latency.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Reduces blast radius. Agent error in the first two weeks is limited loss. Error with full permission on the first day can break production.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Day 1: read files, send Telegram. Week 2: commit to specific repos. Month 1: deployment in staging. Month 3: production with review.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">📧</span>
+<div><span class="font-medium">Separate accounts</span><span class="text-neutral-500 text-sm ml-2">- AgentMail, dedicated Gmail</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Create a new email just for the agent. AgentMail is a service created for this purpose; Dedicated Gmail also works. Never use your main account.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">If the agent's account is compromised, the blast radius is only it. Your personal identity, bank recovery, 2FA of everything — stays intact.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Also use for login to third-party services (OpenRouter, Agent's GitHub). Centralizes "agent's" credentials away from yours.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🏷️</span>
+<div><span class="font-medium">Agent-named keys</span><span class="text-neutral-500 text-sm ml-2">- staff-agent, marketing-agent</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">In OpenRouter (and most providers), you create named keys.<code class="text-amber-400" data-notranslate="True">hermes-pessoal</code>, <code class="text-amber-400" data-notranslate="True">hermes-marketing</code>, <code class="text-amber-400" data-notranslate="True">hermes-financeiro</code>— one per agent.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">When something goes wrong, you know which agent burned tokens. You can revoke one key without affecting others. Spend audit becomes granular.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Never share the same key between different Hermes. Even if it's lazy, it's the kind of shortcut that pays dearly later.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">💳</span>
+<div><span class="font-medium">Limited credit card</span><span class="text-neutral-500 text-sm ml-2">- Virtual card + hard cap</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Use a virtual card (Nubank, Revolut, Privacy.com) with a small limit just for agent subscriptions. Configure expense alert and monthly hard cap on the provider.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Infinite loop of a poorly written skill can burn hundreds of dollars in one night. Hard cap prevents it. Alert warns you before damage occurs.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">In OpenRouter: set<code class="text-amber-400" data-notranslate="True">monthly limit</code>per key. From OpenAI:<code class="text-amber-400" data-notranslate="True">usage limits</code>by project. On the virtual card: hard limit of R$200/month for experimental agents.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">✋</span>
+<div><span class="font-medium">Granular Permissions</span><span class="text-neutral-500 text-sm ml-2">-Once/session/always</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">When Hermes asks to run a command or use a sensitive tool, it offers three levels: approve once, approve the entire session, or approve forever.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Each choice has trade-offs.<code class="text-amber-400" data-notranslate="True">once</code>It's safe but annoying (asks all the time).<code class="text-amber-400" data-notranslate="True">always</code>It's convenient but becomes a permanent backdoor.<code class="text-amber-400" data-notranslate="True">session</code>is the middle ground.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Rule: destructive commands (<code data-notranslate="True">rm -rf</code>, <code data-notranslate="True">git push --force</code>) → <strong>once</strong>. Read commands (<code data-notranslate="True">ls</code>, <code data-notranslate="True">cat</code>) → <strong>always</strong>. Rest →<strong>session</strong>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🔀</span>
+<div><span class="font-medium">Multi-agent = multiple keys</span><span class="text-neutral-500 text-sm ml-2">- Never share credentials</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Each Hermes (personal, marketing, finance) should have its own isolated credential block. Separate containers, separate .env, separate keys, separate profiles.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">An agent's commitment does not cascade. Each one's audit is clean. You can retire an agent without changing the others.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">docker-compose pattern: one service per agent, with volume<code class="text-amber-400" data-notranslate="True">~/.hermes-pessoal</code>, <code class="text-amber-400" data-notranslate="True">~/.hermes-marketing</code>, etc. Document who has access to what in<code data-notranslate="True">SECURITY.md</code>.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-4-3')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors" href="modulo-4-3.html">See Full</a>
+</div>
+</div>
+MODULE 4.4
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-4-4">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="text-2xl font-bold mb-2">📋 Recurring audit + weekly skill</h3>
+<p class="text-neutral-400 text-sm">Security that depends on your failed memory. Cron + skill = audit that happens alone. Health heartbeat, token rotation and post-incident learning.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">⏰</span>
+<div><span class="font-medium">Why automation matters</span><span class="text-neutral-500 text-sm ml-2">- You don't forget</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Manual auditing is good for the first two weeks. Then it became "I'll do it on the weekend" and never again. Cron solves it: the machine doesn’t forget, it doesn’t get tired, it doesn’t postpone.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Security is a problem of habit. If it depends on your discipline, you fail. If it depends on the machine, it works. You just review the report.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Ideal frequency: heavy once a week, light every 5 minutes. Too short an interval becomes ignored noise. Too long loses the event.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">📜</span>
+<div><span class="font-medium">Skill audit-vps</span><span class="text-neutral-500 text-sm ml-2">- Ports, processes, disk, logs</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Skill in<code class="text-amber-400" data-notranslate="True">~/.hermes/skills/auditoria-vps/SKILL.md</code>which checks: open doors (<code data-notranslate="True">ss -tlnp</code>), suspicious processes (top consumers), disk (<code data-notranslate="True">df -h</code>), strange logs (auth.log, syslog).</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Clear procedure = predictable execution. You review a consistent report, you don't try to remember what to check out of nowhere.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">SKILL.md has YAML front matter (name, description, tags). Procedure lists the checks. Verification confirms that it ran. Pitfalls notes common false positives.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">📅</span>
+<div><span class="font-medium">Security Weekly Cron</span><span class="text-neutral-500 text-sm ml-2">- Sunday 9am, report on Telegram</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Command:<code class="text-amber-400" data-notranslate="True">/cron add "every Sunday at 09:00" "Rode auditoria-vps e me mande o relatório no Telegram" --skill auditoria-vps</code>.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Sunday 9am is the ideal slot: you wake up on the weekend with coffee, read the report, take action if necessary. No pressure of the work week.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Use<code class="text-amber-400" data-notranslate="True">--skill</code>to inject the skill into the fresh session.<code class="text-amber-400" data-notranslate="True">--workdir</code>if there is folder specific context.<code class="text-amber-400" data-notranslate="True">--deliver telegram</code>guarantees delivery.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">💓</span>
+<div><span class="font-medium">Cron every 5 min in --no-agent</span><span class="text-neutral-500 text-sm ml-2">- RAM/disk heartbeat</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Mode<code class="text-amber-400" data-notranslate="True">--no-agent</code>runs script without calling LLM. Zero cost. A Bash script checks RAM and disk, exits silently if OK, returns error if it passes the threshold.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Cheap watchdog. You find out before the site goes down. No alert = okay. Alert = immediate action. Very high signal-to-noise.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Command:<code class="text-amber-400" data-notranslate="True">hermes cron create "every 5m" --no-agent --script memory-watchdog.sh --deliver telegram --name "memory-watchdog"</code>. Script<code data-notranslate="True">.sh</code>wheel in<code data-notranslate="True">/bin/bash</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🔄</span>
+<div><span class="font-medium">Token rotation</span><span class="text-neutral-500 text-sm ml-2">- Quarterly reminder</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Every 90 days, generate new keys (GitHub, OpenRouter, Telegram bot if necessary) and revoke the old ones. Cron remembers; you perform.</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Token leaked months ago and not exchanged is a silent vulnerability. Periodic rotation ensures that even an undetected leak has a limited window.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Cron:<code class="text-amber-400" data-notranslate="True">/cron add "every 90 days" "Rote os tokens GitHub, OpenRouter e Telegram. Avise quais foram trocados."</code>. Document each rotation in MEMORY.md.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">📒</span>
+<div><span class="font-medium">Post-incident becomes MEMORY.md</span><span class="text-neutral-500 text-sm ml-2">- "Don't repeat this mistake"</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-amber-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">When something went wrong (token leaked, cron consumed infinite loop, destructive command approved without review), ask the agent: "Save this to MEMORY.md as a lesson".</p></div>
+<div><span class="text-amber-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's the cheapest way to do postmortems. Next session starts with remembering. Reduces recidivism. It becomes persistent learning.</p></div>
+<div><span class="text-amber-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Input pattern: date + symptom + root cause + correction action. Limit ~800 tokens — old entries are dropped when memory fills, but the pattern persists.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-4-4')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors" href="modulo-4-4.html">See Full</a>
+</div>
+</div>
+NAV BETWEEN TRACKS
+<div class="flex flex-col sm:flex-row gap-4 mt-12">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../trilha3/index.html">← Previous trail: Pilares</a>
+<a class="flex-1 text-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors" href="../trilha5/index.html">Next track: Comparisons →</a>
+</div>
+</main>
+MODES
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-4-1" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.1</span><span class="font-semibold">Tokens and .env</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-4-1.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-4-2" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.2</span><span class="font-semibold">Firewall and ports</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-4-2.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-4-3" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.3</span><span class="font-semibold">Least privilege</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-4-3.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-4-4" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.4</span><span class="font-semibold">Recurring audit</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-4-4.html"></iframe></div></div>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Track 4 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
       const explanation = topicItem.querySelector('.topic-explanation');
