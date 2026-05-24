@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3.4 Crons: agendamento e flags | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>3.4 Crons: scheduling and flags | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -65,318 +65,294 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-purple-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-purple-400">Trilha 3</a><span>/</span>
-      <span class="text-purple-400">Módulo 3.4</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.4</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">⏰ Crons: agendamento e flags</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Crons transformam o Hermes de reativo em proativo. Sessão fresh por execução, file lock contra double-run, flags --workdir, --no-agent, --deliver, --skill.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Médio</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🚀 Reativo → proativo: sessão fresh por execução</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Cron é o que transforma o Hermes em assistente <strong class="text-purple-400">proativo</strong>. Sem cron, ele só responde quando você fala. Com cron, ele dispara em horários definidos, abre <strong class="text-purple-400">sessão fresh</strong> de AIAgent, executa o prompt e entrega o resultado.
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-purple-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a><span>/</span>
+<span class="text-purple-400">Module 3.4</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.4</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">⏰ Crons: scheduling and flags</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Crons transform Hermes from reactive to proactive. Session fresh per run, file lock against double-run, flags --workdir, --no-agent, --deliver, --skill.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">35</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Average</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Practice</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🚀 Reactive → proactive: fresh session per run</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Cron is what turns Hermes into an assistant<strong class="text-purple-400">proactive</strong>. Without cron, it only responds when you speak. With cron, it triggers at defined times, opens<strong class="text-purple-400">fresh session</strong>from AIAgent, executes the prompt and delivers the result.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">⚙️</span>How each tick works</h3>
+<ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
+<li>Load jobs from<code class="text-blue-400" data-notranslate="True">~/.hermes/cron/jobs.json</code></li>
+<li>Check<code class="text-blue-400" data-notranslate="True">next_run_at</code>vs current time</li>
+<li>Start a fresh AIAgent session for each job due</li>
+<li>Injects attached skills (--skill)</li>
+<li>Run the prompt until completion</li>
+<li>Deliver the final response to the destination (--deliver)</li>
+<li>Update metadata and next scheduled time</li>
+</ol>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Session fresh = self-contained prompt</h3>
+<p class="text-neutral-300 text-sm">The session is new with each shot. There is no previous conversation history. SOUL.md, USER.md, and MEMORY.md are loaded, but any context beyond that needs to be at the cron prompt.<strong>"Continue what you were doing"</strong>It doesn’t work — there’s nothing to go on.</p>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🔒</span>File lock prevents double-run</h3>
+<p class="text-neutral-300 text-sm">The scheduler writes to<code class="text-emerald-400" data-notranslate="True">~/.hermes/cron/.tick.lock</code>every tick. If a tick takes longer than the interval, the next one does NOT fire in parallel — wait. This avoids running the same task twice at the same time (classic in integration).</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">💬 Natural syntax via chat</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The fastest way to create cron is directly via chat (Telegram, Discord, terminal). Command<code class="text-purple-400" data-notranslate="True">/cron add</code>accepts expressions in<strong class="text-purple-400">natural language</strong>.
       </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">⚙️</span>Como cada tick funciona</h3>
-        <ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
-          <li>Carrega jobs de <code class="text-blue-400">~/.hermes/cron/jobs.json</code></li>
-          <li>Verifica <code class="text-blue-400">next_run_at</code> vs horário atual</li>
-          <li>Inicia sessão fresh de AIAgent pra cada job vencido</li>
-          <li>Injeta skills anexadas (--skill)</li>
-          <li>Executa o prompt até conclusão</li>
-          <li>Entrega a resposta final no destino (--deliver)</li>
-          <li>Atualiza metadados e próximo horário agendado</li>
-        </ol>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Sessão fresh = prompt auto-contido</h3>
-        <p class="text-neutral-300 text-sm">A sessão é nova a cada disparo. Não há histórico de conversa anterior. SOUL.md, USER.md e MEMORY.md ficam carregados, mas qualquer contexto além disso precisa estar no prompt do cron. <strong>"Continua o que estava fazendo"</strong> não funciona — não tem o que continuar.</p>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🔒</span>File lock previne double-run</h3>
-        <p class="text-neutral-300 text-sm">O scheduler escreve em <code class="text-emerald-400">~/.hermes/cron/.tick.lock</code> a cada tick. Se um tick demora mais que o intervalo, o próximo NÃO dispara em paralelo — espera. Isso evita rodar a mesma tarefa duas vezes ao mesmo tempo (clássico em integração).</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">💬 Sintaxe natural via chat</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O caminho mais rápido pra criar cron é direto pelo chat (Telegram, Discord, terminal). Comando <code class="text-purple-400">/cron add</code> aceita expressões em <strong class="text-purple-400">linguagem natural</strong>.
-      </p>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Exemplos prontos</h3>
-<pre><code>/cron add 30m "Remind me to check the build"
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Ready-made examples</h3>
+<pre data-notranslate="True"><code data-notranslate="True">/cron add 30m "Remind me to check the build"
 /cron add "every 2h" "Check server status"
 /cron add "every 1h" "Summarize new feed items" --skill blogwatcher
 /cron add "every 1h" "Use both skills" --skill blogwatcher --skill maps
 /cron add "every 1d at 09:00" "Resumo do dia + agenda"</code></pre>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-2">Durações relativas</h4>
-          <ul class="space-y-1 text-neutral-300 text-sm">
-            <li><code>30m</code>, <code>2h</code>, <code>1d</code> → daqui a X tempo</li>
-            <li>Útil pra lembretes pontuais</li>
-          </ul>
-        </div>
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-2">Recorrência natural</h4>
-          <ul class="space-y-1 text-neutral-300 text-sm">
-            <li><code>"every 2h"</code> → recorrência</li>
-            <li><code>"every 1d at 09:00"</code> → diário com horário</li>
-            <li>Útil pra rotinas</li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Comandos úteis</h3>
-        <ul class="space-y-1 text-neutral-300 text-sm">
-          <li>• <code class="text-primary">/cron list</code> — vê crons ativos</li>
-          <li>• <code class="text-primary">/cron remove &lt;id&gt;</code> — remove cron</li>
-          <li>• <code class="text-primary">/cron pause &lt;id&gt;</code> / <code class="text-primary">/cron resume &lt;id&gt;</code></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🖥️ CLI standalone: hermes cron create</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Mesma capacidade via terminal. Útil pra <strong class="text-purple-400">scripts de provisionamento</strong> (infra-as-code) que recriam todos os crons numa máquina nova de uma vez.
-      </p>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Exemplo CLI</h3>
-<pre><code>hermes cron create "every 1d at 09:00" \
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-2">Relative durations</h4>
+<ul class="space-y-1 text-neutral-300 text-sm">
+<li><code data-notranslate="True">30m</code>, <code data-notranslate="True">2h</code>, <code data-notranslate="True">1d</code>→ in X amount of time</li>
+<li>Useful for occasional reminders</li>
+</ul>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-2">Natural recurrence</h4>
+<ul class="space-y-1 text-neutral-300 text-sm">
+<li><code data-notranslate="True">"every 2h"</code>→ recurrence</li>
+<li><code data-notranslate="True">"every 1d at 09:00"</code>→ diary with schedule</li>
+<li>Useful for routines</li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Useful commands</h3>
+<ul class="space-y-1 text-neutral-300 text-sm">
+<li>• <code class="text-primary" data-notranslate="True">/cron list</code>— see active crons</li>
+<li>• <code class="text-primary" data-notranslate="True">/cron remove &lt;id&gt;</code>— remove cron</li>
+<li>• <code class="text-primary" data-notranslate="True">/cron pause &lt;id&gt;</code> / <code class="text-primary" data-notranslate="True">/cron resume &lt;id&gt;</code></li>
+</ul>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🖥️ Standalone CLI: hermes cron create</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Same capacity via terminal. Useful for<strong class="text-purple-400">provisioning scripts</strong>(infra-as-code) that recreate all crons on a new machine at once.</p>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">📝 CLI Example</h3>
+<pre data-notranslate="True"><code data-notranslate="True">hermes cron create "every 1d at 09:00" \
   "Audit open PRs, summarize CI health, and post to #eng" \
   --workdir /home/me/projects/acme</code></pre>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📦</span>setup-crons.sh versionado</h3>
-        <p class="text-neutral-300 text-sm">Crie um script <code class="text-emerald-400">setup-crons.sh</code> no seu repo de infra. Cada cron vira uma linha. Migrar pra novo VPS = rodar o script. Reproduzível, auditável, sem clique.</p>
-<pre class="mt-4"><code>#!/usr/bin/env bash
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📦</span>setup-crons.sh versioned</h3>
+<p class="text-neutral-300 text-sm">Create a script<code class="text-emerald-400" data-notranslate="True">setup-crons.sh</code>in your repo below. Each cron becomes a line. Migrate to new VPS = run the script. Reproducible, auditable, clickless.</p>
+<pre class="mt-4" data-notranslate="True"><code data-notranslate="True">#!/usr/bin/env bash
 hermes cron create "every 1d at 09:00" "Resumo diário" --deliver telegram
 hermes cron create "every 6h" "Backup S3" --workdir ~/projetos/site
 hermes cron create "every 5m" --no-agent --script ./watchdog.sh \
   --deliver telegram --name "memory-watchdog"</code></pre>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📁</span>Onde fica</h3>
-        <p class="text-neutral-300 text-sm">Definições persistem em <code class="text-blue-400">~/.hermes/cron/jobs.json</code>. Você pode versionar esse arquivo também — backup natural sem precisar refazer setup. Subcomandos: <code class="text-blue-400">hermes cron list</code>, <code class="text-blue-400">hermes cron remove &lt;id&gt;</code>.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">📂 Flag --workdir &lt;path&gt;</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Define o <strong class="text-purple-400">diretório de trabalho</strong> da sessão fresh. O scheduler faz <code class="text-purple-400">cd</code> pra lá antes de rodar e detecta os arquivos de contexto do projeto. <strong>Equivalente cron tradicional: WORKDIR.</strong>
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📚</span>Ordem de prioridade do contexto de projeto</h3>
-        <ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
-          <li><code class="text-blue-400">.hermes.md</code> ou <code class="text-blue-400">HERMES.md</code> (sobe até git root)</li>
-          <li><code class="text-blue-400">AGENTS.md</code> (walk recursivo de subdiretórios)</li>
-          <li><code class="text-blue-400">CLAUDE.md</code> (CWD apenas)</li>
-          <li><code class="text-blue-400">.cursorrules</code> (CWD apenas)</li>
-        </ol>
-        <p class="text-neutral-400 text-xs mt-3">Apenas <strong>UM</strong> tipo é carregado por sessão. SOUL.md sempre é carregado independentemente.</p>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Sem --workdir, ele roda em ~</h3>
-        <p class="text-neutral-300 text-sm">Cron pra projeto específico precisa do contexto desse projeto. Sem <code class="text-red-400">--workdir</code>, o scheduler roda em <code class="text-red-400">~</code> (home) e não acha .hermes.md/AGENTS.md/CLAUDE.md do projeto. Resultado: agente perdido, sem convenções de código nem instruções específicas.</p>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📝</span>Exemplo prático</h3>
-<pre><code>hermes cron create "every 1d at 18:00" \
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📁</span>Where it is</h3>
+<p class="text-neutral-300 text-sm">Settings persist in<code class="text-blue-400" data-notranslate="True">~/.hermes/cron/jobs.json</code>. You can version this file too — natural backup without having to redo setup. Subcommands:<code class="text-blue-400" data-notranslate="True">hermes cron list</code>, <code class="text-blue-400" data-notranslate="True">hermes cron remove &lt;id&gt;</code>.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📂 Flag --workdir &lt;path&gt;</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Sets the<strong class="text-purple-400">working directory</strong>from the fresh session. The scheduler does<code class="text-purple-400" data-notranslate="True">cd</code>there before running and detects the project context files.<strong>Traditional cron equivalent: WORKDIR.</strong>
+</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📚</span>Project context priority order</h3>
+<ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
+<li><code class="text-blue-400" data-notranslate="True">.hermes.md</code> ou <code class="text-blue-400" data-notranslate="True">HERMES.md</code>(goes up to git root)</li>
+<li><code class="text-blue-400" data-notranslate="True">AGENTS.md</code>(recursive walk of subdirectories)</li>
+<li><code class="text-blue-400" data-notranslate="True">CLAUDE.md</code>(CWD only)</li>
+<li><code class="text-blue-400" data-notranslate="True">.cursorrules</code>(CWD only)</li>
+</ol>
+<p class="text-neutral-400 text-xs mt-3">Just<strong>UM</strong>type is loaded per session. SOUL.md always loads independently.</p>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Without --workdir, it runs in ~</h3>
+<p class="text-neutral-300 text-sm">Cron for a specific project needs the context of that project. Without<code class="text-red-400" data-notranslate="True">--workdir</code>, the scheduler runs in<code class="text-red-400" data-notranslate="True">~</code>(home) and does not find .hermes.md/AGENTS.md/CLAUDE.md of the project. Result: lost agent, without code conventions or specific instructions.</p>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📝</span>Practical example</h3>
+<pre data-notranslate="True"><code data-notranslate="True">hermes cron create "every 1d at 18:00" \
   "Audit changed files today, propose changelog entry" \
   --workdir /home/me/projetos/api-clientes \
   --deliver telegram</code></pre>
-        <p class="text-neutral-400 text-xs mt-3">A sessão lê o AGENTS.md do projeto e segue as convenções específicas (formato de changelog, branch policy etc.).</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔇 Flag --no-agent (NOAGENT mode)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Modo que <strong class="text-purple-400">pula o LLM completamente</strong>. O cron roda só um script <code class="text-purple-400">.sh/.bash/.py</code>. Saída vazia = silêncio. Saída não-zero = alerta entregue. Ideal pra watchdogs que não precisam de raciocínio.
-      </p>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Watchdog de memória</h3>
-<pre><code>hermes cron create "every 5m" \
+<p class="text-neutral-400 text-xs mt-3">The session reads the project's AGENTS.md and follows specific conventions (changelog format, branch policy, etc.).</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔇 Flag --no-agent (NOAGENT mode)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">So that<strong class="text-purple-400">skip the LLM completely</strong>. Cron only runs one script<code class="text-purple-400" data-notranslate="True">.sh/.bash/.py</code>. Empty output = silence. Non-zero output = alert delivered. Ideal for watchdogs who don't need reasoning.</p>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Memory Watchdog</h3>
+<pre data-notranslate="True"><code data-notranslate="True">hermes cron create "every 5m" \
   --no-agent \
   --script memory-watchdog.sh \
   --deliver telegram \
   --name "memory-watchdog"</code></pre>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-5">
-          <h4 class="font-bold text-emerald-400 mb-2">stdout vazio</h4>
-          <p class="text-neutral-300 text-sm">Tick silencioso, sem entrega. Ambiente está OK.</p>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5">
-          <h4 class="font-bold text-red-400 mb-2">stdout não vazio</h4>
-          <p class="text-neutral-300 text-sm">Conteúdo é entregue como alerta no destino configurado.</p>
-        </div>
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-5">
-          <h4 class="font-bold text-primary mb-2">exit não-zero</h4>
-          <p class="text-neutral-300 text-sm">Mesma coisa: alerta de erro vai pro destino. Bom pra detectar falha do próprio script.</p>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">⚙️</span>Como o script é executado</h3>
-        <ul class="space-y-1 text-neutral-300 text-sm">
-          <li>• Scripts <code class="text-blue-400">.sh</code> / <code class="text-blue-400">.bash</code> rodam sob <code class="text-blue-400">/bin/bash</code></li>
-          <li>• Outros (Python etc.) rodam no Python interpreter do Hermes</li>
-          <li>• Funciona com qualquer linguagem que produza stdout/exit code padrão</li>
-        </ul>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">💰</span>Por que NOAGENT</h3>
-        <p class="text-neutral-300 text-sm">Watchdog de memória/disco roda a cada 5min. Se passasse pelo LLM, gastaria token sem necessidade. NOAGENT mantém custo zero pra esse tipo de tarefa enquanto preserva entrega na plataforma de mensagem.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">📡 Flags --deliver e --skill</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Duas flags que completam o quadro: <code class="text-purple-400">--deliver &lt;plataforma&gt;</code> escolhe destino. <code class="text-purple-400">--skill &lt;name&gt;</code> injeta skill no início da sessão fresh, garantindo que o procedimento esteja disponível mesmo sem histórico.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-3">--deliver &lt;plataforma&gt;</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li><code class="text-blue-400">telegram</code> — manda no chat principal Telegram</li>
-            <li><code class="text-blue-400">discord</code> — canal Discord configurado</li>
-            <li><code class="text-blue-400">all</code> — todas as plataformas ativas</li>
-            <li><code class="text-blue-400">origin</code> — onde o cron foi criado</li>
-          </ul>
-        </div>
-        <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-          <h4 class="font-bold text-purple-400 mb-3">--skill &lt;name&gt;</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>Carrega skill no início da sessão fresh</li>
-            <li>Pode passar múltiplas: <code>--skill A --skill B</code></li>
-            <li>Garante procedimento disponível sem depender da descoberta automática</li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Exemplo combinando tudo</h3>
-<pre><code>hermes cron create "every 1h" \
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-5">
+<h4 class="font-bold text-emerald-400 mb-2">empty stdout</h4>
+<p class="text-neutral-300 text-sm">Silent tick, no delivery. Ambience is OK.</p>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5">
+<h4 class="font-bold text-red-400 mb-2">non-empty stdout</h4>
+<p class="text-neutral-300 text-sm">Content is delivered as an alert to the configured destination.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-5">
+<h4 class="font-bold text-primary mb-2">non-zero exit</h4>
+<p class="text-neutral-300 text-sm">Same thing: error alert goes to the destination. Good for detecting failure of the script itself.</p>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">⚙️</span>How the script is executed</h3>
+<ul class="space-y-1 text-neutral-300 text-sm">
+<li>• Scripts<code class="text-blue-400" data-notranslate="True">.sh</code> / <code class="text-blue-400" data-notranslate="True">.bash</code>rotate under<code class="text-blue-400" data-notranslate="True">/bin/bash</code></li>
+<li>• Others (Python etc.) run on Hermes' Python interpreter</li>
+<li>• Works with any language that produces standard stdout/exit code</li>
+</ul>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">💰</span>Why NOAGENT</h3>
+<p class="text-neutral-300 text-sm">Memory/disk watchdog runs every 5min. If I went through the LLM, I would spend tokens unnecessarily. NOAGENT maintains zero costs for this type of task while preserving delivery on the messaging platform.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">📡 Flags --deliver and --skill</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Two flags that complete the picture:<code class="text-purple-400" data-notranslate="True">--deliver &lt;plataforma&gt;</code>choose destination.<code class="text-purple-400" data-notranslate="True">--skill &lt;name&gt;</code>injects skill at the beginning of the fresh session, ensuring that the procedure is available even without history.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-3">--deliver &lt;platform&gt;</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-blue-400" data-notranslate="True">telegram</code>— send it to the main Telegram chat</li>
+<li><code class="text-blue-400" data-notranslate="True">discord</code>— configured Discord channel</li>
+<li><code class="text-blue-400" data-notranslate="True">all</code>— all active platforms</li>
+<li><code class="text-blue-400" data-notranslate="True">origin</code>— where cron was created</li>
+</ul>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
+<h4 class="font-bold text-purple-400 mb-3">--skill &lt;name&gt;</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li>Load skill at the beginning of the fresh session</li>
+<li>You can pass multiple:<code data-notranslate="True">--skill A --skill B</code></li>
+<li>Ensures available procedure without relying on automatic discovery</li>
+</ul>
+</div>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Example combining everything</h3>
+<pre data-notranslate="True"><code data-notranslate="True">hermes cron create "every 1h" \
   "Summarize new feed items and post the digest" \
   --workdir /home/me/projetos/blog \
   --skill blogwatcher \
   --skill maps \
   --deliver telegram</code></pre>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🎯</span>Resumo das flags</h3>
-        <table class="w-full text-sm text-neutral-300">
-          <thead class="text-emerald-400 text-left">
-            <tr><th class="py-2">Flag</th><th class="py-2">Equivalente cron</th><th class="py-2">Função</th></tr>
-          </thead>
-          <tbody class="divide-y divide-emerald-500/20">
-            <tr><td class="py-2 pr-4"><code>--workdir &lt;path&gt;</code></td><td class="py-2 pr-4">WORKDIR</td><td class="py-2">Diretório de trabalho + contexto de projeto</td></tr>
-            <tr><td class="py-2 pr-4"><code>--no-agent</code></td><td class="py-2 pr-4">NOAGENT</td><td class="py-2">Script-only, pula LLM</td></tr>
-            <tr><td class="py-2 pr-4"><code>--deliver &lt;plat&gt;</code></td><td class="py-2 pr-4">CONTEXTFROM</td><td class="py-2">Plataforma de entrega</td></tr>
-            <tr><td class="py-2 pr-4"><code>--skill &lt;name&gt;</code></td><td class="py-2 pr-4">skill injection</td><td class="py-2">Injeta skill na sessão fresh</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Cron transforma reativo em proativo</strong><span class="text-neutral-400"> — sessão fresh por execução, file lock previne double-run.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Sintaxe natural via chat</strong><span class="text-neutral-400"> — <code>/cron add 30m "..."</code>, <code>/cron add "every 2h" "..."</code>.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>CLI standalone permite versionar setup</strong><span class="text-neutral-400"> — <code>hermes cron create</code> em scripts reproduzíveis.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>--workdir carrega AGENTS.md/CLAUDE.md do projeto</strong><span class="text-neutral-400"> — sem ele, agente roda perdido em ~.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>--no-agent pula LLM</strong><span class="text-neutral-400"> — watchdogs custo zero, stdout vazio = silêncio.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>--deliver e --skill completam o controle</strong><span class="text-neutral-400"> — telegram/discord/all/origin + skills injetadas.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">3.5 - 🔄 Loop de Auto-Aperfeiçoamento</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-3-3.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="modulo-3-5.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 3.4 • 2026</p></div>
-  </footer>
-
-  <script>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🎯</span>Flag summary</h3>
+<table class="w-full text-sm text-neutral-300">
+<thead class="text-emerald-400 text-left">
+<tr><th class="py-2">Flag</th><th class="py-2">Cron equivalent</th><th class="py-2">Function</th></tr>
+</thead>
+<tbody class="divide-y divide-emerald-500/20">
+<tr><td class="py-2 pr-4"><code data-notranslate="True">--workdir &lt;path&gt;</code></td><td class="py-2 pr-4">WORKDIR</td><td class="py-2">Working directory + project context</td></tr>
+<tr><td class="py-2 pr-4"><code data-notranslate="True">--no-agent</code></td><td class="py-2 pr-4">NOAGENT</td><td class="py-2">Script-only, skip LLM</td></tr>
+<tr><td class="py-2 pr-4"><code data-notranslate="True">--deliver &lt;plat&gt;</code></td><td class="py-2 pr-4">CONTEXTFROM</td><td class="py-2">Delivery platform</td></tr>
+<tr><td class="py-2 pr-4"><code data-notranslate="True">--skill &lt;name&gt;</code></td><td class="py-2 pr-4">skill injection</td><td class="py-2">Inject skill into the fresh session</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Cron turns reactive into proactive</strong><span class="text-neutral-400">— fresh session per run, file lock prevents double-run.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Natural syntax via chat</strong><span class="text-neutral-400"> — <code data-notranslate="True">/cron add 30m "..."</code>, <code data-notranslate="True">/cron add "every 2h" "..."</code>.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Standalone CLI allows versioning of setup</strong><span class="text-neutral-400"> — <code data-notranslate="True">hermes cron create</code>in reproducible scripts.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>--workdir load AGENTS.md/CLAUDE.md from project</strong><span class="text-neutral-400">— without it, we are lost in ~.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>--no-agent skips LLM</strong><span class="text-neutral-400">— watchdogs zero cost, empty stdout = silence.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>--deliver and --skill complete the control</strong><span class="text-neutral-400">— telegram/discord/all/origin + skills injected.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Next module:</h3><p class="text-neutral-300">3.5 - 🔄 Self-Improvement Loop</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-3.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-5.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 3.4 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
