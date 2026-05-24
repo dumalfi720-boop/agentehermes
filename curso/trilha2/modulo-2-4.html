@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.4 Telegram + BotFather | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2.4 Telegram + BotFather | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -60,165 +60,151 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">Módulo 2.4</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.4</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">📱 Telegram: BotFather + autorização</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">O caminho de menor fricção pra colocar o agente no seu bolso. BotFather, user ID, gateway setup, primeira conversa e debug se algo der errado.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">25</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Prático</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Setup</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🚀 Por que começar pelo Telegram</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes suporta <strong class="text-blue-400">20+ plataformas de mensagem</strong> — Discord, Slack, WhatsApp, Signal, Teams, Matrix, iMessage. Mas Telegram é onde você deve começar. <strong class="text-blue-400">Setup em 5 minutos contra 30+ minutos das outras.</strong>
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⚡</span>Comparação de fricção</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-emerald-400">Telegram:</strong> @BotFather no chat, 30 segundos pro token. Sem cadastro extra.</li>
-          <li><strong class="text-blue-400">Discord:</strong> developer portal, criar app, criar bot, configurar intents, gerar invite link.</li>
-          <li><strong class="text-blue-400">Slack:</strong> criar app no api.slack.com, configurar OAuth scopes, instalar no workspace.</li>
-          <li><strong class="text-red-400">WhatsApp:</strong> via gateway pago (Whapi) ou Meta Business Manager — burocrático.</li>
-          <li><strong class="text-red-400">iMessage:</strong> requer Mac em casa rodando BlueBubbles 24/7.</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📦</span>O que você ganha de quebra</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li>Voice notes que o Hermes transcreve e responde com TTS</li>
-          <li>Comandos slash <code>/cron</code>, <code>/usage</code>, <code>/skills</code>, <code>/compress</code></li>
-          <li>Compartilhamento de imagens (vision automático)</li>
-          <li>Compartilhamento de arquivos PDF, áudio, vídeo</li>
-          <li>Cliente desktop e mobile sincronizados</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🤖 Criar bot com BotFather</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        BotFather é um bot oficial do próprio Telegram que cria outros bots. Sem developer portal, sem aprovação, sem cadastro. <strong class="text-blue-400">5 mensagens trocadas no chat e você tem o token.</strong>
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">📝 Sequência completa</h3>
-        <ol class="space-y-3 text-neutral-300 text-sm list-decimal pl-5">
-          <li>No Telegram, busque <code class="text-blue-400">@BotFather</code> e abra o chat.</li>
-          <li>Envie <code class="text-blue-400">/newbot</code>.</li>
-          <li>Ele pergunta o <strong>nome (display)</strong>: ex. "Hermes Pessoal".</li>
-          <li>Ele pergunta o <strong>username</strong>: precisa terminar em <code>bot</code> e ser único globalmente. Ex.: <code>hermes_pessoal_xyz_bot</code>.</li>
-          <li>Ele devolve o <strong>token</strong>: algo como <code>1234567890:AAH...</code>. <strong>É a credencial completa do bot.</strong></li>
-        </ol>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🔒</span>Tratamento do token</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li>Token = senha do bot. Quem tiver controla integralmente.</li>
-          <li><strong>Nunca</strong> cole em chat público, fórum, repositório, GitHub, screenshot.</li>
-          <li>Use <code>hermes config set TELEGRAM_TOKEN xxx</code> dentro do container — escreve com auto-redação nos logs.</li>
-          <li>Se vazar: <code>/revoke</code> no BotFather gera novo token e invalida o antigo.</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🎨</span>Customizações úteis no BotFather</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-blue-400">/setdescription</code> — texto que aparece quando alguém abre o bot</li>
-          <li><code class="text-blue-400">/setuserpic</code> — foto de perfil</li>
-          <li><code class="text-blue-400">/setcommands</code> — lista de comandos slash que aparece no Telegram</li>
-          <li><code class="text-blue-400">/setprivacy</code> — em grupos, define se o bot vê todas mensagens ou só @menções</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🆔 Pegar seu user ID via @userinfobot</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes precisa saber quem está autorizado a falar com ele. Sem essa configuração, o bot ou aceita qualquer um (perigoso) ou ignora você (frustrante). A forma estável de identificação é o <strong class="text-blue-400">user ID numérico</strong> — não o username, que pode mudar.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🔍 Como descobrir seu ID</h3>
-        <ol class="space-y-3 text-neutral-300 text-sm list-decimal pl-5">
-          <li>No Telegram, busque <code class="text-blue-400">@userinfobot</code>.</li>
-          <li>Envie qualquer mensagem (ou <code>/start</code>).</li>
-          <li>Ele responde com seu <strong>ID numérico</strong> (ex: <code>123456789</code>), nome, idioma, etc.</li>
-          <li>Anote esse ID — ele é usado em <code>TELEGRAM_AUTHORIZED_USERS</code>.</li>
-        </ol>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">👥</span>IDs de grupos e canais</h3>
-        <p class="text-neutral-300 text-sm">Para grupos, o ID começa com <code>-100...</code> (negativo). Adicione o bot como membro e use <code>@RawDataBot</code> ou similar pra capturar o group ID. Útil pra usar Hermes em chat compartilhado com cônjuge/sócio.</p>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Múltiplos usuários autorizados</h3>
-        <p class="text-neutral-300 text-sm"><code>TELEGRAM_AUTHORIZED_USERS</code> aceita lista separada por vírgula: <code>123456789,987654321</code>. Útil pra compartilhar agente com pequena equipe — mas lembre que cada um tem acesso completo. Pra equipes maiores, separar por agente é mais seguro.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">⚙️ hermes gateway setup</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Com token e user ID em mãos, é hora de conectar tudo. <code class="text-blue-400">hermes gateway setup</code> abre um wizard interativo dentro do container — guiado, com validação a cada passo.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🪄 Wizard passo-a-passo</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Entre no container
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-blue-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-blue-400" href="index.html">Track 2</a><span>/</span>
+<span class="text-blue-400">Module 2.4</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MODULE 2.4</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">📱 Telegram: BotFather + authorization</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">The least friction path to putting the agent in your pocket. BotFather, user ID, gateway setup, first conversation and debug if something goes wrong.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">25</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Practical</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Setup</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🚀 Why start with Telegram</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes supports<strong class="text-blue-400">20+ messaging platforms</strong>— Discord, Slack, WhatsApp, Signal, Teams, Matrix, iMessage. But Telegram is where you should start.<strong class="text-blue-400">Setup in 5 minutes versus 30+ minutes for others.</strong>
+</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⚡</span>Friction comparison</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-emerald-400">Telegram:</strong>@BotFather in chat, 30 seconds for the token. No extra registration.</li>
+<li><strong class="text-blue-400">Discord:</strong>developer portal, create app, create bot, configure intents, generate invite link.</li>
+<li><strong class="text-blue-400">Slack:</strong>create app at api.slack.com, configure OAuth scopes, install in workspace.</li>
+<li><strong class="text-red-400">WhatsApp:</strong>via paid gateway (Whapi) or Meta Business Manager — bureaucratic.</li>
+<li><strong class="text-red-400">iMessage:</strong>requires Mac at home running BlueBubbles 24/7.</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📦</span>What do you get for free?</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li>Voice notes that Hermes transcribes and responds to with TTS</li>
+<li>slash commands<code data-notranslate="True">/cron</code>, <code data-notranslate="True">/usage</code>, <code data-notranslate="True">/skills</code>, <code data-notranslate="True">/compress</code></li>
+<li>Image sharing (automatic vision)</li>
+<li>Sharing PDF, audio, video files</li>
+<li>Synchronized desktop and mobile client</li>
+</ul>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🤖 Create bot with BotFather</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">BotFather is an official bot from Telegram itself that creates other bots. No developer portal, no approval, no registration.<strong class="text-blue-400">5 messages exchanged in chat and you have the token.</strong>
+</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">📝 Complete sequence</h3>
+<ol class="space-y-3 text-neutral-300 text-sm list-decimal pl-5">
+<li>On Telegram, search<code class="text-blue-400" data-notranslate="True">@BotFather</code>and open the chat.</li>
+<li>Send<code class="text-blue-400" data-notranslate="True">/newbot</code>.</li>
+<li>He asks what<strong>name (display)</strong>: eg. "Personal Hermes".</li>
+<li>He asks what<strong>username</strong>: must end in<code data-notranslate="True">bot</code>and be unique globally. Ex.:<code data-notranslate="True">hermes_pessoal_xyz_bot</code>.</li>
+<li>He returns the<strong>token</strong>: something like<code data-notranslate="True">1234567890:AAH...</code>. <strong>It is the bot's full credential.</strong></li>
+</ol>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🔒</span>Token handling</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li>Token = bot password. Whoever has it controls it completely.</li>
+<li><strong>Never</strong>Paste in public chat, forum, repository, GitHub, screenshot.</li>
+<li>Use<code data-notranslate="True">hermes config set TELEGRAM_TOKEN xxx</code>inside the container — writes with auto-redaction to the logs.</li>
+<li>If it leaks:<code data-notranslate="True">/revoke</code>in BotFather generates new token and invalidates the old one.</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🎨</span>Useful customizations in BotFather</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-blue-400" data-notranslate="True">/setdescription</code>— text that appears when someone opens the bot</li>
+<li><code class="text-blue-400" data-notranslate="True">/setuserpic</code>— profile photo</li>
+<li><code class="text-blue-400" data-notranslate="True">/setcommands</code>— list of slash commands that appear on Telegram</li>
+<li><code class="text-blue-400" data-notranslate="True">/setprivacy</code>— in groups, defines whether the bot sees all messages or only @mentions</li>
+</ul>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🆔 Get your user ID via @userinfobot</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes needs to know who is authorized to speak to him. Without this configuration, the bot either accepts anyone (dangerous) or ignores you (frustrating). The stable form of identification is the<strong class="text-blue-400">numeric user ID</strong>— not the username, which can change.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🔍 How to find out your ID</h3>
+<ol class="space-y-3 text-neutral-300 text-sm list-decimal pl-5">
+<li>On Telegram, search<code class="text-blue-400" data-notranslate="True">@userinfobot</code>.</li>
+<li>Send any message (or<code data-notranslate="True">/start</code>).</li>
+<li>He responds with his<strong>Numeric ID</strong>(ex:<code data-notranslate="True">123456789</code>), name, language, etc.</li>
+<li>Make note of this ID — it is used in<code data-notranslate="True">TELEGRAM_AUTHORIZED_USERS</code>.</li>
+</ol>
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">👥</span>Group and channel IDs</h3>
+<p class="text-neutral-300 text-sm">For groups, the ID starts with<code data-notranslate="True">-100...</code>(negative). Add the bot as a member and use<code data-notranslate="True">@RawDataBot</code>or similar to capture the group ID. Useful for using Hermes in a shared chat with a spouse/partner.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Multiple authorized users</h3>
+<p class="text-neutral-300 text-sm"><code data-notranslate="True">TELEGRAM_AUTHORIZED_USERS</code>accepts comma separated list:<code data-notranslate="True">123456789,987654321</code>. Useful for sharing agents with a small team — but remember that everyone has full access. For larger teams, separating by agent is safer.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">⚙️ hermes gateway setup</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">With token and user ID in hand, it's time to connect everything.<code class="text-blue-400" data-notranslate="True">hermes gateway setup</code>opens an interactive wizard inside the container — guided, with validation at each step.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🪄 Step-by-step wizard</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True"># Entre no container
 docker exec -it hermes hermes gateway setup
 
 # O wizard pergunta:
@@ -229,39 +215,36 @@ docker exec -it hermes hermes gateway setup
 
 # Depois, suba o gateway
 hermes gateway start</code></pre>
-      </div>
-      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📂</span>O que o wizard salva onde</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-emerald-400">~/.hermes/.env</code> — variáveis sensíveis (TELEGRAM_TOKEN)</li>
-          <li><code class="text-emerald-400">~/.hermes/config.yaml</code> — configurações do gateway, autorização</li>
-          <li><strong>TELEGRAM_HOME_CHANNEL:</strong> destino padrão de entregas automáticas (crons sem <code>--deliver</code>)</li>
-          <li><strong>TELEGRAM_AUTHORIZED_USERS:</strong> lista de IDs que podem mandar comando</li>
-        </ul>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🔄 Comandos relacionados</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-blue-400">hermes gateway status</code> — gateway está rodando?</li>
-          <li><code class="text-blue-400">hermes gateway start</code> — sobe o gateway (ou re-sobe após restart)</li>
-          <li><code class="text-blue-400">hermes gateway stop</code> — para o gateway</li>
-          <li><code class="text-blue-400">hermes gateway setup</code> — re-roda wizard se quiser ajustar</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">💬 Primeira conversa + debug</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hora da verdade. Abra o chat com seu bot no Telegram, mande <em>"Olá"</em>. Resposta esperada: o agente responde apresentando-se. <strong class="text-blue-400">Se passar, todo o setup está OK.</strong> Se falhar, os logs mostram o erro objetivo.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🐛 Comandos de debug</h3>
-        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code class="text-blue-400"># Status do gateway
+</div>
+<div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📂</span>What does the wizard save where</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-emerald-400" data-notranslate="True">~/.hermes/.env</code>— sensitive variables (TELEGRAM_TOKEN)</li>
+<li><code class="text-emerald-400" data-notranslate="True">~/.hermes/config.yaml</code>— gateway settings, authorization</li>
+<li><strong>TELEGRAM_HOME_CHANNEL:</strong>default destination for automatic deliveries (crons without<code data-notranslate="True">--deliver</code>)</li>
+<li><strong>TELEGRAM_AUTHORIZED_USERS:</strong>list of IDs that can send commands</li>
+</ul>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🔄 Related commands</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-blue-400" data-notranslate="True">hermes gateway status</code>— is gateway running?</li>
+<li><code class="text-blue-400" data-notranslate="True">hermes gateway start</code>— raise the gateway (or re-up after restart)</li>
+<li><code class="text-blue-400" data-notranslate="True">hermes gateway stop</code>— to the gateway</li>
+<li><code class="text-blue-400" data-notranslate="True">hermes gateway setup</code>— re-run wizard if you want to adjust</li>
+</ul>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">💬 First conversation + debug</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Time of truth. Open the chat with your bot on Telegram, send<em>"Hello"</em>. Expected response: the agent responds by introducing himself.<strong class="text-blue-400">If it passes, the entire setup is OK.</strong>If it fails, the logs show the objective error.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🐛 Debug commands</h3>
+<pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto" data-notranslate="True"><code class="text-blue-400" data-notranslate="True"># Status do gateway
 docker exec hermes hermes gateway status
 
 # Logs em tempo real
@@ -272,87 +255,80 @@ docker exec hermes env | grep TELEGRAM
 
 # Testar conexão com API do Telegram
 docker exec hermes curl -s https://api.telegram.org/bot$TELEGRAM_TOKEN/getMe</code></pre>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🚨</span>Erros mais comuns</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-red-400">"401 Unauthorized":</strong> token errado, com espaço extra ou caractere copiado a mais. Refazer config set.</li>
-          <li><strong class="text-red-400">"user not authorized":</strong> seu ID não está em <code>TELEGRAM_AUTHORIZED_USERS</code>. Confira <code>@userinfobot</code> e refaça setup.</li>
-          <li><strong class="text-red-400">"connection timeout":</strong> firewall do VPS bloqueando saída pra <code>api.telegram.org</code>. Cheque <code>ufw</code> outgoing.</li>
-          <li><strong class="text-red-400">Sem resposta nem erro:</strong> gateway pode estar parado. <code>hermes gateway start</code>.</li>
-          <li><strong class="text-red-400">Bot responde mas demora:</strong> provedor de inferência sem créditos ou rate-limited. Cheque <code>/usage</code>.</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>Aplicação da mentalidade T1.2</h3>
-        <p class="text-neutral-300 text-sm">Se nada funcionou, copie o erro do log e cole na CLI do Hermes (<code>docker exec -it hermes hermes</code>): <em>"Esse erro apareceu quando tentei o gateway. Diagnostique e proponha correção."</em> Ele lê a doc, identifica o sintoma, sugere fix.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🎚️ Customização: voice, slash, permissões</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Conexão funcionando. Agora vale entender 3 capacidades que mudam muito a experiência: <strong class="text-blue-400">voice notes</strong>, <strong class="text-blue-400">comandos slash</strong> e o sistema de <strong class="text-blue-400">permissões</strong> (allow once/session/always).
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🎤 Voice notes</h3>
-        <p class="text-neutral-300 text-sm">Aperte e segure o microfone no Telegram, fale, solte. O Telegram envia áudio. Hermes transcreve, processa, e pode responder com texto OU com TTS de volta. Útil em movimento — andando, dirigindo, cozinhando.</p>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">⌨️ Comandos slash mais úteis</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-blue-400">/cron list</code> — todos os jobs agendados</li>
-          <li><code class="text-blue-400">/cron add "every 1d at 09:00" "Resumo diário"</code> — cria cron</li>
-          <li><code class="text-blue-400">/skills</code> — lista skills disponíveis</li>
-          <li><code class="text-blue-400">/usage</code> — quantos tokens gastos na sessão</li>
-          <li><code class="text-blue-400">/compress</code> — força compressão de contexto</li>
-          <li><code class="text-blue-400">/help</code> — guia rápido dentro do chat</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔐</span>Sistema de permissões</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Allow once:</strong> só essa execução. Bom pra ação destrutiva única (apagar arquivo, force push).</li>
-          <li><strong class="text-blue-400">Allow session:</strong> dentro da sessão atual. Bom pra exploração ("vou fazer várias edições agora").</li>
-          <li><strong class="text-blue-400">Allow always:</strong> persistente em <code>~/.hermes/permissions.json</code>. Bom pra ações recorrentes seguras (git commit/push em repo seu).</li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Use "always" com critério</h3>
-        <p class="text-neutral-300 text-sm">Marcar tudo como "always allow" anula o sistema de proteção. Use só pra ações repetidas, em escopo travado, com baixo risco. Auditar regularmente: <code>hermes permissions list</code>.</p>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Telegram tem a menor fricção pra começar</strong><span class="text-neutral-400"> — BotFather entrega token em 30 segundos.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>BotFather: /newbot, nome, username, token</strong><span class="text-neutral-400"> — trate o token como senha.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>@userinfobot dá seu user ID estável</strong><span class="text-neutral-400"> — único, numérico, permanente.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>hermes gateway setup é o wizard guiado</strong><span class="text-neutral-400"> — token, user ID, home channel.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Voice, slash commands, permissões granulares</strong><span class="text-neutral-400"> — capacidades que mudam a experiência.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">2.5 - 🐙 GitHub: token, .gitignore, hermes config set</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-2-3.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="modulo-2-5.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 2.4 • 2026</p></div>
-  </footer>
-
-  <script>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🚨</span>Most common errors</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-red-400">"401 Unauthorized":</strong>wrong token, with extra space or extra copied character. Redo config set.</li>
+<li><strong class="text-red-400">"user not authorized":</strong>your ID is not in<code data-notranslate="True">TELEGRAM_AUTHORIZED_USERS</code>. Check it out<code data-notranslate="True">@userinfobot</code>and redo setup.</li>
+<li><strong class="text-red-400">"connection timeout":</strong>VPS firewall blocking egress to<code data-notranslate="True">api.telegram.org</code>. Check<code data-notranslate="True">ufw</code>outgoing.</li>
+<li><strong class="text-red-400">No response or error:</strong>gateway may be stopped.<code data-notranslate="True">hermes gateway start</code>.</li>
+<li><strong class="text-red-400">Bot responds but takes a while:</strong>credit-free or rate-limited inference provider. Check<code data-notranslate="True">/usage</code>.</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-emerald-900/20 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">✓</span>Applying the T1.2 mindset</h3>
+<p class="text-neutral-300 text-sm">If nothing worked, copy the error from the log and paste it into the Hermes CLI (<code data-notranslate="True">docker exec -it hermes hermes</code>): <em>"This error appeared when I tried the gateway. Diagnose and propose correction."</em>He reads the doc, identifies the symptom, suggests fixing it.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🎚️ Customization: voice, slash, permissions</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Connection working. Now it’s worth understanding 3 capabilities that greatly change the experience:<strong class="text-blue-400">voice notes</strong>, <strong class="text-blue-400">slash commands</strong>and the system of<strong class="text-blue-400">permissions</strong>(allow once/session/always).</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🎤 Voice notes</h3>
+<p class="text-neutral-300 text-sm">Press and hold the microphone on Telegram, speak, release. Telegram sends audio. Hermes transcribes, processes, and can respond with text OR with TTS back. Useful on the move — walking, driving, cooking.</p>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">⌨️ Most useful slash commands</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-blue-400" data-notranslate="True">/cron list</code>— all scheduled jobs</li>
+<li><code class="text-blue-400" data-notranslate="True">/cron add "every 1d at 09:00" "Resumo diário"</code>— create cron</li>
+<li><code class="text-blue-400" data-notranslate="True">/skills</code>— list of available skills</li>
+<li><code class="text-blue-400" data-notranslate="True">/usage</code>— how many tokens spent in the session</li>
+<li><code class="text-blue-400" data-notranslate="True">/compress</code>— force context compression</li>
+<li><code class="text-blue-400" data-notranslate="True">/help</code>— quick guide within the chat</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔐</span>Permissions system</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Allow once:</strong>just this execution. Good for single destructive action (delete file, force push).</li>
+<li><strong class="text-blue-400">Allow session:</strong>within the current session. Good for exploration ("I'm going to make several edits now").</li>
+<li><strong class="text-blue-400">Allow always:</strong>persistent in<code data-notranslate="True">~/.hermes/permissions.json</code>. Good for safe recurring actions (git commit/push in your repo).</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Use "always" judiciously</h3>
+<p class="text-neutral-300 text-sm">Marking everything as "always allow" overrides the protection system. Use only for repeated actions, in a locked scope, with low risk. Audit regularly:<code data-notranslate="True">hermes permissions list</code>.</p>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Telegram has the least friction to get started</strong><span class="text-neutral-400">— BotFather delivers token within 30 seconds.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>BotFather: /newbot, name, username, token</strong><span class="text-neutral-400">— treat the token as a password.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>@userinfobot gives your stable user ID</strong><span class="text-neutral-400">— unique, numeric, permanent.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>hermes gateway setup is the guided wizard</strong><span class="text-neutral-400">— token, user ID, home channel.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong>Voice, slash commands, granular permissions</strong><span class="text-neutral-400">— capabilities that change the experience.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Next module:</h3><p class="text-neutral-300">2.5 - 🐙 GitHub: token, .gitignore, hermes config set</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-2-3.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="modulo-2-5.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 2.4 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
