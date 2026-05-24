@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>6.1 Quando criar novos agentes | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>6.1 When to create new agents | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -58,282 +58,256 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-rose-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-rose-400">Trilha 6</a><span>/</span>
-      <span class="text-rose-400">Módulo 6.1</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MÓDULO 6.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🌳 Quando criar novos agentes</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Decisão certa = começar com 1 agente, separar quando os critérios pagam. Decision tree, padrões por vertical, anatomia do "prédio" e Kanban multi-agente da v0.13.0.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Avançado</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Decisão</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🚫 Não criar cedo demais</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O erro mais comum de quem começa com Hermes é criar <strong class="text-rose-400">3-4 agentes no primeiro mês</strong> achando que está "se preparando para escalar". Resultado: nenhum agente fica bem treinado, todos têm memórias rasas, e em 60 dias 2 deles estão abandonados.
-      </p>
-      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">📏</span>Heurística do "1º agente"</h3>
-        <p class="text-neutral-300 mb-3">Só crie um <strong>segundo agente</strong> quando o primeiro tiver:</p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">✓</span><span>Pelo menos <strong>5 skills</strong> em uso regular</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">✓</span><span>Pelo menos <strong>3 crons</strong> entregando valor</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">✓</span><span>Pelo menos <strong>1 mês</strong> de uso real (não só teste)</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">✓</span><span>Pelo menos <strong>1 vez</strong> em que você atualizou memória ou soul para corrigir comportamento</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Por que isso importa</h3>
-        <p class="text-neutral-300">Operar 1 agente sólido <strong>te ensina o ciclo completo</strong>: criar skill, atualizar memória, ajustar soul, agendar cron, debugar, rotacionar. Esses ciclos repetidos viram músculo. Tentar aprender o ciclo em 3 agentes ao mesmo tempo dilui aprendizado e gera frustração.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🎯 Critérios para um novo agente</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Quando o critério aparece, separe sem dó. Existem <strong class="text-rose-400">4 sinais concretos</strong> de que vale criar um segundo agente em vez de empilhar mais coisas no primeiro.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🔑 Chaves diferentes</h4>
-          <p class="text-neutral-300 text-sm">A nova função exige conta diferente: outro Telegram bot, outro Gmail, outra API key de banco. Misturar viola princípio do menor privilégio.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🧠 Memória que não pode misturar</h4>
-          <p class="text-neutral-300 text-sm">Dados de cliente A vazando pra cliente B é catástrofe. Memória pessoal vazando pra agente da empresa, idem. Isolar via container.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🎭 Função/tom muito distinto</h4>
-          <p class="text-neutral-300 text-sm">Soul "informal e debochado" pra você não combina com "profissional e empático" pra suporte. Mesmo soul não atende os dois.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">⚠️ Escopo de risco diferente</h4>
-          <p class="text-neutral-300 text-sm">Agente que pode pagar contas é risco diferente de agente que só lê email. Separe pra reduzir blast radius se algo for comprometido.</p>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">📋 Regra prática</h3>
-        <p class="text-neutral-300">Se 2+ critérios estão presentes, separe. Se só 1, pondere — talvez uma skill nova com escopo limitado resolva sem fragmentar.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🗂️ Padrão por vertical</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Receita testada por dezenas de operadores. Você não precisa inventar a divisão — esses são os <strong class="text-rose-400">recortes que funcionam</strong> em operações pessoais e pequenas empresas.
-      </p>
-      <div class="space-y-4 mb-6">
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🧘 Pessoal — assistente do dia</h4>
-          <p class="text-neutral-300 text-sm">Resumos, lembretes, agenda, leitura assistida. Soul informal. Memória sobre você, projetos pessoais, preferências. Acesso ao seu Telegram principal.</p>
-        </div>
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">📣 Marketing — tom de marca</h4>
-          <p class="text-neutral-300 text-sm">Soul = voz da marca, com exemplos. Memória = histórico de conteúdo, calendário editorial. Skills: responder comentário, sugerir thread, revisar copy.</p>
-        </div>
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">💰 Financeiro — acesso restrito</h4>
-          <p class="text-neutral-300 text-sm">Chaves bancárias separadas. Canal Telegram privado. Soul sério. Skills: relatório semanal, alerta de vencimento, anomalia de custo.</p>
-        </div>
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🎧 Suporte — FAQ + escalação</h4>
-          <p class="text-neutral-300 text-sm">Soul empático e profissional. Memória = FAQ vivo. Skills: triagem, sugestão de resposta, escalação para humano em casos críticos.</p>
-        </div>
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">⚙️ Ops — audit + backup</h4>
-          <p class="text-neutral-300 text-sm">Acesso root ao VPS. Crons: auditoria semanal, backup diário, monitor de disco/memória. Soul direto e técnico.</p>
-        </div>
-        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">✍️ Conteúdo — newsletter, posts</h4>
-          <p class="text-neutral-300 text-sm">Soul = sua voz autoral. Memória = exemplos de bons textos seus. Skills: revisar texto, sugerir variações, compilar newsletter semanal.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🏢 Anatomia do "prédio"</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Modelo mental simples e útil: pense em <strong class="text-rose-400">três camadas físicas</strong>. Cada uma tem responsabilidade clara, e confundir entre elas é fonte de bug recorrente.
-      </p>
-      <div class="space-y-6 mb-6">
-        <div class="flex items-start space-x-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-rose-500/20 flex items-center justify-center"><span class="text-rose-400 font-bold">A</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold mb-2">VPS = o prédio</h4>
-            <p class="text-neutral-300 text-sm">Recurso físico (CPU, RAM, disco), IP público, banda. Ubuntu LTS + Docker + nginx + ssh. Você é o síndico — cuida do prédio inteiro.</p>
-          </div>
-        </div>
-        <div class="flex items-start space-x-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-rose-500/20 flex items-center justify-center"><span class="text-rose-400 font-bold">B</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold mb-2">Container Docker = a sala</h4>
-            <p class="text-neutral-300 text-sm">Isolamento. Cada agente tem seu container, seu .env, seus volumes. Reiniciar uma sala não afeta as outras. Atualizar uma versão de Hermes é trocar o conteúdo da sala.</p>
-          </div>
-        </div>
-        <div class="flex items-start space-x-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-rose-500/20 flex items-center justify-center"><span class="text-rose-400 font-bold">C</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold mb-2">Agente Hermes = o funcionário</h4>
-            <p class="text-neutral-300 text-sm">A pessoa que trabalha dentro da sala. Tem skills (procedimentos), memória (fatos), soul (jeito de ser). Quando você "atualiza o agente", está editando esses arquivos Markdown.</p>
-          </div>
-        </div>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Confusão clássica</h3>
-        <p class="text-neutral-300 text-sm">"Coloquei a chave no .env e não funciona." → Você editou o .env do prédio (host) quando o Hermes lê o .env da sala (container). Sempre confirme onde está editando: <code class="text-rose-400">docker exec -it hermes env | grep TELEGRAM</code>.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🚚 Migração entre agentes</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Boa notícia: Hermes guarda quase tudo em <strong class="text-rose-400">arquivos Markdown</strong>. Skills, MEMORY.md, SOUL.md, USER.md — tudo legível, versionável e portável. Migrar conhecimento entre agentes vira um <code class="text-rose-400">git clone</code> e um ajuste de tom.
-      </p>
-      <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4">📋 Receita de migração</h3>
-        <ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
-          <li>Crie um repo GitHub privado: <code class="text-rose-400">hermes-shared</code></li>
-          <li>Lá dentro: <code class="text-rose-400">/skills</code>, <code class="text-rose-400">/templates</code> de soul/memory por vertical</li>
-          <li>Cada container faz <code class="text-rose-400">git clone</code> e linka só o que usa</li>
-          <li>Skill compartilhada por 5 agentes: editou 1 vez, todos pegam no próximo pull</li>
-          <li>Skill específica por vertical: pasta <code class="text-rose-400">/marketing</code>, <code class="text-rose-400">/financeiro</code>, etc.</li>
-        </ol>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Dica de versionamento</h3>
-        <p class="text-neutral-300">Trate skills como código: PR review antes de mergeer, changelog quando muda comportamento, semver simples (<code class="text-primary">v1.0</code>, <code class="text-primary">v1.1</code>). Evita "skill nova quebrou o cron de backup" sem aviso.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🪐 Multi-agente Kanban (v0.13.0)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A grande novidade do <strong class="text-rose-400">v0.13.0 "The Tenacity Release"</strong> é o sistema Kanban multi-agente. Em vez de você orquestrar manualmente, um perfil orquestrador cria um board durável, define cards de tarefa, e múltiplos workers Hermes pegam, trabalham e fecham.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">📜 Citação dos release notes</h3>
-        <p class="text-neutral-300 italic text-sm">"Spin up a durable board, drop tasks on it, and let multiple Hermes workers pick them up, hand off, and close them out. Heartbeats, reclaim, zombie detection, retry budgets, and a hallucination gate keep the team honest."</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">💓 Heartbeats</h4>
-          <p class="text-neutral-300 text-sm">Cada worker bate ping no board. Sem heartbeat por X minutos = considerado travado. Tarefa volta pro topo.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🔄 Reclaim</h4>
-          <p class="text-neutral-300 text-sm">Tarefa abandonada por worker travado é "reclamada" por outro disponível. Trabalho não trava por causa de um worker zumbi.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🧟 Zombie detection</h4>
-          <p class="text-neutral-300 text-sm">Processo pendurado (CPU 0%, sem heartbeat) é detectado e morto. Evita worker fantasma consumindo recurso.</p>
-        </div>
-        <div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
-          <h4 class="font-bold text-rose-400 mb-2">🎯 Hallucination gate</h4>
-          <p class="text-neutral-300 text-sm">Antes de fechar card, valida que a saída faz sentido (testes passam, output não-vazio, etc). Bloqueia "completou" sem ter feito.</p>
-        </div>
-      </div>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-3">🎯 Casos de uso típicos</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Geração de conteúdo em massa:</strong> 1 orquestrador + 3 workers de redação + 1 revisor</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Análise de dados:</strong> dividir dataset em N pedaços, cada worker processa um</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Refactor de código:</strong> orquestrador descreve mudança, workers aplicam por arquivo</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Pesquisa paralela:</strong> N temas, N workers, consolidação no final</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Comece com 1 agente</strong><span class="text-neutral-400"> — só crie o segundo após 5 skills, 3 crons e 1 mês de uso real.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>4 critérios pra novo agente</strong><span class="text-neutral-400"> — chaves, memória, função/tom, escopo de risco. 2+ presentes, separa.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Padrão por vertical existe</strong><span class="text-neutral-400"> — pessoal, marketing, financeiro, suporte, ops, conteúdo.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>VPS = prédio, container = sala, agente = funcionário</strong><span class="text-neutral-400"> — modelo mental que evita confusão de .env.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Migração é Markdown + git</strong><span class="text-neutral-400"> — repo compartilhado de skills, cada container linka o que usa.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Kanban v0.13.0 traz paralelismo real</strong><span class="text-neutral-400"> — heartbeat, reclaim, zombie detection, hallucination gate.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-rose-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">6.2 - 📊 Dashboard, gateway, túnel, Kanban</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a>
-          <a href="modulo-6-2.html" class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 6.1 • 2026</p></div>
-  </footer>
-
-  <script>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10" href="index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-rose-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-rose-400" href="index.html">Track 6</a><span>/</span>
+<span class="text-rose-400">Module 6.1</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MODULE 6.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🌳 When to create new agents</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Right decision = start with 1 agent, separate when criteria pays. Decision tree, patterns by vertical, "building" anatomy and multi-agent Kanban from v0.13.0.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Advanced</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Decision</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🚫 Don't create too soon</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The most common mistake made by those who start with Hermes is to create<strong class="text-rose-400">3-4 agents in the first month</strong>thinking he's "getting ready to climb." Result: no agent is well trained, everyone has shallow memories, and in 60 days 2 of them are abandoned.</p>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">📏</span>"1st agent" heuristic</h3>
+<p class="text-neutral-300 mb-3">Just create one<strong>second agent</strong>when the first one has:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">✓</span><span>At least<strong>5 skills</strong>in regular use</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">✓</span><span>At least<strong>3 crons</strong>delivering value</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">✓</span><span>At least<strong>1 month</strong>real use (not just testing)</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">✓</span><span>At least<strong>1 time</strong>where you updated memory or soul to correct behavior</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Why does this matter</h3>
+<p class="text-neutral-300">Operate 1 solid agent<strong>teaches you the complete cycle</strong>: create skill, update memory, adjust soul, schedule cron, debug, rotate. These repeated cycles turn into muscle. Trying to learn the cycle with 3 agents at the same time dilutes learning and generates frustration.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🎯 Criteria for a new agent</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">When the criterion appears, separate without mercy. They exist<strong class="text-rose-400">4 concrete signs</strong>What's the point of creating a second agent instead of piling more things onto the first one?</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🔑 Different keys</h4>
+<p class="text-neutral-300 text-sm">The new function requires a different account: another Telegram bot, another Gmail, another bank API key. Mixing violates the principle of least privilege.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🧠 Memory that cannot mix</h4>
+<p class="text-neutral-300 text-sm">Data from customer A leaking to customer B is a catastrophe. Personal memory leaking to the company agent, ditto. Isolate via container.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🎭 Very distinct function/tone</h4>
+<p class="text-neutral-300 text-sm">"Informal and debauched" soul for you doesn't match "professional and empathetic" for support. Even soul doesn't do both.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">⚠️ Different risk scope</h4>
+<p class="text-neutral-300 text-sm">An agent who can pay bills is a different risk than an agent who only reads email. Set aside to reduce blast radius if something is compromised.</p>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">📋 Rule of thumb</h3>
+<p class="text-neutral-300">If 2+ criteria are present, separate. If only 1, consider it — perhaps a new skill with limited scope will solve it without fragmenting it.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🗂️ Pattern by vertical</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Recipe tested by dozens of operators. You don't need to invent the division - these are the<strong class="text-rose-400">cutouts that work</strong>in personal and small business operations.</p>
+<div class="space-y-4 mb-6">
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🧘 Staff — assistant of the day</h4>
+<p class="text-neutral-300 text-sm">Summaries, reminders, agenda, assisted reading. Informal soul. Memory about yourself, personal projects, preferences. Access to your main Telegram.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">📣 Marketing — brand tone</h4>
+<p class="text-neutral-300 text-sm">Soul = voice of the brand, with examples. Memory = content history, editorial calendar. Skills: respond to comments, suggest threads, review copy.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">💰 Financial — restricted access</h4>
+<p class="text-neutral-300 text-sm">Separate bank keys. Private Telegram channel. Seriously soul. Skills: weekly report, due date alert, cost anomaly.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🎧 Support — FAQ + escalation</h4>
+<p class="text-neutral-300 text-sm">Empathetic and professional soul. Memory = Live FAQ. Skills: triage, response suggestion, escalation to human in critical cases.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">⚙️ Oops — audit + backup</h4>
+<p class="text-neutral-300 text-sm">Root access to the VPS. Crons: weekly audit, daily backup, disk/memory monitor. Direct and technical soul.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+<h4 class="font-bold text-rose-400 mb-2">✍️ Content — newsletter, posts</h4>
+<p class="text-neutral-300 text-sm">Soul = your authorial voice. Memory = examples of your good texts. Skills: review text, suggest variations, compile weekly newsletter.</p>
+</div>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🏢 Anatomy of the "building"</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Simple and useful mental model: think about<strong class="text-rose-400">three physical layers</strong>. Each one has clear responsibility, and confusing them is a source of recurring bugs.</p>
+<div class="space-y-6 mb-6">
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-rose-500/20 flex items-center justify-center"><span class="text-rose-400 font-bold">A</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+<h4 class="font-semibold mb-2">VPS = the building</h4>
+<p class="text-neutral-300 text-sm">Physical resource (CPU, RAM, disk), public IP, bandwidth. Ubuntu LTS + Docker + nginx + ssh. You are the building manager — you take care of the entire building.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-rose-500/20 flex items-center justify-center"><span class="text-rose-400 font-bold">B</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+<h4 class="font-semibold mb-2">Docker container = the room</h4>
+<p class="text-neutral-300 text-sm">Isolation. Each agent has its container, its .env, its volumes. Restarting one room does not affect the others. Updating a version of Hermes is changing the contents of the room.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-rose-500/20 flex items-center justify-center"><span class="text-rose-400 font-bold">C</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+<h4 class="font-semibold mb-2">Agent Hermes = the employee</h4>
+<p class="text-neutral-300 text-sm">The person working inside the room. It has skills (procedures), memory (facts), soul (way of being). When you "update the agent" you are editing these Markdown files.</p>
+</div>
+</div>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Classic confusion</h3>
+<p class="text-neutral-300 text-sm">"I put the key in the .env and it doesn't work." → You edited the .env of the building (host) when Hermes reads the .env of the room (container). Always confirm where you are editing:<code class="text-rose-400" data-notranslate="True">docker exec -it hermes env | grep TELEGRAM</code>.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🚚 Migration between agents</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Good news: Hermes keeps almost everything in<strong class="text-rose-400">Markdown files</strong>. Skills, MEMORY.md, SOUL.md, USER.md — all readable, versionable, and portable. Migrating knowledge between agents becomes a<code class="text-rose-400" data-notranslate="True">git clone</code>and a tone adjustment.</p>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4">📋 Migration Recipe</h3>
+<ol class="space-y-2 text-neutral-300 text-sm list-decimal list-inside">
+<li>Create a private GitHub repo:<code class="text-rose-400" data-notranslate="True">hermes-shared</code></li>
+<li>Inside:<code class="text-rose-400" data-notranslate="True">/skills</code>, <code class="text-rose-400" data-notranslate="True">/templates</code>of soul/memory by vertical</li>
+<li>Each container does<code class="text-rose-400" data-notranslate="True">git clone</code>and only link what you use</li>
+<li>Skill shared by 5 agents: edited 1 time, everyone gets it in the next pull</li>
+<li>Vertical-specific skill: folder<code class="text-rose-400" data-notranslate="True">/marketing</code>, <code class="text-rose-400" data-notranslate="True">/financeiro</code>, etc.</li>
+</ol>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Versioning tip</h3>
+<p class="text-neutral-300">Treat skills as code: PR review before merging, changelog when behavior changes, simple semver (<code class="text-primary" data-notranslate="True">v1.0</code>, <code class="text-primary" data-notranslate="True">v1.1</code>). Prevents "new skill broke backup cron" without warning.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🪐 Multi-agent Kanban (v0.13.0)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The big news of<strong class="text-rose-400">v0.13.0 "The Tenacity Release"</strong>is the multi-agent Kanban system. Instead of you orchestrating manually, an orchestrator profile creates a durable board, defines task cards, and multiple Hermes workers pick it up, work it, and close it.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">📜 Quote from release notes</h3>
+<p class="text-neutral-300 italic text-sm">"Spin up a durable board, drop tasks on it, and let multiple Hermes workers pick them up, hand off, and close them out. Heartbeats, reclaim, zombie detection, retry budgets, and a hallucination gate keep the team honest."</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">💓 Heartbeats</h4>
+<p class="text-neutral-300 text-sm">Each worker pings the board. No heartbeat for X minutes = considered stuck. Task returns to the top.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🔄Reclaim</h4>
+<p class="text-neutral-300 text-sm">Task abandoned by a stuck worker is "claimed" by another available one. Job doesn't crash because of a zombie worker.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🧟 Zombie detection</h4>
+<p class="text-neutral-300 text-sm">Hanging process (0% CPU, no heartbeat) is detected and killed. Avoid ghost workers consuming resources.</p>
+</div>
+<div class="bg-rose-900/20 rounded-xl border border-rose-500/30 p-5">
+<h4 class="font-bold text-rose-400 mb-2">🎯 Hallucination gate</h4>
+<p class="text-neutral-300 text-sm">Before closing card, validate that the output makes sense (tests pass, non-empty output, etc). Block "completed" without having done it.</p>
+</div>
+</div>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-3">🎯 Typical use cases</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Bulk content generation:</strong>1 orchestrator + 3 writing workers + 1 reviewer</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Data Analysis:</strong>divide dataset into N pieces, each worker processes one</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Code refactor:</strong>orchestrator describes change, workers apply per file</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong>Parallel search:</strong>N themes, N workers, consolidation at the end</span></li>
+</ul>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Start with 1 agent</strong><span class="text-neutral-400">— only create the second one after 5 skills, 3 crons and 1 month of real use.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>4 criteria for a new agent</strong><span class="text-neutral-400">— keys, memory, function/tone, scope of risk. 2+ gifts, separate.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Standard by vertical exists</strong><span class="text-neutral-400">— personnel, marketing, finance, support, oops, content.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>VPS = building, container = room, agent = employee</strong><span class="text-neutral-400">— mental model that avoids .env clutter.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Migration is Markdown + git</strong><span class="text-neutral-400">— shared skills repo, each container links what it uses.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong>Kanban v0.13.0 brings real parallelism</strong><span class="text-neutral-400">— heartbeat, reclaim, zombie detection, hallucination gate.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-rose-400 mb-2">Next module:</h3><p class="text-neutral-300">6.2 - 📊 Dashboard, gateway, tunnel, Kanban</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Back to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors" href="modulo-6-2.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 6.1 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
