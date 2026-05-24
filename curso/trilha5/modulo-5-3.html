@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5.3 Hermes vs n8n | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>5.3 Hermes vs n8n | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -59,262 +59,238 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-teal-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-teal-400">Trilha 5</a><span>/</span>
-      <span class="text-teal-400">Módulo 5.3</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MÓDULO 5.3</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔄 Hermes vs n8n</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Workflows visuais com nós conectados vs linguagem natural com skills. Dois paradigmas opostos — e que se complementam mais do que parecem na prática.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Estratégico</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Comparação</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🎨 Paradigma: visual vs natural</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        n8n usa <strong class="text-teal-400">workflows visuais</strong> com nós conectados — drag-and-drop, igual Zapier mas open source e auto-hospedável. Hermes usa <strong class="text-teal-400">linguagem natural + skills em Markdown</strong> — sem interface de desenho de fluxo, o LLM decide o caminho em runtime.
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10" href="index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-teal-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-teal-400" href="index.html">Track 5</a><span>/</span>
+<span class="text-teal-400">Module 5.3</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MODULE 5.3</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔄 Hermes vs n8n</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Visual workflows with connected nodes vs natural language with skills. Two opposing paradigms — and which complement each other more than they seem in practice.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Strategic</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Comparison</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🎨 Paradigm: visual vs natural</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">n8n uses<strong class="text-teal-400">visual workflows</strong>with connected nodes — drag-and-drop, like Zapier but open source and self-hosting. Hermes uses<strong class="text-teal-400">natural language + Markdown skills</strong>— no flow design interface, LLM decides the path at runtime.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">🔄 n8n (visual)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Trigger → HTTP → Code → Webhook</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>You draw the flow on the canvas</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Each node is a configurable black box</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Clear visual audit trail</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Good for ops/marketing team</span></li>
+</ul>
+</div>
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h4 class="font-bold text-teal-400 mb-4">🪽 Hermes (natural language)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>"Summarize this email in the company's tone"</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>LLM decides next steps</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Markdown skills that the agent reads</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Adapts to unstructured input</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Good for small/individual team</span></li>
+</ul>
+</div>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🧠 Dynamic vs Fixed Sequence Reasoning</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes uses LLM to<strong class="text-teal-400">decide next steps at runtime</strong>— if something changes in the input, it adapts. n8n performs the<strong class="text-teal-400">exact sequence you drew</strong>— if input breaks what is expected, the node fails.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">📊 When everyone wins</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">Hermes wins on unstructured input:</strong>user message, free email, document without schema, transcribed audio. LLM extracts meaning.</div>
+<div><strong class="text-teal-400">n8n wins in API integration with fixed schema:</strong>Stripe webhook, GitHub event, structured JSON payload. Deterministic is cheaper and more predictable.</div>
+<div><strong class="text-teal-400">Example Hermes:</strong>"Summarize this email and respond in the company's tone" — LLM reasons the tone and generates a response.</div>
+<div><strong class="text-teal-400">Example n8n:</strong>"When webhook X arrives, call API Y, save it in Postgres, send Slack" — deterministic surgical flow.</div>
+</div>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Real trade-off</h3>
+<p class="text-neutral-300 text-sm">Dynamic reasoning costs inference (token) every time. Deterministic is free once created. For heavy flows running 10k times/day, n8n is much cheaper.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🏗️ Infrastructure: light vs heavy</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">n8n requires<strong class="text-teal-400">database</strong>(Postgres or SQLite), webhook server, configuration of each node. Hermes rolls with<strong class="text-teal-400"><code data-notranslate="True">pip install hermes-agent</code>+ an API key</strong>— ready.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">🏗️ n8n (rugged infra)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>DB: Postgres recommended in production</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Webhook server with public URL</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Mandatory DB backup</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>RAM: 2GB+ recommended</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Initial setup: half a day until validated</span></li>
+</ul>
+</div>
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h4 class="font-bold text-teal-400 mb-4">🪽 Hermes (light installation)</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><code data-notranslate="True">pip install hermes-agent</code></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Local SQLite (already coming)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>API key + Telegram token = ready</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>RAM: 1GB+ is enough</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Initial setup: ~10 minutes</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>One-click Hostinger</h3>
+<p class="text-neutral-300 text-sm">Hostinger list<strong>n8n and Hermes as separate one-click applications</strong>. The two can coexist on the same VPS. In heavy production, the n8n infrastructure compensates for the visual audit trail and high reliability of deterministic flows.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📈 Learning curve</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">n8n requires understanding<strong class="text-teal-400">each node</strong>(HTTP Request, Code, Webhook, IF, Loop, Set, Merge, etc.), credentials and expressions. Hermes accepts<strong class="text-teal-400">natural language instructions</strong>— you describe the task.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">⏱️ Time to be productive</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">Hermes:</strong>non-technical team adopts within hours. Natural question: "Search how to schedule a cron in Hermes" → he answers in text.</div>
+<div><strong class="text-teal-400">n8n:</strong>entry barrier of weeks to master knots, expressions<code data-notranslate="True">{{ }}</code>, flow debug. On the other hand, surgical visual control.</div>
+<div><strong class="text-teal-400">Practical example:</strong>schedule daily cron at 8am. Hermes: "every day at 8 am, send a summary" — that's it. n8n: drag "Schedule Trigger" node, configure cron expression, save, activate.</div>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">🎓 When it’s worth investing time</h3>
+<p class="text-neutral-300 text-sm">Ops team with 5+ complex workflows running production: investment in n8n pays off. Solo dev testing hypotheses: Hermes wins by time-to-value.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🤝 Hermes + n8n on Hostinger</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hostinger list<strong class="text-teal-400">n8n and Hermes as separate one-click applications</strong>. The two can coexist on the same VPS, with Hermes as<strong class="text-teal-400">intelligence layer over n8n automations</strong>.
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">🔄 n8n (visual)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Trigger → HTTP → Code → Webhook</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Você desenha o fluxo no canvas</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Cada nó é caixa-preta configurável</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Audit trail visual claro</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Bom pra equipe ops/marketing</span></li>
-          </ul>
-        </div>
-        <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-          <h4 class="font-bold text-teal-400 mb-4">🪽 Hermes (linguagem natural)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>"Resume esse email no tom da empresa"</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>LLM decide próximos passos</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Skills em Markdown que o agente lê</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Adapta a input não-estruturado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Bom pra equipe pequena/individual</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🧠 Raciocínio dinâmico vs sequência fixa</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes usa LLM para <strong class="text-teal-400">decidir próximos passos em runtime</strong> — se algo muda no input, ele adapta. n8n executa a <strong class="text-teal-400">sequência exata que você desenhou</strong> — se input quebrar o esperado, o nó falha.
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4">🔗 Integration pattern</h3>
+<div class="space-y-3 text-neutral-300 text-sm">
+<div><strong class="text-teal-400">n8n performs deterministic flow:</strong>synchronizes CRM, receives webhook, validates payload, makes HTTP requests.</div>
+<div><strong class="text-teal-400">Hermes adds intelligence where it needs it:</strong>summarize long email, classify ticket, adjust response tone, decide priority.</div>
+<div><strong class="text-teal-400">Pipe via webhook:</strong>n8n calls Hermes webhook via HTTP node. Hermes receives, processes with LLM, returns JSON. n8n continues the flow with the answer.</div>
+<div><strong class="text-teal-400">Result:</strong>n8n visualization + Hermes intelligence, with optimized cost (LLM only where needed).</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>real case</h3>
+<p class="text-neutral-300 text-sm">Workflow n8n: Stripe webhook → validate payment → search for customer in Postgres →<em>call Hermes via HTTP to generate personalized email</em>→ SendGrid. Hermes reasons the tone; n8n takes care of the operations.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🎯 When to choose each one</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Final decision by task profile, not by preference.<strong class="text-teal-400">n8n for heavy deterministic</strong>, <strong class="text-teal-400">Hermes for adaptive intelligence</strong>.
       </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">📊 Quando cada um vence</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">Hermes ganha em entrada não-estruturada:</strong> mensagem do usuário, email livre, documento sem schema, áudio transcrito. LLM extrai sentido.</div>
-          <div><strong class="text-teal-400">n8n ganha em integração de APIs com schema fixo:</strong> webhook do Stripe, evento do GitHub, payload JSON estruturado. Determinístico é mais barato e previsível.</div>
-          <div><strong class="text-teal-400">Exemplo Hermes:</strong> "Resume esse email e responda no tom da empresa" — LLM raciocina o tom e gera resposta.</div>
-          <div><strong class="text-teal-400">Exemplo n8n:</strong> "Quando webhook X chegar, chama API Y, salva no Postgres, manda Slack" — fluxo cirúrgico determinístico.</div>
-        </div>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Trade-off real</h3>
-        <p class="text-neutral-300 text-sm">Raciocínio dinâmico custa inferência (token) toda vez. Determinístico é grátis depois de criado. Pra fluxos pesados rodando 10k vezes/dia, n8n é muito mais barato.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🏗️ Infraestrutura: leve vs pesada</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        n8n requer <strong class="text-teal-400">banco de dados</strong> (Postgres ou SQLite), webhook server, configuração de cada nó. Hermes roda com <strong class="text-teal-400"><code>pip install hermes-agent</code> + uma API key</strong> — pronto.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">🏗️ n8n (infra robusta)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>DB: Postgres recomendado em produção</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Webhook server com URL pública</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Backup do DB obrigatório</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>RAM: 2GB+ recomendado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span>Setup inicial: meio dia até validar</span></li>
-          </ul>
-        </div>
-        <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-          <h4 class="font-bold text-teal-400 mb-4">🪽 Hermes (instalação leve)</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><code>pip install hermes-agent</code></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>SQLite local (já vem)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>API key + token Telegram = pronto</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>RAM: 1GB+ basta</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">•</span><span>Setup inicial: ~10 minutos</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Hostinger one-click</h3>
-        <p class="text-neutral-300 text-sm">Hostinger lista <strong>n8n e Hermes como aplicações one-click separadas</strong>. Os dois podem coexistir no mesmo VPS. Em produção pesada, a infra do n8n compensa pelo audit trail visual e alta confiabilidade de fluxos determinísticos.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">📈 Curva de aprendizado</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        n8n requer entender <strong class="text-teal-400">cada nó</strong> (HTTP Request, Code, Webhook, IF, Loop, Set, Merge, etc), credenciais e expressões. Hermes aceita <strong class="text-teal-400">instruções em linguagem natural</strong> — você descreve a tarefa.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">⏱️ Tempo até produtivo</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">Hermes:</strong> equipe não-técnica adota em horas. Pergunta natural: "Pesquise como agendar um cron no Hermes" → ele responde em texto.</div>
-          <div><strong class="text-teal-400">n8n:</strong> barreira de entrada de semanas pra dominar nós, expressões <code>{{ }}</code>, debug de fluxo. Em compensação, controle visual cirúrgico.</div>
-          <div><strong class="text-teal-400">Exemplo prático:</strong> agendar cron diário às 8h. Hermes: "todo dia 8h, manda resumo" — pronto. n8n: arrasta nó "Schedule Trigger", configura cron expression, salva, ativa.</div>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">🎓 Quando vale investir tempo</h3>
-        <p class="text-neutral-300 text-sm">Equipe ops com 5+ workflows complexos rodando produção: investimento em n8n compensa. Dev solo testando hipóteses: Hermes ganha pelo time-to-value.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🤝 Hermes + n8n no Hostinger</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hostinger lista <strong class="text-teal-400">n8n e Hermes como aplicações one-click separadas</strong>. Os dois podem coexistir no mesmo VPS, com Hermes como <strong class="text-teal-400">camada de inteligência sobre automações n8n</strong>.
-      </p>
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4">🔗 Padrão de integração</h3>
-        <div class="space-y-3 text-neutral-300 text-sm">
-          <div><strong class="text-teal-400">n8n executa fluxo determinístico:</strong> sincroniza CRM, recebe webhook, valida payload, faz HTTP requests.</div>
-          <div><strong class="text-teal-400">Hermes adiciona inteligência onde precisa:</strong> resumir email longo, classificar ticket, ajustar tom de resposta, decidir prioridade.</div>
-          <div><strong class="text-teal-400">Pipe via webhook:</strong> n8n chama webhook do Hermes via HTTP node. Hermes recebe, processa com LLM, devolve JSON. n8n continua o fluxo com a resposta.</div>
-          <div><strong class="text-teal-400">Resultado:</strong> visualização do n8n + inteligência do Hermes, com custo otimizado (LLM só onde precisa).</div>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Caso real</h3>
-        <p class="text-neutral-300 text-sm">Workflow n8n: webhook do Stripe → valida pagamento → busca cliente no Postgres → <em>chama Hermes via HTTP pra gerar email personalizado</em> → SendGrid. Hermes raciocina o tom; n8n cuida do operacional.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🎯 Quando escolher cada um</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Decisão final por perfil de tarefa, não por preferência. <strong class="text-teal-400">n8n para determinístico pesado</strong>, <strong class="text-teal-400">Hermes para inteligência adaptativa</strong>.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">🔄 Escolha n8n quando</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Workflow determinístico pesado (ETL, sync)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Sync entre 5+ sistemas com schema fixo</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Webhooks com schema rígido</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Audit trail visual obrigatório</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Equipe ops/marketing sem dev</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Volume alto onde inferência inviabiliza LLM</span></li>
-          </ul>
-        </div>
-        <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
-          <h4 class="font-bold text-teal-400 mb-4">🪽 Escolha Hermes quando</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Inteligência adaptativa (mensagens humanas)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Decisões com contexto não-estruturado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Automação pessoal/equipe pequena</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Setup rápido (sem infra pesada)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Comunicação via Telegram/WhatsApp</span></li>
-            <li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Gateway de mensagem nativo é diferencial</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Combo recomendado</h3>
-        <p class="text-neutral-300 text-sm">n8n na camada de integração + Hermes na camada de raciocínio. Webhook entre os dois é colinha simples. Você ganha visualização robusta do n8n e inteligência adaptativa do Hermes.</p>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Paradigmas opostos</strong><span class="text-neutral-400"> — n8n visual com nós; Hermes natural com skills.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Raciocínio dinâmico vs determinístico</strong><span class="text-neutral-400"> — LLM Hermes adapta input livre; n8n é cirúrgico em schema fixo.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Hermes setup em 10 min, n8n em horas</strong><span class="text-neutral-400"> — n8n exige Postgres/webhook server; Hermes é pip install + key.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Curva de aprendizado oposta</strong><span class="text-neutral-400"> — Hermes é instantâneo via chat; n8n exige semanas pra dominar nós.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Hostinger lista os dois separados</strong><span class="text-neutral-400"> — coexistem no mesmo VPS, conectam via webhook.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Combo ideal</strong><span class="text-neutral-400"> — n8n integra; Hermes raciocina onde precisa.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-teal-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">5.4 - 🔗 Hermes vs LangChain / LangGraph</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-5-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="modulo-5-4.html" class="flex-1 text-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 5.3 • 2026</p></div>
-  </footer>
-
-  <script>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-4">🔄 Choose n8n when</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Heavy deterministic workflow (ETL, sync)</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Sync between 5+ systems with fixed schema</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Rigid schema webhooks</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Mandatory visual audit trail</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Ops/marketing team without dev</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>High volume where inference makes LLM unfeasible</span></li>
+</ul>
+</div>
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6">
+<h4 class="font-bold text-teal-400 mb-4">🪽 Choose Hermes when</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Adaptive intelligence (human messages)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Decisions with unstructured context</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Personal/Small Team Automation</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Quick setup (without heavy infrastructure)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Communication via Telegram/WhatsApp</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400">✓</span><span>Native messaging gateway is different</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Recommended combo</h3>
+<p class="text-neutral-300 text-sm">n8n in the integration layer + Hermes in the reasoning layer. Webhook between the two is simple. You get robust visualization from n8n and adaptive intelligence from Hermes.</p>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Opposing paradigms</strong><span class="text-neutral-400">— visual n8n with nodes; Natural Hermes with skills.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Dynamic vs Deterministic Reasoning</strong><span class="text-neutral-400">— LLM Hermes adapts free input; n8n is surgical in fixed schema.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Hermes setup in 10 min, n8n in hours</strong><span class="text-neutral-400">— n8n requires Postgres/webhook server; Hermes is pip install + key.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Opposite learning curve</strong><span class="text-neutral-400">— Hermes is instant via chat; n8n requires weeks to dominate us.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Hostinger lists the two separately</strong><span class="text-neutral-400">— coexist on the same VPS, connect via webhook.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong>Ideal combo</strong><span class="text-neutral-400">— n8n integrates; Hermes reasons where he needs to.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-teal-400 mb-2">Next module:</h3><p class="text-neutral-300">5.4 - 🔗 Hermes vs LangChain / LangGraph</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-5-2.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors" href="modulo-5-4.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 5.3 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
