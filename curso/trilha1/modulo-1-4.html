@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.4 Casos de uso | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1.4 Use cases | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -58,140 +58,129 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-14"><div class="flex items-center space-x-4"><a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a><span class="text-neutral-600">|</span><a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a></div><div class="flex items-center space-x-1 sm:space-x-2"><a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a><a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a><a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a><a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a><a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a><a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a><button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></button></div></div></div></nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-emerald-400">Início</a><span>/</span><a href="index.html" class="hover:text-emerald-400">Trilha 1</a><span>/</span><span class="text-emerald-400">Módulo 1.4</span></div></nav>
-
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.4</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">💼 Casos de uso reais</h1><p class="text-lg text-neutral-400 max-w-3xl">Onde o Hermes brilha de verdade: pessoal, marketing, financeiro, suporte, operações e conteúdo. Exemplos concretos de cron, skill e padrão por área.</p><div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl"><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">35</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Aplicado</div><div class="text-xs text-neutral-400">Tipo</div></div></div></div></header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">🧘 Pessoal: assistente do dia</h2></div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">É o caso de menor risco e <strong class="text-emerald-400">maior retorno percebido</strong>. O agente fica útil em 1 dia. Resumo diário às 8h, lembretes contextuais, pesquisas rápidas via Telegram.</p>
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4">📋 Crons e skills típicos</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">→</span><span><strong>Cron 8h</strong>: <em>"Me envie um resumo das prioridades do dia"</em></span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">→</span><span><strong>Cron 18h</strong>: <em>"Revise o que ficou em aberto e proponha 3 ações pra amanhã"</em></span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">→</span><span><strong>Cron sex 17h</strong>: <em>"Relatório semanal: avanços, pendências, próximos passos"</em></span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">→</span><span><strong>Skill</strong>: <code>quick-research</code> — pesquisa um tema e devolve 5 bullets</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Por que começar aqui</h3>
-        <p class="text-neutral-300 text-sm">Crons curtos, tudo via Telegram, sem GPU local. Você cria hábito de conversar com o agente todo dia — o que torna o feedback (e o aprendizado dele) constante.</p>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">📣 Marketing: monitorar e responder</h2></div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Cron monitorando comentários (YouTube, Instagram, X), <strong class="text-emerald-400">sugerindo respostas dentro do tom da marca</strong>, mantendo um calendário editorial vivo. Você vira revisor, não criador-do-zero.</p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">🎙️ O que fica MUITO importante aqui</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">SOUL.md</strong> define o tom da marca — direto, descontraído, técnico, etc.</li>
-          <li><strong class="text-blue-400">MEMORY.md</strong> guarda exemplos de bons posts e bordões da marca</li>
-          <li><strong class="text-blue-400">Skills</strong>: <code>responder-comentario</code>, <code>sugerir-thread</code>, <code>brief-do-mes</code></li>
-          <li><strong class="text-blue-400">Permissões</strong>: nunca dê "always allow" pra publicar nas redes — só sugerir</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">💰 Financeiro: relatórios recorrentes</h2></div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Cron lendo planilhas, banco ou API financeira, gerando <strong class="text-emerald-400">resumo semanal</strong>, alertando sobre vencimentos e anomalias de custo.</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-4">✓ Padrão recomendado</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Agente financeiro <strong>separado</strong> do pessoal</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Chaves API com escopo só de leitura</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Alertas em canal Telegram <strong>privado</strong></span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Logs de auditoria de tudo que ele fez</span></li>
-          </ul>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Nunca faça</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Mesma chave do agente pessoal</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Permissão de transferência ativa por padrão</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Resposta direta em grupo coletivo</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Always allow" em qualquer ação financeira</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">🎧 Suporte: triagem de mensagens</h2></div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Hermes lendo email/tickets, classificando, <strong class="text-emerald-400">sugerindo resposta</strong> com base em FAQ ou histórico de cliente, escalando o que for crítico. Volume alto de mensagem repetida é onde mais economiza tempo.</p>
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4">🛠️ Stack típico do agente de suporte</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li>• <strong class="text-emerald-400">Soul</strong>: empático, profissional, com regras de escalonamento</li>
-          <li>• <strong class="text-emerald-400">Memory</strong>: FAQ atualizada, links de doc, contatos de owners</li>
-          <li>• <strong class="text-emerald-400">Skills</strong>: <code>classificar-ticket</code>, <code>buscar-na-faq</code>, <code>escalar-para-humano</code></li>
-          <li>• <strong class="text-emerald-400">Cron</strong>: a cada 30 min, varrer caixa e triar novos tickets</li>
-          <li>• <strong class="text-emerald-400">Regra de ouro</strong>: nunca responde sozinho ao cliente nas primeiras 4 semanas — só sugere resposta pra você revisar</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">⚙️ Operações: saúde do servidor</h2></div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Cron de auditoria semanal: <strong class="text-emerald-400">portas abertas, processos suspeitos, espaço em disco, logs anormais</strong>. Backup diário automático. Você não esquece de manter o ambiente saudável.</p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">🛡️ Crons de operação úteis</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Cron diário 00h</strong>: backup completo do diretório <code>~/.hermes</code> pro GitHub privado</li>
-          <li><strong class="text-blue-400">Cron a cada 5 min</strong> (mode <code>--no-agent</code>): heartbeat de RAM, disco, processo</li>
-          <li><strong class="text-blue-400">Cron semanal dom 9h</strong>: auditoria de portas abertas e logs estranhos</li>
-          <li><strong class="text-blue-400">Cron mensal</strong>: review de quais skills usou, quais nunca, e propor limpeza</li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Combine com firewall externo</h3>
-        <p class="text-neutral-300 text-sm">Skills de auditoria não substituem firewall em camada de host (ufw, Hostinger Upguard). Use os dois — segurança em camadas é regra.</p>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">✍️ Conteúdo: ideação e revisão</h2></div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Skills para revisar texto no seu estilo, gerar variações para A/B, sugerir tópicos baseados em conteúdo passado, montar newsletter semanal. <strong class="text-emerald-400">Reduz a fricção do "página em branco"</strong>.</p>
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4">🧠 Conteúdo bem-feito = soul + memory bem feitos</h3>
-        <p class="text-neutral-300 text-sm mb-3">A skill de revisão depende totalmente do <code>SOUL.md</code> (sua voz) e do <code>MEMORY.md</code> (exemplos de textos seus que funcionaram). Sem eles, o agente homogeniza o texto e tira sua personalidade.</p>
-        <p class="text-neutral-300 text-sm">Boa frase pra ele: <em>"Revise mantendo a minha voz. Conserte clareza e estrutura. Mas se você tirar minha personalidade, pior."</em></p>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3">📰 Cron clássico de newsletter</h3>
-        <p class="text-neutral-300 text-sm">"Toda quinta às 14h, leia meu Linear e os meus posts da semana, e prepare um draft de newsletter no formato X. Eu reviso até as 18h e mando."</p>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Pessoal é o ponto de entrada</strong><span class="text-neutral-400"> — baixo risco, retorno em 1 dia, cria hábito.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Marketing = soul + memory</strong><span class="text-neutral-400"> — tom da marca é tudo, agente sugere, você publica.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Financeiro = agente separado</strong><span class="text-neutral-400"> — chaves dedicadas, escopo de leitura, canal privado.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Suporte = nunca responde sozinho no início</strong><span class="text-neutral-400"> — só sugere por 4 semanas.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Operações = backup + auditoria + heartbeat</strong><span class="text-neutral-400"> — combine com firewall externo.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Conteúdo = preserve sua voz</strong><span class="text-neutral-400"> — instruça explicitamente "não me homogeneíze".</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-emerald-400 mb-2">Próxima trilha:</h3><p class="text-neutral-300">T2 - ⚙️ Setup do Zero — VPS, Docker, Telegram, GitHub e o primeiro cron</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-1-3.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo anterior</a>
-          <a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Trilha 2: Setup →</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 1.4 • 2026</p></div></footer>
-  <script>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-14"><div class="flex items-center space-x-4"><a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a><span class="text-neutral-600">|</span><a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a></div><div class="flex items-center space-x-1 sm:space-x-2"><a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a><a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a><a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a><a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a><a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a><a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a><button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle"><svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg></button></div></div></div></nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a class="hover:text-emerald-400" href="../../index.html">Start</a><span>/</span><a class="hover:text-emerald-400" href="index.html">Track 1</a><span>/</span><span class="text-emerald-400">Module 1.4</span></div></nav>
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MODULE 1.4</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">💼 Real use cases</h1><p class="text-lg text-neutral-400 max-w-3xl">Where Hermes really shines: people, marketing, finance, support, operations and content. Concrete examples of cron, skill and pattern by area.</p><div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl"><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Topics</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">35</div><div class="text-xs text-neutral-400">Minutes</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Basic</div><div class="text-xs text-neutral-400">Level</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Applied</div><div class="text-xs text-neutral-400">Type</div></div></div></div></header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">🧘 Personal: assistant of the day</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">This is the case of lowest risk and<strong class="text-emerald-400">higher perceived return</strong>. The agent becomes useful in 1 day. Daily summary at 8am, contextual reminders, quick searches via Telegram.</p>
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4">📋 Typical Crons and skills</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">→</span><span><strong>Chron 8h</strong>: <em>"Send me a summary of the day's priorities"</em></span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">→</span><span><strong>Chron 18h</strong>: <em>"Review what remains open and propose 3 actions for tomorrow"</em></span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">→</span><span><strong>Cron Fri 5pm</strong>: <em>"Weekly report: progress, pending issues, next steps"</em></span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">→</span><span><strong>Skill</strong>: <code data-notranslate="True">quick-research</code>— searches for a topic and returns 5 bullets</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Why start here</h3>
+<p class="text-neutral-300 text-sm">Short crons, all via Telegram, without local GPU. You create a habit of talking to the agent every day — which makes feedback (and learning) constant.</p>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">📣 Marketing: monitor and respond</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Cron monitoring comments (YouTube, Instagram, X),<strong class="text-emerald-400">suggesting responses within the brand tone</strong>, maintaining a live editorial calendar. You become a reviewer, not a creator from scratch.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">🎙️ What is VERY important here</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">SOUL.md</strong>sets the tone of the brand — direct, relaxed, technical, etc.</li>
+<li><strong class="text-blue-400">MEMORY.md</strong>save examples of good posts and brand catchphrases</li>
+<li><strong class="text-blue-400">Skills</strong>: <code data-notranslate="True">responder-comentario</code>, <code data-notranslate="True">sugerir-thread</code>, <code data-notranslate="True">brief-do-mes</code></li>
+<li><strong class="text-blue-400">Permissions</strong>: never give "always allow" to publish on networks — just suggest</li>
+</ul>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">💰 Financial: recurring reports</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Cron reading spreadsheets, bank or financial API, generating<strong class="text-emerald-400">weekly summary</strong>, alerting you about due dates and cost anomalies.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-4">✓ Recommended pattern</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Financial agent<strong>separate</strong>of the staff</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>API keys with read-only scope</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Alerts on Telegram channel<strong>private</strong></span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Audit logs of everything he did</span></li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ Never do</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Same key as personal agent</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Transfer permission active by default</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Direct response in a collective group</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Always allow" in any financial action</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">🎧 Support: Message screening</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes reading email/tickets, sorting,<strong class="text-emerald-400">suggesting answer</strong>based on FAQ or customer history, escalating whichever is critical. High volume of repeated messages saves the most time.</p>
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4">🛠️ Typical support agent stack</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li>• <strong class="text-emerald-400">Soul</strong>: empathetic, professional, with escalation rules</li>
+<li>• <strong class="text-emerald-400">memory</strong>: Updated FAQ, doc links, owner contacts</li>
+<li>• <strong class="text-emerald-400">Skills</strong>: <code data-notranslate="True">classificar-ticket</code>, <code data-notranslate="True">buscar-na-faq</code>, <code data-notranslate="True">escalar-para-humano</code></li>
+<li>• <strong class="text-emerald-400">Cron</strong>: every 30 minutes, sweep the cash register and sort new tickets</li>
+<li>• <strong class="text-emerald-400">Rule of thumb</strong>: never responds to the customer alone in the first 4 weeks — only suggests a response for you to review</li>
+</ul>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">⚙️ Operations: Server Health</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Weekly audit cron:<strong class="text-emerald-400">open ports, suspicious processes, disk space, abnormal logs</strong>. Automatic daily backup. You don't forget to keep the environment healthy.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">🛡️ Useful Operation Crons</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Daily Cron 00h</strong>: full directory backup<code data-notranslate="True">~/.hermes</code>for private GitHub</li>
+<li><strong class="text-blue-400">Cron every 5 min</strong>(mode<code data-notranslate="True">--no-agent</code>): heartbeat of RAM, disk, process</li>
+<li><strong class="text-blue-400">Weekly Cron Sun 9am</strong>: auditing open ports and strange logs</li>
+<li><strong class="text-blue-400">Monthly Cron</strong>: review which skills you used, which ones you never used, and propose cleaning</li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Combine with external firewall</h3>
+<p class="text-neutral-300 text-sm">Audit skills do not replace host-layer firewall (ufw, Hostinger Upguard). Use both — layered security is the rule.</p>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">✍️ Content: ideation and review</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Skills to revise text in your style, generate variations for A/B, suggest topics based on past content, create a weekly newsletter.<strong class="text-emerald-400">Reduces “blank page” friction</strong>.</p>
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4">🧠 Well-made content = well-made soul + memory</h3>
+<p class="text-neutral-300 text-sm mb-3">The review skill completely depends on the<code data-notranslate="True">SOUL.md</code>(your voice) and the<code data-notranslate="True">MEMORY.md</code>(examples of your texts that worked). Without them, the agent homogenizes the text and takes away its personality.</p>
+<p class="text-neutral-300 text-sm">Good phrase for him:<em>"Revise keeping my voice. Fix clarity and structure. But if you take away my personality, worse."</em></p>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3">📰 Classic newsletter cron</h3>
+<p class="text-neutral-300 text-sm">"Every Thursday at 2pm, read my Linear and my posts for the week, and prepare a draft newsletter in format X. I review it by 6pm and send it."</p>
+</div>
+</section>
+<section class="mb-12">
+<div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Personnel is the entry point</strong><span class="text-neutral-400">— low risk, return in 1 day, creates a habit.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Marketing = soul + memory</strong><span class="text-neutral-400">— brand tone is everything, agent suggests, you publish.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Financial = separate agent</strong><span class="text-neutral-400">— dedicated keys, read scope, private channel.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Support = never responds alone at first</strong><span class="text-neutral-400">— only suggests for 4 weeks.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Operations = backup + audit + heartbeat</strong><span class="text-neutral-400">— combine with external firewall.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Content = preserve your voice</strong><span class="text-neutral-400">—explicitly instruct “don’t homogenize me.”</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-emerald-400 mb-2">Next track:</h3><p class="text-neutral-300">T2 - ⚙️ Setup from Scratch — VPS, Docker, Telegram, GitHub and the first cron</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-1-3.html">← Previous module</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="../trilha2/index.html">Track 2: Setup →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 1.4 • 2026</p></div></footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
