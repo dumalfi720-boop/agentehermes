@@ -18,7 +18,7 @@ Hermes Agent is an open source AI agent from Noose Research, MIT licensed and on
 
 Hermes can run through Telegram, Discord, Slack, WhatsApp, or even iMessage. This guide focuses on Telegram setup.
 
-## What It Comes With Out of the Box
+## What It Comes Out of the Box
 
 * 91 built-in skills installed by default.
 * Access to a skills hub with over 520 community skills, including 16 official Anthropic skills.
@@ -54,7 +54,7 @@ Each tool has a clear role in the workflow. Hermes does not replace Claude Code,
 
 ### How to Use Them Together
 
-All these agents work in a directory/file structure that syncs to GitHub. Keep one GitHub repo with your business context and skills, then point any agent — Claude Code, Hermes, OpenCode, Codex — at that repo. Each agent understands its own naming convention, such as `claude.md` vs `agents.md`, so just ask it to adapt the repo.
+All these agents work in a directory/file structure that syncs to GitHub. Keep one GitHub repo with your business context and skills, then point any agent — Claude Code, Hermes, OpenCode, Codex — at that repo. Each agent understands its own naming convention, such as`claude.md` vs `agents.md`, so just ask it to adapt the repo.
 
 ## The Five Pillars of Hermes
 
@@ -64,8 +64,8 @@ These are the core concepts that make Hermes work. Understanding them upfront ma
 
 Memory is the small, durable context Hermes carries across sessions. Two main files load at session start:
 
-* `user.md`: who you are, your style, your preferences, what you don't like.
-* `memory.md`: environments, projects you're working on, business context.
+*`user.md`: who you are, your style, your preferences, what you don't like.
+*`memory.md`: environments, projects you're working on, business context.
 
 AI agents wake up stateless, like the movie *Memento*. Your job is to make sure context files are holistic so the agent doesn't repeat itself. Hermes will automatically update these files as you work, but you should still nudge it:
 
@@ -75,13 +75,13 @@ or:
 
 > Don't ever do this again.
 
-Beginner nuance: save durable preferences and facts to memory, use session search for old conversations because Hermes stores sessions in a SQLite database, and do not store secrets or temporary task status in memory.
+Beginner nuance: save durable preferences and facts to memory, use session search for old conversations because Hermes stores sessions in a SQLite database, and does not store secrets or temporary task status in memory.
 
 ### Pillar 2: Skills
 
 Skills are procedural memory: reusable playbooks for how to do a task well. Think of a skill as a recipe for chocolate chip pancakes. Following the recipe gets consistent results every time. Going off memory gets inconsistent pancakes.
 
-* All skills live in a `skill.md` file with YAML front matter at the top.
+* All skills live in one`skill.md`file with YAML front matter at the top.
 * YAML front matter tells the agent what the skill does and when to use it.
 * This is called progressive disclosure: full skill content only loads when needed, preventing context bloat.
 * Hermes can analyze your workflow and turn repeated tasks into skills automatically.
@@ -91,25 +91,25 @@ Skills are procedural memory: reusable playbooks for how to do a task well. Thin
 
 ### Pillar 3: Soul
 
-The `soul.md` file shapes the personality of the assistant. Six different Hermes agents can each have a different vibe: concise, sarcastic, formal, or whatever you want. Soul also evolves over time based on feedback. The soul file is just Markdown, with no YAML front matter required.
+The`soul.md`file shapes the personality of the assistant. Six different Hermes agents can each have a different vibe: concise, sarcastic, formal, or whatever you want. Soul also evolves over time based on feedback. The soul file is just Markdown, with no YAML front matter required.
 
 ### Pillar 4: Crons
 
 Crons turn Hermes from reactive into proactive scheduled automation while keeping the full agentic loop. You can say in natural language:
 
-> Every morning at 6 AM do X, Y, Z.
+> Every morning at 6 AM from X, Y, Z.
 
 Hermes creates the cron and runs a fresh isolated session at that time, then sends results back to the original chat.
 
 Cron features:
 
-* `CONTEXTFROM`: pass one job's output into another.
-* `WORKDIR`: run tools from a specific project folder.
-* `NOAGENT` flag: run a script without the agentic harness loop, meaning just the script, no agent reasoning.
+*`CONTEXTFROM`: pass one job's output into another.
+*`WORKDIR`: run tools from a specific project folder.
+*`NOAGENT`flag: run a script without the agentic harness loop, meaning just the script, no agent reasoning.
 
 Cron sessions cannot recursively create more cron jobs, so prompts need to be self-contained.
 
-This maps to the WAT framework: workflow, agent, tools. `NOAGENT` mode deploys just the workflow, like deploying a Python script on Modal without the agent layer.
+This maps to the WAT framework: workflow, agent, tools.`NOAGENT`mode deploys just the workflow, like deploying a Python script on Modal without the agent layer.
 
 ### Pillar 5: Self-Improving Loop
 
@@ -126,11 +126,11 @@ Automatic does not mean magic. The loop works best when you correct Hermes, ask 
 
 ### Honorable Mention: Context File (`agents.md`)
 
-`agents.md` is the project-level context file, equivalent to `claude.md` in Claude Code or `AGENTS.md` in Codex. It describes the overall project goal and structure for a contained working environment. It is more relevant when using Hermes in the terminal for coding work.
+`agents.md`is the project-level context file, equivalent to`claude.md`in Claude Code or`AGENTS.md`in Codex. It describes the overall project goal and structure for a contained working environment. It is more relevant when using Hermes in the terminal for coding work.
 
 ## Setting Up Your VPS on Hostinger
 
-A VPS, or virtual private server, is a computer in the cloud that you rent from a provider. You get an IP address and password and SSH in to manage files and install things. I uses Hostinger for Hermes, n8n, OpenCode, and Claude Code.
+A VPS, or virtual private server, is a computer in the cloud that you rent from a provider. You get an IP address and password and SSH in to manage files and install things. I use Hostinger for Hermes, n8n, OpenCode, and Claude Code.
 
 ### Choosing a Plan
 
@@ -143,7 +143,7 @@ A VPS, or virtual private server, is a computer in the cloud that you rent from 
 * OS: Ubuntu 24.04 LTS.
 * Hostinger has a one-click Hermes auto-deploy option.
 * Add the free malware scanner.
-* Set a memorable hostname, for example `youtube-hermes.vps`.
+* Set a memorable hostname, for example`youtube-hermes.vps`.
 * Enable daily auto-backups.
 
 ### Two Install Methods
@@ -155,7 +155,7 @@ Docker is easier and recommended for the demo. It lets you run multiple separate
 
 ## Managing Your Agents With a Claude Code Project
 
-Maintains a Claude Code project called `uppit-agents` to track every VPS agent: passwords, environment variables, IP addresses, Docker setup, security notes. This is the secret to staying organized.
+Maintains a Claude Code project called`uppit-agents`to track every VPS agent: passwords, environment variables, IP addresses, Docker setup, security notes. This is the secret to staying organized.
 
 ### Why Set This Up
 
@@ -166,9 +166,9 @@ Maintains a Claude Code project called `uppit-agents` to track every VPS agent: 
 
 ### What to Track Per Agent
 
-* Admin username and admin password, saved to `.env` file in the project.
+* Admin username and admin password, saved to`.env`file in the project.
 * IP address and hostname.
-* Whether it's Docker or root install.
+*Whether it's Docker or root install.
 * Tool availability, skills, file paths.
 * Security notes and integrations.
 
@@ -189,7 +189,7 @@ Pick GPT-5.5 for the best balance.
 ### Step 3: Set Up Telegram
 
 * Hit space to select Telegram, then Enter to confirm.
-* In Telegram, open BotFather and send `/newbot`.
+* In Telegram, open BotFather and send`/newbot`.
 * Give the bot a name and unique username.
 * Copy the bot token and paste it into the VPS terminal.
 
@@ -212,7 +212,7 @@ This is the first thing every new Hermes agent should do. If the VPS gets corrup
 * Tell Hermes: "Set this up as a private GitHub repo. Do research and figure out how it works."
 * Hermes already has GitHub repo management and GitHub Auth skills built in.
 * It will ask for your GitHub username, repo name, commit identity, and personal access token.
-* It will create a `.gitignore` so secrets don't get pushed, even on private repos.
+* It will create a`.gitignore`so secrets don't get pushed, even on private repos.
 
 ### Personal Access Token Setup
 
@@ -226,26 +226,22 @@ This is the first thing every new Hermes agent should do. If the VPS gets corrup
 Don't paste API keys directly into the chat. They live in conversation history forever. Use the Hermes config command instead.
 
 1. In the VPS, click **Open** to enter the chat.
-2. Hit `Ctrl+C` to exit Hermes chat into the Docker shell.
-3. Run:
-
-```bash
+2. Hit`Ctrl+C`to exit Hermes chat into the Docker shell.
+3. Run:```bash
 hermes config set GITHUB\_TOKEN <paste-token-here>
-```
-
-This saves the token to `/opt/data/.env` inside the Docker container, never the conversation log.
+```This saves the token to`/opt/data/.env`inside the Docker container, never the conversation log.
 
 Then tell Hermes:
 
-> The new token is in the `.env` file as `GITHUB\_TOKEN`.
+> The new token is in the`.env`file as`GITHUB\_TOKEN`.
 
 Hermes will pick it up.
 
 ### Editing or Deleting Keys
 
-If you need to delete or update a key, ask Hermes for the `nano` command to open the `.env` file. Make sure you're editing the `.env` inside the Docker container, not the root VPS `.env`. Use `Ctrl+O` then Enter to save, and `Ctrl+X` to exit.
+If you need to delete or update a key, ask Hermes for the`nano`command to open the`.env`file. Make sure you're editing the`.env`inside the Docker container, not the root VPS`.env`. Use`Ctrl+O`then Enter to save, and`Ctrl+X`to exit.
 
-If `nano` isn't installed, ask Hermes to install it or give you an alternative editing command.
+If`nano`isn't installed, ask Hermes to install it or give you an alternative editing command.
 
 ## Building Your First Skill and Cron
 
@@ -257,8 +253,8 @@ Once GitHub is connected, set up a daily backup cron. Say:
 
 * Views relevant existing skills.
 * Runs terminal commands to set up the cron.
-* Creates a new skill, for example `nightly-github-sync`.
-* Updates `memory.md` with the new context.
+* Creates a new skill, for example`nightly-github-sync`.
+* Updates`memory.md`with the new context.
 * Handles timezone differences automatically. The container runs in UTC, but it self-checks Central Time so daylight savings doesn't break it.
 
 ### Permission Levels in Telegram
@@ -290,7 +286,7 @@ Functionally, it's the same agent in both interfaces. Telegram does not run a we
 
 ### Important Note on Context
 
-Context is token-based, not message-based. The model always sees your system prompt, `user.md`, `soul`, and so on. As you near the context window limit, Hermes runs auto-compaction. In Telegram, you can't see exactly when this happens, so high-stakes work is riskier there.
+Context is token-based, not message-based. The model always sees your system prompt,`user.md`, `soul`, and so on. As you near the context window limit, Hermes runs auto-compaction. In Telegram, you can't see exactly when this happens, so high-stakes work is riskier there.
 
 ## API Key and Security Best Practices
 
@@ -307,7 +303,7 @@ Treat Hermes like a new employee or intern. You wouldn't hand a new hire your cr
 
 * Set up a firewall in Hostinger. Uses one called Upguard.
 * Lock down to your IP and block unused ports.
-* Ask Hermes or Claude Code to research your environment and recommend a firewall config.
+* Ask Hermes or Claude Code to investigate your environment and recommend a firewall config.
 * Build a nightly or weekly security audit skill that checks for vulnerabilities.
 
 ## Maintaining Hermes Over Time
@@ -318,9 +314,9 @@ Hermes is not a tool you finish setting up. It's a teammate you keep training.
 
 * When the agent gets something wrong twice, correct it on the spot and tell it to update the relevant skill or memory.
 * When you give the same instruction twice, ask Hermes to write a skill for it.
-* When the agent is too verbose or off-tone, edit `soul.md`.
+* When the agent is too verbose or off-tone, edit`soul.md`.
 * When you want a new scheduled task, build a skill and ask Hermes to schedule the cron.
-* When something breaks, check `memory.md` first. Stale memory is the number one cause of weird agent behavior.
+* When something breaks, check`memory.md`first. Stale memory is the number one cause of strange agent behavior.
 * At any time, ask: "Read me your memory file" or "Read me your soul file" to see what's actually in there.
 
 ## Scaling: Multiple Hermes Agents
@@ -331,7 +327,7 @@ As you grow, you may want dedicated agents for different roles. Don't force it. 
 
 * Each agent runs in its own Docker container.
 * Each container has its own memory, tools, and private API keys.
-* Containers don't share `.env` files, so keys don't clash across agents.
+* Containers don't share`.env`files, so keys don't clash across agents.
 * Office building analogy: VPS is the building, each agent is a separate office with its own keys.
 
 ### Decision Tree for a New Agent
@@ -368,18 +364,15 @@ Then run three commands.
 * Quick way to manage crons, plugins, and configs.
 * Rarely uses it because his Hermes work happens on the go via Telegram.
 
-## Key Takeaways
+##Key Takeaways
 
 1. Hermes is best for on-the-go automation through Telegram. Claude Code stays the daily driver for desk-bound knowledge work.
 2. The five pillars — Memory, Skills, Soul, Crons, Self-Improving Loop — are the mental model for everything Hermes does.
 3. Use the Hostinger one-click Docker install on Ubuntu 24.04 LTS.
 4. Always set up a Claude Code project to track your VPS agents: passwords, IPs, configs. It pays off the first time something breaks.
 5. First thing after onboarding: connect Hermes to a private GitHub repo and set a daily backup cron.
-6. Never paste API keys into chat. Use `hermes config set KEY\_NAME <value>` from inside the Docker container.
+6. Never paste API keys into chat. Use`hermes config set KEY\_NAME <value>`from inside the Docker container.
 7. Treat each Hermes like a new hire: principle of least privilege, named API keys per agent, separate accounts where possible.
-8. Stale `memory.md` is the number one cause of weird agent behavior. Check it first when things go sideways.
+8. Stale`memory.md`is the number one cause of strange agent behavior. Check it first when things go sideways.
 
 ## Want to connect with others building and monetizing AI automation?
-
-
-
