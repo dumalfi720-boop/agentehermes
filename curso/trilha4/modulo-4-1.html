@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4.1 Tokens, .env e hermes config set | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>4.1 Tokens, .env and hermes config set | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -62,260 +62,237 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-amber-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-amber-400">Trilha 4</a><span>/</span>
-      <span class="text-amber-400">Módulo 4.1</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">MÓDULO 4.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔐 Tokens, .env e hermes config set</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Onde colocar credenciais sem vazá-las, qual .env o Hermes lê em Docker, como o config set protege seu histórico e como logs ficam limpos por padrão.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Inter.</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Hands</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🚫 Por que NUNCA colar token no chat</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Tudo que você digita no chat do Hermes é persistido. As sessões ficam em <code class="text-amber-400">~/.hermes/state.db</code> (SQLite com FTS5) e ficam pesquisáveis pela ferramenta <code class="text-amber-400">session_search</code>. Se você cola um token ali "só pra testar", ele <strong class="text-amber-400">vira parte do histórico para sempre</strong>.
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10" href="index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-amber-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-amber-400" href="index.html">Track 4</a><span>/</span>
+<span class="text-amber-400">Module 4.1</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">MODULE 4.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔐 Tokens, .env and hermes config set</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Where to put credentials without leaking them, which .env does Hermes read in Docker, how the config set protects your history and how logs are clean by default.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Inter.</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Hands</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🚫 Why NEVER paste tokens in chat</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Everything you type in Hermes chat is persisted. The sessions are<code class="text-amber-400" data-notranslate="True">~/.hermes/state.db</code>(SQLite with FTS5) and are searchable by the tool<code class="text-amber-400" data-notranslate="True">session_search</code>. If you paste a token there "just to test", it<strong class="text-amber-400">becomes part of history forever</strong>.
       </p>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>O que acontece quando você cola um token</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1">•</span><span>Vai pro <strong>SQLite indexado</strong> — pesquisável por anos</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1">•</span><span>Aparece em <strong>backups automáticos</strong> da VPS</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1">•</span><span>Pode ser enviado pro <strong>provedor de inferência</strong> em compressões/sumarizações</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1">•</span><span>Fica no <strong>contexto de sessões futuras</strong> via session_search</span></li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3 flex items-center"><span class="mr-2">🛡️</span>O que fazer (e o que NÃO fazer)</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-1">✓</span><span>Use <code class="text-amber-400">hermes config set KEY value</code> sempre</span></li>
-          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-1">✓</span><span>Se vazou por engano: <strong>revogue a credencial imediatamente</strong> e gere outra</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1">✗</span><span>Não tente "limpar" o histórico — assuma vazado</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1">✗</span><span>Não cole o token "só pra ele testar se funciona"</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">⌨️ hermes config set KEY value</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Comando oficial pra escrever variável de ambiente sem expô-la. Ele lê o valor por stdin (ou argv tratado), persiste em <code class="text-amber-400">/root/.hermes/.env</code> dentro do container e confirma sem ecoar o valor.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">📋 Exemplos comuns</h3>
-        <div class="space-y-2 text-neutral-300 text-sm">
-          <div><code class="text-blue-400">hermes config set TELEGRAM_TOKEN 123456:abc...</code></div>
-          <div><code class="text-blue-400">hermes config set OPENROUTER_API_KEY sk-or-...</code></div>
-          <div><code class="text-blue-400">hermes config set OPENAI_API_KEY sk-...</code></div>
-          <div><code class="text-blue-400">hermes config set GITHUB_TOKEN ghp_...</code></div>
-          <div><code class="text-blue-400">hermes config set TELEGRAM_HOME_CHANNEL @meu_canal</code></div>
-        </div>
-      </div>
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3 flex items-center"><span class="mr-2">🐳</span>Em Docker</h3>
-        <p class="text-neutral-300 text-sm mb-3">Sempre exec dentro do container antes:</p>
-        <pre class="bg-dark-900 rounded p-3 text-sm text-amber-400 overflow-x-auto"><code>docker exec -it hermes hermes config set TELEGRAM_TOKEN 123:abc</code></pre>
-        <p class="text-neutral-400 text-sm mt-3">Sem o <code>exec</code>, você está rodando no host — onde o Hermes nem está instalado, ou está numa versão diferente.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🐳 .env do container vs .env do host</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        É a confusão #1 da comunidade. O Docker isola sistemas de arquivos. O <code class="text-amber-400">.env</code> da raiz do projeto no host <strong class="text-amber-400">não chega ao processo</strong> a menos que você monte explicitamente.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ O que NÃO funciona</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Editar <code>/home/voce/projeto/.env</code> no host</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Esperar que o Hermes "veja" sem volume montado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Reiniciar o container e achar que funcionou</span></li>
-          </ul>
-        </div>
-        <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
-          <h4 class="font-bold text-amber-400 mb-4">✓ O que funciona</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Volume <code>~/.hermes:/root/.hermes</code> montado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Variáveis em <code>/root/.hermes/.env</code> do container</span></li>
-            <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span><code>hermes config set</code> escreve no caminho certo</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔍</span>Como confirmar que está certo</h3>
-        <pre class="bg-dark-900 rounded p-3 text-sm text-blue-400 overflow-x-auto"><code>docker exec -it hermes env | grep TELEGRAM</code></pre>
-        <p class="text-neutral-300 text-sm mt-3">Se a variável aparece, está visível para o processo. Se não aparece, volta no volume mount do <code>docker-compose.yml</code> ou no nome da var.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">📝 Editar/deletar via nano</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O <code class="text-amber-400">config set</code> sobrescreve ou adiciona, mas não tem subcomando <em>delete</em> amigável. Quando você troca de provedor (saiu da OpenAI, foi pra OpenRouter), a chave antiga continua no <code>.env</code>. Limpe manualmente.
-      </p>
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4">🔧 Procedimento seguro</h3>
-        <ol class="space-y-3 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-3"><span class="font-bold text-amber-400">1.</span><div>Backup: <code class="text-amber-400">docker exec hermes cp /root/.hermes/.env /root/.hermes/.env.bak</code></div></li>
-          <li class="flex items-start space-x-3"><span class="font-bold text-amber-400">2.</span><div>Editar: <code class="text-amber-400">docker exec -it hermes nano /root/.hermes/.env</code></div></li>
-          <li class="flex items-start space-x-3"><span class="font-bold text-amber-400">3.</span><div>Apagar a linha da chave que não usa mais</div></li>
-          <li class="flex items-start space-x-3"><span class="font-bold text-amber-400">4.</span><div>Reiniciar gateway: <code class="text-amber-400">hermes gateway restart</code></div></li>
-          <li class="flex items-start space-x-3"><span class="font-bold text-amber-400">5.</span><div>Confirmar: <code class="text-amber-400">docker exec hermes env | grep KEY_ANTIGA</code> (deve sumir)</div></li>
-        </ol>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Dica</h3>
-        <p class="text-neutral-300 text-sm">Mantenha um comentário no topo do <code>.env</code> com data da última revisão e quem é dono de cada chave. Em 6 meses você não lembra qual <code>API_KEY</code> serve pra quê.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🎯 Tokens com escopo limitado</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Token vazado é prejuízo proporcional ao escopo. Token <em>classic</em> de GitHub com acesso a todos seus repos privados = catástrofe. Token <em>fine-grained</em> com acesso só ao repo X = incidente contido.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🔑 GitHub: classic vs fine-grained</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Classic:</strong> escolhe scopes amplos (repo, workflow, gist...). Sem expiração obrigatória. Acesso a todos os repos onde você tem permissão.</li>
-          <li><strong class="text-blue-400">Fine-grained:</strong> escolhe repos específicos + permissões granulares (read/write por área). <strong>Expiração obrigatória</strong> (max 1 ano).</li>
-          <li><strong class="text-blue-400">Recomendação:</strong> sempre fine-grained, escopado ao mínimo de repos, com 90 dias de expiração.</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4">🤖 OpenAI / OpenRouter</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-amber-400">OpenAI:</strong> use <em>project keys</em>. Cada projeto pode ter limites de gasto e modelos próprios. Restringe <em>blast radius</em>.</li>
-          <li><strong class="text-amber-400">OpenRouter:</strong> crie chaves nomeadas por agente. Defina limite mensal por chave. Ative alerta de gasto.</li>
-          <li><strong class="text-amber-400">Anthropic:</strong> workspaces separam billing. Use um workspace por agente.</li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Regra prática</h3>
-        <p class="text-neutral-300 text-sm">Comece com escopo <strong>mínimo</strong>. Quando o agente reclamar "permission denied", expanda <strong>só</strong> o necessário. Nunca o contrário (full access "porque é mais fácil").</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🔇 Auto-redação de secrets nos logs</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O Hermes redige automaticamente valores conhecidos de variáveis de ambiente quando aparecem em mensagens de erro. Você pode pedir suporte, postar pedaços do log no Discord da comunidade — sem vazar credencial. <strong class="text-amber-400">Mas confira sempre antes de compartilhar.</strong>
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">📁 Onde olhar</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><code class="text-blue-400">~/.hermes/logs/errors.log</code> — erros do agente, com auto-redação</li>
-          <li><code class="text-blue-400">~/.hermes/logs/gateway.log</code> — eventos de mensageria</li>
-          <li><code class="text-blue-400">~/.hermes/logs/cron.log</code> — execução de jobs agendados</li>
-          <li><code class="text-blue-400">~/.hermes/state.db</code> — sessões (use <code>session_search</code>)</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-3 flex items-center"><span class="mr-2">🛡️</span>O que a redação cobre</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-1">✓</span><span>Variáveis com nomes conhecidos (TELEGRAM_TOKEN, *_API_KEY, *_SECRET)</span></li>
-          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-1">✓</span><span>Padrões de tokens reconhecidos (sk-..., ghp_...)</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1">✗</span><span>Valores hardcoded em código que você passou no chat</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1">✗</span><span>Strings em mensagens livres que parecem texto comum</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Antes de compartilhar log</h3>
-        <p class="text-neutral-300 text-sm">Sempre abra e leia. Procure por <code>sk-</code>, <code>ghp_</code>, <code>123456:</code> (formato de token Telegram), URLs com tokens em query string. Confirme que estão como <code>***REDACTED***</code> ou similar.</p>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-amber-900/40 via-dark-800 to-dark-800 rounded-xl border border-amber-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Token colado no chat fica para sempre no SQLite</strong><span class="text-neutral-400"> — use sempre <code>hermes config set</code>.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Em Docker, o .env é em /root/.hermes/.env do container</strong><span class="text-neutral-400"> — o do host não é lido sem volume montado.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Para apagar chave antiga, edite via nano e reinicie o gateway</strong><span class="text-neutral-400"> — o config set não tem delete fácil.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Use tokens com escopo limitado</strong><span class="text-neutral-400"> — fine-grained no GitHub, project keys na OpenAI, chaves nomeadas no OpenRouter.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Logs têm auto-redação de secrets</strong><span class="text-neutral-400"> — mas confira antes de compartilhar.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-amber-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">4.2 - 🛡️ Firewall, portas e IP allowlist</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a>
-          <a href="modulo-4-2.html" class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 4.1 • 2026</p></div>
-  </footer>
-
-  <script>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>What happens when you paste a token</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400 mt-1">•</span><span>Go to<strong>Indexed SQLite</strong>— searchable for years</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400 mt-1">•</span><span>Appears in<strong>automatic backups</strong>from VPS</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400 mt-1">•</span><span>Can be sent to<strong>inference provider</strong>in compressions/summarizations</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400 mt-1">•</span><span>Stay in<strong>context of future sessions</strong>via session_search</span></li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-3 flex items-center"><span class="mr-2">🛡️</span>What to do (and what NOT to do)</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-amber-400 mt-1">✓</span><span>Use<code class="text-amber-400" data-notranslate="True">hermes config set KEY value</code>always</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400 mt-1">✓</span><span>If it was leaked by mistake:<strong>revoke credential immediately</strong>and generate another</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400 mt-1">✗</span><span>Don't try to "clear" your history — assume it's leaked</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400 mt-1">✗</span><span>Don't paste the token "just to test if it works"</span></li>
+</ul>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">⌨️ hermes config set KEY value</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Official command to write environment variable without exposing it. It reads the value from stdin (or handled argv), persists it across<code class="text-amber-400" data-notranslate="True">/root/.hermes/.env</code>inside the container and confirms without echoing the value.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">📋 Common examples</h3>
+<div class="space-y-2 text-neutral-300 text-sm">
+<div><code class="text-blue-400" data-notranslate="True">hermes config set TELEGRAM_TOKEN 123456:abc...</code></div>
+<div><code class="text-blue-400" data-notranslate="True">hermes config set OPENROUTER_API_KEY sk-or-...</code></div>
+<div><code class="text-blue-400" data-notranslate="True">hermes config set OPENAI_API_KEY sk-...</code></div>
+<div><code class="text-blue-400" data-notranslate="True">hermes config set GITHUB_TOKEN ghp_...</code></div>
+<div><code class="text-blue-400" data-notranslate="True">hermes config set TELEGRAM_HOME_CHANNEL @meu_canal</code></div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-3 flex items-center"><span class="mr-2">🐳</span>In Docker</h3>
+<p class="text-neutral-300 text-sm mb-3">Always execute inside the container before:</p>
+<pre class="bg-dark-900 rounded p-3 text-sm text-amber-400 overflow-x-auto" data-notranslate="True"><code data-notranslate="True">docker exec -it hermes hermes config set TELEGRAM_TOKEN 123:abc</code></pre>
+<p class="text-neutral-400 text-sm mt-3">Without the<code data-notranslate="True">exec</code>, you are running on the host — where Hermes is not even installed, or is in a different version.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🐳 container's .env vs host's .env</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">It's the community's #1 confusion. Docker isolates file systems. THE<code class="text-amber-400" data-notranslate="True">.env</code>from the project root on the host<strong class="text-amber-400">does not reach the process</strong>unless you mount it explicitly.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ What DOESN’T work</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Edit<code data-notranslate="True">/home/voce/projeto/.env</code>on host</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Wait for Hermes to "see" without volume mounted</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Restart the container and think it worked</span></li>
+</ul>
+</div>
+<div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
+<h4 class="font-bold text-amber-400 mb-4">✓ What works</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Volume<code data-notranslate="True">~/.hermes:/root/.hermes</code>mounted</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Variables in<code data-notranslate="True">/root/.hermes/.env</code>of the container</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span><code data-notranslate="True">hermes config set</code>write in the right way</span></li>
+</ul>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔍</span>How to confirm that you are right</h3>
+<pre class="bg-dark-900 rounded p-3 text-sm text-blue-400 overflow-x-auto" data-notranslate="True"><code data-notranslate="True">docker exec -it hermes env | grep TELEGRAM</code></pre>
+<p class="text-neutral-300 text-sm mt-3">If the variable appears, it is visible to the process. If it doesn't appear, go back to the mount volume of the<code data-notranslate="True">docker-compose.yml</code>or in the var name.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📝 Edit/delete via nano</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">
+        O <code class="text-amber-400" data-notranslate="True">config set</code>overwrites or adds, but has no subcommand<em>delete</em>friendly. When you change providers (left OpenAI, went to OpenRouter), the old key remains in the<code data-notranslate="True">.env</code>. Clean manually.</p>
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4">🔧 Safe procedure</h3>
+<ol class="space-y-3 text-neutral-300 text-sm">
+<li class="flex items-start space-x-3"><span class="font-bold text-amber-400">1.</span><div>Backup:<code class="text-amber-400" data-notranslate="True">docker exec hermes cp /root/.hermes/.env /root/.hermes/.env.bak</code></div></li>
+<li class="flex items-start space-x-3"><span class="font-bold text-amber-400">2.</span><div>Edit:<code class="text-amber-400" data-notranslate="True">docker exec -it hermes nano /root/.hermes/.env</code></div></li>
+<li class="flex items-start space-x-3"><span class="font-bold text-amber-400">3.</span><div>Delete the key line you no longer use</div></li>
+<li class="flex items-start space-x-3"><span class="font-bold text-amber-400">4.</span><div>Restart gateway:<code class="text-amber-400" data-notranslate="True">hermes gateway restart</code></div></li>
+<li class="flex items-start space-x-3"><span class="font-bold text-amber-400">5.</span><div>Confirm:<code class="text-amber-400" data-notranslate="True">docker exec hermes env | grep KEY_ANTIGA</code>(should disappear)</div></li>
+</ol>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Tip</h3>
+<p class="text-neutral-300 text-sm">Keep a comment at the top of<code data-notranslate="True">.env</code>with date of last revision and who owns each key. In 6 months you won't remember which<code data-notranslate="True">API_KEY</code>What is it for?</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🎯 Tokens with limited scope</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Leaked token is a loss proportional to the scope. Token<em>classic</em>from GitHub with access to all your private repos = catastrophe. Token<em>fine-grained</em>with access only to repo X = contained incident.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🔑 GitHub: classic vs fine-grained</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Classic:</strong>choose broad scopes (repo, workflow, gist...). No mandatory expiration. Access to all repos where you have permission.</li>
+<li><strong class="text-blue-400">Fine-grained:</strong>choose specific repos + granular permissions (read/write per area).<strong>Mandatory expiration</strong>(max 1 year).</li>
+<li><strong class="text-blue-400">Recommendation:</strong>always fine-grained, limited to minimum repos, with 90 days of expiration.</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4">🤖 OpenAI/OpenRouter</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-amber-400">OpenAI:</strong>use<em>project keys</em>. Each project may have spending limits and its own models. Restricts<em>blast radius</em>.</li>
+<li><strong class="text-amber-400">OpenRouter:</strong>create agent-named keys. Set monthly limit per key. Activate expense alert.</li>
+<li><strong class="text-amber-400">Anthropic:</strong>workspaces separate billing. Use one workspace per agent.</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Rule of thumb</h3>
+<p class="text-neutral-300 text-sm">Start with scope<strong>minimum</strong>. When the agent complains "permission denied", expand<strong>só</strong>what is necessary. Never the other way around (full access "because it's easier").</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔇 Self-writing secrets in logs</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes automatically redacts known values ​​of environment variables when they appear in error messages. You can ask for support, post log chunks on the community Discord — without leaking credentials.<strong class="text-amber-400">But always check before sharing.</strong>
+</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">📁 Where to look</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><code class="text-blue-400" data-notranslate="True">~/.hermes/logs/errors.log</code>— agent errors, with self-writing</li>
+<li><code class="text-blue-400" data-notranslate="True">~/.hermes/logs/gateway.log</code>— messaging events</li>
+<li><code class="text-blue-400" data-notranslate="True">~/.hermes/logs/cron.log</code>— execution of scheduled jobs</li>
+<li><code class="text-blue-400" data-notranslate="True">~/.hermes/state.db</code>— sessions (use<code data-notranslate="True">session_search</code>)</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-3 flex items-center"><span class="mr-2">🛡️</span>What the essay covers</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-amber-400 mt-1">✓</span><span>Variables with known names (TELEGRAM_TOKEN, *_API_KEY, *_SECRET)</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400 mt-1">✓</span><span>Recognized token patterns (sk-..., ghp_...)</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400 mt-1">✗</span><span>Hardcoded values ​​in code you passed in the chat</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400 mt-1">✗</span><span>Strings in free messages that look like regular text</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Before sharing log</h3>
+<p class="text-neutral-300 text-sm">Always open and read. Search for<code data-notranslate="True">sk-</code>, <code data-notranslate="True">ghp_</code>, <code data-notranslate="True">123456:</code>(Telegram token format), URLs with tokens in query string. Confirm that they are as<code data-notranslate="True">***REDACTED***</code>or similar.</p>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-amber-900/40 via-dark-800 to-dark-800 rounded-xl border border-amber-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Token pasted in chat stays forever in SQLite</strong><span class="text-neutral-400">— always use<code data-notranslate="True">hermes config set</code>.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>In Docker, the .env is in /root/.hermes/.env of the container</strong><span class="text-neutral-400">— the host one is not read without the volume mounted.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>To delete old key, edit via nano and restart the gateway</strong><span class="text-neutral-400">— the config set is not easy to delete.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Use tokens with limited scope</strong><span class="text-neutral-400">— fine-grained on GitHub, project keys on OpenAI, named keys on OpenRouter.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong>Logs have self-writing secrets</strong><span class="text-neutral-400">— but check before sharing.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-amber-400 mb-2">Next module:</h3><p class="text-neutral-300">4.2 - 🛡️ Firewall, ports and IP allowlist</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Back to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors" href="modulo-4-2.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 4.1 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
