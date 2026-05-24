@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trilha 6 - Escala e Maestria | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track 6 - Scale and Mastery | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -64,493 +64,480 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🪽</span>
-            <span class="font-bold text-lg hidden sm:inline">Agente Hermes</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">TRILHA 6</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🌹 Escala e Maestria</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">A trilha de quem já tem 1 agente rodando bem e quer crescer com método. Quando justifica criar um segundo agente, como operar dashboard e Kanban, troubleshooting completo e a rotina que mantém o sistema vivo no longo prazo.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">4</div><div class="text-xs text-neutral-400">Módulos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">24</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">~2h</div><div class="text-xs text-neutral-400">Duração</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Avançado</div><div class="text-xs text-neutral-400">Nível</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- NAVEGACAO RAPIDA -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="#modulo-6-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold text-sm">6.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-rose-400 transition-colors">🌳 Quando criar novos agentes</h3>
-          <p class="text-xs text-neutral-400">Decision tree, Kanban v0.13.0, multi-agente</p>
-        </a>
-        <a href="#modulo-6-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold text-sm">6.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-rose-400 transition-colors">📊 Dashboard, gateway, túnel</h3>
-          <p class="text-xs text-neutral-400">Web UI, SSH tunnel, Kanban view</p>
-        </a>
-        <a href="#modulo-6-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold text-sm">6.3</span><span class="text-xs text-neutral-500">~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-rose-400 transition-colors">🛠️ Troubleshooting completo</h3>
-          <p class="text-xs text-neutral-400">Telegram, Docker, timezone, contexto</p>
-        </a>
-        <a href="#modulo-6-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold text-sm">6.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-rose-400 transition-colors">🔁 Rotina de manutenção</h3>
-          <p class="text-xs text-neutral-400">Stale memory, rotação de tokens, filosofia</p>
-        </a>
-      </div>
-    </section>
-
-    <h2 class="text-2xl font-bold mb-6 pt-8 border-t border-dark-600">Conteúdo detalhado</h2>
-
-    <!-- MODULO 6.1 -->
-    <div id="modulo-6-1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold">6.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🌳 Quando criar novos agentes</h3>
-        <p class="text-neutral-400 text-sm">Não comece com 5 agentes. Comece com 1 e separe quando o critério justificar. Decision tree, padrões por vertical e o caminho pra Kanban multi-agente da v0.13.0.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">🚫</span>
-            <div><span class="font-medium">Não criar cedo demais</span><span class="text-neutral-500 text-sm ml-2">- 1 agente até justificar</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Começar com 1 agente único, sem multiplicar até existir motivo concreto. A maioria das pessoas que cria 3-4 agentes no primeiro mês acaba abandonando 2 deles.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Um agente só, bem treinado e usado, vale mais do que cinco vazios. Operar 1 agente sólido te ensina o ciclo de skills, memória e crons antes de fragmentar.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Heurística: só crie um segundo agente quando o primeiro já tiver pelo menos 5 skills usadas regularmente, 3 crons úteis e 1 mês de uso real.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">🎯</span>
-            <div><span class="font-medium">Critérios pra novo agente</span><span class="text-neutral-500 text-sm ml-2">- Chaves, memória, função, risco</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Quatro critérios concretos: (1) chaves de API diferentes; (2) memória que não pode misturar; (3) função/tom muito distinto; (4) escopo de risco diferente.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem critério, viram 5 agentes que fazem quase a mesma coisa. Com critério, cada agente tem responsabilidade clara e atualização independente.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Pessoal e financeiro misturam tom (informal vs sério), chaves (Telegram pessoal vs canal restrito) e risco (acesso à conta bancária). Justifica separar.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🗂️</span>
-            <div><span class="font-medium">Padrão por vertical</span><span class="text-neutral-500 text-sm ml-2">- Pessoal, marketing, financeiro, ops</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Receita testada: pessoal (assistente do dia), marketing (tom de marca), financeiro (acesso restrito), suporte (FAQ + escalação), ops (audit + backup), conteúdo (newsletter, posts).</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você não precisa inventar a divisão. Esse é o recorte que sustenta operações pequenas e médias. Pode começar por 2 verticais e adicionar conforme uso.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Cada vertical = container Docker próprio + .env próprio + skills próprios. Soul.md muda o tom; memory.md muda os fatos; user.md muda quem é o dono.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🏢</span>
-            <div><span class="font-medium">Anatomia do "prédio"</span><span class="text-neutral-500 text-sm ml-2">- VPS, container, agente</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Modelo mental: VPS é o prédio (recurso físico, IP, banda), Docker container é a sala (isolamento, .env próprio), agente Hermes é o funcionário dentro daquela sala (skills, memória, soul).</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Esse modelo evita confusão clássica: "por que minha chave do Telegram não funciona?" geralmente é porque você editou o prédio quando deveria editar a sala.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Múltiplos containers num único VPS é o padrão. Cada um expõe (ou não) sua porta. Backup do VPS protege todos os containers de uma vez.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🚚</span>
-            <div><span class="font-medium">Migração entre agentes</span><span class="text-neutral-500 text-sm ml-2">- Skills/memória/soul são Markdown</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Skills, MEMORY.md, SOUL.md, USER.md — tudo Markdown versionado. Migrar conhecimento entre agentes é copiar arquivos, ajustar tom no soul e subir novo container.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Faz a multiplicação ser barata. Você cria o agente "marketing" reaproveitando 70% do "pessoal", muda só o soul e algumas skills específicas.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Mantenha um repositório GitHub com skills compartilhadas. Cada container faz <code class="text-rose-400">git clone</code> e usa só os subdiretórios que precisa.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🪐</span>
-            <div><span class="font-medium">Multi-agente Kanban (v0.13.0)</span><span class="text-neutral-500 text-sm ml-2">- Heartbeat, reclaim, zombie detection</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Recurso novo da v0.13.0 ("The Tenacity Release"): um perfil orquestrador cria um board Kanban durável, define tarefas, e múltiplos workers Hermes pegam, fazem handoff e fecham.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o caminho de paralelismo real. Você descreve um trabalho grande, ele se quebra em cards, e seus agentes executam em paralelo. Útil pra pesquisa, geração de conteúdo, análise de dados.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Heartbeats mantêm workers honestos. Reclaim devolve tarefa de worker travado. Zombie detection mata processos pendurados. Hallucination gate impede commit de saída suspeita.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-6-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-6-1.html" class="px-4 py-2 text-sm bg-rose-600 hover:bg-rose-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 6.2 -->
-    <div id="modulo-6-2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold">6.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">📊 Dashboard, gateway, túnel, Kanban</h3>
-        <p class="text-neutral-400 text-sm">Hermes tem uma web UI completa. Aprenda o que cabe nela, como abrir via SSH ou nginx, e quando o Telegram puro ainda é melhor caminho.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">🖥️</span>
-            <div><span class="font-medium">O que tem na dashboard</span><span class="text-neutral-500 text-sm ml-2">- Sessões, canais, crons, skills</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A web UI inclui visualização de sessões, lista de canais ativos, crons (cron view), gerenciador de skills, plugins, configurações e — na v0.13.0 — Kanban view multi-agente.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Algumas tarefas ficam mais fáceis visuais: revisar últimas 50 sessões, ativar/desativar plugins, editar arquivos de config. Telegram é ótimo pro dia a dia, mas dashboard é melhor pra manutenção.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Dashboard é apenas leitura/edição do estado interno. Tudo o que ela mostra também está em arquivos de <code class="text-rose-400">~/.hermes/</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">🚪</span>
-            <div><span class="font-medium">Como abrir: SSH tunnel ou nginx</span><span class="text-neutral-500 text-sm ml-2">- Acesso seguro</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A dashboard sobe por padrão em <code class="text-rose-400">localhost:8080</code> dentro do VPS. Pra acessar do seu laptop: <code class="text-rose-400">ssh -L 8080:localhost:8080 user@vps</code> e abrir <code class="text-rose-400">http://localhost:8080</code>.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">SSH tunnel evita expor a dashboard publicamente. Nginx + Cloudflare Tunnel é a alternativa quando você quer URL fixa com autenticação.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Nunca abrir a porta da dashboard direto na internet sem auth. Token de admin não é firewall. SSH key + tunnel é o padrão seguro.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">⚡</span>
-            <div><span class="font-medium">Skill abrir-dashboard</span><span class="text-neutral-500 text-sm ml-2">- Automatiza o túnel</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Skill bundled "abrir-dashboard": você pede no Telegram <em>"abre minha dashboard"</em> e ela executa o SSH tunnel local, espera a porta abrir e te entrega o link <code class="text-rose-400">http://localhost:8080</code>.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Reduz fricção. Em vez de decorar comando SSH, abrir terminal e digitar — você fala. Mantém o agente como porta única de operação.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">A skill assume que sua chave SSH e o host estão configurados localmente. Não funciona se o agente está no VPS — só rodando localmente no seu Mac/Linux.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🗒️</span>
-            <div><span class="font-medium">Kanban view</span><span class="text-neutral-500 text-sm ml-2">- Tarefas entre agentes</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Visual de board (To Do, In Progress, Done) que mostra cards de tarefas e qual worker pegou cada uma. Adicionado no v0.13.0 junto com o Kanban multi-agente.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quando você roda 2-3 workers em paralelo, fica difícil acompanhar pelo Telegram. O Kanban view dá overview imediato: o que falta, o que travou, qual worker está zumbi.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Cards mostram heartbeat dos workers, contagem de retries e estado da hallucination gate. Tarefa marcada zombie volta automaticamente pro topo do board.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🔌</span>
-            <div><span class="font-medium">Manutenção de plugins</span><span class="text-neutral-500 text-sm ml-2">- Via dashboard</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A aba de plugins lista todos os plugins instalados, versão, status (ativo/desativado) e botões para atualizar, desativar ou remover. Inclui plugins oficiais (LCM, kanban) e da comunidade.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Manutenção visual evita errar comando no terminal. Atualizações ficam um clique em vez de pull + restart manual.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Atualização de plugin pode quebrar skill que dependia da versão antiga. Sempre olhe changelog antes de atualizar em produção.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">📵</span>
-            <div><span class="font-medium">Quando NÃO usar dashboard</span><span class="text-neutral-500 text-sm ml-2">- Telegram cobre 80% do uso</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">A maioria do uso diário cabe via Telegram: pedir tarefas, conferir crons, ler resumos, ajustar memória. Dashboard é para manutenção, não operação.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quem se acostuma a abrir dashboard pra qualquer coisa perde a praticidade do agente "no bolso". O Telegram é o ponto único de contato.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Regra: se você consegue pedir em texto, peça via Telegram. Só vá pra dashboard quando precisar editar arquivos longos, ver gráfico ou triar dezenas de cards Kanban.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-6-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-6-2.html" class="px-4 py-2 text-sm bg-rose-600 hover:bg-rose-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 6.3 -->
-    <div id="modulo-6-3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold">6.3</span><span class="text-xs text-neutral-500">~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🛠️ Troubleshooting completo</h3>
-        <p class="text-neutral-400 text-sm">Os 6 problemas que aparecem em quase toda instalação Hermes — e o caminho de solução para cada um. Telegram, Docker, contexto, timezone e diagnóstico via terminal do container.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">📵</span>
-            <div><span class="font-medium">Telegram não responde</span><span class="text-neutral-500 text-sm ml-2">- Gateway, token, home channel</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Sintoma: você manda mensagem e não recebe nada. Sequência: <code class="text-rose-400">hermes gateway status</code> → ler <code class="text-rose-400">~/.hermes/logs/gateway.log</code> → conferir <code class="text-rose-400">TELEGRAM_TOKEN</code> e <code class="text-rose-400">TELEGRAM_HOME_CHANNEL</code> no .env.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o problema mais comum. Em 90% dos casos é token errado, home channel não configurado ou gateway parado. Saber a sequência economiza 30 minutos cada vez.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Em Docker, confirme também que o container tem acesso à internet (firewall/iptables). <code class="text-rose-400">hermes gateway setup</code> re-executa o wizard se algo ficou inconsistente.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">🌐</span>
-            <div><span class="font-medium">Dashboard não abre</span><span class="text-neutral-500 text-sm ml-2">- SSH tunnel ou nginx</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Sintoma: <code class="text-rose-400">localhost:8080</code> não carrega no laptop. Em VPS sem IP público direto, é esperado — você precisa criar o túnel: <code class="text-rose-400">ssh -L 8080:localhost:8080 user@vps</code>.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Muita gente acha que está bugado quando na verdade só faltou o túnel. Confirmar que o processo Hermes está rodando na porta correta evita debug perdido.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Alternativa: nginx como reverse proxy com auth básica + HTTPS via Let's Encrypt. Bom quando múltiplas pessoas precisam acessar.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">📦</span>
-            <div><span class="font-medium">.env do container vs root</span><span class="text-neutral-500 text-sm ml-2">- Volume /root/.hermes</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Problema clássico de Docker: o .env certo fica em <code class="text-rose-400">/root/.hermes/.env</code> dentro do container. No host, monte: <code class="text-rose-400">~/.hermes:/root/.hermes</code>.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quem coloca chaves no .env da raiz do projeto sem volume montado vê o agente subir sem ler nada e fica caçando bug onde não há.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Verificar com <code class="text-rose-400">docker exec -it hermes env | grep TELEGRAM</code>. Logs com auto-redação ficam em <code class="text-rose-400">~/.hermes/logs/errors.log</code>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🗜️</span>
-            <div><span class="font-medium">Compactação de contexto</span><span class="text-neutral-500 text-sm ml-2">- /compress, /usage, LCM</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes comprime conversas longas automaticamente antes do limite do modelo. Comando <code class="text-rose-400">/compress</code> força. <code class="text-rose-400">/usage</code> mostra tokens. v0.13.0 mostra contagem de compressões na status bar.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sintoma: agente "esquecendo" coisas no meio da sessão. Geralmente é compressão muito agressiva ou mal configurada. Trocar pelo plugin LCM elimina perda.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Use modelo barato pra compressão (<code class="text-rose-400">google/gemini-2.5-flash</code> via OpenRouter). Plugin LCM oferece compressão lossless sem chamada de LLM extra.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🕐</span>
-            <div><span class="font-medium">Timezone: UTC vs local</span><span class="text-neutral-500 text-sm ml-2">- config.yaml e TZ</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Container Docker roda em UTC por padrão. Hermes precisa de <code class="text-rose-400">timezone: "America/Sao_Paulo"</code> no config.yaml ou <code class="text-rose-400">TZ=America/Sao_Paulo</code> nas env vars.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem timezone, cron pra "09:00" dispara às 09:00 UTC = 06:00 em Brasília. Você acorda com mensagem do agente 3 horas antes do esperado e não entende por quê.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Afeta: timestamps em logs, agendamento de cron, e a hora injetada no system prompt. Use string IANA padrão (America/Sao_Paulo, Europe/Lisbon, etc).</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🩺</span>
-            <div><span class="font-medium">Diagnóstico via terminal</span><span class="text-neutral-500 text-sm ml-2">- Comando hermes</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Dentro do container: <code class="text-rose-400">docker exec -it hermes bash</code> e use o CLI <code class="text-rose-400">hermes</code> com subcomandos: <code class="text-rose-400">gateway status</code>, <code class="text-rose-400">cron list</code>, <code class="text-rose-400">config get</code>, <code class="text-rose-400">doctor</code>.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quando o Telegram não responde, você precisa de uma porta de diagnóstico fora dele. Terminal do container é o "modo seguro" pra inspecionar tudo.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Logs com auto-redação de secrets ficam em <code class="text-rose-400">~/.hermes/logs/</code>. Pode mandar pro suporte sem medo de vazar token.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-6-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-6-3.html" class="px-4 py-2 text-sm bg-rose-600 hover:bg-rose-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- MODULO 6.4 -->
-    <div id="modulo-6-4" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
-      <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold">6.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">🔁 Rotina de manutenção contínua</h3>
-        <p class="text-neutral-400 text-sm">A diferença entre quem usa Hermes 1 mês e quem usa por 1 ano: rotina simples, atualização honesta da memória, e a filosofia de que agente é colega que aprende — não ferramenta que termina.</p>
-      </div>
-      <div class="divide-y divide-dark-600">
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">📐</span>
-            <div><span class="font-medium">Regras simples</span><span class="text-neutral-500 text-sm ml-2">- 2 erros, repetição, tom errado</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Três regras: (1) errou 2x → atualiza skill ou memória; (2) repetiu instrução → vira skill; (3) tom errado → ajusta soul. Aplique na hora, não acumule pra depois.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem regra, manutenção vira tarefa "quando der tempo" — e nunca dá. Com regra simples, vira reflexo: "isso virou problema duas vezes, agora salva".</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Frase mágica: <em>"isso aqui virou skill, salva."</em> O agente cuida do resto. Você não precisa lembrar a sintaxe de SKILL.md.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">📖</span>
-            <div><span class="font-medium">Leitura periódica</span><span class="text-neutral-500 text-sm ml-2">- Memória, soul, skills, crons</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Mensalmente, peça: <em>"leia sua memória", "leia seu soul", "liste skills ativas", "liste crons ativos"</em>. O próprio agente apresenta resumo e sugere podas.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É auditoria barata. Você vê em 5 minutos o que está desatualizado, o que está duplicado e o que ficou órfão. Sem isso, a memória vira lixão silencioso.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Coloque um cron mensal: <em>"sugira poda da memória e me liste 3 skills sem uso recente"</em>. Você só aprova ou rejeita.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">🧟</span>
-            <div><span class="font-medium">Stale memory é o #1</span><span class="text-neutral-500 text-sm ml-2">- Causa de comportamento estranho</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Memory.md acumula fatos antigos: VPS antigo, projeto morto, preferência que mudou. O agente continua agindo conforme esses fatos e parece "estranho" ou "errado".</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Antes de assumir bug do código, abra memory.md. 70% dos "comportamentos estranhos" do Hermes são fato desatualizado lá dentro.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Memória deve ser editada como diário, não como log. Quando algo muda na sua vida, peça: <em>"atualiza memória: agora uso X em vez de Y"</em>.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">🔍</span>
-            <div><span class="font-medium">Quando algo quebrar</span><span class="text-neutral-500 text-sm ml-2">- Memory.md antes de tudo</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Protocolo de debug: 1) leia memory.md, 2) leia soul.md, 3) leia skill envolvida, 4) só então cheque logs e config. Erros frequentemente são instrução antiga, não bug.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você economiza horas de debug em código quando o problema é texto. Hermes é 90% Markdown — começar pelo texto cobre a maioria dos casos.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Frase pra usar: <em>"comportamento estranho em X. Audita memory, soul e skill relacionada antes de eu mexer no código."</em></p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">🔐</span>
-            <div><span class="font-medium">Rotação e auditoria</span><span class="text-neutral-500 text-sm ml-2">- Tokens, skills, segurança</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Cadência: rotação de tokens trimestral; review de skills mensal; auditoria de segurança semanal (cron skill "auditoria de segurança"). Tudo agendado, não manual.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem cadência, ninguém faz. Com cron, vira automático: o agente lembra você. É a diferença entre "tenho intenção de" e "está acontecendo".</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Tokens vencidos no .env são causa frequente de gateway parado. Auditoria semanal pega ports abertas, processos novos e skills suspeitas.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="topic-item">
-          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-            <span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">🤝</span>
-            <div><span class="font-medium">Filosofia: colega que aprende</span><span class="text-neutral-500 text-sm ml-2">- Agente não termina</span></div>
-          </button>
-          <div class="topic-explanation px-6 pb-4">
-            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-rose-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes não é um app que você instala e está pronto. É um colega: precisa de onboarding, contexto, correção e crescimento. Quem trata como ferramenta estática nunca aproveita.</p></div>
-              <div><span class="text-rose-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A diferença entre 1 mês e 1 ano de Hermes é exatamente esta. Quem mantém a relação viva tem agente cada vez mais útil. Quem trata como ferramenta abandona.</p></div>
-              <div><span class="text-rose-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Mentalidade final: você é o tech lead, ele é o estagiário sênior. Você aprova, corrige e ensina. Ele executa, lembra e sugere. Cada mês, mais alinhamento.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
-        <button onclick="openModal('modal-6-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-        <a href="modulo-6-4.html" class="px-4 py-2 text-sm bg-rose-600 hover:bg-rose-500 text-white rounded-lg transition-colors">Ver Completo</a>
-      </div>
-    </div>
-
-    <!-- NAV ENTRE TRILHAS -->
-    <div class="flex flex-col sm:flex-row gap-4 mt-12">
-      <a href="../trilha5/index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Trilha 5: Comparações</a>
-      <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors">Voltar ao início do curso →</a>
-    </div>
-  </main>
-
-  <!-- MODAIS -->
-  <div id="modal-6-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-rose-400 font-bold">6.1</span><span class="font-semibold">Quando criar novos agentes</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-6-1.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-6-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-rose-400 font-bold">6.2</span><span class="font-semibold">Dashboard, gateway, túnel</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-6-2.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-6-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-rose-400 font-bold">6.3</span><span class="font-semibold">Troubleshooting completo</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-6-3.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-  <div id="modal-6-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-rose-400 font-bold">6.4</span><span class="font-semibold">Rotina de manutenção</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-6-4.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Trilha 6 • 2026</p></div>
-  </footer>
-
-  <script>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🪽</span>
+<span class="font-bold text-lg hidden sm:inline">Agent Hermes</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10" href="index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">TRACK 6</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🌹 Scale and Mastery</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">The path for those who already have 1 agent running well and want to grow with method. When it justifies creating a second agent, how to operate the dashboard and Kanban, complete troubleshooting and the routine that keeps the system alive in the long term.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">4</div><div class="text-xs text-neutral-400">Modules</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">24</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">~2h</div><div class="text-xs text-neutral-400">Duration</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Advanced</div><div class="text-xs text-neutral-400">Level</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+QUICK NAVIGATION
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Trail map</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-5 transition-all" href="#modulo-6-1">
+<div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold text-sm">6.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-rose-400 transition-colors">🌳 When to create new agents</h3>
+<p class="text-xs text-neutral-400">Decision tree, Kanban v0.13.0, multi-agent</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-5 transition-all" href="#modulo-6-2">
+<div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold text-sm">6.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-rose-400 transition-colors">📊 Dashboard, gateway, tunnel</h3>
+<p class="text-xs text-neutral-400">Web UI, SSH tunnel, Kanban view</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-5 transition-all" href="#modulo-6-3">
+<div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold text-sm">6.3</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-rose-400 transition-colors">🛠️ Complete troubleshooting</h3>
+<p class="text-xs text-neutral-400">Telegram, Docker, timezone, context</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/30 p-5 transition-all" href="#modulo-6-4">
+<div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold text-sm">6.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-rose-400 transition-colors">🔁 Maintenance routine</h3>
+<p class="text-xs text-neutral-400">Stale memory, token rotation, philosophy</p>
+</a>
+</div>
+</section>
+<h2 class="text-2xl font-bold mb-6 pt-8 border-t border-dark-600">Detailed content</h2>
+MODULE 6.1
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-6-1">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold">6.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🌳 When to create new agents</h3>
+<p class="text-neutral-400 text-sm">Don't start with 5 agents. Start with 1 and separate when criteria warrant. Decision tree, patterns by vertical and the path to multi-agent Kanban from v0.13.0.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🚫</span>
+<div><span class="font-medium">Don't breed too early</span><span class="text-neutral-500 text-sm ml-2">- 1 agent until justified</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Start with 1 single agent, without multiplying until there is a concrete reason. Most people who create 3-4 agents in the first month end up abandoning 2 of them.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">A single agent, well trained and used, is worth more than five empty ones. Operating 1 solid agent teaches you the cycle of skills, memory and crons before splintering.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Heuristic: only create a second agent when the first one already has at least 5 regularly used skills, 3 useful crons and 1 month of real use.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">🎯</span>
+<div><span class="font-medium">Criteria for new agent</span><span class="text-neutral-500 text-sm ml-2">- Keys, memory, function, risk</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Four concrete criteria: (1) different API keys; (2) memory that cannot mix; (3) very distinct function/tone; (4) different risk scope.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Without criteria, they saw 5 agents doing almost the same thing. With discretion, each agent has clear responsibility and independent updating.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Personal and financial mix tone (informal vs serious), keys (personal Telegram vs restricted channel) and risk (access to bank account). Justifies separation.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🗂️</span>
+<div><span class="font-medium">Default by vertical</span><span class="text-neutral-500 text-sm ml-2">- Personnel, marketing, finance, ops</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Tested recipe: personnel (assistant of the day), marketing (brand tone), financial (restricted access), support (FAQ + escalation), ops (audit + backup), content (newsletter, posts).</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">You don't need to invent division. This is the cut that supports small and medium-sized operations. You can start with 2 verticals and add as you use them.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Each vertical = own Docker container + own .env + own skills. Soul.md changes the tone; memory.md changes the facts; user.md changes who owns it.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🏢</span>
+<div><span class="font-medium">Anatomy of the "building"</span><span class="text-neutral-500 text-sm ml-2">- VPS, container, agent</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Mental model: VPS is the building (physical resource, IP, bandwidth), Docker container is the room (isolation, own .env), agent Hermes is the employee inside that room (skills, memory, soul).</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">This model avoids the classic confusion: "why doesn't my Telegram key work?" usually it's because you edited the building when you should have edited the room.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Multiple containers on a single VPS is the standard. Each person exposes (or not) their own door. VPS backup protects all containers at once.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🚚</span>
+<div><span class="font-medium">Migration between agents</span><span class="text-neutral-500 text-sm ml-2">- Skills/memory/soul are Markdown</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Skills, MEMORY.md, SOUL.md, USER.md — all Markdown versioned. Migrating knowledge between agents means copying files, adjusting the tone in the soul and uploading a new container.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It makes multiplication cheap. You create the "marketing" agent by reusing 70% of the "staff", only changing the soul and some specific skills.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Maintain a GitHub repository with shared skills. Each container does<code class="text-rose-400" data-notranslate="True">git clone</code>and only use the subdirectories you need.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🪐</span>
+<div><span class="font-medium">Multi-agent Kanban (v0.13.0)</span><span class="text-neutral-500 text-sm ml-2">- Heartbeat, reclaim, zombie detection</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">New feature in v0.13.0 ("The Tenacity Release"): an orchestrator profile creates a durable Kanban board, defines tasks, and multiple Hermes workers pick up, handoff, and close.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It is the path of real parallelism. You describe a large job, it is broken down into cards, and your agents execute it in parallel. Useful for research, content generation, data analysis.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Heartbeats keep workers honest. Reclaim returns a stuck worker task. Zombie detection kills hanging processes. Hallucination gate prevents suspicious output commit.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-6-1')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-rose-600 hover:bg-rose-500 text-white rounded-lg transition-colors" href="modulo-6-1.html">See Full</a>
+</div>
+</div>
+MODULE 6.2
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-6-2">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold">6.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">📊 Dashboard, gateway, tunnel, Kanban</h3>
+<p class="text-neutral-400 text-sm">Hermes has a complete web UI. Learn what fits in it, how to open via SSH or nginx, and when pure Telegram is still the best way.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🖥️</span>
+<div><span class="font-medium">What's on the dashboard</span><span class="text-neutral-500 text-sm ml-2">- Sessions, channels, crons, skills</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">The web UI includes session view, list of active channels, crons (cron view), skill manager, plugins, configurations and — in v0.13.0 — multi-agent Kanban view.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Some tasks are easier visually: review last 50 sessions, activate/deactivate plugins, edit config files. Telegram is great for everyday life, but the dashboard is better for maintenance.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Dashboard is just read/edit internal state. Everything it shows is also in archives.<code class="text-rose-400" data-notranslate="True">~/.hermes/</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">🚪</span>
+<div><span class="font-medium">How to open: SSH tunnel or nginx</span><span class="text-neutral-500 text-sm ml-2">- Secure access</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">The dashboard goes up by default at<code class="text-rose-400" data-notranslate="True">localhost:8080</code>inside the VPS. To access from your laptop:<code class="text-rose-400" data-notranslate="True">ssh -L 8080:localhost:8080 user@vps</code>and open<code class="text-rose-400" data-notranslate="True">http://localhost:8080</code>.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">SSH tunnel avoids exposing the dashboard publicly. Nginx + Cloudflare Tunnel is the alternative when you want fixed URL with authentication.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Never open the dashboard door directly on the internet without authentication. Admin token is not a firewall. SSH key + tunnel is the secure default.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">⚡</span>
+<div><span class="font-medium">Skill open-dashboard</span><span class="text-neutral-500 text-sm ml-2">- Automates the tunnel</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Skill bundled "open-dashboard": you ask on Telegram<em>"open my dashboard"</em>and it runs the local SSH tunnel, waits for the port to open and gives you the link<code class="text-rose-400" data-notranslate="True">http://localhost:8080</code>.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Reduces friction. Instead of memorizing an SSH command, opening a terminal and typing — you speak. Maintains the agent as the single operating port.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">The skill assumes that your SSH key and host are configured locally. It doesn't work if the agent is on the VPS — only running locally on your Mac/Linux.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🗒️</span>
+<div><span class="font-medium">Kanban view</span><span class="text-neutral-500 text-sm ml-2">- Tasks between agents</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Board visual (To Do, In Progress, Done) that shows task cards and which worker took each one. Added in v0.13.0 along with Multi-Agent Kanban.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">When you run 2-3 workers in parallel, it becomes difficult to follow on Telegram. The Kanban view gives an immediate overview: what’s missing, what’s stuck, which worker is zombied.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Cards show workers' heartbeat, retries count and state of the hallucination gate. Task marked zombie automatically returns to the top of the board.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🔌</span>
+<div><span class="font-medium">Plugin maintenance</span><span class="text-neutral-500 text-sm ml-2">- Via dashboard</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">The plugins tab lists all installed plugins, version, status (active/deactivated) and buttons to update, deactivate or remove. Includes official (LCM, kanban) and community plugins.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Visual maintenance avoids making incorrect commands in the terminal. Updates are one click instead of manual pull + restart.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Plugin updates can break skills that depended on the old version. Always look at the changelog before updating in production.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">📵</span>
+<div><span class="font-medium">When NOT to use dashboard</span><span class="text-neutral-500 text-sm ml-2">- Telegram covers 80% of usage</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Most of the daily use can be done via Telegram: requesting tasks, checking crons, reading summaries, adjusting memory. Dashboard is for maintenance, not operation.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Anyone who gets used to opening a dashboard for anything loses the practicality of the agent “in their pocket”. Telegram is the single point of contact.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Rule: if you can order in text, order via Telegram. Only go to the dashboard when you need to edit long files, view graphs or sort dozens of Kanban cards.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-6-2')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-rose-600 hover:bg-rose-500 text-white rounded-lg transition-colors" href="modulo-6-2.html">See Full</a>
+</div>
+</div>
+MODULE 6.3
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-6-3">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold">6.3</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🛠️ Complete troubleshooting</h3>
+<p class="text-neutral-400 text-sm">The 6 problems that appear in almost every Hermes installation — and the solution path for each one. Telegram, Docker, context, timezone and diagnosis via container terminal.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">📵</span>
+<div><span class="font-medium">Telegram does not respond</span><span class="text-neutral-500 text-sm ml-2">- Gateway, token, home channel</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Symptom: you send a message and receive nothing. Sequence:<code class="text-rose-400" data-notranslate="True">hermes gateway status</code>→ read<code class="text-rose-400" data-notranslate="True">~/.hermes/logs/gateway.log</code>→ check<code class="text-rose-400" data-notranslate="True">TELEGRAM_TOKEN</code> e <code class="text-rose-400" data-notranslate="True">TELEGRAM_HOME_CHANNEL</code>in the .env.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It is the most common problem. In 90% of cases it is the wrong token, home channel not configured or gateway stopped. Knowing the sequence saves 30 minutes each time.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">In Docker, also confirm that the container has access to the internet (firewall/iptables).<code class="text-rose-400" data-notranslate="True">hermes gateway setup</code>re-run the wizard if something became inconsistent.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">🌐</span>
+<div><span class="font-medium">Dashboard does not open</span><span class="text-neutral-500 text-sm ml-2">- SSH tunnel or nginx</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Symptom:<code class="text-rose-400" data-notranslate="True">localhost:8080</code>does not load on the laptop. On VPS without direct public IP, it is expected — you need to create the tunnel:<code class="text-rose-400" data-notranslate="True">ssh -L 8080:localhost:8080 user@vps</code>.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">A lot of people think it's bugged when in fact the only thing missing is the tunnel. Confirming that the Hermes process is running on the correct port avoids lost debugs.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Alternative: nginx as reverse proxy with basic auth + HTTPS via Let's Encrypt. Good when multiple people need access.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">📦</span>
+<div><span class="font-medium">.env of container vs root</span><span class="text-neutral-500 text-sm ml-2">- Volume /root/.hermes</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Classic Docker problem: the right .env stays in<code class="text-rose-400" data-notranslate="True">/root/.hermes/.env</code>inside the container. On the host, mount:<code class="text-rose-400" data-notranslate="True">~/.hermes:/root/.hermes</code>.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Anyone who places keys in the .env of the project root without a mounted volume sees the agent go up without reading anything and keeps hunting for bugs where there are none.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Check with<code class="text-rose-400" data-notranslate="True">docker exec -it hermes env | grep TELEGRAM</code>. Self-redacting logs are in<code class="text-rose-400" data-notranslate="True">~/.hermes/logs/errors.log</code>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🗜️</span>
+<div><span class="font-medium">Context compression</span><span class="text-neutral-500 text-sm ml-2">- /compress, /usage, LCM</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Hermes automatically compresses long conversations before the model limit. Command<code class="text-rose-400" data-notranslate="True">/compress</code>strength.<code class="text-rose-400" data-notranslate="True">/usage</code>shows tokens. v0.13.0 shows compression count in status bar.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Symptom: agent "forgetting" things in the middle of the session. It is usually very aggressive or poorly configured compression. Switching to the LCM plugin eliminates loss.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Use a cheap model for compression (<code class="text-rose-400" data-notranslate="True">google/gemini-2.5-flash</code>via OpenRouter). LCM plugin offers lossless compression without extra LLM call.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🕐</span>
+<div><span class="font-medium">Timezone: UTC vs local</span><span class="text-neutral-500 text-sm ml-2">- config.yaml and TZ</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Docker Container runs in UTC by default. Hermes needs<code class="text-rose-400" data-notranslate="True">timezone: "America/Sao_Paulo"</code>in config.yaml or<code class="text-rose-400" data-notranslate="True">TZ=America/Sao_Paulo</code>in the env vars.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Without timezone, cron for "09:00" triggers at 09:00 UTC = 06:00 in Brasília. You wake up to a message from the agent 3 hours earlier than expected and you don't understand why.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Affects: timestamps in logs, cron scheduling, and the time injected into the system prompt. Use standard IANA string (America/Sao_Paulo, Europe/Lisbon, etc).</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🩺</span>
+<div><span class="font-medium">Diagnosis via terminal</span><span class="text-neutral-500 text-sm ml-2">- Hermes command</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Inside the container:<code class="text-rose-400" data-notranslate="True">docker exec -it hermes bash</code>and use the CLI<code class="text-rose-400" data-notranslate="True">hermes</code>with subcommands:<code class="text-rose-400" data-notranslate="True">gateway status</code>, <code class="text-rose-400" data-notranslate="True">cron list</code>, <code class="text-rose-400" data-notranslate="True">config get</code>, <code class="text-rose-400" data-notranslate="True">doctor</code>.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">When Telegram is unresponsive, you need a diagnostic port outside of it. Container terminal is the "safe way" to inspect everything.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Logs with self-written secrets are in<code class="text-rose-400" data-notranslate="True">~/.hermes/logs/</code>. You can send it to support without fear of a token leak.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-6-3')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-rose-600 hover:bg-rose-500 text-white rounded-lg transition-colors" href="modulo-6-3.html">See Full</a>
+</div>
+</div>
+MODULE 6.4
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-6-4">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-rose-400 font-bold">6.4</span><span class="text-xs text-neutral-500">~25 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🔁 Continuous maintenance routine</h3>
+<p class="text-neutral-400 text-sm">The difference between those who use Hermes for 1 month and those who use it for 1 year: simple routine, honest updating of memory, and the philosophy that an agent is a colleague who learns — not a tool that ends.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">📐</span>
+<div><span class="font-medium">Simple rules</span><span class="text-neutral-500 text-sm ml-2">- 2 errors, repetition, wrong tone</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Three rules: (1) made a mistake 2x → updates skill or memory; (2) repeated instruction → becomes skill; (3) wrong tone → adjusts soul. Apply immediately, do not accumulate for later.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Without a rule, maintenance becomes a “when there is time” task — and it never is. With a simple rule, it becomes a reflex: "this became a problem twice, now save it".</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Magic phrase:<em>"This has become a skill, save."</em>The agent takes care of the rest. You don't need to remember the syntax of SKILL.md.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">📖</span>
+<div><span class="font-medium">Periodic reading</span><span class="text-neutral-500 text-sm ml-2">- Memory, soul, skills, crons</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Monthly, order:<em>"read your memory", "read your soul", "list active skills", "list active crons"</em>. The agent himself presents a summary and suggests pruning.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It's a cheap audit. You see in 5 minutes what is outdated, what is duplicated and what has been orphaned. Without this, memory becomes a silent dump.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Place a monthly cron:<em>"suggest memory pruning and list 3 skills without recent use"</em>. You just approve or reject it.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🧟</span>
+<div><span class="font-medium">Stale memory is #1</span><span class="text-neutral-500 text-sm ml-2">- Cause of strange behavior</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Memory.md accumulates old facts: old VPS, dead project, preference that has changed. The agent continues to act according to these facts and it seems "strange" or "wrong".</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Before assuming code bug, open memory.md. 70% of Hermes' "strange behavior" is an outdated fact inside.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Memory should be edited as a journal, not a log. When something changes in your life, ask:<em>"updates memory: now I use X instead of Y"</em>.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🔍</span>
+<div><span class="font-medium">When something breaks</span><span class="text-neutral-500 text-sm ml-2">- Memory.md first of all</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Debug protocol: 1) read memory.md, 2) read soul.md, 3) read skill involved, 4) only then check logs and config. Errors are often old instructions, not bugs.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">You save hours of code debugging when the problem is text. Hermes is 90% Markdown — starting with text covers most cases.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Phrase to use:<em>"strange behavior in X. Audits memory, soul and related skill before I change the code."</em></p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🔐</span>
+<div><span class="font-medium">Rotation and audit</span><span class="text-neutral-500 text-sm ml-2">- Tokens, skills, security</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Cadence: quarterly token rotation; monthly skills review; weekly security audit (cron skill "security audit"). Everything scheduled, not manual.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Without cadence, nobody does it. With cron, it becomes automatic: the agent remembers you. It's the difference between "I intend to" and "it is happening."</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Expired tokens in .env are a frequent cause of a stopped gateway. Weekly audit catches open ports, new processes and suspicious skills.</p></div>
+</div>
+</div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🤝</span>
+<div><span class="font-medium">Philosophy: colleague who learns</span><span class="text-neutral-500 text-sm ml-2">- Agent does not finish</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4">
+<div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-rose-400 font-semibold">What is it:</span><p class="text-neutral-300 text-sm">Hermes is not an app that you install and that's it. He's a colleague: he needs onboarding, context, correction and growth. Those who treat it as a static tool never take advantage of it.</p></div>
+<div><span class="text-rose-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">The difference between 1 month and 1 year of Hermes is exactly this. Whoever keeps the relationship alive has an increasingly useful agent. Whoever treats it as a tool abandons it.</p></div>
+<div><span class="text-rose-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Final mindset: you are the tech lead, he is the senior intern. You approve, correct and teach. He executes, remembers and suggests. Every month, more alignment.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-6-4')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-rose-600 hover:bg-rose-500 text-white rounded-lg transition-colors" href="modulo-6-4.html">See Full</a>
+</div>
+</div>
+NAV BETWEEN TRACKS
+<div class="flex flex-col sm:flex-row gap-4 mt-12">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../trilha5/index.html">← Track 5: Comparisons</a>
+<a class="flex-1 text-center px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-500 transition-colors" href="../../index.html">Return to the beginning of the course →</a>
+</div>
+</main>
+MODES
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-6-1" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-rose-400 font-bold">6.1</span><span class="font-semibold">When to create new agents</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-6-1.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-6-2" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-rose-400 font-bold">6.2</span><span class="font-semibold">Dashboard, gateway, tunnel</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-6-2.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-6-3" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-rose-400 font-bold">6.3</span><span class="font-semibold">Complete troubleshooting</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-6-3.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-6-4" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-rose-400 font-bold">6.4</span><span class="font-semibold">Maintenance routine</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-6-4.html"></iframe></div></div>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Track 6 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     function toggleTopic(button) {
       const topicItem = button.closest('.topic-item');
       const explanation = topicItem.querySelector('.topic-explanation');
