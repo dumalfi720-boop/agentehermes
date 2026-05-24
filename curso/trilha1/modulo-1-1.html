@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.1 O que é Hermes | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1.1 What is Hermes | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -59,247 +59,222 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-emerald-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-emerald-400">Trilha 1</a><span>/</span>
-      <span class="text-emerald-400">Módulo 1.1</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🪽 O que é Hermes e por que existe</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">A base conceitual: origem, licença, capacidades nativas, plataformas suportadas e como o Hermes se encaixa no ecossistema de agentes IA em 2026.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Teoria</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🏛️ Origem e licença</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O Hermes Agent é um projeto da <strong class="text-emerald-400">Nous Research</strong> (NousResearch), distribuído sob licença <strong class="text-emerald-400">MIT</strong>. Foi lançado em <strong class="text-emerald-400">22 de julho de 2025</strong> e em menos de 1 ano se tornou um dos agentes IA open source mais populares do mundo.
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-emerald-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-emerald-400" href="index.html">Track 1</a><span>/</span>
+<span class="text-emerald-400">Module 1.1</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MODULE 1.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🪽 What is Hermes and why does it exist</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">The conceptual foundation: origin, license, native capabilities, supported platforms and how Hermes fits into the AI ​​agent ecosystem in 2026.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Basic</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Theory</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🏛️ Origin and license</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes Agent is a project by<strong class="text-emerald-400">Nous Research</strong>(NousResearch), distributed under license<strong class="text-emerald-400">MIT</strong>. It was released in<strong class="text-emerald-400">July 22, 2025</strong>and in less than 1 year it became one of the most popular open source AI agents in the world.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span>Project numbers (May/2026)</h3>
+<ul class="space-y-2 text-neutral-300">
+<li><strong class="text-blue-400">141,404</strong>stars on GitHub</li>
+<li><strong class="text-blue-400">21,979</strong>forks</li>
+<li><strong class="text-blue-400">7,938</strong>commits</li>
+<li><strong class="text-blue-400">v0.13.0</strong>"The Tenacity Release" (May/2026)</li>
+<li><strong class="text-blue-400">88.7%</strong>Python, with TUI in TypeScript</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">⚖️</span>What MIT means in practice</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>You can<strong>use commercially</strong>without paying royalties</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>He can<strong>modify and redistribute</strong>the code</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>He can<strong>embed in closed product</strong>without opening your</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>You still pay for inference (API, cloud, electricity) — open source ≠ free to operate</span></li>
+</ul>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">📦 What’s in the box</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes is not an empty shell that you need to fill. It already comes with<strong class="text-emerald-400">dozens of skills bundled</strong>in more than 20 categories and access to<strong class="text-emerald-400">Public Skills Hub</strong>(agentskills.io) with hundreds of skills from the community.</p>
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4">🏷️ Bundled skill categories</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-neutral-300">
+<div>• apple</div><div>• creative</div><div>• data-science</div>
+<div>• devops</div><div>• email</div><div>• gaming</div>
+<div>• github</div><div>• mcp</div><div>• average</div>
+<div>• mlops</div><div>• note-taking</div><div>• productivity</div>
+<div>• red-teaming</div><div>• research</div><div>• smart-home</div>
+<div>• social-media</div><div>• software-development</div><div>• yuanbao</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical tip</h3>
+<p class="text-neutral-300">On the first day, ask for:<em>"List all the skills you have available and explain to me the 5 most useful for my profile."</em>Instead of discovering skills little by little, you get a complete overview in the initial session.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">👁️ Native Capabilities</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">They are<strong class="text-emerald-400">40+ natively registered tools</strong> em <code class="text-emerald-400" data-notranslate="True">tools/registry.py</code>. You don't need to code integration for the basics — you ask in natural language and the agent decides which tool to use.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-4">✓ Already included</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Vision (analyze uploaded images)</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Browser automation (fill form, scrape)</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Image generation</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Text-to-Speech (reply with audio)</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Commands in the terminal</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Planning and splitting tasks</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Search in previous sessions (FTS5)</span></li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ Don't wait until day 1</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Magical integration with your internal system</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Know your brand’s tone without you saying it</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Dashboard with analytics out of the box</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Advanced multi-user permissions ready</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Fine-tuned training in your domain</span></li>
+</ul>
+</div>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📱 20+ messaging platforms</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes has a<strong class="text-emerald-400">native gateway</strong>that connects the agent to messengers. It's not an external wrapper — it's a project module.<code class="text-emerald-400" data-notranslate="True">hermes gateway setup</code>Run a wizard.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4">🌐 Supported Platforms</h3>
+<p class="text-sm text-neutral-300 mb-3">Telegram, Discord, Slack, WhatsApp, Signal, SMS, Email, Home Assistant, Mattermost, Matrix, DingTalk, Feishu/Lark, WeCom, Weixin,<strong class="text-blue-400">BlueBubbles (iMessage)</strong>, QQBot, Yuanbao, Microsoft Teams, Google Chat, and browser.</p>
+<p class="text-sm text-neutral-400">Each platform has a configurable toolset. Platforms like Signal (without message editing) have their own verbosity controls.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Where to start</h3>
+<p class="text-neutral-300"><strong>Telegram</strong>This is the recommended path for the first installation. BotFather delivers a token within 30 seconds. Discord requires developer portal. WhatsApp goes through an external gateway (Whapi, Meta Business). iMessage requires BlueBubbles on a Mac.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔄 Self-improving by design</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The big difference compared to a stateless chatbot: Hermes<strong class="text-emerald-400">persists learning</strong>in three layers — memory (MEMORY.md, USER.md), skills (SKILL.md) and searchable history (SQLite with FTS5).</p>
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4">🧬 The 3 layers of learning</h3>
+<div class="space-y-4 text-neutral-300">
+<div><strong class="text-emerald-400">MEMORY.md (~800 tokens):</strong>agent's personal notes — environmental facts, decisions, projects. Self-managed via tool<code data-notranslate="True">memory</code>.</div>
+<div><strong class="text-emerald-400">USER.md (~500 tokens):</strong>your profile — preferences, style, personal rules.</div>
+<div><strong class="text-emerald-400">SKILL.md:</strong>reusable procedures with YAML front matter, in<code data-notranslate="True">~/.hermes/skills/</code>.</div>
+<div><strong class="text-emerald-400">SQLite + FTS5:</strong>Full session history, searchable by<code data-notranslate="True">session_search</code>.</div>
+</div>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Attention</h3>
+<p class="text-neutral-300 text-sm">Self-improving<strong>it's not magic</strong>. It only evolves if you correct it, save it, transform processes into skills and adjust the tone. Without user feedback, it becomes stagnant.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🆚 Hermes in the ecosystem</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Hermes<strong class="text-emerald-400">does not replace</strong>Claude Code, OpenCode, Cursor or n8n. It occupies a specific niche:<strong class="text-emerald-400">proactive agent via message, always on, with scheduled automations and self-improvement</strong>.
       </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span>Números do projeto (mai/2026)</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li><strong class="text-blue-400">141.404</strong> estrelas no GitHub</li>
-          <li><strong class="text-blue-400">21.979</strong> forks</li>
-          <li><strong class="text-blue-400">7.938</strong> commits</li>
-          <li><strong class="text-blue-400">v0.13.0</strong> "The Tenacity Release" (mai/2026)</li>
-          <li><strong class="text-blue-400">88,7%</strong> Python, com TUI em TypeScript</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">⚖️</span>O que MIT significa na prática</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Você pode <strong>usar comercialmente</strong> sem pagar royalty</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Pode <strong>modificar e redistribuir</strong> o código</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Pode <strong>embutir em produto fechado</strong> sem abrir o seu</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Você ainda paga inferência (API, cloud, eletricidade) — open source ≠ free de operar</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">📦 O que vem na caixa</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes não é um shell vazio que você precisa preencher. Já vem com <strong class="text-emerald-400">dezenas de skills bundled</strong> em mais de 20 categorias e acesso ao <strong class="text-emerald-400">Skills Hub público</strong> (agentskills.io) com centenas de skills da comunidade.
-      </p>
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4">🏷️ Categorias de skills bundled</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-neutral-300">
-          <div>• apple</div><div>• creative</div><div>• data-science</div>
-          <div>• devops</div><div>• email</div><div>• gaming</div>
-          <div>• github</div><div>• mcp</div><div>• media</div>
-          <div>• mlops</div><div>• note-taking</div><div>• productivity</div>
-          <div>• red-teaming</div><div>• research</div><div>• smart-home</div>
-          <div>• social-media</div><div>• software-development</div><div>• yuanbao</div>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Dica prática</h3>
-        <p class="text-neutral-300">No primeiro dia, peça: <em>"Liste todas as skills que você tem disponíveis e me explique as 5 mais úteis pro meu perfil."</em> Em vez de descobrir skills aos poucos, você ganha um overview completo já na sessão inicial.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">👁️ Capacidades nativas</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        São <strong class="text-emerald-400">40+ ferramentas registradas nativamente</strong> em <code class="text-emerald-400">tools/registry.py</code>. Você não precisa codar integração para o básico — pede em linguagem natural e o agente decide qual ferramenta usar.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-4">✓ Já vem incluído</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Visão (analisar imagens enviadas)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Browser automation (preencher formulário, raspar)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Geração de imagens</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Text-to-Speech (responder com áudio)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Comandos no terminal</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Planejamento e split de tarefas</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Busca em sessões anteriores (FTS5)</span></li>
-          </ul>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Não esperar do dia 1</h4>
-          <ul class="space-y-2 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Integração mágica com seu sistema interno</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Conhecer tom da sua marca sem você dizer</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Dashboard com analytics fora da caixa</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Permissões avançadas multi-usuário prontas</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Treinamento fine-tuned no seu domínio</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">📱 20+ plataformas de mensagem</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes tem um <strong class="text-emerald-400">gateway nativo</strong> que conecta o agente a mensageiros. Não é wrapper externo — é módulo do projeto. <code class="text-emerald-400">hermes gateway setup</code> roda um wizard.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4">🌐 Plataformas suportadas</h3>
-        <p class="text-sm text-neutral-300 mb-3">Telegram, Discord, Slack, WhatsApp, Signal, SMS, Email, Home Assistant, Mattermost, Matrix, DingTalk, Feishu/Lark, WeCom, Weixin, <strong class="text-blue-400">BlueBubbles (iMessage)</strong>, QQBot, Yuanbao, Microsoft Teams, Google Chat, e browser.</p>
-        <p class="text-sm text-neutral-400">Cada plataforma tem toolset configurável. Plataformas como Signal (sem edição de mensagem) têm controles próprios de verbosidade.</p>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Por onde começar</h3>
-        <p class="text-neutral-300"><strong>Telegram</strong> é o caminho recomendado pra primeira instalação. O BotFather entrega um token em 30 segundos. Discord exige developer portal. WhatsApp passa por gateway externo (Whapi, Meta Business). iMessage requer BlueBubbles num Mac.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔄 Self-improving por design</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O grande diferencial frente a um chatbot stateless: o Hermes <strong class="text-emerald-400">persiste aprendizado</strong> em três camadas — memória (MEMORY.md, USER.md), skills (SKILL.md) e histórico pesquisável (SQLite com FTS5).
-      </p>
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4">🧬 As 3 camadas de aprendizado</h3>
-        <div class="space-y-4 text-neutral-300">
-          <div><strong class="text-emerald-400">MEMORY.md (~800 tokens):</strong> notas pessoais do agente — fatos do ambiente, decisões, projetos. Auto-gerenciado via tool <code>memory</code>.</div>
-          <div><strong class="text-emerald-400">USER.md (~500 tokens):</strong> perfil seu — preferências, estilo, regras pessoais.</div>
-          <div><strong class="text-emerald-400">SKILL.md:</strong> procedimentos reutilizáveis com YAML front matter, em <code>~/.hermes/skills/</code>.</div>
-          <div><strong class="text-emerald-400">SQLite + FTS5:</strong> histórico completo de sessões, pesquisável por <code>session_search</code>.</div>
-        </div>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Atenção</h3>
-        <p class="text-neutral-300 text-sm">Self-improving <strong>não é mágico</strong>. Ele só evolui se você corrigir, mandar salvar, transformar processos em skills e ajustar o tom. Sem feedback do usuário, fica estagnado.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🆚 Hermes no ecossistema</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hermes <strong class="text-emerald-400">não substitui</strong> Claude Code, OpenCode, Cursor ou n8n. Ele ocupa um nicho específico: <strong class="text-emerald-400">agente proativo via mensagem, sempre on, com automações agendadas e auto-aperfeiçoamento</strong>.
-      </p>
-      <div class="space-y-6 mb-6">
-        <div class="flex items-start space-x-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">1</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold mb-2">Claude Code = cockpit do código</h4>
-            <p class="text-neutral-300 text-sm">Você sentado no PC, dentro do projeto, fazendo trabalho profundo. Modelo Claude para raciocínio. Sem gateway de mensagem.</p>
-          </div>
-        </div>
-        <div class="flex items-start space-x-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">2</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold mb-2">Hermes = controle remoto e automações</h4>
-            <p class="text-neutral-300 text-sm">Você em movimento, pelo Telegram. Agendar coisa via cron. Tarefas recorrentes que não precisam de você presente.</p>
-          </div>
-        </div>
-        <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600 ml-16">
-          <h4 class="font-semibold mb-2 text-primary">Como combinar</h4>
-          <p class="text-neutral-300 text-sm">Mantenha um repositório GitHub com contexto, skills e configurações. Aponte Claude Code <strong>e</strong> Hermes pra esse repo. Cada agente lê seu próprio formato (CLAUDE.md vs AGENTS.md vs .hermes.md). Você trabalha de forma fluida entre os dois.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Hermes Agent é open source MIT da Nous Research</strong><span class="text-neutral-400"> — 141k stars, lançado em jul/2025, escrito em Python.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Vem com 40+ ferramentas e dezenas de skills bundled</strong><span class="text-neutral-400"> — devops, github, software-development, productivity e mais.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Suporta 20+ plataformas de mensagem</strong><span class="text-neutral-400"> — Telegram, Discord, Slack, WhatsApp, Signal, iMessage, Teams, Matrix.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Self-improving em 3 camadas</strong><span class="text-neutral-400"> — memória (MEMORY.md/USER.md), skills (SKILL.md), histórico SQLite.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Não substitui Claude Code, OpenCode ou n8n</strong><span class="text-neutral-400"> — ocupa o nicho de agente proativo via mensagem com crons.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-emerald-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">1.2 - 🧠 A mentalidade: pergunte ao próprio Hermes</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a>
-          <a href="modulo-1-2.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 1.1 • 2026</p></div>
-  </footer>
-
-  <script>
+<div class="space-y-6 mb-6">
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">1</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+<h4 class="font-semibold mb-2">Claude Code = code cockpit</h4>
+<p class="text-neutral-300 text-sm">You sitting at the PC, inside the project, doing deep work. Claude model for reasoning. No message gateway.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">2</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+<h4 class="font-semibold mb-2">Hermes = remote control and automations</h4>
+<p class="text-neutral-300 text-sm">You on the move, via Telegram. Schedule thing via cron. Recurring tasks that don't need you present.</p>
+</div>
+</div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600 ml-16">
+<h4 class="font-semibold mb-2 text-primary">How to combine</h4>
+<p class="text-neutral-300 text-sm">Maintain a GitHub repository with context, skills, and settings. Point Claude Code<strong>e</strong>Hermes for this repo. Each agent reads its own format (CLAUDE.md vs AGENTS.md vs .hermes.md). You work fluidly between the two.</p>
+</div>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Hermes Agent is open source MIT from Nous Research</strong><span class="text-neutral-400">— 141k stars, released in Jul/2025, written in Python.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Comes with 40+ tools and dozens of skills bundled</strong><span class="text-neutral-400">— devops, github, software-development, productivity and more.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Supports 20+ messaging platforms</strong><span class="text-neutral-400">— Telegram, Discord, Slack, WhatsApp, Signal, iMessage, Teams, Matrix.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Self-improving in 3 layers</strong><span class="text-neutral-400">— memory (MEMORY.md/USER.md), skills (SKILL.md), SQLite history.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong>Does not replace Claude Code, OpenCode or n8n</strong><span class="text-neutral-400">— occupies the niche of proactive agent via message with crons.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-emerald-400 mb-2">Next module:</h3><p class="text-neutral-300">1.2 - 🧠 The mindset: ask Hermes himself</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Back to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors" href="modulo-1-2.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 1.1 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
