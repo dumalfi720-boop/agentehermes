@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3.2 Skills: SKILL.md + Progressive Disclosure | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>3.2 Skills: SKILL.md + Progressive Disclosure | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -65,90 +65,80 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-purple-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-purple-400">Trilha 3</a><span>/</span>
-      <span class="text-purple-400">Módulo 3.2</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.2</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🛠️ Skills: SKILL.md + Progressive Disclosure</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Procedimentos reutilizáveis em Markdown com YAML front matter. O agente carrega só nome+descrição por padrão e abre o corpo só quando precisa. Padrão aberto: agentskills.io.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Médio</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">📜 O que é uma skill</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Skill é um arquivo <code class="text-purple-400">SKILL.md</code> com <strong class="text-purple-400">YAML front matter</strong> no topo e instruções estruturadas abaixo. É um <strong class="text-purple-400">procedimento reutilizável</strong> escrito em linguagem natural — o modelo lê e segue.
-      </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🆚</span>Skill vs prompt vs código</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">Prompt avulso:</strong> some no fim da sessão. Repete sempre.</li>
-          <li><strong class="text-blue-400">Skill:</strong> Markdown estruturado, persistido, descoberto pelo agente quando relevante.</li>
-          <li><strong class="text-blue-400">Código:</strong> determinístico mas inflexível. Não toma decisão por contexto.</li>
-        </ul>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📡</span>Padrão aberto</h3>
-        <p class="text-neutral-300 text-sm">Hermes adota o spec público <strong class="text-emerald-400">agentskills.io/specification</strong>. Skill criada pra Hermes vale também em outros agentes que adotam o padrão. Discord do hub: discord.gg/MKPE9g8aUy.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">📋 Anatomia do YAML front matter</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O front matter é o cabeçalho YAML entre <code class="text-purple-400">---</code> que descreve a skill. É lido a cada sessão pra montar a lista que o agente consulta. Description ruim = skill nunca chamada.
-      </p>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Front matter completo</h3>
-<pre><code>---
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-purple-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a><span>/</span>
+<span class="text-purple-400">Module 3.2</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.2</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🛠️ Skills: SKILL.md + Progressive Disclosure</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Reusable procedures in Markdown with YAML front matter. The agent only loads name+description by default and opens the body only when necessary. Open standard: agentskills.io.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">35</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Average</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Practice</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📜 What is a skill</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Skill is a file<code class="text-purple-400" data-notranslate="True">SKILL.md</code>with<strong class="text-purple-400">YAML front matter</strong>at the top and structured instructions below. It's a<strong class="text-purple-400">reusable procedure</strong>written in natural language — the model reads and follows.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🆚</span>Skill vs prompt vs code</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">Single prompt:</strong>disappears at the end of the session. Always repeat.</li>
+<li><strong class="text-blue-400">Skill:</strong>Structured Markdown, persisted, discovered by the agent when relevant.</li>
+<li><strong class="text-blue-400">Code:</strong>deterministic but inflexible. Does not make decisions based on context.</li>
+</ul>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📡</span>Open standard</h3>
+<p class="text-neutral-300 text-sm">Hermes adopts the public spec<strong class="text-emerald-400">agentskills.io/specification</strong>. Skill created for Hermes is also valid for other agents that adopt the standard. Hub Discord: discord.gg/MKPE9g8aUy.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">📋 Anatomy of YAML front matter</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The front matter is the YAML header between<code class="text-purple-400" data-notranslate="True">---</code>that describes the skill. It is read at each session to create the list that the agent consults. Bad description = skill never called.</p>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Front matter complete</h3>
+<pre data-notranslate="True"><code data-notranslate="True">---
 name: my-skill
 description: Brief description of what this skill does
 version: 1.0.0
@@ -165,41 +155,38 @@ metadata:
         default: "value"
         prompt: "Prompt for setup"
 ---</code></pre>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-2">Campos obrigatórios</h4>
-          <ul class="space-y-1 text-neutral-300 text-sm">
-            <li><code>name</code> — identificador único</li>
-            <li><code>description</code> — o que faz, em uma linha</li>
-            <li><code>version</code> — semver</li>
-          </ul>
-        </div>
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-2">metadata.hermes (opcional)</h4>
-          <ul class="space-y-1 text-neutral-300 text-sm">
-            <li><code>tags</code> — busca rápida</li>
-            <li><code>category</code> — agrupamento</li>
-            <li><code>fallback_for_toolsets</code> — ativa se outro falhar</li>
-            <li><code>requires_toolsets</code> — exige toolset disponível</li>
-            <li><code>config</code> — prompts de setup</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🧱 Estrutura padrão do corpo</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Abaixo do front matter vem o conteúdo Markdown. O modelo espera <strong class="text-purple-400">quatro seções canônicas</strong>: When to Use, Procedure, Pitfalls, Verification. Pular qualquer uma degrada a qualidade da skill.
-      </p>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Esqueleto canônico</h3>
-<pre><code># Skill Title
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-2">Required fields</h4>
+<ul class="space-y-1 text-neutral-300 text-sm">
+<li><code data-notranslate="True">name</code>— unique identifier</li>
+<li><code data-notranslate="True">description</code>— what does it do, in one line</li>
+<li><code data-notranslate="True">version</code>— semver</li>
+</ul>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-2">metadata.hermes (optional)</h4>
+<ul class="space-y-1 text-neutral-300 text-sm">
+<li><code data-notranslate="True">tags</code>— quick search</li>
+<li><code data-notranslate="True">category</code>— grouping</li>
+<li><code data-notranslate="True">fallback_for_toolsets</code>— activates if another fails</li>
+<li><code data-notranslate="True">requires_toolsets</code>— requires available toolset</li>
+<li><code data-notranslate="True">config</code>— setup prompts</li>
+</ul>
+</div>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🧱Standard body structure</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Below the front matter comes the Markdown content. The model waits<strong class="text-purple-400">four canonical sections</strong>: When to Use, Procedure, Pitfalls, Verification. Skipping any one degrades the quality of the skill.</p>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">📝 Canonical skeleton</h3>
+<pre data-notranslate="True"><code data-notranslate="True"># Skill Title
 
 ## When to Use
 Trigger conditions for this skill.
@@ -213,71 +200,66 @@ Trigger conditions for this skill.
 
 ## Verification
 How to confirm it worked.</code></pre>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-2">When to Use</h4>
-          <p class="text-neutral-300 text-sm">Gatilhos. Quando o agente deve invocar esta skill. Sem isso, ele ou nunca chama ou chama errado.</p>
-        </div>
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-2">Procedure</h4>
-          <p class="text-neutral-300 text-sm">Passos numerados, diretos. Um passo por linha. Idealmente verificável.</p>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-2">Pitfalls</h4>
-          <p class="text-neutral-300 text-sm">O que já quebrou e como contornar. Coletado da experiência real, não imaginação.</p>
-        </div>
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
-          <h4 class="font-bold text-primary mb-2">Verification</h4>
-          <p class="text-neutral-300 text-sm">Teste curto: "se rodar X, deve sair Y". Sem isso, o agente declara sucesso achando que deu certo.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🪜 Progressive Disclosure (3 níveis)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O grande truque de eficiência: o agente <strong class="text-purple-400">não carrega todas as skills no system prompt</strong>. Carrega só uma lista mínima e abre cada skill sob demanda. Padrão chamado <strong class="text-purple-400">Progressive Disclosure</strong>.
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-2">When to Use</h4>
+<p class="text-neutral-300 text-sm">Triggers. When the agent should invoke this skill. Without this, he either never calls or calls wrong.</p>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-2">Procedure</h4>
+<p class="text-neutral-300 text-sm">Numbered, direct steps. One step per line. Ideally verifiable.</p>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-2">Pitfalls</h4>
+<p class="text-neutral-300 text-sm">What has already broken and how to get around it. Collected from real experience, not imagination.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
+<h4 class="font-bold text-primary mb-2">Verification</h4>
+<p class="text-neutral-300 text-sm">Short test: "if you run X, Y should come out". Without this, the agent declares success, thinking it worked.</p>
+</div>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🪜 Progressive Disclosure (3 levels)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The great efficiency trick: the agent<strong class="text-purple-400">does not load all skills in system prompt</strong>. Load only a minimum list and open each skill on demand. Pattern called<strong class="text-purple-400">Progressive Disclosure</strong>.
       </p>
-      <div class="space-y-4 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-2">Level 0 — <code>skills_list()</code></h4>
-          <p class="text-neutral-300 text-sm mb-2">Retorna lista <code>[{name, description, category}, ...]</code> de TODAS as skills disponíveis.</p>
-          <p class="text-neutral-400 text-xs">Custo: ~3.000 tokens. Sempre carregado.</p>
-        </div>
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-2">Level 1 — <code>skill_view(name)</code></h4>
-          <p class="text-neutral-300 text-sm mb-2">Retorna o SKILL.md completo da skill escolhida + metadados.</p>
-          <p class="text-neutral-400 text-xs">Custo: variável. Carregado só quando o agente decide usar a skill.</p>
-        </div>
-        <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-          <h4 class="font-bold text-purple-400 mb-2">Level 2 — <code>skill_view(name, path)</code></h4>
-          <p class="text-neutral-300 text-sm mb-2">Retorna arquivo específico de <code>references/</code>, <code>templates/</code>, <code>scripts/</code> ou <code>assets/</code>.</p>
-          <p class="text-neutral-400 text-xs">Custo: variável. Carregado só quando o procedimento exige aquele arquivo.</p>
-        </div>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Por que isso importa</h3>
-        <p class="text-neutral-300 text-sm">Permite ter <strong>centenas de skills</strong> sem estourar contexto. Description curta e poderosa importa MUITO — é o que entra no L0 e decide se a skill será descoberta. Skills com description vaga ficam órfãs.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">📁 Estrutura de diretórios</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Cada skill mora em <code class="text-purple-400">~/.hermes/skills/&lt;categoria&gt;/&lt;skill-name&gt;/</code>. Dentro do diretório, SKILL.md é obrigatório; subpastas opcionais separam tipos de arquivo.
-      </p>
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">📂 Layout de uma skill</h3>
-<pre><code>~/.hermes/skills/
+<div class="space-y-4 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-2">Level 0 —<code data-notranslate="True">skills_list()</code></h4>
+<p class="text-neutral-300 text-sm mb-2">Returns list<code data-notranslate="True">[{name, description, category}, ...]</code>of ALL available skills.</p>
+<p class="text-neutral-400 text-xs">Cost: ~3,000 tokens. Always charged.</p>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-2">Level 1 —<code data-notranslate="True">skill_view(name)</code></h4>
+<p class="text-neutral-300 text-sm mb-2">Returns the complete SKILL.md of the chosen skill + metadata.</p>
+<p class="text-neutral-400 text-xs">Variable cost. Loaded only when the agent decides to use the skill.</p>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
+<h4 class="font-bold text-purple-400 mb-2">Level 2 —<code data-notranslate="True">skill_view(name, path)</code></h4>
+<p class="text-neutral-300 text-sm mb-2">Returns specific file from<code data-notranslate="True">references/</code>, <code data-notranslate="True">templates/</code>, <code data-notranslate="True">scripts/</code> ou <code data-notranslate="True">assets/</code>.</p>
+<p class="text-neutral-400 text-xs">Variable cost. Loaded only when the procedure requires that file.</p>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Why does this matter</h3>
+<p class="text-neutral-300 text-sm">Allows you to have<strong>hundreds of skills</strong>without breaking context. Short and powerful description matters A LOT — it's what goes into L0 and decides whether the skill will be discovered. Skills with vague descriptions are orphaned.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">📁 Directory structure</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Each skill lives in<code class="text-purple-400" data-notranslate="True">~/.hermes/skills/&lt;categoria&gt;/&lt;skill-name&gt;/</code>. Within the directory, SKILL.md is mandatory; Optional subfolders separate file types.</p>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">📂 Layout of a skill</h3>
+<pre data-notranslate="True"><code data-notranslate="True">~/.hermes/skills/
 ├── mlops/
 │   └── axolotl/
 │       ├── SKILL.md          # Instruções principais (obrigatório)
@@ -285,110 +267,103 @@ How to confirm it worked.</code></pre>
 │       ├── templates/        # Formatos de output
 │       ├── scripts/          # Scripts auxiliares
 │       └── assets/           # Arquivos suplementares</code></pre>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-4 text-center">
-          <h4 class="font-bold text-blue-400 mb-1">references/</h4>
-          <p class="text-neutral-300 text-xs">Docs longas, especificações, exemplos extensos</p>
-        </div>
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-4 text-center">
-          <h4 class="font-bold text-emerald-400 mb-1">templates/</h4>
-          <p class="text-neutral-300 text-xs">Modelos de output (relatório, email, post)</p>
-        </div>
-        <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-4 text-center">
-          <h4 class="font-bold text-purple-400 mb-1">scripts/</h4>
-          <p class="text-neutral-300 text-xs">Bash/Python pra execução determinística</p>
-        </div>
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-4 text-center">
-          <h4 class="font-bold text-primary mb-1">assets/</h4>
-          <p class="text-neutral-300 text-xs">Imagens, dados, qualquer arquivo extra</p>
-        </div>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📦</span>Versionamento via git</h3>
-        <p class="text-neutral-300 text-sm">Como tudo é Markdown e arquivos auxiliares, versionar uma skill (ou todo o conjunto <code>~/.hermes/skills/</code>) num repositório git é trivial. Você ganha histórico de evolução e migração entre máquinas vira <code>git clone</code>.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🌐 Skills Hub (agentskills.io)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hub público em <code class="text-purple-400">agentskills.io</code> agrega skills da comunidade. O Hermes aceita instalação a partir de <strong class="text-purple-400">cinco fontes diferentes</strong>, do bundled oficial até auto-discovery via well-known.
-      </p>
-      <div class="space-y-3 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-5 flex items-start space-x-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">1</span>
-          <div>
-            <h4 class="font-bold text-emerald-400 mb-1">official (bundled)</h4>
-            <p class="text-neutral-300 text-sm">Skills no repositório <code>NousResearch/hermes-agent</code> em <code>optional-skills/</code>. Ativadas explicitamente.</p>
-          </div>
-        </div>
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-5 flex items-start space-x-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">2</span>
-          <div>
-            <h4 class="font-bold text-blue-400 mb-1">skills-sh (hub externo)</h4>
-            <p class="text-neutral-300 text-sm">agentskills.io — registry independente, mais skills, mais experimentação da comunidade.</p>
-          </div>
-        </div>
-        <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-5 flex items-start space-x-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold">3</span>
-          <div>
-            <h4 class="font-bold text-purple-400 mb-1">GitHub direto</h4>
-            <p class="text-neutral-300 text-sm">Formato <code>user/repo/path</code>. Útil pra skills hospedadas no seu próprio repo ou de terceiros não publicados.</p>
-          </div>
-        </div>
-        <div class="bg-primary/10 rounded-xl border border-primary/40 p-5 flex items-start space-x-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">4</span>
-          <div>
-            <h4 class="font-bold text-primary mb-1">URL direta</h4>
-            <p class="text-neutral-300 text-sm"><code>https://example.com/SKILL.md</code> — qualquer URL pública que serve um SKILL.md válido funciona.</p>
-          </div>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5 flex items-start space-x-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 font-bold">5</span>
-          <div>
-            <h4 class="font-bold text-red-400 mb-1">well-known (auto-discovery)</h4>
-            <p class="text-neutral-300 text-sm">Aponte o agente para um domínio e ele busca skills em <code>/.well-known/agent-skills</code>. Padrão pra empresas publicarem catálogo oficial.</p>
-          </div>
-        </div>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Atenção a skills externas</h3>
-        <p class="text-neutral-300 text-sm">Skill é instrução que o agente segue. Skill maliciosa pode pedir pra exfiltrar secret, deletar arquivo ou abrir conexão externa. Revise SKILL.md antes de instalar — especialmente <strong>Procedure</strong> e <strong>scripts/</strong>. Trate skill como dependência: vinda de fonte confiável e auditada.</p>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Skill = SKILL.md com YAML front matter + corpo Markdown</strong><span class="text-neutral-400"> — procedimento reutilizável.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Front matter exige name, description, version</strong><span class="text-neutral-400"> — opcional: platforms e metadata.hermes (tags, category, toolsets, config).</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Corpo padrão: When to Use, Procedure, Pitfalls, Verification</strong><span class="text-neutral-400"> — quatro seções canônicas.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Progressive Disclosure 3 níveis</strong><span class="text-neutral-400"> — L0 lista (~3k tokens), L1 corpo, L2 referência. Description importa MUITO.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Diretório: ~/.hermes/skills/categoria/skill-name/</strong><span class="text-neutral-400"> — subpastas references, templates, scripts, assets.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>5 fontes de instalação</strong><span class="text-neutral-400"> — official, skills-sh, GitHub, URL direta, well-known auto-discovery.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">3.3 - 👻 Soul: identidade do agente</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-3-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
-          <a href="modulo-3-3.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 3.2 • 2026</p></div>
-  </footer>
-
-  <script>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-4 text-center">
+<h4 class="font-bold text-blue-400 mb-1">references/</h4>
+<p class="text-neutral-300 text-xs">Long docs, specs, extensive examples</p>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-4 text-center">
+<h4 class="font-bold text-emerald-400 mb-1">templates/</h4>
+<p class="text-neutral-300 text-xs">Output models (report, email, post)</p>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-4 text-center">
+<h4 class="font-bold text-purple-400 mb-1">scripts/</h4>
+<p class="text-neutral-300 text-xs">Bash/Python for deterministic execution</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-4 text-center">
+<h4 class="font-bold text-primary mb-1">assets/</h4>
+<p class="text-neutral-300 text-xs">Images, data, any extra files</p>
+</div>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">📦</span>Versioning via git</h3>
+<p class="text-neutral-300 text-sm">Since everything is Markdown and auxiliary files, versioning a skill (or the entire set<code data-notranslate="True">~/.hermes/skills/</code>) in a git repository is trivial. You gain history of evolution and migration between machines<code data-notranslate="True">git clone</code>.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🌐 Skills Hub (agentskills.io)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Public hub in<code class="text-purple-400" data-notranslate="True">agentskills.io</code>adds skills from the community. Hermes accepts installation from<strong class="text-purple-400">five different fonts</strong>, from official bundled to auto-discovery via well-known.</p>
+<div class="space-y-3 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-5 flex items-start space-x-4">
+<span class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">1</span>
+<div>
+<h4 class="font-bold text-emerald-400 mb-1">official (bundled)</h4>
+<p class="text-neutral-300 text-sm">Skills in the repository<code data-notranslate="True">NousResearch/hermes-agent</code> em <code data-notranslate="True">optional-skills/</code>. Explicitly enabled.</p>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-5 flex items-start space-x-4">
+<span class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">2</span>
+<div>
+<h4 class="font-bold text-blue-400 mb-1">skills-sh (external hub)</h4>
+<p class="text-neutral-300 text-sm">agentskills.io — independent registry, more skills, more community experimentation.</p>
+</div>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-5 flex items-start space-x-4">
+<span class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold">3</span>
+<div>
+<h4 class="font-bold text-purple-400 mb-1">Direct GitHub</h4>
+<p class="text-neutral-300 text-sm">Format<code data-notranslate="True">user/repo/path</code>. Useful for skills hosted in your own repo or from unpublished third parties.</p>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-5 flex items-start space-x-4">
+<span class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">4</span>
+<div>
+<h4 class="font-bold text-primary mb-1">Direct URL</h4>
+<p class="text-neutral-300 text-sm"><code data-notranslate="True">https://example.com/SKILL.md</code>— any public URL serving a valid SKILL.md works.</p>
+</div>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5 flex items-start space-x-4">
+<span class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 font-bold">5</span>
+<div>
+<h4 class="font-bold text-red-400 mb-1">well-known (auto-discovery)</h4>
+<p class="text-neutral-300 text-sm">Point the agent to a domain and it searches for skills in<code data-notranslate="True">/.well-known/agent-skills</code>. Standard for companies to publish official catalogue.</p>
+</div>
+</div>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Pay attention to external skills</h3>
+<p class="text-neutral-300 text-sm">Skill is instruction that the agent follows. Malicious skill may ask to exfiltrate secret, delete file or open external connection. Review SKILL.md before installing — especially<strong>Procedure</strong> e <strong>scripts/</strong>. Treat skill as a dependency: coming from a reliable and audited source.</p>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Skill = SKILL.md with YAML front matter + Markdown body</strong><span class="text-neutral-400">— reusable procedure.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Front matter requires name, description, version</strong><span class="text-neutral-400">— optional: platforms and metadata.hermes (tags, category, toolsets, config).</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Standard body: When to Use, Procedure, Pitfalls, Verification</strong><span class="text-neutral-400">— four canonical sections.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Progressive Disclosure 3 levels</strong><span class="text-neutral-400">— L0 list (~3k tokens), L1 body, L2 reference. Description matters A LOT.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Directory: ~/.hermes/skills/categoria/skill-name/</strong><span class="text-neutral-400">— references, templates, scripts, assets subfolders.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>5 installation sources</strong><span class="text-neutral-400">— official, skills-sh, GitHub, direct URL, well-known auto-discovery.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Next module:</h3><p class="text-neutral-300">3.3 - 👻 Soul: agent identity</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-1.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-3.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 3.2 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
