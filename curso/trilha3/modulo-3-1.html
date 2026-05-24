@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3.1 Memory: USER.md + MEMORY.md | Agente Hermes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>3.1 Memory: USER.md + MEMORY.md | Agent Hermes</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     html:not(.dark) body { background-color: #f8fafc; }
@@ -64,242 +64,217 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agente Hermes</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pilares</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Segurança</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparações</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Escala</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-purple-400">Início</a><span>/</span>
-      <a href="index.html" class="hover:text-purple-400">Trilha 3</a><span>/</span>
-      <span class="text-purple-400">Módulo 3.1</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🧠 Memory: USER.md + MEMORY.md</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Os dois arquivos que o agente injeta no system prompt como snapshot frozen no início de cada sessão. Limites rígidos, gerenciados via tool, complementados por SQLite + FTS5.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Médio</div><div class="text-xs text-neutral-400">Nível</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🧊 Memória persistente como snapshot frozen</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        No início de cada sessão, o Hermes lê o conteúdo de <code class="text-purple-400">~/.hermes/memories/USER.md</code> e <code class="text-purple-400">~/.hermes/memories/MEMORY.md</code> e injeta tudo no <strong class="text-purple-400">system prompt</strong> como um bloco fixo. Esse bloco não muda mais durante a sessão — é um <strong class="text-purple-400">snapshot frozen</strong>.
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🪽</span><span class="font-bold text-lg hidden sm:inline">Agent Hermes</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Setup</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Pillars</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Security</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Comparisons</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">Scale</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-purple-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a><span>/</span>
+<span class="text-purple-400">Module 3.1</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧠 Memory: USER.md + MEMORY.md</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">The two files that the agent injects into the system prompt as frozen snapshots at the beginning of each session. Strict limits, managed via tool, complemented by SQLite + FTS5.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Average</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Practice</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🧊 Persistent memory like frozen snapshot</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">At the beginning of each session, Hermes reads the contents of<code class="text-purple-400" data-notranslate="True">~/.hermes/memories/USER.md</code> e <code class="text-purple-400" data-notranslate="True">~/.hermes/memories/MEMORY.md</code>and injects everything into<strong class="text-purple-400">system prompt</strong>as a fixed block. This block no longer changes during the session — it is a<strong class="text-purple-400">frozen snapshot</strong>.
       </p>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📐</span>Os dois arquivos por dentro</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-blue-400">USER.md</strong> — perfil seu, ~500 tokens, limite <strong>1.375 chars</strong></li>
-          <li><strong class="text-blue-400">MEMORY.md</strong> — notas do agente, ~800 tokens, limite <strong>2.200 chars</strong></li>
-          <li><strong class="text-blue-400">Local:</strong> <code>~/.hermes/memories/</code></li>
-          <li><strong class="text-blue-400">Carregamento:</strong> uma vez por sessão (frozen)</li>
-          <li><strong class="text-blue-400">Atualização entre sessões:</strong> via tool <code>memory</code> ou edição direta</li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Implicação prática</h3>
-        <p class="text-neutral-300 text-sm">Se o agente atualizar memória <em>durante</em> a sessão atual, o snapshot já injetado <strong>não muda</strong> nessa sessão. Quem usa essa nova entrada é a próxima sessão. Por isso "salva isso na memória" só impacta as próximas conversas.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">👤 USER.md — quem é VOCÊ</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        USER.md é o perfil do usuário: nome, papel, preferências, estilo de comunicação, idiomas, contextos relevantes. Tem <strong class="text-purple-400">limite rígido de 1.375 caracteres (~500 tokens)</strong>. Excedeu, o agente para de aceitar novas entradas até abrir espaço.
-      </p>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4">✅ O que faz sentido aqui</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">•</span><span>Nome, papel/profissão, fuso horário, idioma preferido</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">•</span><span>Estilo: respostas curtas vs detalhadas, formal vs informal</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">•</span><span>Preferências técnicas estáveis (linguagens, stack, sistemas operacionais usados)</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">•</span><span>Regras pessoais não-negociáveis ("não me chame por apelido", "evite emojis em mensagens financeiras")</span></li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-4">❌ O que NÃO entra em USER.md</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Status atual ("estou trabalhando no projeto X agora") — é volátil</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>To-do list e tarefas em andamento — uso outro lugar (issues, planner)</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Senhas, tokens, API keys — vão em <code class="text-red-400">~/.hermes/.env</code></span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Identidade do agente — isso é SOUL.md</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">📓 MEMORY.md — notas pessoais do agente</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        MEMORY.md é a memória "de trabalho" do agente. Notas sobre ambiente, decisões fechadas, paths, atalhos, fatos aprendidos. Limite rígido de <strong class="text-purple-400">2.200 caracteres (~800 tokens)</strong>. Quando enche, o próprio agente consolida entradas redundantes.
-      </p>
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">🧱 Bons exemplos de entrada</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-purple-400">•</span><span>"Repo principal do usuário fica em <code>~/projetos/site/</code>, deploy via Hostinger."</span></li>
-          <li class="flex items-start space-x-2"><span class="text-purple-400">•</span><span>"Usuário prefere commits no formato <code>tipo: descrição curta</code>, sem prefixos extras."</span></li>
-          <li class="flex items-start space-x-2"><span class="text-purple-400">•</span><span>"Banco Postgres do projeto X fica acessível via <code>db.local.example</code> porta 5432."</span></li>
-          <li class="flex items-start space-x-2"><span class="text-purple-400">•</span><span>"Cron de backup roda às 3h, não interferir nesse horário."</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Limite apertado é feature</h3>
-        <p class="text-neutral-300 text-sm">2.200 chars força você a guardar só o que realmente importa. Ferramenta perfeita pra evitar "memória bagunçada que não ajuda em nada". Se você sente falta de mais espaço, provavelmente está colocando coisa errada lá (status, tarefa, histórico).</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🔧 Tool memory: add, replace, remove</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O agente gerencia a própria memória via <strong class="text-purple-400">tool <code>memory</code></strong>. Três operações disponíveis. Você não edita os arquivos manualmente o tempo todo — pede em linguagem natural e o modelo dispara a operação certa.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-2">add</h4>
-          <p class="text-neutral-300 text-sm">Adiciona nova entrada. Frase: <em>"Salva na memória que prefiro Postgres pra projetos novos."</em></p>
-        </div>
-        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-2">replace</h4>
-          <p class="text-neutral-300 text-sm">Substitui entrada existente. Frase: <em>"Atualiza a entrada sobre meu fuso, agora estou em Lisboa."</em></p>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-2">remove</h4>
-          <p class="text-neutral-300 text-sm">Apaga entrada obsoleta. Frase: <em>"Remove o que sabe sobre o projeto X, descontinuei."</em></p>
-        </div>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🤖</span>Auto-consolidação quando enche</h3>
-        <p class="text-neutral-300 text-sm">Quando MEMORY.md ou USER.md atinge o limite, o agente faz pass de consolidação: junta entradas redundantes, reescreve mais conciso, descarta o que ficou obsoleto. Você pode forçar manualmente: <em>"Faz uma limpeza no MEMORY.md, junta o que for redundante."</em></p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔍 session_search: SQLite + FTS5</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Toda conversa passa por <strong class="text-purple-400">SQLite com índice full-text (FTS5)</strong> em <code class="text-purple-400">~/.hermes/state.db</code>. A tool <code class="text-purple-400">session_search</code> permite buscar conversas antigas por palavra-chave — é a "memória longa" complementar.
-      </p>
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4">📚 Quando usar cada um</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong class="text-purple-400">MEMORY.md:</strong> fato durável e relevante pra MUITAS sessões. Sempre carregado.</li>
-          <li><strong class="text-purple-400">USER.md:</strong> seu perfil. Sempre carregado.</li>
-          <li><strong class="text-purple-400">SQLite + FTS5:</strong> conversa específica que pode ou não voltar a ser útil. Pesquisado sob demanda.</li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Frase pronta</h3>
-        <p class="text-neutral-300 text-sm"><em>"Busca no histórico de sessões qualquer conversa onde falamos sobre &lt;tópico&gt; e me resume os pontos principais."</em> O agente roda <code>session_search</code> e te traz o material consolidado sem inflar memória.</p>
-      </div>
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">💾</span>Backup importa</h3>
-        <p class="text-neutral-300 text-sm">Backup do <code class="text-blue-400">state.db</code> = backup da história inteira do agente. Inclua esse arquivo na rotina de backup do VPS. Perdeu, perdeu o passado.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🚫 O que NUNCA salvar na memória</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Memória mal usada não é só desperdício — vira <strong class="text-purple-400">ruído ativo</strong> que prejudica o raciocínio do agente em toda sessão. E pior: secret salvo lá pode vazar em logs ou em chamadas pra modelos remotos.
-      </p>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-4">🚨 Lista do "não"</h3>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Secrets, tokens, API keys, senhas</strong> — vão em <code>~/.hermes/.env</code>, nunca em arquivos de memória</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Tarefa temporária</strong> — issue tracker, planner ou conversa atual</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Status atual ("estou em férias")</strong> — vai estar errado em duas semanas</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Histórico de conversa</strong> — já está no SQLite, não duplique</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Procedimentos longos</strong> — vire skill (Markdown completo cabe lá)</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Personalidade do agente</strong> — vai em SOUL.md</span></li>
-        </ul>
-      </div>
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🎯</span>Teste do "vai me servir em 6 meses?"</h3>
-        <p class="text-neutral-300 text-sm">Antes de salvar, pergunte: "isso vai me ser útil em 6 meses, em qualquer sessão, independente da tarefa?" Se sim → memória. Se não → outro lugar.</p>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Resumo do módulo</h2>
-        <div class="space-y-3 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Memória é snapshot frozen no system prompt</strong><span class="text-neutral-400"> — lida uma vez por sessão a partir de <code>~/.hermes/memories/</code>.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>USER.md = perfil seu (1.375 chars / ~500 tokens)</strong><span class="text-neutral-400"> — fatos estáveis sobre você.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>MEMORY.md = notas do agente (2.200 chars / ~800 tokens)</strong><span class="text-neutral-400"> — ambiente, decisões, atalhos.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Tool memory tem add, replace, remove</strong><span class="text-neutral-400"> — auto-gerenciada, consolida quando enche.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>session_search é a memória longa</strong><span class="text-neutral-400"> — SQLite + FTS5 em <code>~/.hermes/state.db</code>.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Nunca salvar secrets, tarefas temporárias ou status</strong><span class="text-neutral-400"> — esses têm outros lugares próprios.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">3.2 - 🛠️ Skills: SKILL.md + Progressive Disclosure</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a>
-          <a href="modulo-3-2.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">Próximo Módulo →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agente Hermes • Módulo 3.1 • 2026</p></div>
-  </footer>
-
-  <script>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📐</span>The two files inside</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-blue-400">USER.md</strong>— your profile, ~500 tokens, limit<strong>1,375 characters</strong></li>
+<li><strong class="text-blue-400">MEMORY.md</strong>— agent notes, ~800 tokens, limit<strong>2,200 characters</strong></li>
+<li><strong class="text-blue-400">Location:</strong> <code data-notranslate="True">~/.hermes/memories/</code></li>
+<li><strong class="text-blue-400">Loading:</strong>once per session (frozen)</li>
+<li><strong class="text-blue-400">Inter-session update:</strong>via tool<code data-notranslate="True">memory</code>or direct editing</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span>Practical implication</h3>
+<p class="text-neutral-300 text-sm">If the agent updates memory<em>during</em>the current session, the already injected snapshot<strong>doesn't change</strong>in this session. Whoever uses this new entry is the next session. That's why "save this in your memory" only impacts future conversations.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">👤 USER.md — who are YOU</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">USER.md is the user profile: name, role, preferences, communication style, languages, relevant contexts. He has<strong class="text-purple-400">Hard limit of 1,375 characters (~500 tokens)</strong>. Exceeded, the agent stops accepting new entries until space becomes available.</p>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4">✅ What makes sense here</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400">•</span><span>Name, role/profession, time zone, preferred language</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">•</span><span>Style: short vs detailed answers, formal vs informal</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">•</span><span>Stable technical preferences (languages, stack, operating systems used)</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">•</span><span>Non-negotiable personal rules ("don't call me by my nickname", "avoid emojis in financial messages")</span></li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-4">❌ What DOES NOT go into USER.md</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Current status ("I'm working on project X right now") — is volatile</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>To-do list and ongoing tasks — I use another place (issues, planner)</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Passwords, tokens, API keys — go in<code class="text-red-400" data-notranslate="True">~/.hermes/.env</code></span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">•</span><span>Agent Identity — this is SOUL.md</span></li>
+</ul>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">📓 MEMORY.md — personal notes from the agent</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">MEMORY.md is the agent's "working" memory. Notes on the environment, closed decisions, paths, shortcuts, facts learned. Hard limit of<strong class="text-purple-400">2,200 characters (~800 tokens)</strong>. When it fills up, the agent itself consolidates redundant entries.</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">🧱 Good input examples</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-purple-400">•</span><span>"User's main repo is in<code data-notranslate="True">~/projetos/site/</code>, deploy via Hostinger."</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">•</span><span>"User prefers commits in the format<code data-notranslate="True">tipo: descrição curta</code>, no extra prefixes."</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">•</span><span>"Project X's Postgres Bank is accessible via<code data-notranslate="True">db.local.example</code>port 5432."</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">•</span><span>"Backup Cron runs at 3am, do not interfere at this time."</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Tight limit is a feature</h3>
+<p class="text-neutral-300 text-sm">2,200 chars forces you to keep only what really matters. Perfect tool to avoid "messy memory that doesn't help at all". If you miss more space, you're probably putting the wrong thing there (status, task, history).</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🔧 Tool memory: add, replace, remove</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The agent manages its own memory via<strong class="text-purple-400">tool<code data-notranslate="True">memory</code></strong>. Three operations available. You don't edit files manually all the time — you ask in natural language and the model triggers the right operation.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-2">add</h4>
+<p class="text-neutral-300 text-sm">Adds new entry. Phrase:<em>"Keep in mind that I prefer Postgres for new projects."</em></p>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<h4 class="font-bold text-blue-400 mb-2">replace</h4>
+<p class="text-neutral-300 text-sm">Replaces existing entry. Phrase:<em>"Update the entry about my time zone, now I'm in Lisbon."</em></p>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-2">remove</h4>
+<p class="text-neutral-300 text-sm">Deletes obsolete entry. Phrase:<em>"Remove what you know about project X, I discontinued it."</em></p>
+</div>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🤖</span>Self-consolidation when filling</h3>
+<p class="text-neutral-300 text-sm">When MEMORY.md or USER.md reaches the limit, the agent performs a consolidation pass: it joins redundant entries, rewrites more concisely, discards what has become obsolete. You can manually force:<em>"Clean up MEMORY.md, add anything redundant."</em></p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔍 session_search: SQLite + FTS5</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Every conversation goes through<strong class="text-purple-400">SQLite with full-text index (FTS5)</strong> em <code class="text-purple-400" data-notranslate="True">~/.hermes/state.db</code>. The tool<code class="text-purple-400" data-notranslate="True">session_search</code>allows you to search for old conversations by keyword — it's the complementary "long memory".</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4">📚 When to use each one</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li><strong class="text-purple-400">MEMORY.md:</strong>durable and relevant fact for MANY sessions. Always charged.</li>
+<li><strong class="text-purple-400">USER.md:</strong>your profile. Always charged.</li>
+<li><strong class="text-purple-400">SQLite + FTS5:</strong>specific conversation that may or may not be useful again. Searched on demand.</li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Ready sentence</h3>
+<p class="text-neutral-300 text-sm"><em>"Search the session history for any conversation where we talked about &lt;topic&gt; and summarize the main points."</em>The agent runs<code data-notranslate="True">session_search</code>and brings you the consolidated material without inflating memory.</p>
+</div>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">💾</span>Backup matters</h3>
+<p class="text-neutral-300 text-sm">Backup<code class="text-blue-400" data-notranslate="True">state.db</code>= backup of the entire agent history. Include this file in the VPS backup routine. Lost, lost the past.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🚫 What to NEVER save in memory</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Poorly used memory is not just waste — it becomes<strong class="text-purple-400">active noise</strong>which harms the agent's reasoning throughout the session. And worse: secret saved there can leak in logs or in calls to remote models.</p>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-red-400 mb-4">🚨 “No” list</h3>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Secrets, tokens, API keys, passwords</strong>— go on<code data-notranslate="True">~/.hermes/.env</code>, never in memory files</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Temporary task</strong>— issue tracker, planner or current conversation</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Current status ("I'm on vacation")</strong>— it will be wrong in two weeks</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Conversation history</strong>— it's already in SQLite, don't duplicate it</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Long procedures</strong>— become a skill (full Markdown fits there)</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Agent personality</strong>— go to SOUL.md</span></li>
+</ul>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🎯</span>"Will it serve me in 6 months?" test</h3>
+<p class="text-neutral-300 text-sm">Before saving, ask: "will this be useful to me in 6 months, in any session, regardless of the task?" If yes → memory. If not → elsewhere.</p>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎯</span>Module summary</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Memory is snapshot frozen at system prompt</strong><span class="text-neutral-400">— read once per session from<code data-notranslate="True">~/.hermes/memories/</code>.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>USER.md = your profile (1,375 chars / ~500 tokens)</strong><span class="text-neutral-400">— stable facts about you.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>MEMORY.md = agent notes (2,200 chars / ~800 tokens)</strong><span class="text-neutral-400">— environment, decisions, shortcuts.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Tool memory has add, replace, remove</strong><span class="text-neutral-400">— self-managed, consolidates when full.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>session_search is long memory</strong><span class="text-neutral-400">— SQLite + FTS5 in<code data-notranslate="True">~/.hermes/state.db</code>.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong>Never save secrets, temporary tasks or statuses</strong><span class="text-neutral-400">— these have other places of their own.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Next module:</h3><p class="text-neutral-300">3.2 - 🛠️ Skills: SKILL.md + Progressive Disclosure</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Back to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-2.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Agent Hermes • Module 3.1 • 2026</p></div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
